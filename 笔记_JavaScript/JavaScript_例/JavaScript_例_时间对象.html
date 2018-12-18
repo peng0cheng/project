@@ -1,0 +1,33 @@
+<meta charset="utf-8" />
+
+<style>
+	#test_javascript_date_01{width:100px;height:50px;}
+</style>
+
+<button id="test_javascript_date_01" onclick="test_javascript_date_01()">click</button>
+<div id="test_javascript_date_02"></div>
+
+<script src="../../public/js/jquery-1.8.3.min.js"></script>
+<script>
+
+function test_javascript_date_01(){
+	var DT = new Date();
+	var y = DT.getFullYear();
+	var m = DT.getMonth()+1;
+	var d = DT.getDate();
+	var h = DT.getHours();
+	var i = DT.getMinutes();
+	var s = DT.getSeconds();
+	var w = DT.getDay();
+	if(1 == m.toString().length){m = '0'+m;}
+	if(1 == d.toString().length){d = '0'+d;}
+	if(1 == h.toString().length){h = '0'+h;}
+	if(1 == i.toString().length){i = '0'+i;}
+	if(1 == s.toString().length){s = '0'+s;}
+	var week = ['日','一','二','三','四','五','六'];
+	var show = y+' 年 '+m+' 月 '+d+' 日 '+h+' 时 '+i+' 分 '+s+' 秒 '+'&nbsp;&nbsp;&nbsp;&nbsp;'+' 星期 '+week[w];
+	$('#test_javascript_date_02').html(show);	
+	setTimeout(test_javascript_date_01,1000);
+}
+
+</script>

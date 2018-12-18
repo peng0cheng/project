@@ -1,0 +1,280 @@
+<table class="i_table">
+	<tr onclick="test_table()" title="">
+		<td>【表格】</td>
+		<td><p><font class="w b">&lt;table&gt;</font><font class="w b">&lt;tr&gt;</font><font class="w b">&lt;td&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_table_border()" title="">
+		<td>【表格】【边框】</td>
+		<td><p><font class="w b">&lt;table</font> <font class="w g">border</font> = <font class="r">宽度</font> <font class="w b">&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_table_colspan()" title="
+		&#10;设几就跨几列 设置后需要手动删除被合并的单元格">
+		<td>【表格】【单元格跨列】</td>
+		<td><p><font class="w b">&lt;td</font> <font class="w g">colspan</font> = <font class="r">列数</font> <font class="w b">&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_table_rowspan()" title="
+		&#10;设几就跨几行 设置后需要手动删除被合并的单元格">
+		<td>【表格】【单元格跨行】</td>
+		<td><p><font class="w b">&lt;td</font> <font class="w g">rowspan</font> = <font class="r">行数</font> <font class="w b">&gt;</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_ol()" title="">
+		<td>【列表】【有序列表】</td>
+		<td><p><font class="w b">&lt;ol&gt;</font><font class="w b">&lt;li&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_ol_reversed()" title="
+		&#10;默认按正序排列
+		&#10;reversed → 倒序排列">
+		<td>【列表】【有序列表】【排序】</td>
+		<td><p><font class="w b">&lt;ol</font> <font class="w g">reversed</font> <font class="w b">&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_ol_type()" title="
+		&#10;序号类型 1 → 按 1 2 3 ... 的顺序
+		&#10;序号类型 A → 按 A B C ... 的顺序
+		&#10;序号类型 a → 按 a b c ... 的顺序
+		&#10;序号类型 I → 按 I II III ... 的顺序
+		&#10;序号类型 i → 按 i ii iii ... 的顺序">
+		<td>【有序列表】【标记类型】</td>
+		<td><p><font class="w b">&lt;ol</font> <font class="w g">type</font> = <font class="r">序号类型</font> <font class="w b">&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_ol_start()" title="">
+		<td>【列表】【有序列表】【起始值】</td>
+		<td><p><font class="w b">&lt;ol</font> <font class="w g">start</font> = <font class="r">起始值</font> <font class="w b">&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_ul()" title="">
+		<td>【列表】【无序列表】</td>
+		<td><p><font class="w b">&lt;ul&gt;</font><font class="w b">&lt;li&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_dl()" title="">
+		<td>【列表】【定义列表】</td>
+		<td><p><font class="w b">&lt;dl&gt;</font><font class="w b">&lt;dt&gt;</font><font class="w b">&lt;dd&gt;</font></p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【表格】**************************************************/
+
+function test_table(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;table&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;tr&gt;</font></p>'
+				+'<p class="ti_2"><font class="b">&lt;td&gt;</font>'+'one'+'<font class="b">&lt;/td&gt;</font></p>'
+				+'<p class="ti_2"><font class="b">&lt;td&gt;</font>'+'two'+'<font class="b">&lt;/td&gt;</font></p>'
+				+'<p class="ti_2"><font class="b">&lt;td&gt;</font>'+'three'+'<font class="b">&lt;/td&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;/tr&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;tr&gt;</font></p>'
+				+'<p class="ti_2"><font class="b">&lt;td&gt;</font>'+'four'+'<font class="b">&lt;/td&gt;</font></p>'
+				+'<p class="ti_2"><font class="b">&lt;td&gt;</font>'+'five'+'<font class="b">&lt;/td&gt;</font></p>'
+				+'<p class="ti_2"><font class="b">&lt;td&gt;</font>'+'six'+'<font class="b">&lt;/td&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;/tr&gt;</font></p>'
+		+'<p><font class="b">&lt;/table&gt;</font></p>');
+	PC_Case.show(2,
+		'<table>'
+			+'<tr>'
+				+'<td>one</td>'
+				+'<td>two</td>'
+				+'<td>three</td>'
+			+'</tr>'
+			+'<tr>'
+				+'<td>four</td>'
+				+'<td>five</td>'
+				+'<td>six</td>'
+			+'</tr>'
+		+'</table>');
+}
+
+function test_table_border(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;table</font> <font class="g">border</font>=<font class="r">"1"</font><font class="b">&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;tr&gt;</font></p>'
+				+'<p class="ti_2"><font class="b">&lt;td&gt;</font>'+'one'+'<font class="b">&lt;/td&gt;</font></p>'
+				+'<p class="ti_2"><font class="b">&lt;td&gt;</font>'+'two'+'<font class="b">&lt;/td&gt;</font></p>'
+				+'<p class="ti_2"><font class="b">&lt;td&gt;</font>'+'three'+'<font class="b">&lt;/td&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;/tr&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;tr&gt;</font></p>'
+				+'<p class="ti_2"><font class="b">&lt;td&gt;</font>'+'four'+'<font class="b">&lt;/td&gt;</font></p>'
+				+'<p class="ti_2"><font class="b">&lt;td&gt;</font>'+'five'+'<font class="b">&lt;/td&gt;</font></p>'
+				+'<p class="ti_2"><font class="b">&lt;td&gt;</font>'+'six'+'<font class="b">&lt;/td&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;/tr&gt;</font></p>'
+		+'<p><font class="b">&lt;/table&gt;</font></p>');
+	PC_Case.show(2,
+		'<table border="1">'
+			+'<tr>'
+				+'<td>one</td>'
+				+'<td>two</td>'
+				+'<td>three</td>'
+			+'</tr>'
+			+'<tr>'
+				+'<td>four</td>'
+				+'<td>five</td>'
+				+'<td>six</td>'
+			+'</tr>'
+		+'</table>');
+}
+
+function test_table_colspan(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;table&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;tr&gt;</font></p>'
+				+'<p class="ti_2"><font class="b">&lt;td</font> <font class="g">colspan</font>=<font class="r">"2"</font><font class="b">&gt;</font>'+'one'+'<font class="b">&lt;/td&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;/tr&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;tr&gt;</font></p>'
+				+'<p class="ti_2"><font class="b">&lt;td&gt;</font>'+'three'+'<font class="b">&lt;/td&gt;</font></p>'
+				+'<p class="ti_2"><font class="b">&lt;td&gt;</font>'+'four'+'<font class="b">&lt;/td&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;/tr&gt;</font></p>'
+		+'<p><font class="b">&lt;/table&gt;</font></p>');
+	PC_Case.show(2,
+		'<table border="1">'
+			+'<tr>'
+				+'<td colspan="2">one</td>'
+			+'</tr>'
+			+'<tr>'
+				+'<td>three</td>'
+				+'<td>four</td>'
+			+'</tr>'
+		+'</table>');
+}
+
+function test_table_rowspan(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;table&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;tr&gt;</font></p>'
+				+'<p class="ti_2"><font class="b">&lt;td</font> <font class="g">rowspan</font>=<font class="r">"2"</font><font class="b">&gt;</font>'+'one'+'<font class="b">&lt;/td&gt;</font></p>'
+				+'<p class="ti_2"><font class="b">&lt;td&gt;</font>'+'two'+'<font class="b">&lt;/td&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;/tr&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;tr&gt;</font></p>'
+				+'<p class="ti_2"><font class="b">&lt;td&gt;</font>'+'four'+'<font class="b">&lt;/td&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;/tr&gt;</font></p>'
+		+'<p><font class="b">&lt;/table&gt;</font></p>');
+	PC_Case.show(2,
+		'<table border="1">'
+			+'<tr>'
+				+'<td rowspan="2">one</td>'
+				+'<td>two</td>'
+			+'</tr>'
+			+'<tr>'
+				+'<td>four</td>'
+			+'</tr>'
+		+'</table>');
+}
+
+/**************************************************【列表】**************************************************/
+
+function test_ol(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;ol&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;li&gt;</font>'+'one'+'<font class="b">&lt;/li&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;li&gt;</font>'+'two'+'<font class="b">&lt;/li&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;li&gt;</font>'+'three'+'<font class="b">&lt;/li&gt;</font></p>'
+		+'<p><font class="b">&lt;/ol&gt;</font></p>');
+	PC_Case.show(2,
+		'<ol style="margin-left:20px;">'
+			+'<li>one</li>'
+			+'<li>two</li>'
+			+'<li>three</li>'
+		+'</ol>');
+}
+
+function test_ol_reversed(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;ol</font> <font class="g">reversed</font><font class="b">&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;li&gt;</font>'+'one'+'<font class="b">&lt;/li&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;li&gt;</font>'+'two'+'<font class="b">&lt;/li&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;li&gt;</font>'+'three'+'<font class="b">&lt;/li&gt;</font></p>'
+		+'<p><font class="b">&lt;/ol&gt;</font></p>');
+	PC_Case.show(2,
+		'<ol reversed style="margin-left:20px;">'
+			+'<li>one</li>'
+			+'<li>two</li>'
+			+'<li>three</li>'
+		+'</ol>');
+}
+
+function test_ol_type(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;ol</font> <font class="g">type</font>=<font class="r">"I"</font><font class="b">&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;li&gt;</font>'+'one'+'<font class="b">&lt;/li&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;li&gt;</font>'+'two'+'<font class="b">&lt;/li&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;li&gt;</font>'+'three'+'<font class="b">&lt;/li&gt;</font></p>'
+		+'<p><font class="b">&lt;/ol&gt;</font></p>'
+		+'<hr class="cut" />'
+		+'<p><font class="b">&lt;ol</font> <font class="g">type</font>=<font class="r">"A"</font><font class="b">&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;li&gt;</font>'+'one'+'<font class="b">&lt;/li&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;li&gt;</font>'+'two'+'<font class="b">&lt;/li&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;li&gt;</font>'+'three'+'<font class="b">&lt;/li&gt;</font></p>'
+		+'<p><font class="b">&lt;/ol&gt;</font></p>');
+	PC_Case.show(2,
+		'<ol type="I" style="margin-left:20px;">'
+			+'<li>one</li>'
+			+'<li>two</li>'
+			+'<li>three</li>'
+		+'</ol>'
+		+'<hr class="cut" />'
+		+'<ol type="A" style="margin-left:20px;">'
+			+'<li>one</li>'
+			+'<li>two</li>'
+			+'<li>three</li>'
+		+'</ol>');
+}
+
+function test_ol_start(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;ol</font> <font class="g">start</font>=<font class="r">"3"</font><font class="b">&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;li&gt;</font>'+'one'+'<font class="b">&lt;/li&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;li&gt;</font>'+'two'+'<font class="b">&lt;/li&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;li&gt;</font>'+'three'+'<font class="b">&lt;/li&gt;</font></p>'
+		+'<p><font class="b">&lt;/ol&gt;</font></p>'
+		+'<hr class="cut" />'
+		+'<p><font class="b">&lt;ol</font> <font class="g">type</font>=<font class="r">"I"</font> <font class="g">start</font>=<font class="r">"3"</font><font class="b">&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;li&gt;</font>'+'one'+'<font class="b">&lt;/li&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;li&gt;</font>'+'two'+'<font class="b">&lt;/li&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;li&gt;</font>'+'three'+'<font class="b">&lt;/li&gt;</font></p>'
+		+'<p><font class="b">&lt;/ol&gt;</font></p>');
+	PC_Case.show(2,
+		'<ol start="3" style="margin-left:20px;">'
+			+'<li>one</li>'
+			+'<li>two</li>'
+			+'<li>three</li>'
+		+'</ol>'
+		+'<hr class="cut" />'
+		+'<ol type="A" start="3" style="margin-left:20px;">'
+			+'<li>one</li>'
+			+'<li>two</li>'
+			+'<li>three</li>'
+		+'</ol>');
+}
+
+function test_ul(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;ul&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;li&gt;</font>'+'one'+'<font class="b">&lt;/li&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;li&gt;</font>'+'two'+'<font class="b">&lt;/li&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;li&gt;</font>'+'three'+'<font class="b">&lt;/li&gt;</font></p>'
+		+'<p><font class="b">&lt;/ul&gt;</font></p>');
+	PC_Case.show(2,
+		'<ul style="margin-left:20px;">'
+			+'<li>one</li>'
+			+'<li>two</li>'
+			+'<li>three</li>'
+		+'</ul>');
+}
+
+function test_dl(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;ol&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;dt&gt;</font>'+'标题'+'<font class="b">&lt;/dt&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;dd&gt;</font>'+'one'+'<font class="b">&lt;/dd&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;dd&gt;</font>'+'two'+'<font class="b">&lt;/dd&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;dd&gt;</font>'+'three'+'<font class="b">&lt;/dd&gt;</font></p>'
+		+'<p><font class="b">&lt;/dl&gt;</font></p>');
+	PC_Case.show(2,
+		'<dl>'
+			+'<dt>标题</dt>'
+			+'<dd>one</dd>'
+			+'<dd>two</dd>'
+			+'<dd>three</dd>'
+		+'</dl>');
+}
+
+/**************************************************【】**************************************************/
+</script>

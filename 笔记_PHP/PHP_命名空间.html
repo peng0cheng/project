@@ -1,0 +1,87 @@
+<table class="i_table">
+	<tr onclick="test_" title="
+		&#10;声前命名空间之前不能有任何除注释以外的字符">
+		<td>【增加命名空间】</td>
+		<td><p><font class="b w">namespace</font> <font class="g">空间名</font></p></td>
+	</tr>
+	<tr onclick="test_" title="
+		&#10;不充许在 {} 之外写任何代码">
+		<td>【增加个命名空间】</td>
+		<td><p><font class="b w">namespace</font> <font class="g">空间名</font><font class="b w">{</font><font class="o">属于该空间内的代码</font><font class="b w">}</font></p></td>
+	</tr>
+	<tr onclick="test_" title="
+		&#10;声前命名空间之前不能有任何除注释以外的字符">
+		<td>【增加多层命名空间】</td>
+		<td><p><font class="b w">namespace</font> <font class="g">空间名<font class="b w">\</font>子空间名...</font></p></td>
+	</tr>
+	<tr onclick="test_" title="">
+		<td>【调用当前空间的函数】</td>
+		<td><p><font class="g">函数名( )</font></p></td>
+	</tr>
+	<tr onclick="test_" title="">
+		<td>【调用当前空间的常量】</td>
+		<td><p><font class="g">常量名</font></p></td>
+	</tr>
+	<tr onclick="test_" title="">
+		<td>【调用当前空间的类】</td>
+		<td><p><font class="g">类名</font></p></td>
+	</tr>
+	<tr onclick="test_" title="">
+		<td>【调用全局空间的函数】</td>
+		<td><p><font class="b w">\</font> <font class="g">函数名( )</font></p></td>
+	</tr>
+	<tr onclick="test_" title="">
+		<td>【调用全局空间的常量】</td>
+		<td><p><font class="b w">\</font> <font class="g">常量名</font></p></td>
+	</tr>
+	<tr onclick="test_" title="">
+		<td>【调用全局空间的类】</td>
+		<td><p><font class="b w">\</font> <font class="g">类名</font></p></td>
+	</tr>
+	<tr onclick="test_" title="">
+		<td>【调用指定空间的函数】</td>
+		<td><p><font class="b w">\</font><font class="g">空间名</font><font class="b w">\</font><font class="g">函数名( )</font></p></td>
+	</tr>
+	<tr onclick="test_" title="">
+		<td>【调用指定空间的常量】</td>
+		<td><p><font class="b w">\</font><font class="g">空间名</font><font class="b w">\</font><font class="g">常量名</font></p></td>
+	</tr>
+	<tr onclick="test_" title="">
+		<td>【调用指定空间的类】</td>
+		<td><p><font class="b w">\</font><font class="g">空间名</font><font class="b w">\</font><font class="g">类名</font></p></td>
+	</tr>
+	<tr onclick="test_" title="">
+		<td>【用魔术常量调用当前空间的内容】</td>
+		<td><p><font class="b w">__NAMESPACE__.\</font></font><font class="g">'内容'</font></p></td>
+	</tr>
+	<tr onclick="test_" title="">
+		<td>【用关键字调用当前空间的内容】</td>
+		<td><p><font class="b w">namespace</font><font class="b">\</font><font class="g">内容</font></p></td>
+	</tr>
+	<tr onclick="test_" title="
+		&#10;自定义别名">
+		<td>【命名空间起名】</td>
+		<td><p><font class="b w">use</font> <font class="b w">namespace</font> <font class="g">空间名</font> <font class="b w">as</font> <font class="g">新空间名</font></p></td>
+	</tr>
+	<tr onclick="test_" title="
+		&#10;使用最后一层作别名">
+		<td>【命名空间起名】</td>
+		<td><p><font class="b w">use</font> <font class="b w">namespace</font> <font class="g">空间名</font></p></td>
+	</tr>
+	<tr onclick="test_" title="
+		&#10;声前命名空间之前不能有任何除注释以外的字符">
+		<td>【别名调用当前空间】</td>
+		<td><p><font class="g">新空间名</font><font class="b w">\</font><font class="g">内容</font></p></td>
+	</tr>
+	<tr onclick="test_" title="
+		&#10;不需要 include 操作 此方法仅对类有效 对函数和常量无效">
+		<td>【导入全局空间的类】</td>
+		<td><p><font class="b w">use</font><font class="b">\</font><font class="g">类名</font></p></td>
+	</tr>
+	<tr onclick="test_" title="
+		&#10;不需要 include 操作 此方法仅对类有效 对函数和常量无效">
+		<td>【导入指定空间的类】</td>
+		<td><p><font class="b w">use</font><font class="b">\</font><font class="g">空间名</font><font class="b">\</font><font class="g">类名</font></p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->

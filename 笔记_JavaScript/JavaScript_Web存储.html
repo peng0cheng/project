@@ -1,0 +1,111 @@
+<table class="i_table">
+	<tr onclick="test_localStorage()" title="
+		&#10;没有时间限制的数据存储
+		&#10;localStorage 存数的数据是不能跨浏览器共用的
+		&#10;储存空间 5M">
+		<td>【localStorage】</td>
+		<td><p><font class="w b">localStorage</font></font></p></td>
+	</tr>
+	<tr onclick="test_localStorage_set()" title="
+		&#10;如果该键存在时 更新键值">
+		<td>【localStorage】【存储】</td>
+		<td><p><font class="w b">localStorage</font> . <font class="r">键</font> = <font class="r">值</font></p></td>
+	</tr>
+	<tr onclick="test_localStorage_setItem()" title="
+		&#10;如果该键存在时 更新键值">
+		<td>【localStorage】【存储】</td>
+		<td><p><font class="w b">localStorage</font> . <font class="w b">setItem</font> ( <font class="r">键</font> , <font class="r">值</font> )</p></td>
+	</tr>
+	<tr onclick="test_localStorage_get()" title="">
+		<td>【localStorage】【获取】</td>
+		<td><p><font class="w b">localStorage</font> . <font class="r">键</font></p></td>
+	</tr>
+	<tr onclick="test_localStorage_getItem()" title="">
+		<td>【localStorage】【获取】</td>
+		<td><p><font class="w b">localStorage</font> . <font class="w b">getItem</font> ( <font class="r">键</font> )</p></td>
+	</tr>
+	<tr onclick="test_localStorage_removeItem()" title="">
+		<td>【localStorage】【删除】</td>
+		<td><p><font class="w b">localStorage</font> . <font class="w b">removeItem</font> ( <font class="r">键</font> )</p></td>
+	</tr>
+	<tr onclick="test_localStorage_clear()" title="">
+		<td>【localStorage】【全部删除】</td>
+		<td><p><font class="w b">localStorage</font> . <font class="w b">clear</font> ( )</p></td>
+	</tr>
+	<tr onclick="test_localStorage_key()" title="
+		&#10;获取存储的第 n 个键名">
+		<td>【localStorage】【遍历】</td>
+		<td><p><font class="w b">localStorage</font> . <font class="w b">key</font> ( <font class="r">n</font> )</p></td>
+	</tr>
+	<tr onclick="test_localStorage_length()" title="
+		&#10;获取存储的键名">
+		<td>【localStorage】【长度】</td>
+		<td><p><font class="w b">localStorage</font> . <font class="w b">length</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_sessionStorage_set()" title="
+		&#10;针对一个 session 的数据存储">
+		<td>【sessionStorage】</td>
+		<td><p><font class="w b">sessionStorage</font></p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【localStorage】**************************************************/
+
+function test_localStorage(){
+	PC_Case.show(1,
+		'<p>if(<font class="b">window</font>.<font class="b">localStorage</font>){</p>');
+	PC_Case.show(2,'');
+}
+
+function test_localStorage_set(){
+	PC_Case.show(1,'<p><font class="b">localStorage</font>.<font class="r">ok</font> = <font class="r">"true"</font></p>');
+	PC_Case.show(2,'');
+}
+
+function test_localStorage_setItem(){
+	PC_Case.show(1,'<p><font class="b">localStorage</font>.<font class="b">setItem</font>( <font class="r">"ok"</font> , <font class="r">"true"</font> )</p>');
+	PC_Case.show(2,'');
+}
+
+function test_localStorage_get(){
+	PC_Case.show(1,
+		'<p><font class="b">localStorage</font>.<font class="r">ok</font> = <font class="r">"true"</font></p>'
+		+'<p><font class="w g">result_01</font> = <font class="b">localStorage</font>.<font class="r">ok</font></p>');
+	PC_Case.show(2,'<font class="w g">result_01</font> <font class="p">→</font> <font class="r">"true"</font>');
+}
+
+function test_localStorage_getItem(){
+	PC_Case.show(1,
+		'<p><font class="b">localStorage</font>.<font class="b">setItem</font>( <font class="r">"ok"</font> , <font class="r">"true"</font> )</p>'
+		+'<p><font class="w g">result_01</font> = <font class="b">localStorage</font>.<font class="b">getItem</font>( <font class="r">"ok"</font> )</p>');
+	PC_Case.show(2,'<font class="w g">result_01</font> <font class="p">→</font> <font class="r">"true"</font>');
+}
+
+function test_localStorage_removeItem(){
+	PC_Case.show(1,'<p><font class="b">localStorage</font>.<font class="b">removeItem</font>( <font class="r">"ok"</font> , <font class="r">"true"</font> )</p>');
+	PC_Case.show(2,'');
+}
+
+function test_localStorage_clear(){
+	PC_Case.show(1,'<p><font class="b">localStorage</font>.<font class="b">clear</font>()</p>');
+	PC_Case.show(2,'');
+}
+
+function test_localStorage_key(){
+	PC_Case.show(1,'<p><font class="b">localStorage</font>.<font class="b">key</font>( <font class="r">0</font> )</p>');
+	PC_Case.show(2,'');
+}
+
+function test_localStorage_length(){
+	PC_Case.show(1,'<p><font class="b">localStorage</font>.<font class="b">length</font></p>');
+	PC_Case.show(2,'');
+}
+
+/**************************************************【sessionStorage】**************************************************/
+
+
+
+/**************************************************【】**************************************************/
+</script>

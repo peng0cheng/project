@@ -1,0 +1,193 @@
+<!doctype html>
+<meta charset="utf-8" />
+<link href="./css/css.css" rel="stylesheet" type="text/css" />
+
+<div id="body">
+	<ul>
+		<li>分支结构</li>
+		<li>
+		<table>
+		<tr>
+			<td>【单项分支】</td>
+			<td>
+				<font class="w b">if</font>(<font class="w b">变量</font>==<font class="g">值</font>)</font>{
+					<p style="text-indent:2em"><font class="o">多条PHP语句</font>
+				}
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【双项分支】</td>
+			<td>
+				<font class="w b">if</font>(<font class="w b">变量</font>==<font class="g">值</font>)</font>{
+					<p style="text-indent:2em"><font class="o">多条PHP语句</font>
+				}<font class="w b">else</font>{
+					<p style="text-indent:2em"><font class="o">多条PHP语句</font>
+				}
+			</td>
+			<td>
+				★ else前的区间为真区间<br>
+				★ else后的区间为假区间<br>
+			</td>
+		</tr>
+		<tr>
+			<td>【多项分支】</td>
+			<td>
+				<font class="w b">if</font>(<font class="w b">变量</font>==<font class="g">值</font>)</font>{
+					<p style="text-indent:2em"><font class="o">多条PHP语句</font>
+				}<font class="w b">elseif</font>{
+					<p style="text-indent:2em"><font class="o">多条PHP语句</font>
+				}<font class="w b">else</font>{
+					<p style="text-indent:2em"><font class="o">多条PHP语句</font>
+				}
+			
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【多项分支】</td>
+			<td>
+				<font class="w b">switch</font>(<font class="w b">变量</font>==<font class="g">值</font>)</font>{
+					<p style="text-indent:2em"><font class="w b">case</font> <font class="g">值</font>:<font class="o">多条PHP语句</font>;<font class="w b">break</font>;
+					<p style="text-indent:2em"><font class="w b">case</font> <font class="g">值</font>:<font class="o">多条PHP语句</font>;<font class="w b">break</font>;
+					<p style="text-indent:2em">...
+					<p style="text-indent:2em"><font class="w b">default</font>:<font class="o">多条PHP语句</font>
+				}
+			</td>
+			<td>
+				★ case 值必须是确定值 不能是范围值<br>
+				★ 不能使用浮点型<br>
+				★ break 用于破坏执行进程 当符合条件时不再往下读取<br>
+				★ default 相当于 else<br>
+			</td>
+		</tr>
+		<tr>
+			<td>【巢状分支】</td>
+			<td>
+				<font class="w b">if</font>(<font class="w b">变量</font>==<font class="g">值</font>)</font>{
+					<p style="text-indent:2em"><font class="o">多条PHP语句</font>
+					<p style="text-indent:2em"><font class="w b">if</font>(<font class="w b">变量</font>==<font class="g">值</font>)</font>{
+						<p style="text-indent:4em"><font class="o">多条PHP语句</font>
+						<p style="text-indent:4em"><font class="w b">if</font>...
+					<p style="text-indent:2em">}
+					<p style="text-indent:2em"><font class="w b">else</font>{
+						<p style="text-indent:4em"><font class="o">多条PHP语句</font>
+					<p style="text-indent:2em">}
+				}<font class="w b">else</font>{
+					<p style="text-indent:2em"><font class="o">多条PHP语句</font>
+				}
+			</td>
+			<td></td>
+		</tr>
+		</table>
+		</li>
+	</ul>
+<div id="body_00"></div>
+	<ul>
+		<li>实例</li>
+		<li>
+		<table>
+		<tr>
+			<td>【单项分支】</td>
+			<td>
+				<p title="">$peng='彭';</p>
+				<p title="if判定成立 输出if部分">if($peng=='彭'){</p>
+					<p title="echo【高富帅】" style="text-indent:2em">echo '高富帅';</p>
+				<p title="">}</p>
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【双项分支】</td>
+			<td><p></p>
+			<p title="">$pc='彭程';</p>
+			<p title="if判定不成立 输出else部分">if($pc=='不是彭程'){</p>
+				<p title="" style="text-indent:2em">echo '高富帅';</p>
+			<p title="">}</p>
+			<p title="echo【矮穷龊】">else{</p>
+				<p title="" style="text-indent:2em">echo '高富帅';</p>
+			<p title="">}</p>
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【多项分支】</td>
+			<td><p></p></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【巢状分支】</td>
+			<td><p></p></td>
+			<td></td>
+		</tr>
+		</table>
+		</li>
+	</ul>
+<div id="body_00"></div>
+	<ul>
+		<li>循环控制</li>
+		<li>
+		<table>
+		<tr>
+			<td>【while 型】</td>
+			<td>
+				<font class="w b">while</font>(<font class="o">条件</font>)</font>{
+				<p style="text-indent:2em"><font class="o">用于循环的PHP代码</font>
+				<p style="text-indent:2em"><font class="o">自增或者自减条件</font>
+				}
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【do while 型】</td>
+			<td>
+				<font class="w b">do</font>{
+				<p style="text-indent:2em"><font class="o">用于循环的PHP代码</font>
+				<p style="text-indent:2em"><font class="o">自增或者自减条件</font>
+				}
+				<font class="w b">while</font>(<font class="o">条件</font>)</font>
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【for 型】</td>
+			<td>
+				<font class="w b">for</font>(<font class="o">初始化条件</font>;<font class="o">条件表达式</font>;<font class="o">自增自减条件</font>)</font>{
+				<p style="text-indent:2em"><font class="o">用于循环的PHP代码</font>
+				}
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【foreach 型】</td>
+			<td></td>
+			<td>★ continue 终止本次循环开启下一次的循环</td>
+		</tr>
+		</table>
+		</li>
+	</ul>
+<div id="body_00"></div>
+	<ul>
+		<li>实例</li>
+		<li>
+		<table>
+		<tr>
+			<td>【while循环】</td>
+			<td><p></p></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【for循环】</td>
+			<td><p></p></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【foreach循环】</td>
+			<td><p></p></td>
+			<td></td>
+		</tr>
+		</table>
+		</li>
+	</ul>
+</div>
+</div>

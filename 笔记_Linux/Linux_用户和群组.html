@@ -1,0 +1,159 @@
+<table class="i_table">
+	<tr onclick="" title="
+		&#10;每个用户信息之间用 : 隔开
+		&#10;例：root:x:0:0:root:/root:/bin/bash
+		&#10;--------------------------------------------------
+		&#10;位置1 → 用户名
+		&#10;位置2 → 用户密码占位符
+		&#10;位置3 → 用户编号
+		&#10;位置4 → 用户组编号
+		&#10;位置5 → 用户备注信息
+		&#10;位置6 → 用户主目录
+		&#10;位置7 → 用户 shell 类型">
+		<td>【用户管理】【增删改查】【查看用户列表】</td>
+		<td><p><font class="w b">cat</font> <font class="w r">/etc/passwd</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;每个用户信息之间用 : 隔开
+		&#10;例：root:$6$XehzvuZW$4Q4tFCnnKplwfgQ0nxC6obilEyaU.BmpHQIXy.ETYacAicwug0/NXCilJH8xcSTBgtPnop5ER08MlOsWorS790:16622:0:99999:7:::
+		&#10;3~9 位置可忽略
+		&#10;--------------------------------------------------
+		&#10;位置1 → 用户名
+		&#10;位置2 → 用户密码
+		&#10;位置3 → 上次更改密码的日期（从 1970-1-1 开始）
+		&#10;位置4 → 最短密码期限（按天计算 [0 无最短期限]）
+		&#10;位置5 → 最长密码期限（按天计算）
+		&#10;位置6 → 密码警告期限（按天计算 [0 未指定警告]）
+		&#10;位置7 → 密码非活动期限（按天计算）
+		&#10;位置8 → 账号到期时间（从 1970-1-1 开始）
+		&#10;位置9→ 保留域">
+		<td>【用户管理】【增删改查】【查看用户密码列表】</td>
+		<td><p><font class="w b">cat</font> <font class="w r">/etc/shadow</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项和值可以是多个组 用空格隔开
+		&#10;--------------------------------------------------
+		&#10;选项：-l 新用户名 → 修改用户名
+		&#10;选项：-c 备注 → 添加备注
+		&#10;选项：-d 目录 → 指定用户个人目录（不写则默认为 /home/用户名）
+		&#10;选项：-g 组名 → 加入主要群组
+		&#10;选项：-G 组名 → 加入附加组
+		&#10;选项：-u 编号 → 指定用户编号
+		&#10;选项：-s → 指定用户登入后所使用的 shell 默认值为 /bin/bash
+		&#10;选项：-r → 创建系统账号">
+		<td>【用户管理】【增删改查】【添加用户】</td>
+		<td><p><font class="w b">useradd</font> <font class="w g">[选项]</font> <font class="r">用户名</font></p></td>
+		<td></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项和值可以是多个组 用空格隔开
+		&#10;--------------------------------------------------
+		&#10;选项：-c 备注 → 添加备注
+		&#10;选项：-d 目录 → 指定用户个人目录（不写则默认为 /home/用户名）
+		&#10;选项：-g 组名 → 加入主要群组
+		&#10;选项：-G 组名 → 加入附加组
+		&#10;选项：-u 编号 → 指定用户编号">
+		<td>【用户管理】【增删改查】【修改用户属性】</td>
+		<td><p><font class="w b">usermod</font> <font class="w g">[选项]</font> <font class="r">用户名</font></p></td>
+		<td></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：空 → 修改用户密码
+		&#10;选项：-d → 删除用户密码
+		&#10;选项：-l → 锁定用户（禁止用户操作和登录）
+		&#10;选项：-u → 解锁定用户">
+		<td>【用户管理】【增删改查】【修改登录属性】</td>
+		<td><p><font class="w b">passwd</font> <font class="w g">[选项]</font> <font class="r">用户名</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：-r → 同时删除用户家目录">
+		<td>【用户管理】【增删改查】【删除用户】</td>
+		<td><p><font class="w b">userdel</font> <font class="w g">[选项]</font> <font class="r">用户名</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：- → 连带环境变量一起切换">
+		<td>【用户管理】【其它命令】【切换登录用户】</td>
+		<td><p><font class="w b">su</font> <font class="w g">[选项]</font> <font class="r">用户名</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;只需在 etc 下创建 nologin 文件即可">
+		<td>【用户管理】【其它命令】【禁止所有用户登录】</td>
+		<td><p><font class="w b">vi</font> <font class="w r">/etc/nologin</font></p></td>
+	</tr>
+	<tr onclick="" title="">
+		<td>【用户管理】【其它命令】【显示当前登录用户名】</td>
+		<td><p><font class="w b">whoami</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;显示指定用户信息 包括用户编号、用户名、主组、附加组列表">
+		<td>【用户管理】【其它命令】【显示用户详情】</td>
+		<td><p><font class="w b">id</font> <font class="r">用户名</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;每个属组信息之间用 : 隔开
+		&#10;例：root:root
+		&#10;--------------------------------------------------
+		&#10;位置1 → 所属主组
+		&#10;位置2 → 所属附加组列表">
+		<td>【用户管理】【其它命令】【显示用户所在的所有组】</td>
+		<td><p><font class="w b">groups</font> <font class="r">用户名</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;需要习惯使用 不要直接关机">
+		<td>【用户管理】【其它命令】【登出】</td>
+		<td><p><font class="w b">logout</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="
+		&#10;每个组信息之间用 : 隔开
+		&#10;例：root:x:0:
+		&#10;--------------------------------------------------
+		&#10;位置1 → 组名称
+		&#10;位置2 → 组密码占位符
+		&#10;位置3 → 组编号
+		&#10;位置4 → 组中用户名列表">
+		<td>【组管理】【增删改查】【查看组列表】</td>
+		<td><p><font class="w b">cat</font> <font class="w r">/etc/group</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;每个组信息之间用 : 隔开
+		&#10;root:*::
+		&#10;--------------------------------------------------
+		&#10;位置1 → 组名称
+		&#10;位置2 → 组密码
+		&#10;位置3 → 组管理者
+		&#10;位置4 → 组中用户名列表">
+		<td>【组管理】【增删改查】【查看组密码列表】</td>
+		<td><p><font class="w b">cat</font> <font class="w r">/etc/gshadow</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：-g → 创建同时添加组编号
+		&#10;选项：-r → 创建系统组">
+		<td>【组管理】【增删改查】【添加组】</td>
+		<td><p><font class="w b">groupadd</font> <font class="w g">[选项]</font> <font class="r">组名</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：-n 新组名 → 修改组名
+		&#10;选项：-g 组编号 → 修改组编号">
+		<td>【组管理】【增删改查】【修改组属性】</td>
+		<td><p><font class="w b">groupmod</font> <font class="w g">[选项]</font> <font class="r">组名</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：空 → 给群组设置密码
+		&#10;选项：-d 用户名 → 将用户移除附加组
+		&#10;选项：-a 用户名 → 将用户加入附加组">
+		<td>【组管理】【增删改查】【修改组成员】</td>
+		<td><p><font class="w b">gpasswd</font> <font class="w g">[选项]</font> <font class="r">组名</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;组中不能有初始用户">
+		<td>【组管理】【增删改查】【删除组】</td>
+		<td><p><font class="w b">groupdel</font> <font class="r">组名</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;用户新建的文件将属于当前设置的组">
+		<td>【组管理】【其它命令】【切换组身份】</td>
+		<td><p><font class="w b">newgrp</font> <font class="r">组名</font></p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->

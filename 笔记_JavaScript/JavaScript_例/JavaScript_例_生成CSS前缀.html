@@ -1,0 +1,19 @@
+<meta charset="utf-8" />
+<br><br><br><br><br><br><br><br><br><br>
+<hr>
+<pre>
+var Prefix;
+if((navigator.userAgent.indexOf('MSIE') >= 0) && (navigator.userAgent.indexOf('Opera') < 0)){
+	Prefix = '-ms-';
+}else if(navigator.userAgent.indexOf('Opera') >= 0){
+	Prefix = '-o-';
+}else if(navigator.userAgent.indexOf('Firefox') >= 0){
+	Prefix = '-moz-';
+}else if(navigator.userAgent.indexOf('Safari') >= 0){
+	Prefix = '-webkit-';
+}else if(navigator.userAgent.indexOf('Chrome') >= 0){
+	Prefix = '-webkit-';
+}else{
+	Prefix = '';
+}
+</pre>

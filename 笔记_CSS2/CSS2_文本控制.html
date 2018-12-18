@@ -1,0 +1,429 @@
+<table class="i_table">
+	<tr onclick="test_color()" title="
+		&#10;可以使用颜色单位">
+		<td>【字体】【颜色】</td>
+		<td><p><font class="w g">color</font> : <font class="r">颜色</font><p></td>
+	</tr>
+	<tr onclick="test_fontFamily()" title="">
+		<td>【字体】【型号】</td>
+		<td><p><font class="w g">font-family</font> : <font class="r">字体</font><p></td>
+	</tr>
+	<tr onclick="test_fontSize()" title="">
+		<td>【字体】【尺寸】</td>
+		<td><p><font class="w g">font-size</font> : <font class="r">尺寸</font><p></td>
+	</tr>
+	<tr onclick="test_fontStyle()" title="
+		&#10;normal → 正常（默认）
+		&#10;italic → 斜体">
+		<td>【字体】【风格】</td>
+		<td><p><font class="w g">font-style</font> : <font class="w r">normal</font> 丨 <font class="w r">italic</font><p></td>
+	</tr>
+	<tr onclick="test_fontWeight()" title="
+		&#10;normal → 正常（默认）
+		&#10;bold → 粗体
+		&#10;数值 → 指定粗细 400=normal 700=bold">
+		<td>【字体】【粗细】</td>
+		<td><p><font class="w g">font-weight</font> : <font class="w r">normal</font> 丨 <font class="w r">bold</font> 丨 <font class="r">数值</font><p></td>
+	</tr>
+	<tr onclick="test_textDecoration()" title="
+		&#10;none → 正常（默认）
+		&#10;underline → 下划线
+		&#10;line-through → 中划线
+		&#10;overline → 上划线">
+		<td>【字体】【修饰线】</td>
+		<td><p><font class="w g">text-decoration</font> : <font class="w r">none</font> 丨 <font class="w r">underline</font> 丨 <font class="w r">line-through</font> 丨 <font class="w r">overline</font><p></td>
+	</tr>
+	<tr onclick="test_textShadow()" title="
+		&#10;none → 正常（默认）
+		&#10;颜色 → 颜色单位
+		&#10;水平偏移 → 相对左边距离 ...px
+		&#10;垂直偏移 → 相对顶边距离 ...px
+		&#10;模糊度 → ...px 数值越大越模糊
+		&#10;可连续设置多个阴影">
+		<td>【字体】【阴影】</td>
+		<td><p><font class="w g">text-shadow</font> : <font class="w r">none</font> 丨 <font class="r">颜色 水平偏移 垂直偏移 模糊度</font><p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_lineHeight()" title="
+		&#10;通常设置其与 height 值相同使单行文本垂直居中">
+		<td>【文本】【行高】</td>
+		<td><p><font class="w g">line-height</font> : <font class="r">高度</font><p></td>
+	</tr>
+	<tr onclick="test_textIndent()" title="
+		&#10;一般以 em 作单位">
+		<td>【文本】【缩进】</td>
+		<td><p><font class="w g">text-indent</font> : <font class="r">长度</font><p></td>
+	</tr>
+	<tr onclick="test_whiteSpace()" title="
+		&#10;nowrap → 强制不换行">
+		<td>【文本】【换行】</td>
+		<td><p><font class="w g">white-space</font> : <font class="w r">nowrap</font><p></td>
+	</tr>
+	<tr onclick="test_textOverflow()" title="
+		&#10;需要和 overflow:hidden 和 white-space:nowrap 联合使用
+		&#10;clip → 溢出时切割
+		&#10;ellipsis → 溢出时省略号">
+		<td>【文本】【溢出】</td>
+		<td><p><font class="w g">text-overflow</font> : <font class="w r">clip</font> 丨 <font class="w r">ellipsis</font><p></td>
+	</tr>
+	<tr onclick="test_textAlign()" title="
+		&#10;left → 水平左对齐
+		&#10;right → 水平右对齐
+		&#10;center → 水平居中">
+		<td>【文本】【水平对齐】</td>
+		<td><p><font class="w g">text-align</font> : <font class="w r">left</font> 丨 <font class="w r">right</font> 丨 <font class="w r">center</font><p></td>
+	</tr>
+	<tr onclick="test_verticalAlign()" title="
+		&#10;该属性只对表格或内联元素有效 内联元素无法设置宽高
+		&#10;top → 垂直上对齐
+		&#10;bottom → 垂直下对齐
+		&#10;middle → 垂直居中">
+		<td>【文本】【垂直对齐】</td>
+		<td><p><font class="w g">vertical-align</font> : <font class="w r">top</font> 丨 <font class="w r">bottom</font> 丨 <font class="w r">middle</font><p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_listStyleImage()" title="">
+		<td>【列表】【序号图片】</td>
+		<td><p><font class="w g">list-style-image</font> : <font class="w r">url</font> ( <font class="r">地址</font> )<p></td>
+	</tr>
+	<tr onclick="test_03_listStylePosition()" title="
+		&#10;outside → 在序号外 不受 li 样式的影响
+		&#10;inside → 在序号内 受 li 样式的影响">
+		<td>【列表】【序号位置】</td>
+		<td><p><font class="w g">list-style-position</font> : <font class="w r">outside</font> 丨 <font class="w r">inside</font><p></td>
+	</tr>
+	<tr onclick="test_listStyleType()" title="
+		&#10;样式 none → 无标记
+		&#10;样式 disc → 标记是实心圆 默认值
+		&#10;样式 circle → 标记是空心圆
+		&#10;样式 square → 标记是实心方块。
+		&#10;样式 decimal → 标记是数字
+		&#10;样式 decimal-leading-zero → 0 开头的数字标记（01 02 03 等）
+		&#10;样式 lower-roman → 小写罗马数字（i ii iii iv v 等）
+		&#10;样式 upper-roman → 大写罗马数字（I II III IV V 等）
+		&#10;样式 lower-alpha → 小写英文字母（a b c d e 等）
+		&#10;样式 upper-alpha → 大写英文字母（A B C D E 等）
+		&#10;样式 lower-greek → 小写希腊字母（alpha beta gamma 等）
+		&#10;样式 lower-latin → 小写拉丁字母（a b c d e 等）
+		&#10;样式 upper-latin → 大写拉丁字母（A B C D E 等）">
+		<td>【列表】【序号样式】</td>
+		<td><p><font class="w g">list-style-type</font> : <font class="r">样式</font><p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【字体】**************************************************/
+
+function test_color(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'h1'+'</font> { <font class="g">color:</font> <font class="r">red;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'h1'+'</font>&gt;hello world&lt;/h1&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<h1 style="color:red;">hello world</h1>');
+}
+
+function test_fontFamily(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'h1'+'</font> { <font class="g">font-family:</font> <font class="r">黑体;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'h1'+'</font>&gt;hello world&lt;/h1&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<h1 style="font-family:黑体;">hello world</h1>');
+}
+
+function test_fontSize(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'h1'+'</font> { <font class="g">font-size:</font> <font class="r">50px;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'h1'+'</font>&gt;hello world&lt;/h1&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<h1 style="font-size:50px;">hello world</h1>');
+}
+
+function test_fontStyle(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { <font class="g">font-style:</font> <font class="r">normal;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { <font class="g">font-style:</font> <font class="r">italic;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;h1 class="<font class="b">'+'style_01'+'</font>"&gt;one&lt;/h1&gt;</p>'
+			+'<p class="ti_1">&lt;h1 class="<font class="b">'+'style_02'+'</font>"&gt;two&lt;/h1&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<h1 style="font-style:normal;">one</h1>'
+		+'<h1 style="font-style:italic;">two</h1>');
+}
+
+function test_fontWeight(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { <font class="g">font-weight:</font> <font class="r">normal;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { <font class="g">font-weight:</font> <font class="r">bold;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_03'+'</font> { <font class="g">font-weight:</font> <font class="r">1000;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;h1 class="<font class="b">'+'style_01'+'</font>"&gt;one&lt;/h1&gt;</p>'
+			+'<p class="ti_1">&lt;h1 class="<font class="b">'+'style_02'+'</font>"&gt;two&lt;/h1&gt;</p>'
+			+'<p class="ti_1">&lt;h1 class="<font class="b">'+'style_03'+'</font>"&gt;three&lt;/h1&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<h1 style="font-weight:normal;">one</h1>'
+		+'<h1 style="font-weight:bold;">two</h1>'
+		+'<h1 style="font-weight:1000;">three</h1>');
+}
+
+function test_textDecoration(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { <font class="g">text-decoration:</font> <font class="r">none;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { <font class="g">text-decoration:</font> <font class="r">underline;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_03'+'</font> { <font class="g">text-decoration:</font> <font class="r">line-through;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_04'+'</font> { <font class="g">text-decoration:</font> <font class="r">overline;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;h1 class="<font class="b">'+'style_01'+'</font>"&gt;one&lt;/h1&gt;&lt;br /&gt;</p>'
+			+'<p class="ti_1">&lt;h1 class="<font class="b">'+'style_02'+'</font>"&gt;two&lt;/h1&gt;&lt;br /&gt;</p>'
+			+'<p class="ti_1">&lt;h1 class="<font class="b">'+'style_03'+'</font>"&gt;three&lt;/h1&gt;&lt;br /&gt;</p>'
+			+'<p class="ti_1">&lt;h1 class="<font class="b">'+'style_04'+'</font>"&gt;four&lt;/h1&gt;&lt;br /&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<h1 style="text-decoration:none;">one</h1><br>'
+		+'<h1 style="text-decoration:underline;">two</h1><br>'
+		+'<h1 style="text-decoration:line-through;">three</h1><br>'
+		+'<h1 style="text-decoration:overline;">four</h1><br>');
+}
+
+function test_textShadow(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { <font class="g">text-shadow:</font> <font class="r">none;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { <font class="g">text-shadow:</font> <font class="r">blue 5px 5px 5px;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_03'+'</font> { <font class="g">text-shadow:</font> <font class="r">blue 5px 5px 5px , green -5px 5px 5px;</font> }></p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;h1 class="<font class="b">'+'style_01'+'</font>"&gt;one&lt;/h1&gt;</p>'
+			+'<p class="ti_1">&lt;h1 class="<font class="b">'+'style_02'+'</font>"&gt;two&lt;/h1&gt;</p>'
+			+'<p class="ti_1">&lt;h1 class="<font class="b">'+'style_03'+'</font>"&gt;three&lt;/h1&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<h1 style="text-shadow:none;">one</h1>'
+		+'<h1 style="text-shadow:blue 5px 5px 5px;">two</h1>'
+		+'<h1 style="text-shadow:blue 5px 5px 5px,green -5px 5px 5px;">two</h1>');
+}
+
+/**************************************************【文本】**************************************************/
+
+function test_lineHeight(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { background: green; width: 200px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'p'+'</font> { height: 100px; <font class="g">line-height:</font> <font class="r">100px;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div&gt;</p>'
+				+'<p class="ti_2">&lt;<font class="b">'+'p'+'</font>&gt;hello world&lt;/p&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="background:green;height:100px;width:200px;">'
+		+'<p style="line-height:100px;">hello world</p>'
+		+'</div>');
+}
+
+function test_textIndent(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { background: green; height: 100px; width: 200px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'p'+'</font> { <font class="g">text-indent:</font> <font class="r">2em;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div&gt;</p>'
+				+'<p class="ti_2">&lt;<font class="b">'+'p'+'</font>&gt;one two three four five six seven eight nine ten&lt;/p&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="background:green;height:100px;width:200px;">'
+		+'<p style="text-indent:2em;">one two three four five six seven eight nine ten</p>'
+		+'</div>');
+}
+
+function test_whiteSpace(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { background: green; height: 100px; width: 200px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'p'+'</font> { <font class="g">white-space:</font> <font class="r">nowrap;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div&gt;</p>'
+				+'<p class="ti_2">&lt;<font class="b">'+'p'+'</font>&gt;one two three four five six seven eight nine ten&lt;/p&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="background:green;height:100px;width:200px;">'
+		+'<p style="white-space:nowrap;">one two three four five six seven eight nine ten</p>'
+		+'</div>');
+}
+
+function test_textOverflow(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { background: green; height: 100px; width: 200px; float: left; margin: 1%; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { overflow: hidden; white-space: nowrap; <font class="g">text-overflow:</font> <font class="r">clip;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { overflow: hidden; white-space: nowrap; <font class="g">text-overflow:</font> <font class="r">ellipsis;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div&gt;&lt;p class="<font class="b">'+'style_01'+'</font>"&gt;one two three four five six seven eight nine ten&lt;/p&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div&gt;&lt;p class="<font class="b">'+'style_02'+'</font>"&gt;ONE TWO THREE FOUR FIVE SIX SEVEN EIGHT NINE TEN&lt;/p&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="background:green;height:100px;width:200px;float:left;margin:1%;">'
+		+'<p style="text-overflow:clip;overflow:hidden;white-space:nowrap;">one two three four five six seven eight nine ten</p>'
+		+'</div>'
+		+'<div style="background:green;height:100px;width:200px;float:left;margin:1%;">'
+		+'<p style="text-overflow:ellipsis;overflow:hidden;white-space:nowrap;">ONE TWO THREE FOUR FIVE SIX SEVEN EIGHT NINE TEN</p>'
+		+'</div>');
+}
+
+function test_textAlign(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { background: green; width: 100px; height: 100px; margin: 1%; float: left; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { <font class="g">text-align:</font> <font class="r">left;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { <font class="g">text-align:</font> <font class="r">right;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_03'+'</font> { <font class="g">text-align:</font> <font class="r">center;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div&gt;&lt;p class="<font class="b">'+'style_01'+'</font>"&gt;one&lt;/p&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div&gt;&lt;p class="<font class="b">'+'style_02'+'</font>"&gt;two&lt;/p&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div&gt;&lt;p class="<font class="b">'+'style_03'+'</font>"&gt;three&lt;/p&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="background:green;width:100px;height:100px;float:left;margin:1%;"><p style="text-align:left">two</p></div>'
+		+'<div style="background:green;width:100px;height:100px;float:left;margin:1%;"><p style="text-align:right">two</p></div>'
+		+'<div style="background:green;width:100px;height:100px;float:left;margin:1%;"><p style="text-align:center">three</p></div>');
+}
+
+function test_verticalAlign(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">tr { height: 100px; }</p>'
+			+'<p class="ti_1">td { border: 1px solid red; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { <font class="g">vertical-align:</font> <font class="r">top;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { <font class="g">vertical-align:</font> <font class="r">bottom;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_03'+'</font> { <font class="g">vertical-align:</font> <font class="r">middle;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;table&gt;</p>'
+				+'<p class="ti_2">&lt;tr&gt;</p>'
+					+'<p class="ti_3">&lt;td class="<font class="b">'+'style_01'+'</font>"&gt;one&lt;/td&gt;</p>'
+					+'<p class="ti_3">&lt;td class="<font class="b">'+'style_02'+'</font>"&gt;two&lt;/td&gt;</p>'
+					+'<p class="ti_3">&lt;td class="<font class="b">'+'style_03'+'</font>"&gt;three&lt;/td&gt;</p>'
+				+'<p class="ti_2">&lt;/tr&gt;</p>'
+			+'<p class="ti_1">&lt;/table&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<table>'
+		+'<tr style="height:100px;">'
+		+'<td style="border:1px solid red;vertical-align:top;">two</td>'
+		+'<td style="border:1px solid red;vertical-align:bottom;">two</td>'
+		+'<td style="border:1px solid red;vertical-align:middle;">three</td>'
+		+'</tr>'
+		+'</table>');
+}
+
+/**************************************************【列表】**************************************************/
+
+function test_listStyleImage(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">ul { margin-left: 20px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'li'+'</font> { <font class="g">list-style-image:</font> <font class="r">url</font><font class="r">("./CSS2/CSS2_public/test_02.gif");</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;ul&gt;</p>'
+				+'<p class="ti_2">&lt;<font class="b">'+'li'+'</font>&gt;one&lt;/li&gt;</p>'
+				+'<p class="ti_2">&lt;<font class="b">'+'li'+'</font>&gt;two&lt;/li&gt;</p>'
+				+'<p class="ti_2">&lt;<font class="b">'+'li'+'</font>&gt;three&lt;/li&gt;</p>'
+				+'<p class="ti_2">&lt;<font class="b">'+'li'+'</font>&gt;four&lt;/li&gt;</p>'
+				+'<p class="ti_2">&lt;<font class="b">'+'li'+'</font>&gt;five&lt;/li&gt;</p>'
+			+'<p class="ti_1">&lt;/ul&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<ul style="margin-left:20px;">'
+		+'<li style="list-style-image:url(./CSS2/CSS2_public/test_02.gif);">one</li>'
+		+'<li style="list-style-image:url(./CSS2/CSS2_public/test_02.gif);">two</li>'
+		+'<li style="list-style-image:url(./CSS2/CSS2_public/test_02.gif);">three</li>'
+		+'<li style="list-style-image:url(./CSS2/CSS2_public/test_02.gif);">four</li>'
+		+'<li style="list-style-image:url(./CSS2/CSS2_public/test_02.gif);">five</li>'
+		+'</ul>');
+}
+
+function test_listStylePosition(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">style_01 { margin-left: 20px; background: pink; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01&gt;li'+'</font> { <font class="g">list-style-position:</font> <font class="r">outside;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02&gt;li'+'</font> { <font class="g">list-style-position:</font> <font class="r">inside;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;ul class="<font class="b">'+'style_01'+'</font>"&gt;</p>'
+				+'<p class="ti_2">&lt;li&gt;outside&lt;/li&gt;</p>'
+				+'<p class="ti_2">&lt;li&gt;outside&lt;/li&gt;</p>'
+				+'<p class="ti_2">&lt;li&gt;outside&lt;/li&gt;</p>'
+			+'<p class="ti_1">&lt;/ul&gt;</p>'
+			+'<br />'
+			+'<p class="ti_1">&lt;ul class="<font class="b">'+'style_02'+'</font>"&gt;</p>'
+				+'<p class="ti_2">&lt;li&gt;inside&lt;/li&gt;</p>'
+				+'<p class="ti_2">&lt;li&gt;inside&lt;/li&gt;</p>'
+				+'<p class="ti_2">&lt;li&gt;inside&lt;/li&gt;</p>'
+			+'<p class="ti_1">&lt;/ul&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<ul style="margin-left:20px;background:pink;">'
+		+'<li style="list-style-position:outside;">outside</li>'
+		+'<li style="list-style-position:outside;">outside</li>'
+		+'<li style="list-style-position:outside;">outside</li>'
+		+'</ul>'
+		+'<br />'
+		+'<ul style="margin-left:10px;background:pink;">'
+		+'<li style="list-style-position:inside;">inside</li>'
+		+'<li style="list-style-position:inside;">inside</li>'
+		+'<li style="list-style-position:inside;">inside</li>'
+		+'</ul>');
+}
+
+function test_listStyleType(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">ul { margin-left: 20px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'li'+'</font> { <font class="g">list-style-type:</font> <font class="r">square;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;ul&gt;</p>'
+				+'<p class="ti_2">&lt;<font class="b">'+'li'+'</font>&gt;one&lt;/li&gt;</p>'
+				+'<p class="ti_2">&lt;<font class="b">'+'li'+'</font>&gt;two&lt;/li&gt;</p>'
+				+'<p class="ti_2">&lt;<font class="b">'+'li'+'</font>&gt;three&lt;/li&gt;</p>'
+				+'<p class="ti_2">&lt;<font class="b">'+'li'+'</font>&gt;four&lt;/li&gt;</p>'
+				+'<p class="ti_2">&lt;<font class="b">'+'li'+'</font>&gt;five&lt;/li&gt;</p>'
+			+'<p class="ti_1">&lt;/ul&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<ul style="margin-left:20px;">'
+		+'<li style="list-style-type:square;">one</li>'
+		+'<li style="list-style-type:square;">two</li>'
+		+'<li style="list-style-type:square;">three</li>'
+		+'<li style="list-style-type:square;">four</li>'
+		+'<li style="list-style-type:square;">five</li>'
+		+'</ul>');
+}
+
+/**************************************************【】**************************************************/
+</script>

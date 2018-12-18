@@ -1,0 +1,196 @@
+<table class="i_table">
+	<tr onclick="test_form()" title="
+		&#10;post → 设置表单上传的方式为密传（较安全但效率较低）
+		&#10;get → 设置表单上传的方式为明传（通过 URL 上传 效率较高但有长度限制）
+		&#10;地址 → 设置表单上传到服务器的接收的脚本地址
+		&#10;multipart/form-dat → 当表单需要上传文件时使用">
+		<td>【表单】【表单】</td>
+		<td><p><font class="w b">&lt;form</font> <font class="w g">method</font> = <font class="w r">post</font>丨<font class="w r">get</font> <font class="w g">action</font> = <font class="r">地址</font> <font class="w g">enctype</font> = <font class="w r">multipart/form-data</font> <font class="w b">&gt;</font><font class="w o">输入标签</font><font class="w b">&lt;/form&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_input_text()" title="
+		&#10;text → 必须设置 当用户要在表单中键入内容时使用 通常用于输入用户名
+		&#10;name 值 → 可选设置 提交表单时用于接收的名称
+		&#10;value 值 → 可选设置 页面载入后的默认显示内容">
+		<td>【表单】【输入标签】【文本】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">type</font> = <font class="w r">text</font> <font class="w g">name</font> = <font class="r">名称</font> <font class="w g">value</font> = <font class="r">内容</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_input_password()" title="
+		&#10;password → 必须设置 当用户要在表单中键入密码时使用
+		&#10;name 值 → 可选设置 提交表单时用于接收的名称
+		&#10;value 值 → 可选设置 页面载入后的默认显示内容">
+		<td>【表单】【输入标签】【密码】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">type</font> = <font class="w r">password</font> <font class="w g">name</font> = <font class="r">名称</font> <font class="w g">value</font> = <font class="r">内容</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_input_radio()" title="
+		&#10;radio → 必须设置 当用户要选择单个选项时使用
+		&#10;name 值 → 可选设置 必须使用同一个名称 也是提交表单时用于接收的名称
+		&#10;value 值 → 可选设置 设置选项名称 也是提交表单时接收的内容
+		&#10;checked → 可选设置 页面载入后默认的选中状态">
+		<td>【表单】【输入标签】【单选】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">type</font> = <font class="w r">radio</font> <font class="w g">name</font> = <font class="r">名称</font> <font class="w g">value</font> = <font class="r">内容</font> <font class="w g">checked</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_input_checkbox()" title="
+		&#10;checkbox → 必须设置 当用户要选择多个选项时使用
+		&#10;name 值 → 可选设置 提交表单时用于接收的名称 通常接收的是数组形式 所以要加 []
+		&#10;value 值 → 可选设置 设置选项名称 也是提交表单时接收的内容
+		&#10;checked → 可选设置 页面载入后默认的选中状态">
+		<td>【表单】【输入标签】【多选】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">type</font> = <font class="w r">checkbox</font> <font class="w g">name</font> = <font class="r">名称</font> <font class="w g">value</font> = <font class="r">内容</font> <font class="w g">checked</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_input_hidden()" title="
+		&#10;hidden → 必须设置 当用户在提交表单时需要加入隐藏数据时使用
+		&#10;name 值 → 可选设置 提交表单时用于接收内容的名称
+		&#10;value 值 → 可选设置 页面载入后的默认显示内容">
+		<td>【表单】【输入标签】【隐藏】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">type</font> = <font class="w r">hidden</font> <font class="w g">name</font> = <font class="r">名称</font> <font class="w g">value</font> = <font class="r">内容</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_input_file()" title="
+		&#10;file → 必须设置 当用户在提交表单时需要上传文件时使用
+		&#10;name 值 → 可选设置 提交表单时用于接收文件的名称
+		&#10;有 accept 属性可以限制上传文件的格式 建议由后台控制">
+		<td>【表单】【输入标签】【上传文件】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">type</font> = <font class="w r">file</font> <font class="w g">name</font> = <font class="r">名称</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_input_submit()" title="
+		&#10;submit → 必须设置 当用户要提交一个表单数据时使用
+		&#10;value 值 → 可选设置 用于设置按钮上的文字">
+		<td>【表单】【输入标签】【按钮】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">type</font> = <font class="w r">submit</font> <font class="w g">value</font> = <font class="r">内容</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_input_button()" title="
+		&#10;button → 必须设置 当用户要制作一个按钮时使用 这只是一个按钮
+		&#10;submit → 必须设置 当用户要提交一个表单时使用 会提交表单数据
+		&#10;内容 → 可选设置 用于设置按钮上的文字">
+		<td>【表单】【输入标签】【按钮】</td>
+		<td><p><font class="w b">&lt;button</font> <font class="w g">type</font> = <font class="w r">button</font>丨<font class="w r">submit</font> <font class="w b">&gt;</font><font class="w o">内容</font><font class="w b">&lt;/button&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_input_textarea()" title="
+		&#10;当用户要在一个文本框内输入较多内容时使用
+		&#10;name 值 → 可选设置 提交表单时用于接收内容的名称
+		&#10;内容 → 可选设置 页面载入后的默认显示内容">
+		<td>【表单】【输入标签】【文本框】</td>
+		<td><p><font class="w b">&lt;textarea</font> <font class="w g">name</font> = <font class="r">名称</font> <font class="w b">&gt;</font><font class="w o">内容</font><font class="w b">&lt;/textarea&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_input_select()" title="
+		&#10;当用户要使用下拉列表时使用
+		&#10;name 值 → 可选设置 提交表单时用于接收内容的名称
+		&#10;value 值 → 可选设置 提交表单时用于接收的内容
+		&#10;selected → 可选设置 页面载入后默认的选中状态">
+		<td>【表单】【输入标签】【下拉列表】</td>
+		<td><p><font class="w b">&lt;select</font> <font class="w g">name</font> = <font class="r">名称</font> <font class="w b">&gt;</font><font class="w b">&lt;option</font> <font class="w g">value</font> = <font class="r">内容</font> <font class="w g">selected</font> <font class="w b">&gt;</font></p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【表单】**************************************************/
+
+function test_form(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;form&gt;</font></p>'
+		+'<br />'
+		+'<p><font class="b">&lt;/form&gt;</font></p>');
+	PC_Case.show(2,'');
+}
+
+function test_input_text(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"text"</font><font class="b">&gt;</font></p>'
+		+'<hr class="cut" />'
+		+'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"text"</font> <font class="g">name</font>=<font class="r">"hello"</font> <font class="g">value</font>=<font class="r">"hello world"</font><font class="b">&gt;</font></p>');
+	PC_Case.show(2,
+		'<input type="text">'
+		+'<hr class="cut" />'
+		+'<input type="text" value="hello world">');
+}
+
+function test_input_password(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"password"</font><font class="b">&gt;</font></p>'
+		+'<hr class="cut" />'
+		+'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"password"</font> <font class="g">name</font>=<font class="r">"hello"</font> <font class="g">value</font>=<font class="r">"hello world"</font><font class="b">&gt;</font></p>');
+	PC_Case.show(2,
+		'<input type="password">'
+		+'<hr class="cut" />'
+		+'<input type="password" value="hello world">');
+}
+
+function test_input_radio(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"radio"</font> <font class="g">name</font>=<font class="r">"sex"</font> <font class="g">value</font>=<font class="r">"1"</font><font class="b">&gt;</font> 男</p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"radio"</font> <font class="g">name</font>=<font class="r">"sex"</font> <font class="g">value</font>=<font class="r">"0"</font><font class="b">&gt;</font> 女</p>'
+		+'<hr class="cut" />'
+		+'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"radio"</font> <font class="g">name</font>=<font class="r">"sex"</font> <font class="g">value</font>=<font class="r">"1"</font><font class="b">&gt;</font> 男</p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"radio"</font> <font class="g">name</font>=<font class="r">"sex"</font> <font class="g">value</font>=<font class="r">"0"</font> <font class="g">checked</font><font class="b">&gt;</font> 女</p>');
+	PC_Case.show(2,
+		'<p><input type="radio" name="sex" value="1"> 男</p>'
+		+'<p><input type="radio" name="sex" value="0"> 女</p>'
+		+'<hr class="cut" />'
+		+'<p><input type="radio" name="sex" value="1"> 男</p>'
+		+'<p><input type="radio" name="sex" value="0" checked> 女</p>');
+}
+
+function test_input_checkbox(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"checkbox"</font> <font class="g">name</font>=<font class="r">"fruit[]"</font> <font class="g">value</font>=<font class="r">"apple"</font><font class="b">&gt;</font> 苹果</p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"checkbox"</font> <font class="g">name</font>=<font class="r">"fruit[]"</font> <font class="g">value</font>=<font class="r">"pear"</font><font class="b">&gt;</font> 梨</p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"checkbox"</font> <font class="g">name</font>=<font class="r">"fruit[]"</font> <font class="g">value</font>=<font class="r">"orange"</font> <font class="g">checked</font><font class="b">&gt;</font> 桔子</p>');
+	PC_Case.show(2,
+		'<p><input type="checkbox" name="fruit[]" value="apple"> 苹果</p>'
+		+'<p><input type="checkbox" name="fruit[]" value="pear"> 梨</p>'
+		+'<p><input type="checkbox" name="fruit[]" value="orange" checked> 桔子</p>');
+}
+
+function test_input_hidden(){
+	PC_Case.show(1,'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"hidden"</font> <font class="g">name</font>=<font class="r">"hello"</font> <font class="g">value</font>=<font class="r">"hello world"</font><font class="b">&gt;</font></p>');
+	PC_Case.show(2,'<input type="hidden" name="hello" value="hello world">');
+}
+
+function test_input_file(){
+	PC_Case.show(1,'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"file"</font> <font class="g">name</font>=<font class="r">"files"</font><font class="b">&gt;</font></p>');
+	PC_Case.show(2,'<input type="file" name="files">');
+}
+
+function test_input_submit(){
+	PC_Case.show(1,'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"submit"</font> <font class="g">value</font>=<font class="r">"提交"</font><font class="b">&gt;</font></p>');
+	PC_Case.show(2,'<input type="submit" value="提交">');
+}
+
+function test_input_button(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;button</font> <font class="g">type</font>=<font class="r">"submit"</font><font class="b">&gt;</font>提交<font class="b">&lt;/button&gt;</font></p>'
+		+'<hr class="cut" />'
+		+'<p><font class="b">&lt;button</font> <font class="g">type</font>=<font class="r">"button"</font><font class="b">&gt;</font>点我<font class="b">&lt;/button&gt;</font></p>');
+	PC_Case.show(2,
+		'<button type="submit">提交</button>'
+		+'<hr class="cut" />'
+		+'<button type="button">点我</button>');
+}
+
+function test_input_textarea(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;textarea</font> <font class="g">name</font>=<font class="r">"text"</font><font class="b">&gt;</font></p>'
+		+'<p>Bla Bla Bla ...</p>'
+		+'<p><font class="b">&lt;/textarea&gt;</font></p>');
+	PC_Case.show(2,
+		'<textarea name="text">'
+		+'Bla Bla Bla ...'
+		+'</textarea>');
+}
+
+function test_input_select(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;select</font> <font class="g">name</font>=<font class="r">"choice"</font><font class="b">&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;option</font> <font class="g">value</font>=<font class="r">"beijing"</font><font class="b">&gt;</font>北京<font class="b">&lt;/option&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;option</font> <font class="g">value</font>=<font class="r">"shanghai"</font> <font class="g">selected</font><font class="b">&gt;</font>上海<font class="b">&lt;/option&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;option</font> <font class="g">value</font>=<font class="r">"guangzhou"</font><font class="b">&gt;</font>广州<font class="b">&lt;/option&gt;</font></p>'
+		+'<p><font class="b">&lt;/select&gt;</font></p>');
+	PC_Case.show(2,
+		'<select name="choice">'
+			+'<option value="beijing">北京</option>'
+			+'<option value="shanghai" selected>上海</option>'
+			+'<option value="guangzhou">广州</option>'
+		+'</select>');
+}
+
+/**************************************************【】**************************************************/
+</script>

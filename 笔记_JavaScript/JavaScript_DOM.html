@@ -1,0 +1,356 @@
+<table class="i_table">
+	<tr id="test_close" title="
+		&#10;每个载入浏览器的 HTML 文档都会成为 Document 对象
+		&#10;Document 对象使我们可以从脚本中对 HTML 页面中的所有元素进行访问
+		&#10;Document 对象是 Window 对象的一部分 可通过 window.document 属性对其进行访问">
+		<td>【文档】【document】</td>
+		<td><p></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;对 body 元素的直接访问
+		&#10;对于定义了框架集的文档 该属性引用最外层的 frameset">
+		<td>【文档】【body】</td>
+		<td><p><font class="w b">document</font> . <font class="w b">body</font></p></td>
+	</tr>
+	<tr id="test_" title="">
+		<td>【文档】【设置当前文档的 cookie】</td>
+		<td><p><font class="w b">document</font> . <font class="w b">cookie</font> = <font class="o">键</font> = <font class="o">值</font></p></td>
+	</tr>
+	<tr id="test_" title="">
+		<td>【文档】【取出当前文档的 cookie】</td>
+		<td><p><font class="w b">document</font> . <font class="w b">cookie</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;该属性是一个只读的字符串 包含了载入当前文档的 web 服务器的主机名
+		&#10;该属性和 location.hostname 一样
+		&#10;返回值：127.0.0.1 、 localhost 等">
+		<td>【文档】【获取当前文档的服务器域名】</td>
+		<td><p><font class="w b">document</font> . <font class="w b">domain</font></p></td>
+	</tr>
+	<tr id="test_" title="">
+		<td>【文档】【获取当前文档的修改时间】</td>
+		<td><p><font class="w b">document</font> . <font class="w b">lastModified</font></p></td>
+	</tr>
+	<tr id="test_" title="">
+		<td>【文档】【获取载入当前文档的文档的 URL】</td>
+		<td><p><font class="w b">document</font> . <font class="w b">referrer</font></p></td>
+	</tr>
+	<tr id="test_" title="返回页面中 <title></title> 的内容">
+		<td>【文档】【获取当前文档的 title】</td>
+		<td><p><font class="w b">document</font> . <font class="w b">title</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;返回页面的完整 URL
+		&#10;等同于 location.href">
+		<td>【文档】【获取当前文档的 URL】</td>
+		<td><p><font class="w b">document</font> . <font class="w b">URL</font></p></td>
+	</tr>
+	<tr id="test_" title="打开一个新文档 并擦除当前文档的内容">
+		<td>【文档】【打开文档流】</td>
+		<td><p><font class="w b">document</font> . <font class="w b">open</font> ( )</p></td>
+	</tr>
+	<tr id="test_" title="">
+		<td>【文档】【关闭文档流】</td>
+		<td><p><font class="w b">document</font> . <font class="w b">close</font> ( )</p></td>
+	</tr>
+	<tr id="test_" title="向文档写 HTML 表达式 或 JavaScript 代码">
+		<td>【文档】【输出文档】</td>
+		<td><p><font class="w b">document</font> . <font class="w b">write</font> ( <font class="o">内容</font> )</p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;向文档写 HTML 表达式 或 JavaScript 代码
+		&#10;换行时需要写换行符">
+		<td>【文档】【输出文档】</td>
+		<td><p><font class="w b">document</font> . <font class="w b">writeln</font> ( <font class="o">内容</font> )</p></td>
+	</tr>
+	<tr id="test_" title="访问的是唯一的 id 节点">
+		<td>【文档】【按 id 定位节点】</td>
+		<td><p><font class="w b">document</font> . <font class="w b">getElementById</font> ( <font class="o">id 名</font> )</p></td>
+	</tr>
+	<tr id="test_" title="访问的是所有该 name 值的集合 精确匹配需要加下标">
+		<td>【文档】【按 name 定位节点】</td>
+		<td><p><font class="w b">document</font> . <font class="w b">getElementsByName</font> ( <font class="o">name 值</font> )</p></td>
+	</tr>
+	<tr id="test_" title="访问的是所有该标签的集合 精确匹配需要加下标">
+		<td>【文档】【按标签定位节点】</td>
+		<td><p><font class="w b">document</font> . <font class="w b">getElementsByTagName</font> ( <font class="o">标签名</font> )</p></td>
+	</tr>
+	<tr id="test_" title="访问的是所有该 class 值的集合 精确匹配需要加下标">
+		<td>【文档】【按 class 值定位节点】</td>
+		<td><p><font class="w b">document</font> . <font class="w b">getElementsByClassName</font> ( <font class="o">class 值</font> )</p></td>
+	</tr>
+	<tr id="test_" title="">
+		<td>【文档】【创建一个标签节点】</td>
+		<td><p><font class="w b">document</font> . <font class="w b">createElement</font> ( <font class="o">标签名</font> )</p></td>
+	</tr>
+	<tr id="test_" title="">
+		<td>【文档】【创建一个文本节点】</td>
+		<td><p><font class="w b">document</font> . <font class="w b">createTextNode</font> ( <font class="o">文本</font> )</p></td>
+	</tr>
+	<tr id="test_" title="">
+		<td>【文档】【创建一个属性节点】</td>
+		<td><p><font class="w b">document</font> . <font class="w b">createAttribute</font> ( <font class="o">属性</font> )</p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr id="test_" title="
+		&#10;Element 对象表示 HTML 元素
+		&#10;Element 对象可以拥有类型为元素节点、文本节点、注释节点的子节点
+		&#10;NodeList 对象表示节点列表 比如 HTML 元素的子节点集合">
+		<td>【节点】【element】</td>
+		<td><p></p></td>
+	</tr>
+	<tr id="test_" title="">  
+		<td>【节点】【定位元素】【选中第一个子元素】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">firstChild</font></p></td>
+	</tr>
+	<tr id="test_" title="">  
+		<td>【节点】【定位元素】【选中第一个子元素】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">firstElementChild</font></p></td>
+	</tr>
+	<tr id="test_" title="">  
+		<td>【节点】【定位元素】【选中最后一个子元素】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">lastChild</font></p></td>
+	</tr>
+	<tr id="test_" title="">  
+		<td>【节点】【定位元素】【选中最后一个子元素】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">lastElementChild</font></p></td>
+	</tr>
+	<tr id="test_" title="">  
+		<td>【节点】【定位元素】【选中下一个兄弟元素】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">nextSibling</font></p></td>
+	</tr>
+	<tr id="test_" title="">  
+		<td>【节点】【定位元素】【选中下一个兄弟元素】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">nextElementSibling</font></p></td>
+	</tr>
+	<tr id="test_" title="">  
+		<td>【节点】【定位元素】【选中上一个兄弟元素】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">previousSibling</font></p></td>
+	</tr>
+	<tr id="test_" title="">  
+		<td>【节点】【定位元素】【选中上一个兄弟元素】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">previousElementSibling</font></p></td>
+	</tr>
+	<tr id="test_" title="">  
+		<td>【节点】【定位元素】【选中父元素】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">parentNode</font></p></td>
+	</tr>
+	<tr id="test_" title="">  
+		<td>【节点】【定位元素】【选中子元素】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">childNodes</font></p></td>
+	</tr>
+	<tr id="test_" title="可以对定位的节点进行任何属性操作 不管该属性存不存在">
+		<td>【节点】【操作属性】【设置节点的属性】</td>
+		<td><p><font class="o">节点</font> . <font class="g">属性</font> = <font class="g">值</font></p></td>
+	</tr>
+	<tr id="test_" title="对节点获取单个样式">
+		<td>【节点】【操作属性】【获取样式的属性】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">style</font> . <font class="g">属性</font></p></td>
+	</tr>
+	<tr id="test_" title="对节点设置单个样式">
+		<td>【节点】【操作属性】【设置样式的属性】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">style</font> . <font class="g">属性</font> = <font class="g">值</font></p></td>
+	</tr>
+	<tr id="test_" title="对节点获取所有类样式">
+		<td>【节点】【操作属性】【获取类名】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">className</font></p></td>
+	</tr>
+	<tr id="test_" title="对节点设置一个或多个类样式">
+		<td>【节点】【操作属性】【设置类名】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">className</font> = <font class="o">类</font></p></td>
+	</tr>
+	<tr id="test_" title="">
+		<td>【节点】【操作属性】【获取节点的属性值】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">getAttribute</font> ( <font class="g">属性名</font> )</p></td>
+	</tr>
+	<tr id="test_" title="">
+		<td>【节点】【操作属性】【设置节点的属性和值】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">setAttribute</font> ( <font class="g">属性名</font> , <font class="g">属性值</font> )</p></td>
+	</tr>
+	<tr id="test_" title="">
+		<td>【节点】【操作属性】【移除节点属性】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">removeAttribute</font> ( <font class="g">属性名</font> )</p></td>
+	</tr>
+	<tr id="test_" title=" 往闭合标签内添加可带HTML标签的内容">
+		<td>【节点】【操作内容】【添加内容】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">innerHTML</font> = <font class="o">内容</font></p></td>
+	</tr>
+	<tr id="test_" title="取出带HTML标签的内容">
+		<td>【节点】【操作内容】【取出内容】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">outerHTML</font></p></td>
+	</tr>
+	<tr id="test_" title="IE有效 往闭合标签内添加纯文本内容">
+		<td>【节点】【操作内容】【添加文本】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">innerText</font> = <font class="o">文本</font></p></td>
+	</tr>
+	<tr id="test_" title="IE有效 取出纯文本的内容">
+		<td>【节点】【操作内容】【取出文本】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">outerText</font></p></td>
+	</tr>
+	<tr id="test_" title="火狐有效 往闭合标签内添加纯文本内容">
+		<td>【节点】【操作内容】【添加文本】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">textContent</font> = <font class="o">文本</font></p></td>
+	</tr>
+	<tr id="test_" title="火狐有效 取出纯文本的内容">
+		<td>【节点】【操作内容】【取出文本】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">textContent</font></p></td>
+	</tr>
+	<tr id="test_" title="在文本节点的最后插入文本内容">
+		<td>【节点】【操作内容】【追加文本】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">appendData</font> ( <font class="o">文本</font> )</p></td>
+	</tr>
+	<tr id="test_" title="在指定位置删除指定长度的文本内容">
+		<td>【节点】【操作内容】【删除内容】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">deleteData</font> ( <font class="g">位置</font> , <font class="g">长度</font> )</p></td>
+	</tr>
+	<tr id="test_" title="在指定的位置前插入指定的内容">
+		<td>【节点】【操作内容】【插入文本】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">insertData</font> ( <font class="g">位置</font> , <font class="g">文本</font> )</p></td>
+	</tr>
+	<tr id="test_" title="使用新文本替换指定的文本">
+		<td>【节点】【操作内容】【替换文本】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">replaceData</font> ( <font class="g">位置</font> , <font class="g">长度</font> , <font class="g">文本</font> )</p></td>
+	</tr>
+	<tr id="test_" title="切割并取得指定位置之后的文本 并把结果保存到节点的 textContent 中">
+		<td>【节点】【操作内容】【切割文本】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">splitText</font> ( <font class="g">位置</font> )</p></td>
+	</tr>
+	<tr id="test_" title="切割指定长度的文本内容">
+		<td>【节点】【操作内容】【切割文本】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">substringData</font> ( <font class="g">位置</font> , <font class="g">长度</font> )</p></td>
+	</tr>
+		<td>【节点】【操作表单】【设置表单的值】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">value</font> = <font class="g">文本</font></p></td>
+	</tr>
+	<tr id="test_" title="从表单中取出纯文本内容">
+		<td>【节点】【操作表单】【取出表单的值】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">value</font></p></td>
+	</tr>
+	<tr id="test_" title="在子节点最后插入新元素">
+		<td>【节点】【操作节点】【子节点追加元素】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">appendChild</font> ( <font class="o">新元素</font> )</p></td>
+	</tr>
+	<tr id="test_" title="在指定子节点前插入新元素">
+		<td>【节点】【操作节点】【子节点插入元素】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">insertBefore</font> ( <font class="o">新元素</font> , <font class="o">子元素</font> )</p></td>
+	</tr>
+	<tr id="test_" title="">
+		<td>【节点】【操作节点】【子节点替换元素】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">replaceChild</font> ( <font class="o">新元素</font> , <font class="o">子元素</font> )</p></td>
+	</tr>
+	<tr id="test_" title="删除指定子元素 可以直接利用 parentNode 定位父节点">
+		<td>【节点】【操作节点】【子节点删除元素】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">removeChild</font> ( <font class="o">子元素</font> )</p></td>
+	</tr>
+	<tr id="test_" title="true 表示复制原始节点的所有子节点">
+		<td>【节点】【操作节点】【复制所有子节点】</td>
+		<td><p><font class="o">节点</font> . <font class="w b">cloneNode</font> ( <font class="w b">true</font> )</p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr id="test_" title="
+		&#10;Attr 对象表示 HTML 属性
+		&#10;NamedNodeMap 对象表示元素属性节点的无序集合
+		&#10;NamedNodeMap 中的节点可通过名称或索引（数字）来访问">
+		<td>【属性】【attribute】</td>
+		<td><p></p></td>
+	</tr>
+	</tr>
+	<tr id="test_" title="
+		&#10;检测该属性是否为 id 类型 返回布尔值
+		&#10;返回值：true → 是
+		&#10;返回值：false → 不是">
+		<td>【属性】【检测 id 类型】</td>
+		<td><p><font class="o">属性对象</font> . <font class="w b">isId</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;检测是否已指定属性 返回布尔值
+		&#10;返回值：true → 是
+		&#10;返回值：false → 不是">
+		<td>【属性】【检测是否指定属性】</td>
+		<td><p><font class="o">属性对象</font> . <font class="w b">specified</font></p></td>
+	</tr>
+	<tr id="test_" title="">
+		<td>【属性】【获取属性名称】</td>
+		<td><p><font class="o">属性对象</font> . <font class="w b">name</font></p></td>
+	</tr>
+	<tr id="test_" title="">
+		<td>【属性】【获取属性的值】</td>
+		<td><p><font class="o">属性对象</font> . <font class="w b">value</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr id="test_" title="
+		&#10;Event 对象代表事件的状态 比如事件在其中发生的元素、键盘按键的状态、鼠标的位置、鼠标按钮的状态
+		&#10;事件通常与函数结合使用，函数不会在事件发生前被执行
+		&#10;事件类型：onabort → 图像的加载被中断
+		&#10;事件类型：onblur → 元素失去焦点
+		&#10;事件类型：onchange → 域的内容被改变
+		&#10;事件类型：onclick → 当用户点击某个对象时调用的事件句柄
+		&#10;事件类型：ondblclick → 当用户双击某个对象时调用的事件句柄
+		&#10;事件类型：onerror → 在加载文档或图像时发生错误
+		&#10;事件类型：onfocus → 元素获得焦点
+		&#10;事件类型：onkeydown → 某个键盘按键被按下
+		&#10;事件类型：onkeypress → 某个键盘按键被按下并松开
+		&#10;事件类型：onkeyup → 某个键盘按键被松开
+		&#10;事件类型：onload → 一张页面或一幅图像完成加载
+		&#10;事件类型：onmousedown → 鼠标按钮被按下
+		&#10;事件类型：onmousemove → 鼠标被移动
+		&#10;事件类型：onmouseout → 鼠标从某元素移开
+		&#10;事件类型：onmouseover → 鼠标移到某元素之上
+		&#10;事件类型：onmouseup → 鼠标按键被松开
+		&#10;事件类型：onreset → 重置按钮被点击
+		&#10;事件类型：onresize → 窗口或框架被重新调整大小
+		&#10;事件类型：onselect → 文本被选中
+		&#10;事件类型：onsubmit → 确认按钮被点击
+		&#10;事件类型：onunload → 用户退出页面">
+		<td>【事件】【event】</td>
+		<td><p></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;返回值：true丨1 → 此键被按下
+		&#10;返回值：false丨0 → 此键未被按下">
+		<td>【事件】【检测 alt 键是否被按下】</td>
+		<td><p><font class="w b">event</font> . <font class="w b">altKey</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;返回值：true丨1 → 此键被按下
+		&#10;返回值：false丨0 → 此键未被按下">
+		<td>【事件】【检测 shift 键是否被按下】</td>
+		<td><p><font class="w b">event</font> . <font class="w b">shiftKey</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;返回值：true丨1 → 此键被按下
+		&#10;返回值：false丨0 → 此键未被按下">
+		<td>【事件】【检测 ctrl 键是否被按下】</td>
+		<td><p><font class="w b">event</font> . <font class="w b">ctrlKey</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;返回值：true丨1 → 此键被按下
+		&#10;返回值：false丨0 → 此键未被按下">
+		<td>【事件】【检测 meta 键是否被按下】</td>
+		<td><p><font class="w b">event</font> . <font class="w b">metaKey</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;返回值：0 → 鼠标左键 IE 为 1
+		&#10;返回值：1 → 鼠标中键 IE 为 4
+		&#10;返回值：2 → 鼠标右键 IE 为 2">
+		<td>【事件】【获取鼠标哪个按钮被点击】</td>
+		<td><p><font class="w b">event</font> . <font class="w b">button</font></p></td>
+	</tr>
+	<tr id="test_" title="鼠标指针距离窗口左侧的距离（像素）">
+		<td>【事件】【获取鼠标指针相对于窗口的横座标】</td>
+		<td><p><font class="w b">event</font> . <font class="w b">clientX</font></p></td>
+	</tr>
+	<tr id="test_" title="鼠标指针距离窗口顶部的距离（像素）">
+		<td>【事件】【获取鼠标指针相对于窗口的纵座标】</td>
+		<td><p><font class="w b">event</font> . <font class="w b">clientY</font></p></td>
+	</tr>
+	<tr id="test_" title="鼠标指针距离显示屏左侧的距离（像素）">
+		<td>【事件】【获取鼠标指针相对于屏幕的横座标】</td>
+		<td><p><font class="w b">event</font> . <font class="w b">screenX</font></p></td>
+	</tr>
+	<tr id="test_" title="鼠标指针距离显示屏顶部的距离（像素）">
+		<td>【事件】【获取鼠标指针相对于屏幕的纵座标】</td>
+		<td><p><font class="w b">event</font> . <font class="w b">screenY</font></p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->

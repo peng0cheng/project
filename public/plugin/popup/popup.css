@@ -1,0 +1,47 @@
+/**************************************************【整体样式】**************************************************/
+
+div[popup_body] {
+	box-sizing:border-box;
+	width:500px;
+	height:250px;
+	background-image:url('./popup_view_01.jpg');
+}
+
+div[popup_body] {
+	display:none;
+	position:fixed;
+	left:20%;
+	top:20%;
+	z-index:3;
+}
+
+/**************************************************【标题样式】**************************************************/
+
+div[popup_control] {
+	box-sizing:border-box;
+	background:black;
+}
+
+div[popup_title] {
+	box-sizing:border-box;
+	font-weight:bold;
+	float:left;
+	cursor:move;
+}
+
+div[popup_close] {
+	box-sizing:border-box;
+	background-image:url('./popup_close_01.jpg');
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+	float:right;
+	cursor:pointer;
+}
+
+div[popup_view] {
+	box-sizing:border-box;
+	overflow:hidden;
+	text-overflow:clip;
+}
+
+/**************************************************【】**************************************************/

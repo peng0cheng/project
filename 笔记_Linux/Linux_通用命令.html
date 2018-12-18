@@ -1,0 +1,598 @@
+<table class="i_table">
+	<tr onclick="" title="
+		&#10;可以创建多个文件 用空格隔开">
+		<td>【文件和目录】【文件创建】</td>
+		<td><p><font class="w b">touch</font> <font class="r">文件</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：-n → 添加行号">
+		<td>【文件和目录】【文件查看】</td>
+		<td><p><font class="w b">cat</font> <font class="w g">[选项]</font> <font class="r">文件</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;常用操作命令：Enter → 向下 n 行 需要定义 默认为 1 行
+		&#10;常用操作命令：Ctrl+f → 向下滚动一屏
+		&#10;常用操作命令：Space → 向下滚动一屏
+		&#10;常用操作命令：Ctrl+b → 返回上一屏
+		&#10;常用操作命令：= → 输出当前行的行号
+		&#10;常用操作命令：:f → 输出文件名和当前行的行号
+		&#10;常用操作命令：V → 调用vi编辑器
+		&#10;常用操作命令：!命令 → 调用 Shell 并执行命令 
+		&#10;常用操作命令：q → 退出more">
+		<td>【文件和目录】【文件分屏查看】</td>
+		<td><p><font class="w b">more</font> <font class="r">文件</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;查看指定行数的文件名 默认显示前十行
+		&#10;--------------------------------------------------
+		&#10;选项：-n 行数 → 显示指定行数">
+		<td>【文件和目录】【文件头查看】</td>
+		<td><p><font class="w b">head</font> <font class="w g">[选项]</font> <font class="r">文件</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;查看指定行数的文件名 默认显示后十行
+		&#10;--------------------------------------------------
+		&#10;选项：-n 行数 → 显示指定行数">
+		<td>【文件和目录】【文件尾查看】</td>
+		<td><p><font class="w b">tail</font> <font class="w g">[选项]</font> <font class="r">文件</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;可以创建多个目录 用空格隔开
+		&#10;--------------------------------------------------
+		&#10;选项：-p → 递归建立 可以同时创建多级目录">
+		<td>【文件和目录】【目录创建】</td>
+		<td><p><font class="w b">mkdir</font> <font class="w g">[选项]</font> <font class="r">目录</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;可以利用 tab 键自动补全
+		&#10;--------------------------------------------------
+		&#10;目录名：/ → 进入到根目录
+		&#10;目录名：~ → 进入用户家目录
+		&#10;目录名：- → 进入上次进入的目录
+		&#10;目录名：. → 进入本级目录
+		&#10;目录名：.. → 进入上级目录">
+		<td>【文件和目录】【目录进入】</td>
+		<td><p><font class="w b">cd</font> <font class="r">目录</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;不输入目录名则查看当前目录下的文件和目录
+		&#10;目录名必须为绝对路径
+		&#10;--------------------------------------------------
+		&#10;选项：-a → 显示隐藏文件
+		&#10;选项：-l → 显示详细信息
+		&#10;选项：-d → 查看目录属性
+		&#10;选项：-h → 将文件大小单位显示为 B KB MB
+		&#10;选项：-i → 显示 innode 即文件所在的节点号
+		&#10;常用选项 ll → 代替 ls -l 命令
+		&#10;常用选项 ls -dl → 查看当前目录的详细属性 也可以用 ll -d">
+		<td>【文件和目录】【目录查看】</td>
+		<td><p><font class="w b">ls</font> <font class="w g">[选项]</font> <font class="r">[目录]</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;查看当前位置的路径">
+		<td>【文件和目录】【目录路径】</td>
+		<td><p><font class="w b">pwd</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;可以删除多个文件或目录 用空格隔开
+		&#10;--------------------------------------------------
+		&#10;选项：-r → 递归 对多级目录有效
+		&#10;选项：-f → 强制删除
+		&#10;常用选项 -rf → 强制删除所有文件和目录以及子目录">
+		<td>【文件和目录】【删除】</td>
+		<td><p><font class="w b">rm</font> <font class="w g">[选项]</font> <font class="r">文件或目录</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;不填写选项时 创建的是硬链接
+		&#10;硬链接删除源文件后 链接文件依然有效
+		&#10;硬链接与源文件拥有相同的 I 节点存储 BLOCK 块 可以看作是同一个文件
+		&#10;硬链接可以通过 I 节点识别
+		&#10;硬链接不能跨分区
+		&#10;硬链接不能对目录使用
+		&#10;不建议创建硬链接
+		&#10;--------------------------------------------------
+		&#10;填写选项时 创建的是软链接
+		&#10;软链接删除源文件后 链接文件失效
+		&#10;软链接有自已的 I 节点和 BLOCK 块 但是不写入任何数据 不能看作是同一个文件
+		&#10;软链接类似 windows 的快捷方式
+		&#10;选项：-s → 创建的是软链接文件">
+		<td>【文件和目录】【链接】</td>
+		<td><p><font class="w b">ln</font> <font class="w g">[选项]</font> <font class="r">原文件或目录</font> <font class="r">目标文件或目录</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;拷贝文件或目录到目标位置
+		&#10;--------------------------------------------------
+		&#10;选项：-p → 连带文件属性复制
+		&#10;选项：-d → 若源文件是链接文件 则复制链接属性
+		&#10;选项：-r → 复制目录
+		&#10;常用选项：-a → 相当于 -pdr">
+		<td>【文件和目录】【复制】</td>
+		<td><p><font class="w b">cp</font> <font class="w g">[选项]</font> <font class="r">原文件或目录</font> <font class="r">目标文件或目录</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;剪切文件或目录到目标位置">
+		<td>【文件和目录】【剪切】</td>
+		<td><p><font class="w b">mv</font> <font class="r">原文件或目录</font> <font class="r">目标文件或目录</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="
+		&#10;选项：-R → 递归设置 即如果是目录时 将目录中的所有子文件都进行相同设置">
+		<td>【文件和目录权限】【设置属组】</td>
+		<td><p><font class="w b">chgrp</font> <font class="w g">[选项]</font> <font class="r">组名</font> <font class="r">文件或目录</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：-R → 递归设置 即如果是目录时 将目录中的所有子文件都进行相同设置">
+		<td>【文件和目录权限】【设置属主】</td>
+		<td><p><font class="w b">chown</font> <font class="w g">[选项]</font> <font class="r">用户名</font> <font class="r">文件或目录</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：-R → 递归设置 即如果是目录时 将目录中的所有子文件都进行相同设置">
+		<td>【文件和目录权限】【设置属主和属组】</td>
+		<td><p><font class="w b">chown</font> <font class="w g">[选项]</font> <font class="r">用户名</font><font class="w r">:</font><font class="r">组名</font> <font class="r">文件或目录</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：-R → 递归设置 即如果是目录时 将目录中的所有子文件都进行相同设置
+		&#10;--------------------------------------------------
+		&#10;权限模式：数值表示法 → 用权限值的和分别对应属主、组、其它的三位数字（通常设 755 全去除可以用 000）
+		&#10;权限模式：字符表示法 → 效率很低 不常使用（u/g/o +/-/= r/w/x）">
+		<td>【文件和目录权限】【设置权限】</td>
+		<td><p><font class="w b">chmod</font> <font class="w g">[选项]</font> <font class="r">权限模式 文件或目录</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="
+		&#10;源文件可以是多个 用空格隔开 可以将多个文件压入一个压缩包内
+		&#10;--------------------------------------------------
+		&#10;选项：-r → 压缩目录时使用">
+		<td>【压缩和解压缩】【zip】【压缩】</td>
+		<td><p><font class="w b">zip</font> <font class="w g">选项</font> <font class="r">压缩包 源文件</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;解压不需要识别是否是目录
+		&#10;如果有同名文件或目录 则有操作信息">
+		<td>【压缩和解压缩】【zip】【解压】</td>
+		<td><p><font class="w b">unzip</font> <font class="r">压缩包</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;源文件可以是多个 用空格隔开 可以将多个文件压缩成多个压缩包
+		&#10;源文件自动压缩成 .gz 格式 且源文件会消失
+		&#10;--------------------------------------------------
+		&#10;选项：-c → 压缩并保留源文件
+		&#10;选项：-r → 分别压缩目录中的所有子文件 不能压缩本目录
+		&#10;选项：-d → 解压 等同于 gunzip
+		&#10;--------------------------------------------------
+		&#10;格式：gzip -c 源文件名 > 压缩包名 → 压缩并保留源文件">
+		<td>【压缩和解压缩】【gz】【压缩】</td>
+		<td><p><font class="w b">gzip</font> <font class="w g">选项</font> <font class="r">源文件</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;解压后压缩包会消失">
+		<td>【压缩和解压缩】【gz】【解压】</td>
+		<td><p><font class="w b">gunzip</font> <font class="r">压缩包</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;源文件可以是多个 用空格隔开 可以将多个文件压缩成多个压缩包
+		&#10;源文件自动压缩成 .bz2 格式 且源文件会消失
+		&#10;不能压缩目录
+		&#10;--------------------------------------------------
+		&#10;选项：-k → 保留源文件
+		&#10;选项：-d → 解压 等同于 bunzip2">
+		<td>【压缩和解压缩】【bz2】【压缩】</td>
+		<td><p><font class="w b">bzip2</font> <font class="w g">选项</font> <font class="r">源文件</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;解压后压缩包会消失">
+		<td>【压缩和解压缩】【bz2】【解压】</td>
+		<td><p><font class="w b">bunzip2</font> <font class="r">压缩包</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：-z → 识别 .gz 格式
+		&#10;选项：-c → 压缩
+		&#10;选项：-v → 显示压缩过程
+		&#10;选项：-f → 指定压缩包名">
+		<td>【压缩和解压缩】【tar.gz】【压缩】</td>
+		<td><p><font class="w b">tar</font> <font class="w g">选项</font> <font class="r">压缩包名 源文件</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项1：-z → 识别 .gz 格式
+		&#10;选项1：-x → 解压缩
+		&#10;选项1：-v → 显示压缩过程
+		&#10;选项1：-f → 指定压缩包名
+		&#10;--------------------------------------------------
+		&#10;选项2：-C → 指定解压目标目录 后面跟目录名">
+		<td>【压缩和解压缩】【tar.gz】【解压缩】</td>
+		<td><p><font class="w b">tar</font> <font class="w g">选项1</font> <font class="r">压缩包</font> <font class="w g">[选项2]</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：-z → 识别 .gz 格式
+		&#10;选项：-t → 只查看 不解压
+		&#10;选项：-v → 显示压缩过程
+		&#10;选项：-f → 指定压缩包名">
+		<td>【压缩和解压缩】【tar.gz】【仅查看】</td>
+		<td><p><font class="w b">tar</font> <font class="w g">选项</font> <font class="r">压缩包</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：-j → 识别 .bz2 格式
+		&#10;选项：-c → 压缩
+		&#10;选项：-v → 显示压缩过程
+		&#10;选项：-f → 指定压缩包名">
+		<td>【压缩和解压缩】【tar.bz2】【压缩】</td>
+		<td><p><font class="w b">tar</font> <font class="w g">选项</font> <font class="r">压缩包名 源文件</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项1：-j → 识别 .bz2 格式
+		&#10;选项1：-x → 解压缩
+		&#10;选项1：-v → 显示压缩过程
+		&#10;选项1：-f → 指定压缩包名
+		&#10;--------------------------------------------------
+		&#10;选项2：-C → 指定解压目标目录 后面跟目录名">
+		<td>【压缩和解压缩】【tar.bz2】【解压缩】</td>
+		<td><p><font class="w b">tar</font> <font class="w g">选项1</font> <font class="r">压缩包</font> <font class="w g">[选项2]</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：-j → 识别 .bz2 格式
+		&#10;选项：-t → 只查看 不解压
+		&#10;选项：-v → 显示压缩过程
+		&#10;选项：-f → 指定压缩包名">
+		<td>【压缩和解压缩】【tar.bz2】【仅查看】</td>
+		<td><p><font class="w b">tar</font> <font class="w g">选项</font> <font class="r">压缩包</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="
+		&#10;搜索指定系统命令所支持的文件位置和别名">
+		<td>【搜索命令】【which】</td>
+		<td><p><font class="w b">which</font> <font class="r">命令</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;搜索指定系统命令所支持的文件位置和帮助文档
+		&#10;可以确定该命令是否是 shell 内部命令（找不到 /bin 下的文件名则是）
+		&#10;--------------------------------------------------
+		&#10;选项：-b → 只查找可执行文件
+		&#10;选项：-m → 只查找帮助文件">
+		<td>【搜索命令】【whereis】</td>
+		<td><p><font class="w b">whereis</font> <font class="w g">[选项]</font> <font class="r">命令</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;搜索指定命令的命令等级">
+		<td>【搜索命令】【whatis】</td>
+		<td><p><font class="w b">whatis</font> <font class="r">命令</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;搜索与指定命令相关的所有命令和帮助文档">
+		<td>【搜索命令】【apropos】</td>
+		<td><p><font class="w b">apropos</font> <font class="r">命令</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;只能搜索文件名 功能较弱 但是查找效率高
+		&#10;仅仅是从数据库中查找 对新建的文件短时间内无效
+		&#10;数据库位置：/var/lib/mlocate/">
+		<td>【搜索文件】【locate】【搜索】</td>
+		<td><p><font class="w b">locate</font> <font class="r">文件</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;可以强制更新数据库 使刚建立的文件也在搜索范围内">
+		<td>【搜索文件】【locate】【更新数据库】</td>
+		<td><p><font class="w b">updatedb</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;可以修改数据库配置文件以修改搜索规则
+		&#10;--------------------------------------------------
+		&#10;编缉：PRUNE_BIND_MOUNTS → 是否使以下所有的搜索规则都生效（[yes] [no]）
+		&#10;编缉：PRUNEFS → 不搜索的文件系统的集合
+		&#10;编缉：PRUNENAMES → 不搜索包含指定字符的文件的集合
+		&#10;编缉：PRUNEPATHS → 不搜索指定目录更新的文件的集合">
+		<td>【搜索文件】【locate】【修改数据库配置文件】</td>
+		<td><p><font class="w b">vi</font> <font class="w r">/etc/updatedb.conf</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;可以用通配符进行匹配
+		&#10;--------------------------------------------------
+		&#10;选项：-name → 按文件名查找 区分大小写
+		&#10;选项：-iname → 按文件名查找 不区分大小写
+		&#10;选项：-user → 按属主查找
+		&#10;选项：-nouser → 查找没有属主的文件 后面不能输入名称
+		&#10;选项：-group → 按属主查找
+		&#10;选项：-nogroup → 查找没有属组的文件 后面不能输入名称">
+		<td>【搜索文件】【find】【基本查找】</td>
+		<td><p><font class="w b">find</font> <font class="r">路径</font> <font class="w g">[选项]</font> <font class="r">名称</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;搜索千字节要小写 k 兆字节要大写 M
+		&#10;--------------------------------------------------
+		&#10;大小：+50k → 大于 50kb 的文件
+		&#10;大小：-50M → 小于 50MB 的文件
+		&#10;大小：50 → 等于 50 个 i 节点的文件
+		&#10;--------------------------------------------------
+		&#10;选项：-a → -a 后面继续接 -size 可以增加限制条件
+		&#10;选项：-exec 操作命令 {} \; → 可以用类似 ls -lh 或 rm -rf 之类的命令操作查询结果 后面的 {} \; 必填">
+		<td>【搜索文件】【find】【按文件大小查找】</td>
+		<td><p><font class="w b">find</font> <font class="r">路径</font> <font class="w g">-size</font> <font class="r">大小</font> <font class="w g">[选项]</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：f → 普通文件
+		&#10;选项：d → 目录
+		&#10;选项：l → 链接文件">
+		<td>【搜索文件】【find】【按文件类型查找】</td>
+		<td><p><font class="w b">find</font> <font class="r">路径</font> <font class="w g">-type</font> <font class="r">选项</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;权限值：777 → 所有用户都可读写执行">
+		<td>【搜索文件】【find】【按权限查找】</td>
+		<td><p><font class="w b">find</font> <font class="r">路径</font> <font class="w g">-perm</font> <font class="r">权限值</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：-atime → 文件访问时间
+		&#10;选项：-ctime → 改变文件属性
+		&#10;选项：-mtime → 修改文件内容
+		&#10;--------------------------------------------------
+		&#10;时间：-10 → 表示10天内
+		&#10;时间：+10 → 表示10天前
+		&#10;时间：10 → 表示10天前当天">
+		<td>【搜索文件】【find】【按时间查找】</td>
+		<td><p><font class="w b">find /var/log</font> <font class="w g">选项</font> <font class="r">时间</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;可以对文件包含的内容进行搜索 返回符合条件的行内容
+		&#10;可以对命令返回的内容进行搜索 返回符合条件的行内容（不用输入文件名）
+		&#10;可以用正则表达式进行匹配
+		&#10;--------------------------------------------------
+		&#10;选项：-i → 忽略大小写
+		&#10;选项：-v → 排除指定字符串">
+		<td>【搜索内容】【grep】【查找行】</td>
+		<td><p><font class="w b">grep</font> <font class="w g">[选项]</font> <font class="r">关键字</font> <font class="r">文件</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="
+		&#10;选项：-f → 查看命令等级 相当于 whatis 命令
+		&#10;选项：-k → 查看和命令相关的所有帮助文档 相当于 apropos 命令">
+		<td>【帮助命令】【说明】</td>
+		<td><p><font class="w b">man</font> <font class="w g">[选项]</font> <font class="r">命令</font></p></td>
+	</tr>
+	<tr onclick="" title="">
+		<td>【帮助命令】【详细说明】</td>
+		<td><p><font class="w b">info</font> <font class="r">命令</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;只能查看 shell 内部命令的帮助文档">
+		<td>【帮助命令】【内部命令】</td>
+		<td><p><font class="w b">help</font> <font class="r">命令</font></p></td>
+	</tr>
+	<tr onclick="" title="">
+		<td>【帮助命令】【可用选项】</td>
+		<td><p><font class="r">命令名</font> <font class="w b">--help</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="
+		&#10;简单设置开机启动命令">
+		<td>【系统设置】【开机启动命令】</td>
+		<td><p><font class="w b">vi</font> <font class="w r">/etc/rc.local</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;开机启动的脚本目录 将脚本放入该目录可以开机时运行">
+		<td>【系统设置】【开机启动脚本】</td>
+		<td><p><font class="w r">/etc/rc.d/init.d/</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;服务脚本必须存放在 /etc/ini.d/ 目录下 也是 chkconfig 命令指向的目录">
+		<td>【系统设置】【系统服务脚本】</td>
+		<td><p><font class="w r">/etc/init.d/</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;只要系统启动就会执行的脚本 忽略任何用户">
+		<td>【系统设置】【环境变量】【针对系统】</td>
+		<td><p><font class="w r">/etc/profile</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;仅针对用户起作用 这个方法的原理就是再执行一次 /etc/profile 脚本">
+		<td>【系统设置】【环境变量】【针对用户】</td>
+		<td><p><font class="w r">/root/.bash_profile</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="
+		&#10;选项：-c → 取消前一个关机命令
+		&#10;选项：-h → 关机
+		&#10;选项：-r → 重启
+		&#10;--------------------------------------------------
+		&#10;时间：now → 马上
+		&#10;时间：00:00 → 零点零分关机（注意不能设置秒数）">
+		<td>【系统命令】【开关机】</td>
+		<td><p><font class="w b">shutdown</font> <font class="w g">选项</font> <font class="r">时间</font></p></td>
+	</tr>
+	<tr onclick="" title="">
+		<td>【系统命令】【退出登录】</td>
+		<td><p><font class="w b">logout</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：-c → 清空操作记录">
+		<td>【系统命令】【操作记录】</td>
+		<td><p><font class="w b">history</font> <font class="w g">[选项]</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：空 → 查看系统当前时间
+		&#10;选项：-s → 修改系统时间
+		&#10;--------------------------------------------------
+		&#10;格式 date -s 19871219 → 修改日期为 1987 年 12 月 19 日
+		&#10;格式 date -s 00:11:22 → 修改时间为 00 时 11 分 22 秒">
+		<td>【系统命令】【时间】</td>
+		<td><p><font class="w b">date</font> <font class="w g">[选项]</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：空 → 查看进程
+		&#10;选项：-a → 查看前台进程
+		&#10;选项：-x → 查看后台进程
+		&#10;选项：-u → 显示进程所有者详情
+		&#10;常用选项：-aux → 查看所有进程的详细信息
+		&#10;--------------------------------------------------
+		&#10;参数：USER → 用户名
+		&#10;参数：PID → 进程 id
+		&#10;参数：%CPU → CPU 占用百分比
+		&#10;参数：%MEM → 内存占用百分比
+		&#10;参数：VSZ → 虚拟内存占用量
+		&#10;参数：RSS → 固定内存占用量
+		&#10;参数：TTY → 登录终端（[tty1~7 本地终端] [tty1-6 字符界面] [tty7 图形界面]）
+		&#10;参数：STAT → 运行状态（[S 睡眠] [D 不可唤醒] [R 运行] [T 停止] [Z 僵死] [W 进入内存交换] [X 死掉的进程] [< 高优先级] [N 低优先级] [L 被锁进内存] [s 含子进程] [+ 位于后台] [l 多线程]）
+		&#10;参数：START → 进程触发时间
+		&#10;参数：TIME → 占用 CPU 时间
+		&#10;参数：COMMAND → 进程本身">
+		<td>【系统命令】【任务管理器】【查看】</td>
+		<td><p><font class="w b">ps</font> <font class="w g">[选项]</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;每次启动进程号可能不一样
+		&#10;进程名通常是 apache nginx 等
+		&#10;--------------------------------------------------
+		&#10;选项：-QUIT → 结束任务
+		&#10;选项：-TERM → 快速结束任务
+		&#10;选项：-HUP → 重新启动任务
+		&#10;--------------------------------------------------
+		&#10;常用格式：pkill -9 进程名 → 强制踢出进程用户
+		&#10;常用格式：pkill -9 -t 进程号 → 踢出终端用户
+		&#10;常用格式：pkill -9 -t tty → 踢出本地用户
+		&#10;常用格式：killall -9 进程名 → 结束一类进程">
+		<td>【系统命令】【任务管理器】【操作】</td>
+		<td><p><font class="w b">kill</font> <font class="w g">[选项]</font> <font class="r">进程</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;原理是通过读取计划任务配置文件来执行里面的定时任务
+		&#10;--------------------------------------------------
+		&#10;选项：-l → 查看计划任务列表
+		&#10;选项：-e → 编辑计划任务
+		&#10;选项：-r → 清空计划任务
+		&#10;--------------------------------------------------
+		&#10;格式：* * * * * 命令
+		&#10;第 1 位：*____ → 一小时中第几分钟（0-59）
+		&#10;第 2 位：_*___ → 一天中第几个小时（0-23）
+		&#10;第 3 位：__*__ → 一个月中第几天（1-31）
+		&#10;第 4 位：___*_ → 一年第几个月（1-12）
+		&#10;第 5 位：____* → 一周中星期几（0-6）">
+		<td>【系统命令】【计划任务】</td>
+		<td><p><font class="w b">crontab</font> <font class="w g">选项</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="
+		&#10;服务脚本必须存放在 /etc/ini.d/ 目录下
+		&#10;--------------------------------------------------
+		&#10;选项：--add → 增加服务
+		&#10;选项：--del → 删除服务
+		&#10;选项：--list → 列出所有系统服务
+		&#10;选项：--level → 设定运行级别
+		&#10;--------------------------------------------------
+		&#10;格式：--level 服务名 on → 启动状态
+		&#10;格式：--level 服务名 off → 停止状态
+		&#10;格式：--level 服务名 reset → 重置服务的启动信息">
+		<td>【服务命令】【管理】</td>
+		<td><p><font class="w b">chkconfig</font> <font class="w g">[选项]</font> <font class="r">服务名</font></p></td>
+	</tr>
+	<tr onclick="" title="">
+		<td>【服务命令】【查看状态】</td>
+		<td><p><font class="w b">service</font> <font class="r">服务名</font> <font class="w b">status</font></p></td>
+	</tr>
+	<tr onclick="" title="">
+		<td>【服务命令】【重启】</td>
+		<td><p><font class="w b">service</font> <font class="r">服务名</font> <font class="w b">restart</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="
+		&#10;选项：空 → 显示本地磁盘的情况 和 -l 一样
+		&#10;选项：-l → 显示本地磁盘的情况 默认
+		&#10;选项：-a → 显示所有文件系统的磁盘使用情况 包含比如 /proc/
+		&#10;选项：-h → 以 1024 进制计算最合适的单位显示磁盘容量
+		&#10;选项：-H → 以 1000 进制计算最合适的单位显示磁盘容量
+		&#10;选项：-T → 显示磁盘分区类型
+		&#10;选项：-t 类型 → 显示指定类型文件系统的磁盘分区 后面需要输入类型 如 ext4
+		&#10;选项：-x 类型 → 不显示指定类型文件系统的磁盘分区 后面需要输入类型 如 ext4
+		&#10;常用选项：-lhT → 人性化显示">
+		<td>【磁盘命令】【查看分区】</td>
+		<td><p><font class="w b">df</font> <font class="w g">[选项]</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：空 → 统计目录下文件及总大小
+		&#10;选项：-b → 以 byte 为单位显示
+		&#10;选项：-k → 以 kb 为单位显示
+		&#10;选项：-m → 以 mb 为单位显示
+		&#10;选项：-h → 以 1024 进制以合适的单位统计文件
+		&#10;选项：-H → 以 1000 进制以合适的单位统计文件
+		&#10;选项：-s → 指定统计目标
+		&#10;选项：-s → 统计目录总大小
+		&#10;常用选项：-sh → 统计目录及文件的总大小">
+		<td>【磁盘命令】【统计文件】</td>
+		<td><p><font class="w b">du</font> <font class="w g">[选项]</font> <font class="r">[目录]</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：-t → 指定文件系统类型 后面跟文件系统
+		&#10;--------------------------------------------------
+		&#10;文件系统 → 如 ext3 ext4 等
+		&#10;磁盘文件 → dev 下的对应文件 如 sdb1 sdb2 等">
+		<td>【磁盘命令】【格式化分区】</td>
+		<td><p><font class="w b">mkfs</font> <font class="w g">选项</font> <font class="r">文件系统</font> <font class="r">分区	文件</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;">
+		<td>【磁盘命令】【查看已挂载设备】</td>
+		<td><p><font class="w b">mount</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;Linux 下所有存储设备必须挂载使用 包括硬盘
+		&#10;常见的设备系统可以识别 不需要写选项
+		&#10;--------------------------------------------------
+		&#10;选项1：-t 文件系统 → 系统类型有 iso9660 ext3 ext4 等
+		&#10;--------------------------------------------------
+		&#10;选项2：-o 特殊选项 → 指定挂载的额外选项
+		&#10;--------------------------------------------------
+		&#10;设备文件名 → 光盘通常在 /dev/sr0
+		&#10;--------------------------------------------------
+		&#10;挂载点 → 要事先建立挂载目录 通常在 /mnt 下">
+		<td>【磁盘命令】【挂载设备】</td>
+		<td><p><font class="w b">mount</font> <font class="w g">[选项1]</font> <font class="w g">[选项2]</font> <font class="r">设备文件</font> <font class="r">挂载点</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;若当前位置处于挂载目录中 则无法卸载">
+		<td>【磁盘命令】【卸载设备】</td>
+		<td><p><font class="w b">umount</font> <font class="r">设备文件或挂载点</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="
+		&#10;带有程序的源代码 配置文件 等
+		&#10;大多用 tar.gz 压缩
+		&#10;需要编译后安装 编译效率与机器配置和文件大小有关
+		&#10;安装和卸载方便
+		&#10;--------------------------------------------------
+		&#10;选项：-q → 表示是查看（查看是否已安装）
+		&#10;选项：-i → 表示是安装
+		&#10;选项：-U → 表示是升级
+		&#10;选项：-e → 表示是卸载
+		&#10;选项：-i → 显示详细信息
+		&#10;选项：-l → 显示安装位置
+		&#10;选项：-f → 显示该文件属于哪个包（选项后是文件名 不是包名）
+		&#10;常用命令：-qa | grep 服务名 → 查询指定服务的所有安装包
+		&#10;常用命令：-ivh → 安装
+		&#10;常用命令：-Uvh → 升级
+		&#10;常用命令：-e → 卸载">
+		<td>【软件安装】【CentOS】【rpm】</td>
+		<td><p><font class="w b">rpm</font> <font class="w g">[选项]</font> <font class="r">安装包</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;尽量不要用来更新和卸载 因为会误删其它支持组件
+		&#10;--------------------------------------------------
+		&#10;选项：-y → 显示过程信息（成功或报错信息）
+		&#10;--------------------------------------------------
+		&#10;操作：install → 安装
+		&#10;操作：remove → 卸载">
+		<td>【软件安装】【CentOS】【yum】</td>
+		<td><p><font class="w b">yum</font> <font class="w g">[选项]</font> <font class="w o">操作</font> <font class="r">安装包</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;比 yum 更安全
+		&#10;--------------------------------------------------
+		&#10;操作：install → 安装
+		&#10;操作：remove → 卸载">
+		<td>【软件安装】【Ubuntu】【apt-get】</td>
+		<td><p><font class="w b">apt-get</font> <font class="w g">[选项]</font> <font class="w o">操作</font> <font class="r">安装包</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="
+		&#10;查看系统是 32 位的还是 64 位的">
+		<td>【其它命令】【查看系统类型】</td>
+		<td><p><font class="w b">getconf LONG_BIT</font></p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->

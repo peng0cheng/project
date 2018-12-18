@@ -1,0 +1,77 @@
+<meta charset="utf-8" />
+<script src="../../public/js/jquery-1.8.3.min.js"></script>
+<!---------------------------------------------------------------------------------------------------->
+
+<style>
+table{
+	width:50%;
+	border:1px solid green;
+}
+td:nth-of-type(1){
+	text-align:right;
+}
+td:nth-of-type(2){
+	text-indent: 2em; 
+}
+button{
+	width:150px;
+	height:50px; 
+	text-align:left;
+	text-align:center; 
+}
+</style>
+
+<!---------------------------------------------------------------------------------------------------->
+
+<table>
+	<tr>
+		<td>最小值：</td>
+		<td><input type="number" id="min" value="0" /></td>
+	</tr>
+	<tr>
+		<td>最大值：</td>
+		<td><input type="number" id="max" value="100" /></td>
+	</tr>
+	<tr>
+		<td>速度（毫秒）：</td>
+		<td><input type="number" id="speed" value="100" /></td>
+	</tr>
+</table>
+<br>
+<button onclick="one()">resstart</button>
+<br><br><hr><br><br>
+
+<meter id="aaa"></meter><span></span>
+
+<!---------------------------------------------------------------------------------------------------->
+
+<script>
+
+var a;
+var max;
+var min;
+var speed;
+var timer;
+
+function one(){
+	a = 0;
+	max = $('#max').val();
+	min = $('#min').val();
+	speed = $('#speed').val();
+	clearTimeout(timer);
+
+	$('#aaa').attr('max',max);
+	$('#aaa').attr('min',min);
+
+	two();
+}
+
+function two(){
+	if(a > max){return;}
+	$('#aaa').attr('value',a);
+	$('#aaa').next().html(a+'%');
+	a++;
+	timer = setTimeout(two,speed);
+}
+
+</script>

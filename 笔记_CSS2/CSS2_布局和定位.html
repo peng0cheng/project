@@ -1,0 +1,212 @@
+<table class="i_table">
+	<tr onclick="test_overflow()" title="
+		&#10;overflow → 元素超出范围
+		&#10;overflow-x → 元素超出横向范围
+		&#10;overflow-y → 元素超出纵向范围
+		&#10;visible → 溢出 默认值
+		&#10;hidden → 隐藏
+		&#10;scroll → 显示滚动条
+		&#10;auto → 自动显示滚动条">
+		<td>【布局】【元素超出范围】</td>
+		<td><p><font class="w g">overflow</font> 丨 <font class="w g">overflow-x</font> 丨 <font class="w g">overflow-y</font> : <font class="w r">visible</font> 丨 <font class="w r">hidden</font> 丨 <font class="w r">scroll</font> 丨 <font class="w r">auto</font><p></td>
+	</tr>
+	<tr onclick="test_visibility()" title="
+		&#10;visible → 设置元素 显示 默认值
+		&#10;hidden → 设置元素 隐藏 并且该元素继续占据页面空间">
+		<td>【布局】【元素显隐】</td>
+		<td><p><font class="w g">visibility</font> : <font class="w r">visible</font> 丨 <font class="w r">hidden</font><p></td>
+	</tr>
+	<tr onclick="test_display()" title="
+		&#10;block → 设置元素为 块状元素
+		&#10;inline → 设置元素为 行内元素
+		&#10;inline-block → 设置元素为 行内块状元素
+		&#10;none → 设置元素为 隐藏元素 并且该元素不再占据页面空间
+		&#10;table-cell → 设置元素为 单元格">
+		<td>【布局】【元素属性】</td>
+		<td><p><font class="w g">display</font> : <font class="w r">block</font> 丨 <font class="w r">inline</font> 丨 <font class="w r">inline-block</font> 丨 <font class="w r">none</font> 丨 <font class="w r">table-cell</font><p></td>
+	</tr>
+	<tr onclick="test_float()" title="
+		&#10;left → 左浮动
+		&#10;right → 右浮动
+		&#10;none → 不浮动">
+		<td>【布局】【元素浮动】</td>
+		<td><p><font class="w g">float</font> : <font class="w r">left</font> 丨 <font class="w r">right</font> 丨 <font class="w r">none</font><p></td>
+	</tr>
+	<tr onclick="test_clear()" title="
+		&#10;left → 清除上方左浮动
+		&#10;right → 清除上方右浮动
+		&#10;both → 清除上方两侧浮动">
+		<td>【布局】【清除浮动】</td>
+		<td><p><font class="w g">clear</font> : <font class="w r">left</font> 丨 <font class="w r">right</font> 丨 <font class="w r">both</font><p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_position()" title="
+		&#10;absolute → 绝对定位 以页面或上级元素为参照物
+		&#10;relative → 相对定位 以元素当前位置为参照物
+		&#10;fixed → 脱离定位 永远不跟随浏览器活动">
+		<td>【定位】</td>
+		<td><p><font class="w g">position</font> : <font class="w r">absolute</font> 丨 <font class="w r">relative</font> 丨 <font class="w r">fixed</font><p></td>
+	</tr>
+	<tr onclick="test_TBLR()" title="
+		&#10;relative 元素必须在进行定位操作之后生效
+		&#10;absolute 元素的父元素必须进行定位操作">
+		<td>【定位】【移动】</td>
+		<td><p><font class="w g">top</font> 丨 <font class="w g">bottom</font> 丨 <font class="w g">left</font> 丨 <font class="w g">right</font> : <font class="r">距离</font><p></td>
+	</tr>
+	<tr onclick="test_zIndex()" title="
+		&#10;层级关系即相对页面的高度 数值高的覆盖数值低的">
+		<td>【定位】【层级】</td>
+		<td><p><font class="w g">z-index</font> : <font class="r">高度</font><p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【布局】**************************************************/
+
+function test_overflow(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { height: 100px; width: 100px; background: red; margin: 1%; float: left; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { <font class="g">overflow:</font> <font class="r">hidden;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { <font class="g">overflow-x:</font> <font class="r">scroll;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_03'+'</font> { <font class="g">overflow-y:</font> <font class="r">auto;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>"&gt;&lt;/div&gt;'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_02'+'</font>"&gt;&lt;/div&gt;'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_03'+'</font>"&gt;&lt;/div&gt;'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:100px;height:100px;background:red;margin:1%;float:left;overflow:hidden">##############################</div>'
+		+'<div style="width:100px;height:100px;background:red;margin:1%;float:left;overflow-x:scroll">##############################</div>'
+		+'<div style="width:100px;height:100px;background:red;margin:1%;float:left;overflow-y:auto">#<br>#<br>#<br>#<br>#<br>#<br>#<br>#<br>#<br>#<br></div>');
+}
+
+function test_visibility(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { height: 100px; width: 100px; background: red; margin: 1%; float: left; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { <font class="g">visibility:</font> <font class="r">hidden;</font> }></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { <font class="g">visibility:</font> <font class="r">visible;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>"&gt;one&lt;/div&gt;'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_02'+'</font>"&gt;two&lt;/div&gt;'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:100px;height:100px;background:red;margin:1%;float:left;visibility:hidden">one</div>'
+		+'<div style="width:100px;height:100px;background:red;margin:1%;float:left;visibility:visible">two</div>');
+}
+
+function test_display(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { height: 100px; width: 100px; background: red; margin: 1%; float: left; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { <font class="g">display:</font> <font class="r">none;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { <font class="g">display:</font> <font class="r">block;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>"&gt;one&lt;/div&gt;'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_02'+'</font>"&gt;two&lt;/div&gt;'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:100px;height:100px;background:red;margin:1%;float:left;display:none;">one</div>'
+		+'<div style="width:100px;height:100px;background:red;margin:1%;float:left;display:block;">two</div>');
+}
+
+function test_float(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div{ height: 100px; width: 100px; background: red; }</p>'
+			+'<p class="ti_1">.style_03 { height: 50px; width: 200px; background: red; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { <font class="g">float:</font> <font class="r">left;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { <font class="g">float:</font> <font class="r">right;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>"&gt;one&lt;/div&gt;'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_02'+'</font>"&gt;two&lt;/div&gt;'
+			+'<p class="ti_1">&lt;div class="style_03"&gt;three&lt;/div&gt;'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:100px;height:100px;background:red;margin:1%;float:left;">one</div>'
+		+'<div style="width:100px;height:100px;background:red;margin:1%;float:right;">two</div>'
+		+'<div style="width:200px;height:50px;background:green;">three</div>');
+}
+
+function test_clear(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { height: 100px; width: 100px; background: red; }</p>'
+			+'<p class="ti_1">.style_03 { height: 50px; width: 200px; background: red; }</p>'
+			+'<p class="ti_1">.style_01 { float: left; }</p>'
+			+'<p class="ti_1">.style_02 { float: right; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_03'+'</font> { <font class="g">clear:</font> <font class="r">both;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="style_01"&gt;one&lt;/div&gt;'
+			+'<p class="ti_1">&lt;div class="style_02"&gt;two&lt;/div&gt;'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_03'+'</font>"&gt;three&lt;/div&gt;'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:100px;height:100px;background:red;margin:1%;float:left;">one</div>'
+		+'<div style="width:100px;height:100px;background:red;margin:1%;float:right;">two</div>'
+		+'<div style="width:200px;height:50px;background:green;margin:1%;clear:both;">three</div>');
+}
+
+/**************************************************【定位】**************************************************/
+
+function test_position(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">.style_01 { width: 200px; height: 200px; background: blue; }</p>'
+			+'<p class="ti_1">.style_02 { width: 100px; height: 100px; background: green; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { <font class="g">position:</font> <font class="r">relative;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { <font class="g">position:</font> <font class="r">absolute;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>"&gt;'
+				+'<p class="ti_2">&lt;div class="<font class="b">'+'style_02'+'</font>"&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:200px;height:200px;background:blue;position:relative;"><div style="width:100px;height:100px;background:green;position:absolute;"></div></div>');
+}
+
+function test_TBLR(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">.style_01 { width: 200px; height: 200px; background: blue; }</p>'
+			+'<p class="ti_1">.style_02 { width: 100px; height: 100px; background: green; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { position: relative; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { position: absolute; <font class="g">left:</font> <font class="r">20px;</font> <font class="g">top:</font> <font class="r">50px;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>"&gt;'
+				+'<p class="ti_2">&lt;div class="<font class="b">'+'style_02'+'</font>"&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:200px;height:200px;background:blue;position:relative;"><div style="width:100px;height:100px;background:green;position:absolute;left:20px;top:50px;"></div></div>');
+}
+
+function test_zIndex(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">.style_01 { width: 200px; height: 100px; background: blue; }</p>'
+			+'<p class="ti_1">.style_02 { width: 200px; height: 100px; background: green; }</p>'
+			+'<p class="ti_1">.style_03 { width: 200px; height: 100px; background: red; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { position: absolute; left: 50px; top: 50px; <font class="g">z-index:</font> <font class="r">1;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { position: absolute; left: 100px; top: 100px; <font class="g">z-index:</font> <font class="r">2;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_03'+'</font> { position: absolute; left: 150px; top: 150px; <font class="g">z-index:</font> <font class="r">3;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>"&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_02'+'</font>"&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_03'+'</font>"&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:200px;height:100px;background:blue;position:absolute;left:50px;top:50px;z-index:1"></div>'
+		+'<div style="width:200px;height:100px;background:green;position:absolute;left:100px;top:100px;z-index:2"></div>'
+		+'<div style="width:200px;height:100px;background:red;position:absolute;left:150px;top:150px;z-index:3"></div>');
+}
+
+/**************************************************【定位】**************************************************/
+</script>

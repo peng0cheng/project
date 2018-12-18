@@ -1,0 +1,244 @@
+<table class="i_table">
+	<tr onclick="test_section()" title="
+		&#10;表示页面主体内容 也可以表示文章中独立的块">
+		<td>【结构】【页面主体】</td>
+		<td><p><font class="w b">&lt;section&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_aside()" title="
+		&#10;表示页面的非主体内容 一般是侧边栏">
+		<td>【结构】【页面侧边栏】</td>
+		<td><p><font class="w b">&lt;aside&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_article()" title="
+		&#10;用来表示一个完整的文章 新闻 博文 评论">
+		<td>【结构】【页面文章】</td>
+		<td><p><font class="w b">&lt;article&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_header()" title="
+		&#10;表示页面的头部区域 也可以表示文章的头部区域">
+		<td>【结构】【页面头部区域】</td>
+		<td><p><font class="w b">&lt;header&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_footer()" title="
+		&#10;表示页面的底部区域 同时也表示文章的底部区域">
+		<td>【结构】【页面底部区域】</td>
+		<td><p><font class="w b">&lt;footer&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_hgroup()" title="
+		&#10;表示一组标题 适合多标题/正副标题的文章标题">
+		<td>【结构】【页面的标题】</td>
+		<td><p><font class="w b">&lt;hgroup&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_nav()" title="
+		&#10;用来设定导航区域 或页面中文章的分页链接">
+		<td>【结构】【页面的导航区】</td>
+		<td><p><font class="w b">&lt;nav&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_figure()" title="
+		&#10;内容解释标签 对一副图片进行描述(定义描述范围)">
+		<td>【结构】【页面的描述区域】</td>
+		<td><p><font class="w b">&lt;figure&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_figcaption()" title="
+		&#10;描述配合标签(定义描述主体)">
+		<td>【结构】【页面的描述区域】</td>
+		<td><p><font class="w b">&lt;figcaption&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_address()" title="
+		&#10;地址标签 用于描述一个地址 即可以描述真实地址 也可描述 url 地址">
+		<td>【结构】【页面的地址区域】</td>
+		<td><p><font class="w b">&lt;address&gt;</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_progress()" title="
+		&#10;最大值 → 此值为进度条的参照标准 即 进度 100% 时的值 必选设置
+		&#10;默认值 → 根据默认值与最大值的比例显示正确的进度">
+		<td>【状态】【进度条】【最大值】</td>
+		<td><p><font class="w b">&lt;progress</font> <font class="w g">max</font> = <font class="r">最大值</font> <font class="w g">value</font> = <font class="r">当前值</font> <font class="w b">&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_meter_MMV()" title="
+		&#10;最大值 → 此为状态条的参照标准 即 状态 100% 时的值 必选设置
+		&#10;最小值 → 此为状态条的参照标准 即 状态 0% 时的值 可选设置
+		&#10;默认值 → 根据最小值最大值的距离显示正确的状态值">
+		<td>【状态】【状态条】【最小值】</td>
+		<td><p><font class="w b">&lt;meter</font> <font class="w g">min</font> = <font class="r">最小值</font> <font class="w g">max</font> = <font class="r">最大值</font> <font class="w g">value</font> = <font class="r">当前值</font> <font class="w b">&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_meter_LH()" title="
+		&#10;低警告值 → 设置状态条的低值警告值 低于指定数值警告 值必须大于 min
+		&#10;高警告值 → 设置状态条的高值警告值 高于指定数值警告 值必须小于 max">
+		<td>【状态】【状态条】【警告值】</td>
+		<td><p><font class="w b">&lt;meter</font> <font class="w g">low</font> = <font class="r">低警告值</font> <font class="w g">high</font> = <font class="r">高警告值</font> <font class="w b">&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_meter_O()" title="
+		&#10;最优值 → 大于 high 表示数值大了好 low 部分为最差值
+		&#10;最优值 → 小于 low 表示数值小了好 high 部分为最差值
+		&#10;最优值 → 小于 high 且 大于 low 不起作用">
+		<td>【状态】【状态条】【最优值】</td>
+		<td><p><font class="w b">&lt;meter</font> <font class="w g">optimum</font> = <font class="r">最优值</font> <font class="w b">&gt;</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_other_mark()" title="
+		&#10;可以通过样式修改默认背景">
+		<td>【其它】【高亮标记】</td>
+		<td><p><font class="w b">&lt;mark&gt;</font><font class="w o">标记内容</font><font class="w b">&lt;/mark&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_other_ruby()" title="
+		&#10;浏览器兼容时 → 显示音标在字符中上方
+		&#10;浏览器不兼容时 → 显示音标">
+		<td>【其它】【音标】</td>
+		<td><p><font class="w b">&lt;ruby&gt;</font><font class="w o">字符</font><font class="w b">&lt;rt&gt;</font><font class="w o">字符的音标</font><font class="w b">/&lt;rt&gt;</font><font class="w b">&lt;/ruby&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_other_ruby()" title="
+		&#10;浏览器兼容时 → 不显示音标
+		&#10;浏览器不兼容时 → 显示音标在标签位置">
+		<td>【其它】【音标】</td>
+		<td><p><font class="w b">&lt;ruby&gt;</font><font class="w o">字符</font><font class="w b">&lt;rp&gt;</font><font class="w o">字符的音标</font><font class="w b">/&lt;rp&gt;</font><font class="w b">&lt;/ruby&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_other_details()" title="
+		&#10;该元素会占用整行
+		&#10;details → 嵌套描述的内容
+		&#10;summary → 用于嵌套描述的标题">
+		<td>【其它】【细节描述】</td>
+		<td><p><font class="w b">&lt;details&gt;</font><font class="w o">描述内容</font><font class="w b">&lt;summary&gt;</font><font class="w o">被描述内容</font><font class="w b">/&lt;summary&gt;</font><font class="w b">&lt;/details&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_other_dialog()" title="">
+		<td>【其它】【对话】</td>
+		<td><p><font class="w b">&lt;dialog</font> <font class="w g">dt</font> <font class="w b">&gt;</font><font class="w o">姓名或呢称</font><font class="w b">&lt;/dialog&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_other_dialog()" title="">
+		<td>【其它】【对话】</td>
+		<td><p><font class="w b">&lt;dialog</font> <font class="w g">dd</font> <font class="w b">&gt;</font><font class="w o">对话内容</font><font class="w b">&lt;/dialog&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_other_contentEDitable()" title="
+		&#10;设定区域内容可以在页面上临时改变">
+		<td>【其它】【通用属性】【编缉】</td>
+		<td><p><font class="w g">contentEDitable</font></p></td>
+	</tr>
+	<tr onclick="test_other_hidden()" title="
+		&#10;效果和 display:none 效果相同">
+		<td>【其它】【通用属性】【隐藏】</td>
+		<td><p><font class="w g">hidden</font></p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【结构】**************************************************/
+
+/**************************************************【状态】**************************************************/
+
+function test_progress(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;progress</font> <font class="g">max</font>=<font class="r">"100"</font> <font class="g">value</font>=<font class="r">"50"</font> <font class="b">&gt;</font><font class="b">&lt;/progress&gt;</font></p>'
+		+'<hr class="cut" />'
+		+'<p><font class="b">&lt;progress</font> <font class="g">max</font>=<font class="r">"10"</font> <font class="g">value</font>=<font class="r">"3"</font> <font class="b">&gt;</font><font class="b">&lt;/progress&gt;</font></p>');
+	PC_Case.show(2,
+		'<progress max="100" value="50"></progress>'
+		+'<hr class="cut" />'
+		+'<progress max="10" value="3"></progress>');
+}
+
+function test_meter_MMV(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;meter</font> <font class="g">max</font>=<font class="r">"100"</font> <font class="g">value</font>=<font class="r">"50"</font> <font class="b">&gt;</font><font class="b">&lt;/meter&gt;</font></p>'
+		+'<hr class="cut" />'
+		+'<p><font class="b">&lt;meter</font> <font class="g">max</font>=<font class="r">"100"</font> <font class="g">min</font>=<font class="r">"50"</font> <font class="g">value</font>=<font class="r">"20"</font> <font class="b">&gt;</font><font class="b">&lt;/meter&gt;</font></p>'
+		+'<hr class="cut" />'
+		+'<p><font class="b">&lt;meter</font> <font class="g">max</font>=<font class="r">"100"</font> <font class="g">min</font>=<font class="r">"50"</font> <font class="g">value</font>=<font class="r">"75"</font> <font class="b">&gt;</font><font class="b">&lt;/meter&gt;</font></p>');
+	PC_Case.show(2,
+		'<meter max="100" value="50"></meter>'
+		+'<hr class="cut" />'
+		+'<meter max="100" min="50" value="20"></meter>'
+		+'<hr class="cut" />'
+		+'<meter max="100" min="50" value="75"></meter>');
+}
+
+function test_meter_LH(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;meter</font> <font class="g">max</font>=<font class="r">"100"</font> <font class="g">min</font>=<font class="r">"0"</font>  <font class="g">low</font>=<font class="r">"20"</font> <font class="g">high</font>=<font class="r">"80"</font> <font class="g">value</font>=<font class="r">"50"</font> <font class="b">&gt;</font><font class="b">&lt;/meter&gt;</font></p>'
+		+'<hr class="cut" />'
+		+'<p><font class="b">&lt;meter</font> <font class="g">max</font>=<font class="r">"100"</font> <font class="g">min</font>=<font class="r">"0"</font>  <font class="g">low</font>=<font class="r">"20"</font> <font class="g">high</font>=<font class="r">"80"</font> <font class="g">value</font>=<font class="r">"10"</font> <font class="b">&gt;</font><font class="b">&lt;/meter&gt;</font></p>'
+		+'<hr class="cut" />'
+		+'<p><font class="b">&lt;meter</font> <font class="g">max</font>=<font class="r">"100"</font> <font class="g">min</font>=<font class="r">"0"</font>  <font class="g">low</font>=<font class="r">"20"</font> <font class="g">high</font>=<font class="r">"80"</font> <font class="g">value</font>=<font class="r">"90"</font> <font class="b">&gt;</font><font class="b">&lt;/meter&gt;</font></p>');
+	PC_Case.show(2,
+		'<meter max="100" min="0" low="20" high="80" value="50"></meter>'
+		+'<hr class="cut" />'
+		+'<meter max="100" min="0" low="20" high="80" value="10"></meter>'
+		+'<hr class="cut" />'
+		+'<meter max="100" min="0" low="20" high="80" value="90"></meter>');
+}
+
+function test_meter_O(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;meter</font> <font class="g">max</font>=<font class="r">"100"</font>  <font class="g">min</font>=<font class="r">"0"</font>  <font class="g">low</font>=<font class="r">"20"</font> <font class="g">high</font>=<font class="r">"80"</font> <font class="g">optimum</font>=<font class="r">"10"</font> <font class="g">value</font>=<font class="r">"10"</font> <font class="b">&gt;</font><font class="b">&lt;/meter&gt;</font></p>'
+		+'<hr class="cut" />'
+		+'<p><font class="b">&lt;meter</font> <font class="g">max</font>=<font class="r">"100"</font>  <font class="g">min</font>=<font class="r">"0"</font>  <font class="g">low</font>=<font class="r">"20"</font> <font class="g">high</font>=<font class="r">"80"</font> <font class="g">optimum</font>=<font class="r">"10"</font> <font class="g">value</font>=<font class="r">"50"</font> <font class="b">&gt;</font><font class="b">&lt;/meter&gt;</font></p>'
+		+'<hr class="cut" />'
+		+'<p><font class="b">&lt;meter</font> <font class="g">max</font>=<font class="r">"100"</font>  <font class="g">min</font>=<font class="r">"0"</font>  <font class="g">low</font>=<font class="r">"20"</font> <font class="g">high</font>=<font class="r">"80"</font> <font class="g">optimum</font>=<font class="r">"10"</font> <font class="g">value</font>=<font class="r">"90"</font> <font class="b">&gt;</font><font class="b">&lt;/meter&gt;</font></p>'
+		+'<hr class="cut" />'
+		+'<p><font class="b">&lt;meter</font> <font class="g">max</font>=<font class="r">"100"</font>  <font class="g">min</font>=<font class="r">"0"</font>  <font class="g">low</font>=<font class="r">"20"</font> <font class="g">high</font>=<font class="r">"80"</font> <font class="g">optimum</font>=<font class="r">"90"</font> <font class="g">value</font>=<font class="r">"10"</font> <font class="b">&gt;</font><font class="b">&lt;/meter&gt;</font></p>'
+		+'<hr class="cut" />'
+		+'<p><font class="b">&lt;meter</font> <font class="g">max</font>=<font class="r">"100"</font>  <font class="g">min</font>=<font class="r">"0"</font>  <font class="g">low</font>=<font class="r">"20"</font> <font class="g">high</font>=<font class="r">"80"</font> <font class="g">optimum</font>=<font class="r">"90"</font> <font class="g">value</font>=<font class="r">"50"</font> <font class="b">&gt;</font><font class="b">&lt;/meter&gt;</font></p>'
+		+'<hr class="cut" />'
+		+'<p><font class="b">&lt;meter</font> <font class="g">max</font>=<font class="r">"100"</font>  <font class="g">min</font>=<font class="r">"0"</font>  <font class="g">low</font>=<font class="r">"20"</font> <font class="g">high</font>=<font class="r">"80"</font> <font class="g">optimum</font>=<font class="r">"90"</font> <font class="g">value</font>=<font class="r">"90"</font> <font class="b">&gt;</font><font class="b">&lt;/meter&gt;</font></p>');
+	PC_Case.show(2,
+		'<meter max="100" min="0" low="20" high="80" optimum="10" value="10"></meter>'
+		+'<hr class="cut" />'
+		+'<meter max="100" min="0" low="20" high="80" optimum="10" value="50"></meter>'
+		+'<hr class="cut" />'
+		+'<meter max="100" min="0" low="20" high="80" optimum="10" value="90"></meter>'
+		+'<hr class="cut" />'
+		+'<meter max="100" min="0" low="20" high="80" optimum="90" value="10"></meter>'
+		+'<hr class="cut" />'
+		+'<meter max="100" min="0" low="20" high="80" optimum="90" value="50"></meter>'
+		+'<hr class="cut" />'
+		+'<meter max="100" min="0" low="20" high="80" optimum="90" value="90"></meter>');
+}
+
+/**************************************************【其它】**************************************************/
+
+function test_other_mark(){
+	PC_Case.show(1,'<p>一二三四<font class="b">&lt;mark&gt;</font>五<font class="b">&lt;/mark&gt;</font>六七八九十</p>');
+	PC_Case.show(2,'一二三四<mark>五</mark>六七八九十');
+}
+
+function test_other_ruby(){
+	PC_Case.show(1,
+		'<p>一二三四<font class="b">&lt;ruby&gt;</font>五<font class="b">&lt;rt&gt;</font>wu<font class="b">&lt;/rt&gt;</font><font class="b">&lt;/ruby&gt;</font>六七八九十</p>'
+		+'<hr class="cut" />'
+		+'<p>一二三四<font class="b">&lt;ruby&gt;</font>五<font class="b">&lt;rp&gt;</font>wu<font class="b">&lt;/rp&gt;</font><font class="b">&lt;/ruby&gt;</font>六七八九十</p>');
+	PC_Case.show(2,
+		'一二三四<ruby>五<rt>wu</rt></ruby>六七八九十'
+		+'<hr class="cut" />'
+		+'一二三四<ruby>五<rp>wu</rp></ruby>六七八九十');
+}
+
+function test_other_details(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;details&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;summary&gt;</font>我是谁？<font class="b">&lt;/summary&gt;</font></p>'
+			+'<p class="ti_1">我是彭程</p>'
+		+'<p><font class="b">&lt;/details&gt;</font></p>');
+	PC_Case.show(2,'<details>我是彭程<summary>我是谁？</summary></details>');
+}
+
+function test_other_dialog(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;dialog <font class="g">dt</font>&gt;</font>小蘑菇采姑娘：<font class="b">&lt;/dialog&gt;</font></p>'
+		+'<p><font class="b">&lt;dialog <font class="g">dd</font>&gt;</font>啊啊啊啊啊啊！<font class="b">&lt;/dialog&gt;</font></p>');
+	PC_Case.show(2,
+		'<dialog dt>小蘑菇采姑娘：</dialog>'
+		+'<dialog dd>啊啊啊啊啊啊！</dialog>');
+}
+
+function test_other_contentEDitable(){
+	PC_Case.show(1,'<p><font class="b">&lt;span <font class="g">contentEDitable</font>&gt;</font>点我可编缉<font class="b">&lt;/span&gt;</font></p>');
+	PC_Case.show(2,'<span contentEDitable>点我可编缉</span>');
+}
+
+function test_other_hidden(){
+	PC_Case.show(1,'<p>一二三四<font class="b">&lt;span <font class="g">hidden</font>&gt;</font>五<font class="b">&lt;/span&gt;</font>六七八九十</p>');
+	PC_Case.show(2,'一二三四<span hidden>五</span>六七八九十');
+}
+
+/**************************************************【】**************************************************/
+</script>

@@ -1,0 +1,200 @@
+<table class="i_table">
+	<tr onclick="test_style()" title="">
+		<td>【格式】【嵌套】</td>
+		<td><p><font class="w b">style</font> = <font class="w g">属性</font> : <font class="r">值</font></p></td>
+	</tr>
+	<tr onclick="test_html()" title="">
+		<td>【格式】【标签定位】</td>
+		<td><p><font class="w o">标签名</font> { <font class="w g">属性</font> : <font class="r">值</font> }</p></td>
+	</tr>
+	<tr onclick="test_class()" title="">
+		<td>【格式】【类名定位】</td>
+		<td><p><font class="w b">.</font><font class="w o">类名</font> { <font class="w g">属性</font> : <font class="r">值</font> }</p></td>
+	</tr>
+	<tr onclick="test_id()" title="">
+		<td>【格式】【ID 定位】</td>
+		<td><p><font class="w b">#</font><font class="w o">ID名</font> { <font class="w g">属性</font> : <font class="r">值</font> }</p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_px()" title="
+		&#10;相对于屏幕的一个像素点
+		&#10;浏览器默认字体的长度为 16px">
+		<td>【长度单位】【像素】</td>
+		<td><p><font class="w g">属性</font> : <font class="w o">n</font><font class="w r">px</font><p></td>
+	</tr>
+	<tr onclick="test_em()" title="
+		&#10;相对于当前对象内文本字体的高度 通常用于设置汉字文章的缩进">
+		<td>【长度单位】【em】</td>
+		<td><p><font class="w g">属性</font> : <font class="w o">n</font><font class="w r">em</font><p></td>
+	</tr>
+	<tr onclick="test_ex()" title="
+		&#10;相对于当前对象内小写字母 x 的高度 相当于 em 的一半">
+		<td>【长度单位】【ex】</td>
+		<td><p><font class="w g">属性</font> : <font class="w o">n</font><font class="w r">ex</font><p></td>
+	</tr>
+	<tr onclick="test_persent()" title="
+		&#10;相对于当前对象内元素尺寸">
+		<td>【长度单位】【百分比】</td>
+		<td><p><font class="w g">属性</font> : <font class="w o">n</font><font class="w r">%</font><p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_color_01()" title="">
+		<td>【颜色单位】【英文】</td>
+		<td><p><font class="w g">属性</font> : <font class="w o">颜色英文单词</font><p></td>
+	</tr>
+	<tr onclick="test_color_02()" title="
+		&#10;前两位 0~F → 红色度
+		&#10;继两位 0~F → 绿色度
+		&#10;后两位 0~F → 蓝色度">
+		<td>【颜色单位】【十六进制】</td>
+		<td><p><font class="w g">属性</font> : <font class="w r">#</font><font class="w o">六位十六进制数</font><p></td>
+	</tr>
+	<tr onclick="test_color_rgb()" title="
+		&#10;第一位 0~255 → 红色度
+		&#10;第二位 0~255 → 绿色度
+		&#10;第三位 0~255 → 蓝色度">
+		<td>【颜色单位】【RGB】</td>
+		<td><p><font class="w g">属性</font> : <font class="w r">rgb</font> ( <font class="w o">0~255</font> , <font class="w o">0~255</font> , <font class="w o">0~255</font> )<p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【格式】**************************************************/
+
+function test_style(){
+	PC_Case.show(1,'<p>&lt;div <font class="b">style</font>="<font class="g">width:</font> <font class="r">100px;</font> <font class="g">height:</font> <font class="r">100px;</font> <font class="g">background:</font> <font class="r">red;</font>"&gt;&lt;/div&gt;</p>');
+	PC_Case.show(2,'<div style="width:100px;height:100px;background:red"></div>');
+}
+
+function test_html(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> {</p>'
+				+'<p class="ti_2"><font class="g">width:</font> <font class="r">100px;</font></p>'
+				+'<p class="ti_2"><font class="g">height:</font> <font class="r">100px;</font></p>'
+				+'<p class="ti_2"><font class="g">background:</font> <font class="r">red;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:100px;height:100px;background:red"></div>');
+}
+
+function test_class(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.test'+'</font> {</p>'
+				+'<p class="ti_2"><font class="g">width:</font> <font class="r">100px;</font></p>'
+				+'<p class="ti_2"><font class="g">height:</font> <font class="r">100px;</font></p>'
+				+'<p class="ti_2"><font class="g">background:</font> <font class="r">red;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'test'+'</font>"&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:100px;height:100px;background:red"></div>');
+}
+
+function test_id(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'#test'+'</font> {</p>'
+				+'<p class="ti_2"><font class="g">width:</font> <font class="r">100px;</font></p>'
+				+'<p class="ti_2"><font class="g">height:</font> <font class="r">100px;</font></p>'
+				+'<p class="ti_2"><font class="g">background:</font> <font class="r">red;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div id="<font class="b">'+'test'+'</font>"&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:100px;height:100px;background:red"></div>');
+}
+
+/**************************************************【长度单位】**************************************************/
+
+function test_px(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { background: green; height: 20px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">width:</font> <font class="r">100px;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:100px;height:20px;background:green"></div>');
+}
+
+function test_em(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { background: green; height: 20px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">width:</font> <font class="r">10em;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:10em;height:20px;background:green"></div>');
+}
+
+function test_ex(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { background: green; height: 20px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">width:</font> <font class="r">10ex;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:10ex;height:20px;background:green"></div>');
+}
+
+function test_persent(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { background: green; height: 20px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">width:</font> <font class="r">100%;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:100%;height:20px;background:green"></div>');
+}
+
+/**************************************************【颜色单位】**************************************************/
+
+function test_color_01(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { width: 100px; height: 100px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">background:</font> <font class="r">red;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:100px;height:100px;background:red"></div>');
+}
+
+function test_color_02(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { width: 100px; height: 100px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">background:</font> <font class="r">#</font><font class="r">00ff00;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:100px;height:100px;background:#00ff00"></div>');
+}
+
+function test_color_rgb(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { width: 100px; height: 100px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">background:</font> <font class="r">rgb</font><font class="r">( 0,0,255 );</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:100px;height:100px;background:rgb(0,0,255)"></div>');
+}
+
+/**************************************************【】**************************************************/
+</script>

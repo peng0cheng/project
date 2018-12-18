@@ -1,0 +1,119 @@
+<table class="i_table">
+	<tr ondblclick="test_tag_01()" title="">
+		<td>【概念】【标签】</td>
+		<td><p><font class="w b">&lt;标签名&gt;</font><font class="w o">内容</font><font class="w b">&lt;/标签名&gt;</font></p></td>
+	</tr>
+	<tr ondblclick="test_tag_02()" title="">
+		<td>【概念】【单标签】</td>
+		<td><p><font class="w b">&lt;标签名 /&gt;</font></p></td>
+	</tr>
+	<tr ondblclick="test_tag_03()" title="">
+		<td>【概念】【属性】</td>
+		<td><p><font class="w b">&lt;标签名</font> <font class="w g">属性名</font> = <font class="r">属性值</font> <font class="w b">&gt;</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr ondblclick="error()" title="
+		&#10;不是 HTML 标签 它为浏览器提供一项信息 即 HTML 是用什么版本编写的">
+		<td>【文档】【声明类型】</td>
+		<td><p><font class="w b">&lt;!DOCTYPE</font> <font class="w g">html</font> <font class="w b">&gt;</font></p></td>
+	</tr>
+	<tr ondblclick="error()" title="
+		&#10;定义文档的标题 通常显示在浏览器的页面标签处">
+		<td>【文档】【文档的标题】</td>
+		<td><p><font class="w b">&lt;title&gt;</font><font class="w o">标题</font><font class="w b">&lt;/title&gt;</font></p></td>
+	</tr>
+	<tr ondblclick="error()" title="
+		&#10;为页面上的所有链接规定默认地址
+		&#10;对文档中设置的链接无效">
+		<td>【文档】【链接地址】</td>
+		<td><p><font class="w b">&lt;base</font> <font class="w g">href</font> = <font class="r">地址</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr ondblclick="error()" title="
+		&#10;为页面上的所有链接规定默认打开方式
+		&#10;对文档中设置的链接无效
+		&#10;_self → 在当前框架中打开被链接文档
+		&#10;_blank → 在新窗口中打开被链接文档
+		&#10;_parent → 在父框架中打开被链接文档
+		&#10;_top → 在窗口主体中打开被链接文档">
+		<td>【文档】【链接目标】</td>
+		<td><p><font class="w b">&lt;base</font> <font class="w g">target</font> = <font class="r">打开方式</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr ondblclick="error()" title="
+		&#10;用于连接外部 CSS 文件
+		&#10;href → 用于引入 CSS 文件地址
+		&#10;rel → 用于声明引入的 CSS 文件和当前页面的关系 stylesheet
+		&#10;type → 设定文件的 MIME 类型">
+		<td>【文档】【连接样式】</td>
+		<td><p><font class="w b">&lt;link</font> <font class="w g">rel</font> = <font class="w r">stylesheet</font> <font class="w g">type</font> = <font class="w r">text/css</font> <font class="w g">href</font> = <font class="r">地址</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr ondblclick="error()" title="
+		&#10;用于为当前 HTML 文档定义样式信息">
+		<td>【文档】【嵌入样式】</td>
+		<td><p><font class="w b">&lt;style&gt;</font><font class="w o">CSS 代码</font><font class="w b">&lt;/style&gt;</font></p></td>
+	</tr>
+	<tr ondblclick="error()" title="
+		&#10;用于连接外部 JS 文件">
+		<td>【文档】【连接脚本】</td>
+		<td><p><font class="w b">&lt;script</font> <font class="w g">rel</font> = <font class="w r">stylesheet</font> <font class="w g">type</font> = <font class="w r">text/javascript</font> <font class="w g">src</font> = <font class="r">地址</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr ondblclick="error()" title="
+		&#10;用于为当前 HTML 文档定义 JavaScript 脚本">
+		<td>【文档】【嵌入脚本】</td>
+		<td><p><font class="w b">&lt;script&gt;</font><font class="w o">JavaScript 代码</font><font class="w b">&lt;/script&gt;</font></p></td>
+	</tr>
+	<tr ondblclick="error()" title="
+		&#10;一些搜索引擎会利用 meta 元素的 name 和 content 属性来索引页面">
+		<td>【文档】【元数据】【描述】</td>
+		<td><p><font class="w b">&lt;meta</font> <font class="w g">name</font> = <font class="w r">description</font> <font class="w g">content</font> = <font class="r">描述</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr ondblclick="error()" title="
+		&#10;一些搜索引擎会利用 meta 元素的 name 和 content 属性来索引页面">
+		<td>【文档】【元数据】【关键词】</td>
+		<td><p><font class="w b">&lt;meta</font> <font class="w g">name</font> = <font class="w r">keywords</font> <font class="w g">content</font> = <font class="r">关键词</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr ondblclick="error()" title="
+		&#10;告诉浏览器等设备 文件为 html 文件 使用了 utf8 编码">
+		<td>【文档】【元数据】【编码】</td>
+		<td><p><font class="w b">&lt;meta</font> <font class="w g">http-equiv</font> = <font class="w r">content-type</font> <font class="w g">content</font> = <font class="w r">txt/html;charset=utf-8</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr ondblclick="error()" title="
+		&#10;告诉浏览器等设备 N 秒后跳转到指定页面">
+		<td>【文档】【元数据】【跳转】</td>
+		<td><p><font class="w b">&lt;meta</font> <font class="w g">http-equiv</font> = <font class="w r">refresh</font> <font class="w g">content</font> = <font class="r">秒数;url=地址</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【】**************************************************/
+
+function error(){
+	AL.open('没有实例');
+}
+
+function showTest(code){
+	PU.content(TEST.get());
+	TEST.write(code);
+	TEST.result(code);
+	PU.open();
+}
+
+/**************************************************【概念】**************************************************/
+
+
+function test_tag_01(){
+	var code = '<b>hello world</b>\n';
+	showTest(code);
+}
+
+function test_tag_02(){
+	var code = '<input />\n';
+	showTest(code);
+}
+
+function test_tag_03(){
+	var code = '<font color="blue">hello world</font>\n';
+	showTest(code);
+}
+
+/**************************************************【】**************************************************/
+</script>

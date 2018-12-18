@@ -1,0 +1,261 @@
+<table class="i_table">
+	<tr id="test_close" title="
+		&#10;window 是全局对象 在页面上创建的所有全局对象都会变成 window 对象的属性
+		&#10;history location document 都属于 window 对象的属性
+		&#10;window 有时可以省略不写 例：window.open() 可以写成 open()">
+		<td>【窗口】【window】</td>
+		<td><p></p></td>
+	</tr>
+	<tr id="test_open" title="
+		&#10;地址 → 打开页面的 url 地址
+		&#10;名称 → 打开页面的名称（不是文件名） 可以设为空 默认为在新的页面打开
+		&#10;名称：_self → 在本页面打开 但是参数将失效
+		&#10;参数：height → 窗口高度（px）
+		&#10;参数：width → 窗口宽度（px）
+		&#10;参数：top → 窗口距离屏幕上方的象素值（px）
+		&#10;参数：left → 窗口距离屏幕左侧的象素值（px）
+		&#10;参数：toolbar → 是否显示工具栏 （yes / no）
+		&#10;参数：menubar → 是否显示菜单栏 （yes / no）
+		&#10;参数：scrollbars → 是否显示滚动条 （yes / no）
+		&#10;参数：resizable → 是否允许改变窗口大小 （yes / no）
+		&#10;参数：location → 是否显示地址栏 （yes / no）
+		&#10;参数：status → 是否显示状态栏内的信息 （yes / no）">
+		<td>【窗口】【打开窗口】</td>
+		<td><p><font class="w b">window</font> . <font class="w b">open</font> ( <font class="o">地址</font> , <font class="o">名称</font> , <font class="o">参数</font> )</p></td>
+	</tr>
+	<tr id="test_close" title="
+		&#10;部分浏览器可能不支持 window.close()">
+		<td>【窗口】【关闭窗口】</td>
+		<td><p><font class="w b">window</font> . <font class="w b">close</font> ( )</p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr id="test_" title="
+		&#10;Navigator 对象包含有关浏览器的信息">
+		<td>【浏览器】【navigator】</td>
+		<td><p></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;userAgent 声明了浏览器用于 HTTP 请求的用户代理头的值 返回一个固定的字符串
+		&#10;一般来讲 它是在 navigator.appCodeName 的值之后加上斜线和 navigator.appVersion 的值构成的">
+		<td>【浏览器】【获取浏览器用于 HTTP 请求的值】</td>
+		<td><p><font class="w b">navigator</font> . <font class="w b">userAgent</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;platform 声明了运行浏览器的操作系统和（或）硬件平台 该属性没有标准的值集合 只有一些常见值
+		&#10;返回值有：Win32 Win64 MacPPC Linuxi586 等">
+		<td>【浏览器】【获取浏览器的操作系统平台】</td>
+		<td><p><font class="w b">navigator</font> . <font class="w b">platform</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;cpuClass 属性可返回浏览器系统的 CPU 等级
+		&#10;返回值 x64 x86 undefined 等">
+		<td>【浏览器】【获取浏览器系统的 CPU 等级】</td>
+		<td><p><font class="w b">navigator</font> . <font class="w b">cpuClass</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;onLine 声明了系统是否处于脱机模式
+		&#10;返回值：true → 该浏览器是在线状态
+		&#10;返回值：false → 该浏览器是离线状态">
+		<td>【浏览器】【判断浏览器是否连网】</td>
+		<td><p><font class="w b">navigator</font> . <font class="w b">onLine</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;cookieEnabled 声明了系统是否启用了 cookie
+		&#10;返回值：true → 该浏览器启用了 cookie
+		&#10;返回值：false → 该浏览器禁用了 cookie">
+		<td>【浏览器】【判断浏览器是否启用 cookie】</td>
+		<td><p><font class="w b">navigator</font> . <font class="w b">cookieEnabled</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr id="test_" title="
+		&#10;获取显示屏幕的数据 不同浏览器可能结果不同">
+		<td>【屏幕】【screen】</td>
+		<td><p></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;获取显示屏幕的宽度">
+		<td>【屏幕】【显示屏宽】</td>
+		<td><p><font class="w b">screen</font> . <font class="w b">width</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;获取显示屏幕的高度">
+		<td>【屏幕】【显示屏高】</td>
+		<td><p><font class="w b">screen</font> . <font class="w b">height</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;获取显示屏幕的宽度（除 Windows 任务栏之外）">
+		<td>【屏幕】【显示屏宽】</td>
+		<td><p><font class="w b">screen</font> . <font class="w b">availWidth</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;获取显示屏幕的高度（除 Windows 任务栏之外）">
+		<td>【屏幕】【显示屏高】</td>
+		<td><p><font class="w b">screen</font> . <font class="w b">availHeight</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;获取目标设备或缓冲器上的调色板的比特深度
+		&#10;返回数值">
+		<td>【屏幕】【色深】</td>
+		<td><p><font class="w b">screen</font> . <font class="w b">colorDepth</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr id="test_" title="
+		&#10;获取 URL 数据 若手动设置 可以直接给属性或方法赋值
+		&#10;例：location.href=a.html">
+		<td>【地址】【location】</td>
+		<td><p></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;获取完整的 url 地址
+		&#10;可以直接赋值 如：location.href = a.html
+		&#10;浏览器会产生历史记录">
+		<td>【地址】【设置或获取 URL】</td>
+		<td><p><font class="w b">location</font> . <font class="w b">href</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;获取 URL 的协议部分
+		&#10;返回值：file: 、 http: 等">
+		<td>【地址】【设置或获取 URL 协议】</td>
+		<td><p><font class="w b">location</font> . <font class="w b">protocol</font></p></td>
+	</tr>
+	<tr id="test_" title="">
+		<td>【地址】【设置或获取 URL 端口号】</td>
+		<td><p><font class="w b">location</font> . <font class="w b">port</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;获取 URL 的主机名称
+		&#10;返回值：127.0.0.1 、 localhost 等">
+		<td>【地址】【设置或获取 URL 主机名】</td>
+		<td><p><font class="w b">location</font> . <font class="w b">hostname</font></p></td>
+	</tr>
+	<tr id="test_" title="">
+		<td>【地址】【设置或获取 URL 主机名和端口号】</td>
+		<td><p><font class="w b">location</font> . <font class="w b">host</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;URL 协议之后的部分 不包括双斜线 //">
+		<td>【地址】【设置或获取 URL 路径部分】</td>
+		<td><p><font class="w b">location</font> . <font class="w b">pathname</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;# 号之后的部分（不包括 # 号）">
+		<td>【地址】【设置或获取 URL 锚】</td>
+		<td><p><font class="w b">location</font> . <font class="w b">hash</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;从问号 ? 开始的查询部分 即参数部分（包括 ? 号）">
+		<td>【地址】【设置或获取 URL 查询部分】</td>
+		<td><p><font class="w b">location</font> . <font class="w b">search</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;参数为布尔值 默认为 false
+		&#10;参数：false → 当服务器的文档已改变 则会重新下载该文档 否则直接读缓存
+		&#10;参数：true → 无论文档的最后修改日期是什么 它都会绕过缓存 从服务器上重新下载该文档">
+		<td>【地址】【重新加载当前文档】</td>
+		<td><p><font class="w b">location</font> . <font class="w b">reload</font> ( <font class="o">参数</font> )</p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;与 location.href 类似 一个是设置属性 一个是设置方法
+		&#10;浏览器会产生历史记录">
+		<td>【地址】【加载新的文档】</td>
+		<td><p><font class="w b">location</font> . <font class="w b">assign</font> ( <font class="o">地址</font> )</p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;用法和效果与 location.assign() 相同
+		&#10;浏览器不会产生历史记录 即不能倒退">
+		<td>【地址】【用新的文档替换当前文档】</td>
+		<td><p><font class="w b">location</font> . <font class="w b">replace</font> ( <font class="o">地址</font> )</p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr id="test_" title="
+		&#10;对浏览器的历史记录操作 可以前进或后退">
+		<td>【历史】【history】</td>
+		<td><p></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;返回值：数值型e → IE 6 和 Opera 9 以 0 开始 而 Firefox 1.5 以 1 开始">
+		<td>【历史】【获取浏览器历史列表中的 URL 数量】</td>
+		<td><p><font class="w b">history</font> . <font class="w b">length</font></p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;加载 history 列表中的上一个 URL
+		&#10;类似于浏览器的 后退 按钮">
+		<td>【历史】【加载上一个历史 URL】</td>
+		<td><p><font class="w b">history</font> . <font class="w b">back</font> ( )</p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;加载 history 列表中的下一个 URL
+		&#10;类似于浏览器的 前进 按钮">
+		<td>【历史】【加载下一个历史 URL】</td>
+		<td><p><font class="w b">history</font> . <font class="w b">forward</font> ( )</p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;数值参数使用的是要访问的 URL 在 History 的 URL 列表中的相对位置
+		&#10;URL 参数使用的是要访问的 URL
+		&#10;数字：0 → 加载本页面
+		&#10;数字：n → 加载下 n 个页面 等同于 history.forward()
+		&#10;数字：-n → 加载上 n 个页面 等同于 history.back()
+		&#10;地址：URL → 加载指定的历史 URL">
+		<td>【历史】【加载指定的历史 URL】</td>
+		<td><p><font class="w b">history</font> . <font class="w b">go</font> ( <font class="o">数值或地址</font> )</p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr id="test_setinterval" title="
+		&#10;时间间隔 → 单位：毫秒">
+		<td>【其它】【定时器】</td>
+		<td><p><font class="w b">setInterval</font> ( <font class="o">执行函数</font> , <font class="o">时间间隔</font> )</p></td>
+	</tr>
+	<tr id="test_clearinterval" title="
+		&#10;参数 → 必须是由 setInterval() 的返回值 即绑定的变量">
+		<td>【其它】【取消定时器】</td>
+		<td><p><font class="w b">clearInterval</font> ( <font class="o">参数</font> )</p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;在指定时间之后执行一次">
+		<td>【其它】【延时器】</td>
+		<td><p><font class="w b">setTimeout</font> ( <font class="o">执行函数</font> , <font class="o">时间间隔</font> )</p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;停止延时器 需要提前将延时器赋予一个变量">
+		<td>【其它】【取消延时器】</td>
+		<td><p><font class="w b">clearTimeout</font> ( <font class="o">延时器变量</font> )</p></td>
+	</tr>
+	<tr id="test_" title="
+		&#10;确认返回 true 取消返回 false">
+		<td>【其它】【确认对话框】</td>
+		<td><p><font class="w b">confirm</font> ( <font class="o">对话框文字</font> )</p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+$(function(){
+
+/**************************************************【窗口】**************************************************/
+
+	$('#test_setinterval,#test_clearinterval').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="gr">&lt;html&gt;</font></p>'
+				+'<p class="ti_1">&lt;<font>button</font>&gt;one&lt;/button&gt;</p>'
+				+'<p class="ti_1">&lt;<font>br /</font>&gt;</p>'
+				+'<p class="ti_1">&lt;<font>button</font>&gt;two&lt;/button&gt;</p>'
+			+'<p><font class="gr">&lt;/html&gt;</font></p>'
+			+'<p><font class="gr">&lt;script&gt;</font></p>'
+				+'<p class="ti_1">function <font class="g">set</font>(){</p>'
+					+'<p class="ti_2"><font class="w g">var1</font> = <font class="w b">window.setInterval</font>( \'<font class="g">one()</font>\' , <font class="r">1000</font> )</p>'
+				+'<p class="ti_1">}</p>'
+				+'<p class="ti_1">function <font class="g">one</font>(){</p>'
+					+'<p class="ti_2">alert( \'hello world\' )</p>'
+				+'<p class="ti_1">}</p>'
+				+'<p class="ti_1">function <font class="g">two</font>(){</p>'
+					+'<p class="ti_2"><font class="w b">clearInterval</font>( \'<font class="g">var1</font>\' )</p>'
+				+'<p class="ti_1">}</p>'
+			+'<p><font class="gr">&lt;/script&gt;</font></p>');
+		PC_Case.show(2,
+			'<button id="interval_set" style="width:150px;height:50px;text-align:center;line-height:50px;" onclick="set()">one</button>'
+			+'<br><br>'
+			+'<button id="interval_clear" style="width:150px;height:50px;text-align:center;line-height:50px;" onclick="two()">two</button>');
+	});
+	
+/**************************************************【结束】**************************************************/
+});
+</script>

@@ -1,0 +1,92 @@
+<table class="i_table">
+	<tr onclick="" title="">
+		<td>【库】【连接】</td>
+		<td><p><font class="w b">mysql_connect</font> ( <font class="r">数据库地址</font> , <font class="r">数据库账户</font> , <font class="r">数据库密码</font> )</p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;判断连接是否成功 成功时返回0 不成功时返回失败的 ID">
+		<td>【库】【检测】</td>
+		<td><p><font class="w b">mysql_errno</font> ( )</p></td>
+	</tr>
+	<tr onclick="" title="">
+		<td>【库】【选择】</td>
+		<td><p><font class="w b">mysql_select_db</font> ( <font class="r">数据库名</font> )</p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;一般是 utf8">
+		<td>【库】【设置字符集】</td>
+		<td><p><font class="w b">mysql_set_charset</font> ( <font class="r">字符集名称</font> )</p></td>
+	</tr>
+	<tr onclick="" title="">
+		<td>【库】【关闭】</td>
+		<td><p><font class="w b">mysql_close</font> ( )</p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="">
+		<td>【数据】【执行SQL语句】</td>
+		<td><p><font class="w b">mysql_query</font> ( <font class="o">Mysql 语句</font> )</p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;可以在 mysql_query() 函数上一次执行的结果判断该语句是否执行成功 若失败则返回失败原因">
+		<td>【数据】【判断SQL语句】</td>
+		<td><p><font class="w b">mysql_error</font> ( )</p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="
+		&#10;结果集是 mysql_query() 函数的返回结果 可以是一个变量
+		&#10;第一次执行会返回查询结果中的第一条数据
+		&#10;第 n 次执行会返回查询结果中的第 n 条数据
+		&#10;可以使用 while 循环一次打印所有结果">
+		<td>【fetch函数】【以索引数组形式获取数据】</td>
+		<td><p><font class="w b">mysql_fetch_row</font> ( <font class="o">查询结果集</font> )</p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;结果集是 mysql_query() 函数的返回结果 可以是一个变量
+		&#10;第一次执行并打印会返回查询结果中的第一条数据
+		&#10;第 n 次执行并打印会返回查询结果中的第 n 条数据
+		&#10;可以使用 while 循环一次打印所有结果">
+		<td>【fetch函数】【以关联数组形式获取数据】</td>
+		<td><p><font class="w b">mysql_fetch_assoc</font> ( <font class="o">查询结果集</font> )</p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;结果集是 mysql_query() 函数的返回结果 可以是一个变量
+		&#10;第一次执行会返回查询结果中的第一条数据
+		&#10;第 n 次执行会返回查询结果中的第 n 条数据
+		&#10;可以使用 while 循环一次打印所有结果
+		&#10;--------------------------------------------------
+		&#10;参数可以不写 默认返回一个索引数组和关联数组
+		&#10;参数：MYSQL_ASSOC → 返回关联数组 和 mysql_fetch_assoc() 相同
+		&#10;参数：MYSQL_NUM → 返回索引数组 和 mysql_fetch_row() 相同
+		&#10;参数：MYSQL_BOTH → 默认值 返回索引数组和关联数组的混合数组">
+		<td>【fetch函数】【以混合数组形式获取数据】</td>
+		<td><p><font class="w b">mysql_fetch_array</font> ( <font class="o">查询结果集</font> , <font class="g">参数</font> )</p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;结果集是 mysql_query() 函数的返回结果 可以是一个变量
+		&#10;第一次执行并打印会返回查询结果中的第一条数据
+		&#10;第 n 次执行并打印会返回查询结果中的第 n 条数据
+		&#10;可以使用 while 循环一次打印所有结果">
+		<td>【fetch函数】【以对象形式获取数据】</td>
+		<td><p><font class="w b">mysql_fetch_object</font> ( <font class="o">查询结果集</font> )</p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="
+		&#10;结果集是 mysql_query() 函数的返回结果 可以是一个变量
+		&#10;返回值是一个数字 是结果的行数 即数据的数量">
+		<td>【其它函数】【获取结果集中行的数目】</td>
+		<td><p><font class="w b">mysql_num_rows</font> ( <font class="o">查询结果集</font> )</p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;结果集是 mysql_query() 函数的返回结果 可以是一个变量
+		&#10;行号从 0 开始 代表第一行">
+		<td>【其它函数】【获取结果集中一个字段的值】</td>
+		<td><p><font class="w b">mysql_result</font> ( <font class="o">查询结果集</font> , <font class="r">行号</font> , <font class="r">字段名</font> )</p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;连接标识符是 mysql_connect() 函数的返回结果 可以是一个变量
+		&#10;返回数值 即受影响的数据条数">
+		<td>【其它函数】【获取前一次操作受影响的记录行数】</td>
+		<td><p><font class="w b">mysql_affected_rows</font> ( <font class="o">连接标识符</font> )</p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->

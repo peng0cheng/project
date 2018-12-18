@@ -1,0 +1,24 @@
+/**************************************************【整体样式】**************************************************/
+
+div[alert_body] {
+	box-sizing : border-box;
+	width : 200px;
+	height : 100px;
+	line-height : 100px;
+}
+
+div[alert_body] {
+	position : fixed;
+	display : none;
+	z-index : 100;
+}
+
+div[alert_body] {
+	background : rgba(0,0,0,0.7);
+	border-radius: 10px 10px;
+	color : white;
+	font-size : 20px;
+	text-align : center;
+}
+
+/**************************************************【】**************************************************/

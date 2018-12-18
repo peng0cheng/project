@@ -1,0 +1,146 @@
+<table class="i_table">
+	<tr title="
+		&#10;说&#12288;明：给 key 设置 value
+		&#10;说&#12288;明：如果 key 已存在则无效
+		&#10;返回值：成功 → OK
+		&#10;返回值：键已存在 → 0">
+		<td>【CMD】【设置】【单个值】</td>
+		<td><p><font class="w b">SETNX</font> <font class="w g">key</font> <font class="w r">value</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：给 key 设置 value
+		&#10;说&#12288;明：如果 key 不存在将自动创建
+		&#10;说&#12288;明：如果 key 已存在则覆盖
+		&#10;返回值：成功 → 1">
+		<td>【CMD】【设置】【强制单个值】</td>
+		<td><p><font class="w b">SET</font> <font class="w g">key</font> <font class="w r">value</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：给 key 设置新值 并返回旧值
+		&#10;说&#12288;明：只能操作字符串类型
+		&#10;返回值：成功 → value 的新值">
+		<td>【CMD】【设置】【强制单个值并返回旧值】</td>
+		<td><p><font class="w b">GETSET</font> <font class="w g">key</font> <font class="w r">value</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：给 key 设置 value 并设置生存时间
+		&#10;说&#12288;明：如果 key 不存在将自动创建
+		&#10;说&#12288;明：如果 key 已存在则覆盖
+		&#10;返回值：成功 → 1">
+		<td>【CMD】【设置】【强制单个值和生存时间】</td>
+		<td><p><font class="w b">SETEX</font> <font class="w g">key</font> <font class="w o">秒数</font> <font class="w r">value</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：给 key 设置 value
+		&#10;说&#12288;明：如果其中任何一个 key 已存在则全部无效
+		&#10;返回值：成功 → OK
+		&#10;返回值：键已存在 → 0">
+		<td>【CMD】【设置】【多个值】</td>
+		<td><p><font class="w b">MSETNX</font> <font class="w g">key</font> <font class="w r">value</font> <font class="w gr">[</font> <font class="w g">key</font> <font class="w r">value</font> <font class="w gr">...</font> <font class="w gr">]</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：给 key 设置 value
+		&#10;说&#12288;明：如果 key 不存在将自动创建
+		&#10;说&#12288;明：如果 key 已存在则覆盖
+		&#10;返回值：成功 → 1">
+		<td>【CMD】【设置】【强制多个值】</td>
+		<td><p><font class="w b">MSET</font> <font class="w g">key</font> <font class="w r">value</font> <font class="w gr">[</font> <font class="w g">key</font> <font class="w r">value</font> <font class="w gr">...</font> <font class="w gr">]</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：给 key 替换部分 value
+		&#10;说&#12288;明：如果 key 不存在将自动创建 并将位置替换为 \x00 即空格
+		&#10;说&#12288;明：如果 key 已存在则从指定位置开始替换指定字符
+		&#10;返回值：成功 → 新值的长度">
+		<td>【CMD】【设置】【替换】</td>
+		<td><p><font class="w b">SETRANGE</font> <font class="w g">key</font> <font class="w o">位置</font> <font class="w r">value</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：给 key 的 value 后追加新字符
+		&#10;说&#12288;明：如果 key 不存在将自动创建
+		&#10;返回值：成功 → 新值的长度">
+		<td>【CMD】【设置】【追加】</td>
+		<td><p><font class="w b">APPEND</font> <font class="w g">key</font> <font class="w r">value</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：获取 key 的值
+		&#10;返回值：键存在 → value 值
+		&#10;返回值：键不存在 → 空">
+		<td>【CMD】【获取】【单个值】</td>
+		<td><p><font class="w b">GET</font> <font class="w g">key</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：获取多个 key 的值
+		&#10;返回值：键存在 → value 值的列表
+		&#10;返回值：键不存在 → 不存在的成员为空">
+		<td>【CMD】【获取】【多个值】</td>
+		<td><p><font class="w b">MGET</font> <font class="w g">key</font> <font class="w gr">[</font> <font class="w g">key</font> <font class="w gr">...</font> <font class="w gr">]</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：获取 key 的值从指定位置开始到结束位置之后的部分
+		&#10;说&#12288;明：位置可以为负值
+		&#10;返回值：键存在 → value 指定的部分
+		&#10;返回值：键不存在 → 空字符串">
+		<td>【CMD】【获取】【部分值】</td>
+		<td><p><font class="w b">GETRANGE</font> <font class="w g">key</font> <font class="w o">起始位置</font> <font class="w o">结束位置</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：检测 key 的值的字符长度
+		&#10;返回值：键存在 → 长度数值
+		&#10;返回值：键不存在 → 0">
+		<td>【CMD】【获取】【值的长度】</td>
+		<td><p><font class="w b">STRLEN</font> <font class="w g">key</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：为 key 的值增加 1
+		&#10;说&#12288;明：如果 key 不存在 则创建并执行 INCR 命令
+		&#10;说&#12288;明：不能对非数值的 value 操作
+		&#10;返回值：成功 → 计算结果
+		&#10;返回值：键非数值 → error">
+		<td>【CMD】【操作】【加1】</td>
+		<td><p><font class="w b">INCR</font> <font class="w g">key</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：为 key 的值增减 1
+		&#10;说&#12288;明：如果 key 不存在 则创建并执行 DECR 命令
+		&#10;说&#12288;明：不能对非数值的 value 操作
+		&#10;返回值：成功 → 计算结果
+		&#10;返回值：键非数值 → error">
+		<td>【CMD】【操作】【减1】</td>
+		<td><p><font class="w b">DECR</font> <font class="w g">key</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：为 key 的值增加增量
+		&#10;说&#12288;明：增量可以为负值 相当于减法
+		&#10;说&#12288;明：如果 key 不存在 则创建并执行 INCRBY 命令
+		&#10;说&#12288;明：不能对非数值的 value 操作
+		&#10;返回值：成功 → 计算结果
+		&#10;返回值：键非数值 → error">
+		<td>【CMD】【操作】【增值】</td>
+		<td><p><font class="w b">INCRBY</font> <font class="w g">key</font> <font class="w o">增量</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：为 key 的值减去增量
+		&#10;说&#12288;明：增量可以为负值 相当于减法
+		&#10;说&#12288;明：如果 key 不存在 则创建并执行 DECRBY 命令
+		&#10;说&#12288;明：不能对非数值的 value 操作
+		&#10;返回值：成功 → 计算结果
+		&#10;返回值：键非数值 → error">
+		<td>【CMD】【操作】【减值】</td>
+		<td><p><font class="w b">DECRBY</font> <font class="w g">key</font> <font class="w o">增量</font><font class="w r">value</font> </p></td>
+	</tr>
+	<tr title="">
+		<td>【CMD】【?】</td>
+		<td><p><font class="w b">SETBIT</font> <font class="w g">key</font> <font class="w o">偏移</font></p></td>
+	</tr>
+	<tr title="">
+		<td>【CMD】【?】</td>
+		<td><p><font class="w b">GETBIT</font> <font class="w g">key</font> <font class="w o">偏移</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr title="
+		&#10;说&#12288;明：
+		&#10;返回值：">
+		<td>【php】</td>
+		<td><p></p></td>
+	</tr>
+</table>

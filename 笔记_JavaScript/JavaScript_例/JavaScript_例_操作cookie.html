@@ -1,0 +1,33 @@
+<meta charset="utf-8" />
+
+<style>
+
+</style>
+
+
+<script src="../../public/js/jquery-1.8.3.min.js"></script>
+<script>
+
+//设置 cookie
+	function setCookie(name,value,days){
+		if(days){
+			var Days = days;
+		}else{
+			var Days = 30;
+		}
+	    var exp = new Date();
+	    exp.setTime(exp.getTime() + Days*24*60*60*1000);
+	    document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+	}
+
+//取出 cookie
+	function getCookie(name){ 
+	    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+	    if(arr=document.cookie.match(reg)){
+	        return unescape(arr[2]);
+	    }else{
+	        return null;
+	    }
+	}
+
+</script>

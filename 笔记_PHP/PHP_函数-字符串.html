@@ -1,0 +1,527 @@
+<table class="i_table">
+	<tr id="test_trim" title="
+		&#10;如果未设置该参数 则全部删除空白字符或其他预定义字符
+		&#10;如果设置该参数 则全部删除指定字符">
+		<td>【筛选】【舍去两端的字符】</td>
+		<td><p><font class="w b">trim</font>( <font class="o">String</font> , <font class="g">[字符]</font> )</p></td>
+	</tr>
+	<tr id="test_ltrim" title="
+		&#10;如果未设置该参数 则全部删除空白字符或其他预定义字符
+		&#10;如果设置该参数 则全部删除指定字符">
+		<td>【筛选】【舍去左端的字符】</td>
+		<td><p><font class="w b">ltrim</font>( <font class="o">String</font> , <font class="g">[字符]</font> )</p></td>
+	</tr>
+	<tr id="test_rtrim" title="
+		&#10;如果未设置该参数 则全部删除空白字符或其他预定义字符
+		&#10;如果设置该参数 则全部删除指定字符">
+		<td>【筛选】【舍去右端的字符】</td>
+		<td><p><font class="w b">rtrim</font>( <font class="o">String</font> , <font class="g">[字符]</font> )</p></td>
+	</tr>
+	<tr id="test_chop" title="
+		&#10;如果未设置该参数 则全部删除空白字符或其他预定义字符
+		&#10;如果设置该参数 则全部删除指定字符">
+		<td>【筛选】【舍去右端的字符】</td>
+		<td><p><font class="w b">chop</font>( <font class="o">String</font> , <font class="g">[字符]</font> )</p></td>
+	</tr>
+	<tr id="test_strtok" title="
+		&#10;不包括指定字符
+		&#10;区分大小写">
+		<td>【筛选】【获取从开始到指定字符第一次出现之前的部分】</td>
+		<td><p><font class="w b">strtok</font>( <font class="o">String</font> , <font class="g">字符</font> )</p></td>
+	</tr>
+	<tr id="test_strrchr" title="
+		&#10;包括指定字符
+		&#10;区分大小写">
+		<td>【筛选】【获取指定字符最后一次出现直到结束的部分】</td>
+		<td><p><font class="w b">strrchr</font>( <font class="o">String</font> , <font class="g">字符</font> )</p></td>
+	</tr>
+	<tr id="test_strstr" title="
+		&#10;包括指定字符
+		&#10;区分大小写">
+		<td>【筛选】【获取指定字符第一次出现直到结束的部分】</td>
+		<td><p><font class="w b">strstr</font>( <font class="o">String</font> , <font class="g">字符</font> )</p></td>
+	</tr>
+	<tr id="test_strchr" title="
+		&#10;包括指定字符
+		&#10;区分大小写">
+		<td>【筛选】【获取指定字符第一次出现直到结束的部分】</td>
+		<td><p><font class="w b">strchr</font>( <font class="o">String</font> , <font class="g">字符</font> )</p></td>
+	</tr>
+	<tr id="test_stristr" title="
+		&#10;包括指定字符
+		&#10;不区分大小写">
+		<td>【筛选】【获取指定字符第一次出现直到结束的部分】</td>
+		<td><p><font class="w b">stristr</font>( <font class="o">String</font> , <font class="g">字符</font> )</p></td>
+	</tr>
+	<tr id="test_substr" title="
+		&#10;包括指定位置
+		&#10;可以设置选取长度 默认到最后">
+		<td>【筛选】【获取指定位置之后的部分】</td>
+		<td><p><font class="w b">substr</font>( <font class="o">String</font> , <font class="g">位置</font> ，<font class="g">[长度]</font> )</p></td>
+	</tr>
+	<tr class="line">
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr id="test_strrev" title="">
+		<td>【修改】【反转】</td>
+		<td><p><font class="w b">strrev</font>( <font class="o">String</font> )</p></td>
+	</tr>
+	<tr id="test_str_shuffle" title="">
+		<td>【修改】【随机打乱】</td>
+		<td><p><font class="w b">str_shuffle</font>( <font class="o">String</font> )</p></td>
+	</tr>
+	<tr id="test_number_format" title="必须是纯数字形式">
+		<td>【修改】【千位制】</td>
+		<td><p><font class="w b">number_format</font>( <font class="o">String</font>丨<font class="o">Int</font> )</p></td>
+	</tr>
+	<tr id="test_chunk_split" title="若不指定分隔符 则默认为空格">
+		<td>【修改】【按指定数量隔开字符串】</td>
+		<td><p><font class="w b">chunk_split</font>( <font class="o">String</font> , <font class="g">数量</font> , <font class="g">[分隔符]</font> )</p></td>
+	</tr>
+	<tr id="test_str_pad" title="">
+		<td>【修改】【用指定字符填充到指定长度】</td>
+		<td><p><font class="w b">str_pad</font>( <font class="o">String</font> , <font class="g">长度</font> , <font class="g">字符</font> )</p></td>
+	</tr>
+	<tr id="test_str_repeat" title="">
+		<td>【修改】【按指定次数重复】</td>
+		<td><p><font class="w b">str_repeat</font>( <font class="o">String</font> , <font class="g">次数</font> )</p></td>
+	</tr>
+	<tr id="test_str_replace" title="">
+		<td>【修改】【将指定字符替换成新字符】</td>
+		<td><p><font class="w b">str_replace</font>( <font class="g">被替换字符</font> , <font class="g">替换字符</font> , <font class="o">String</font> )</p></td>
+	</tr>
+	<tr id="test_str_ireplace" title="不区分大小写">
+		<td>【修改】【将指定字符替换成新字符】</td>
+		<td><p><font class="w b">str_ireplace</font>( <font class="g">被替换字符</font> , <font class="g">替换字符</font> , <font class="o">String</font> )</p></td>
+	</tr>
+	<tr id="test_substr_replace" title="包括指定位置">
+		<td>【修改】【从指定位置开始替换剩余部分】</td>
+		<td><p><font class="w b">substr_replace</font>( <font class="o">String</font> , <font class="g">替换字符</font> , <font class="g">位置</font> )</p></td>
+	</tr>
+	<tr class="line">
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr id="test_strlen" title="">
+		<td>【计算】【长度】</td>
+		<td><p><font class="w b">strlen</font>( <font class="o">String</font> )</p></td>
+	</tr>
+	<tr id="test_str_word_count" title="">
+		<td>【计算】【单词数】</td>
+		<td><p><font class="w b">str_word_count</font>( <font class="o">String</font> )</p></td>
+	</tr>
+	<tr id="test_similar_text" title="">
+		<td>【计算】【相同部分的长度】</td>
+		<td><p><font class="w b">similar_text</font>( <font class="o">String</font> , <font class="o">String</font> )</p></td>
+	</tr>
+	<tr id="test_substr_count" title="">
+		<td>【计算】【指定字符出现的次数】</td>
+		<td><p><font class="w b">substr_count</font>( <font class="o">String</font> , <font class="g">字符</font> )</p></td>
+	</tr>
+	<tr id="test_strpos" title="区分大小写">
+		<td>【计算】【指定字符最先出现的位置】</td>
+		<td><p><font class="w b">strpos</font>( <font class="o">String</font> , <font class="g">字符</font> )</p></td>
+	</tr>
+	<tr id="test_stripos" title="不区分大小写">
+		<td>【计算】【指定字符最先出现的位置】</td>
+		<td><p><font class="w b">stripos</font>( <font class="o">String</font> , <font class="g">字符</font> )</p></td>
+	</tr>
+	<tr id="test_strrpos" title="区分大小写">
+		<td>【计算】【指定字符最后出现的位置】</td>
+		<td><p><font class="w b">strrpos</font>( <font class="o">String</font> , <font class="g">字符</font> )</p></td>
+	</tr>
+	<tr id="test_strripos" title="不区分大小写">
+		<td>【计算】【指定字符最后出现的位置】</td>
+		<td><p><font class="w b">strripos</font>( <font class="o">String</font> , <font class="g">字符</font> )</p></td>
+	</tr>
+	<tr class="line">
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr id="test_str_split" title="按指定长度将字符串分割成数组">
+		<td>【转换格式】【按指定数量切割成数组】</td>
+		<td><p><font class="w b">str_split</font>( <font class="o">String</font> , <font class="g">长度</font> )</p></td>
+	</tr>
+	<tr id="test_explode" title="">
+		<td>【转换格式】【按指定符号分割成数组】</td>
+		<td><p><font class="w b">explode</font>( <font class="g">分隔符</font> , <font class="o">String</font> )</p></td>
+	</tr>
+	<tr id="test_join" title="若不指定分隔符 则默认直接拼接">
+		<td>【转换格式】【将数组拼接成字符串】</td>
+		<td><p><font class="w b">join</font>( <font class="g">[分隔符]</font> , <font class="o">Array</font> )</p></td>
+	</tr>
+	<tr id="test_implode" title="若不指定分隔符 则默认直接拼接">
+		<td>【转换格式】【将数组拼接成字符串】</td>
+		<td><p><font class="w b">implode</font>( <font class="g">[分隔符]</font> , <font class="o">Array</font> )</p></td>
+	</tr>
+	<tr class="line">
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr id="test_strtolower" title="">
+		<td>【转换大小写】【全部小写】</td>
+		<td><p><font class="w b">strtolower</font>( <font class="o">String</font> )</p></td>
+	</tr>
+	<tr id="test_strtoupper" title="">
+		<td>【转换大小写】【全部大写】</td>
+		<td><p><font class="w b">strtoupper</font>( <font class="o">String</font> )</p></td>
+	</tr>
+	<tr id="test_ucfirst" title="">
+		<td>【转换大小写】【整句首字母大写】</td>
+		<td><p><font class="w b">ucfirst</font>( <font class="o">String</font> )</p></td>
+	</tr>
+	<tr id="test_ucwords" title="">
+		<td>【转换大小写】【每个单词首字母大写】</td>
+		<td><p><font class="w b">ucwords</font>( <font class="o">String</font> )</p></td>
+	</tr>
+	<tr class="line">
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr id="test_ord" title="只翻译第一个字符">
+		<td>【转换编码】【获取字符对应的 ASCII 值】</td>
+		<td><p><font class="w b">ord</font>( <font class="o">String</font> )</p></td>
+	</tr>
+	<tr id="test_chr" title="">
+		<td>【转换编码】【获取 ASCII 值对应的字符】</td>
+		<td><p><font class="w b">chr</font>( <font class="o">String</font> )</p></td>
+	</tr>
+	<tr id="test_htmlentities" title="">
+		<td>【转换编码】【特殊符号转换成实体字符】</td>
+		<td><p><font class="w b">htmlentities</font>( <font class="o">String</font> )</p></td>
+	</tr>
+	<tr id="test_html_entity_decode" title="">
+		<td>【转换编码】【实体字符转换成特殊符号】</td>
+		<td><p><font class="w b">html_entity_decode</font>( <font class="o">String</font> )</p></td>
+	</tr>
+	<tr id="test_MD5" title="MD5 加密不可逆">
+		<td>【转换编码】【MD5加密字符串】</td>
+		<td><p><font class="w b">MD5</font>( <font class="o">String</font> )</p></td>
+	</tr>
+	<tr id="test_MD5_file" title="MD5 加密不可逆">
+		<td>【转换编码】【MD5加密文件】</td>
+		<td><p><font class="w b">MD5_file</font>( <font class="g">地址</font> )</p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+$(function(){
+
+//【筛选】【除去两端的字符】
+	$('#test_trim').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">trim</font>( <font class="r">\' hello world ! \'</font> )</p>'
+			+'<hr>'
+			+'<p><font class="w b">trim</font>( <font class="r">\'★hello world !★\'</font> , <font class="r">\'★\'</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="r">\'hello world !\'</font></p>'
+			+'<hr>'
+			+'<p><font class="r">\'hello world !\'</font></p>');
+	});
+//【筛选】【去除左端的字符】
+	$('#test_ltrim').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">ltrim</font>( <font class="r">\' hello world ! \'</font> )</p>'
+			+'<hr>'
+			+'<p><font class="w b">ltrim</font>( <font class="r">\'★hello world !★\'</font> , <font class="r">\'★\'</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="r">\'hello world ! \'</font></p>'
+			+'<hr>'
+			+'<p><font class="r">\'hello world !★\'</font></p>');
+	});
+//【筛选】【去除右端的字符】
+	$('#test_rtrim').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">rtrim</font>( <font class="r">\' hello world ! \'</font> )</p>'
+			+'<hr>'
+			+'<p><font class="w b">rtrim</font>( <font class="r">\'★hello world !★\'</font> , <font class="r">\'★\'</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="r">\' hello world !\'</font></p>'
+			+'<hr>'
+			+'<p><font class="r">\'★hello world !\'</font></p>');
+	});
+//【筛选】【去除右端的字符】
+	$('#test_chop').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">chop</font>( <font class="r">\' hello world ! \'</font> )</p>'
+			+'<hr>'
+			+'<p><font class="w b">chop</font>( <font class="r">\'★hello world !★\'</font> , <font class="r">\'★\'</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="r">\' hello world !\'</font></p>'
+			+'<hr>'
+			+'<p><font class="r">\'★hello world !\'</font></p>');
+	});
+//【筛选】【获取从开始到指定字符第一次出现之前的部分】
+	$('#test_strtok').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">strtok</font>( <font class="r">\'ABCDEFG\'</font> , <font class="r">\'D\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">ABC</font></p>');
+	});
+//【筛选】【获取指定字符最后一次出现直到结束的部分】
+	$('#test_strrchr').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">strrchr</font>( <font class="r">\'abcdABCD\'</font> , <font class="r">\'b\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">\'bcdABCD\'</font></p>');
+	});
+//【筛选】【获取指定字符第一次出现直到结束的部分】
+	$('#test_strstr').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">strstr</font>( <font class="r">\'abcdABCD\'</font> , <font class="r">\'b\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">\'bcdABCD\'</font></p>');
+	});
+//【筛选】【获取指定字符第一次出现直到结束的部分】
+	$('#test_strchr').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">strchr</font>( <font class="r">\'ABCDabcd\'</font> , <font class="r">\'b\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">\'bcd\'</font></p>');
+	});
+//【筛选】【获取指定字符第一次出现直到结束的部分】
+	$('#test_stristr').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">stristr</font>( <font class="r">\'abcdABCD\'</font> , <font class="r">\'b\'</font> )</p>'
+			+'<hr>'
+			+'<p><font class="w b">stristr</font>( <font class="r">\'ABCDabcd\'</font> , <font class="r">\'b\'</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="r">\'bcdABCD\'</font></p>'
+			+'<hr>'
+			+'<p><font class="r">\'BCDabcd\'</font></p>');
+	});
+//【修改】【从指定位置开始替换剩余部分】
+	$('#test_substr').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">substr</font>( <font class="r">\'ABCDEFG\'</font> , <font class="r">5</font> )</p>'
+			+'<hr>'
+			+'<p><font class="w b">substr</font>( <font class="r">\'ABCDEFG\'</font> , <font class="r">-5</font> )</p>'
+			+'<hr>'
+			+'<p><font class="w b">substr</font>( <font class="r">\'ABCDEFG\'</font> , <font class="r">-5</font> , <font class="r">2</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="r">\'FG\'</font></p>'
+			+'<hr>'
+			+'<p><font class="r">\'CDEFG\'</font></p>'
+			+'<hr>'
+			+'<p><font class="r">\'CD\'</font></p>');
+	});
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+//【修改】【反转】
+	$('#test_strrev').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">strrev</font>( <font class="r">\'ABCDEFG\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">\'GFEDCBA\'</font></p>');
+	});
+//【修改】【随机打乱】
+	$('#test_str_shuffle').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">str_shuffle</font>( <font class="r">\'ABCDEFG\'</font> )</p>'
+			+'<hr>'
+			+'<p><font class="w b">str_shuffle</font>( <font class="r">\'ABCDEFG\'</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="r">\'EFDACBG\'</font></p>'
+			+'<hr>'
+			+'<p><font class="r">\'BDAFECG\'</font></p>');
+	});
+//【修改】【千位制】
+	$('#test_number_format').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">number_format</font>( <font class="r">\'100000000\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">\'100,000,000\'</font></p>');
+	});
+//【修改】【按指定数量隔开字符串】
+	$('#test_chunk_split').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">chunk_split</font>( <font class="r">\'ABCDEFG\'</font> , <font class="r">2</font> )</p>'
+			+'<hr>'
+			+'<p><font class="w b">chunk_split</font>( <font class="r">\'ABCDEFG\'</font> , <font class="r">2</font> , <font class="r">\'-\'</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="r">\'AB CD EF G \'</font></p>'
+			+'<hr>'
+			+'<p><font class="r">\'AB-CD-EF-G-\'</font></p>');
+	});
+//【修改】【按指定字符填充到指定长度】
+	$('#test_str_pad').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">str_pad</font>( <font class="r">\'ABCDE\'</font> , <font class="r">10</font> , <font class="r">\'F\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">\'ABCDEFFFFF\'</font></p>');
+	});
+//【修改】【按指定次数重复】
+	$('#test_str_repeat').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">str_repeat</font>( <font class="r">\'ABC\'</font> , <font class="r">3</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">\'ABCABCABC\'</font></p>');
+	});
+//【修改】【将指定字符替换成新字符】
+	$('#test_str_replace').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">str_replace</font>( <font class="r">\'d\'</font> , <font class="r">\'★\'</font> , <font class="r">\'ABCDabcd\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">\'ABCDabc★\'</font></p>');
+	});
+//【修改】【将指定字符替换成新字符】
+	$('#test_str_ireplace').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">str_ireplace</font>( <font class="r">\'d\'</font> , <font class="r">\'★\'</font> , <font class="r">\'ABCDabcd\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">\'ABC★abc★\'</font></p>');
+	});
+//【修改】【从指定位置替换剩余部分】
+	$('#test_substr_replace').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">substr_replace</font>( <font class="r">\'abcdefg\'</font> , <font class="r">\'★\'</font> , <font class="r">0</font> )</p>'
+			+'<hr>'
+			+'<p><font class="w b">substr_replace</font>( <font class="r">\'abcdefg\'</font> , <font class="r">\'★\'</font> , <font class="r">3</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="r">\'★\'</font></p>'
+			+'<hr>'
+			+'<p><font class="r">\'abc★\'</font></p>');
+	});
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+//【计算】【长度】
+	$('#test_strlen').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">strlen</font>( <font class="r">\'one two three\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">13</font></p>');
+	});
+//【计算】【单词数】
+	$('#test_str_word_count').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">str_word_count</font>( <font class="r">\'one two three\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">3</font></p>');
+	});
+//【计算】【相同部分的长度】
+	$('#test_similar_text').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">similar_text</font>( <font class="r">\'abcdefg\'</font> , <font class="r">\'cde\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">3</font></p>');
+	});
+//【计算】【指定字符出现的次数】
+	$('#test_substr_count').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">substr_count</font>( <font class="r">\'abcdABCD\'</font> , <font class="r">\'b\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">1</font></p>');
+	});
+//【计算】【指定字符最先出现的位置】
+	$('#test_strpos').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">strpos</font>( <font class="r">\'abcdABCD\'</font> , <font class="r">\'b\'</font> )</p>'
+			+'<hr>'
+			+'<p><font class="w b">strpos</font>( <font class="r">\'abcdABCD\'</font> , <font class="r">\'B\'</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="r">1</font></p>'
+			+'<hr>'
+			+'<p><font class="r">5</font></p>');
+	});
+//【计算】【指定字符最先出现的位置】
+	$('#test_stripos').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">stripos</font>( <font class="r">\'abcdABCD\'</font> , <font class="r">\'b\'</font> )</p>'
+			+'<hr>'
+			+'<p><font class="w b">stripos</font>( <font class="r">\'abcdABCD\'</font> , <font class="r">\'B\'</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="r">1</font></p>'
+			+'<hr>'
+			+'<p><font class="r">1</font></p>');
+	});
+//【计算】【指定字符最后出现的位置】
+	$('#test_strrpos').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">strrpos</font>( <font class="r">\'abcdABCD\'</font> , <font class="r">\'b\'</font> )</p>'
+			+'<hr>'
+			+'<p><font class="w b">strrpos</font>( <font class="r">\'abcdABCD\'</font> , <font class="r">\'B\'</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="r">1</font></p>'
+			+'<hr>'
+			+'<p><font class="r">5</font></p>');
+	});
+//【计算】【指定字符最后出现的位置】
+	$('#test_strripos').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">strripos</font>( <font class="r">\'abcdABCD\'</font> , <font class="r">\'b\'</font> )</p>'
+			+'<hr>'
+			+'<p><font class="w b">strripos</font>( <font class="r">\'abcdABCD\'</font> , <font class="r">\'B\'</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="r">5</font></p>'
+			+'<hr>'
+			+'<p><font class="r">5</font></p>');
+	});
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+//【转换格式】【按指定数量切割成数组】
+	$('#test_str_split').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">str_split</font>( <font class="r">\'ABCDEFG\'</font> ，<font class="r">3</font> )</p>');
+		PC_Case.show(2,'<p><font class="w b">array</font>(<font class="r">\'ABC\'</font> , <font class="r">\'DEF\'</font> , <font class="r">\'G\'</font>)</p>');
+	});
+//【转换格式】【按指定符号分割成数组】
+	$('#test_explode').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">explode</font>( <font class="r">\'-\'</font> , <font class="r">\'A-B-C\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="w b">array</font>( <font class="r">\'A\'</font> , <font class="r">\'B\'</font> , <font class="r">\'C\'</font> )</p>');
+	});
+//【转换格式】【将数组拼接成字符串】
+	$('#test_join').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">join</font>( <font class="w b">array</font>( <font class="r">\'A\'</font> , <font class="r">\'B\'</font> , <font class="r">\'C\'</font> ) )</p>'
+			+'<hr>'
+			+'<p><font class="w b">join</font>( <font class="r">\'-\'</font> , <font class="w b">array</font>( <font class="r">\'A\'</font> , <font class="r">\'B\'</font> , <font class="r">\'C\'</font> ) )</p>');
+		PC_Case.show(2,
+			'<p><font class="r">\'ABC\'</font></p>'
+			+'<hr>'
+			+'<p><font class="r">\'A-B-C\'</font></p>');
+	});
+//【转换格式】【将数组拼接成字符串】
+	$('#test_implode').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">implode</font>( <font class="w b">array</font>( <font class="r">\'A\'</font> , <font class="r">\'B\'</font> , <font class="r">\'C\'</font> ) )</p>'
+			+'<hr>'
+			+'<p><font class="w b">implode</font>( <font class="r">\'-\'</font> , <font class="w b">array</font>( <font class="r">\'A\'</font> , <font class="r">\'B\'</font> , <font class="r">\'C\'</font> ) )</p>');
+		PC_Case.show(2,
+			'<p><font class="r">\'ABC\'</font></p>'
+			+'<hr>'
+			+'<p><font class="r">\'A-B-C\'</font></p>');
+	});
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+//【转换大小写】【全部小写】
+	$('#test_strtolower').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">strtolower</font>( <font class="r">\'ONE TWO THREE\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">\'one two three\'</font></p>');
+	});
+//【转换大小写】【全部大写】
+	$('#test_strtoupper').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">strtoupper</font>( <font class="r">\'one two three\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">\'ONE TWO THREE\'</font></p>');
+	});
+//【转换大小写】【整句首字母大写】
+	$('#test_ucfirst').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">ucfirst</font>( <font class="r">\'one two three\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">\'One two three\'</font></p>');
+	});
+//【转换大小写】【每个单词首字母大写】
+	$('#test_ucwords').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">ucwords</font>( <font class="r">\'one two three\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">\'One Two Three\'</font></p>');
+	});
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+//【转换编码】【获取字符对应的 ASCII 值】
+	$('#test_ord').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">ord</font>( <font class="r">\'PC\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">80</font></p>');
+	});
+//【转换编码】【获取 ASCII 值对应的字符】
+	$('#test_chr').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">chr</font>( <font class="r">80</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">\'P\'</font></p>');
+	});
+//【转换编码】【特殊符号转换成实体字符】
+	$('#test_htmlentities').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">htmlentities</font>( <font class="r">\'&lt;div&gt;\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">&lt;div&gt;</font></p>');
+	});
+//【转换编码】【实体字符转换成特殊符号】
+	$('#test_html_entity_decode').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">html_entity_decode</font>( <font class="r">&lt;div&gt;</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">&lt;div&gt;</font></p>');
+	});
+//【转换编码】【MD5加密字符串】
+	$('#test_MD5').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">MD5</font>( <font class="r">\'abcdefg\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">\'7ac66c0f148de9519b8bd264312c4d64\'</font></p>');
+	});
+//【转换编码】【MD5加密文件】
+	$('#test_MD5_file').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">MD5_file</font>( <font class="r">\'a.php\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">\'c6f37d3f6716bbf2e5fc2748517cebdc\'</font></p>');
+	});
+
+});
+</script>

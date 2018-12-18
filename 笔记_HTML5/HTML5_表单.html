@@ -1,0 +1,342 @@
+<table class="i_table">
+	<tr onclick="test_form()" title="
+		&#10;指定id 绑定该表单">
+		<td>【表单】【绑定 form】</td>
+		<td><p><font class="w b">&lt;form</font> <font class="w g">id</font> = <font class="r">ID</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_form()" title="
+		&#10;设置表单归属于哪个 form 表单中（值为 form 标签的 id）">
+		<td>【表单】【绑定 form】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">form</font> = <font class="r">form的ID</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_datalist()" title="
+		&#10;也支持旧的 <option></option> 格式
+		&#10;ID → 相对应 input 标签内用 list 标记的 id
+		&#10;列表内容 → 下拉列表显示的内容 也是表单提交后的名称
+		&#10;真实内容 → 选中后显示的内容 也是表单提交后的值">
+		<td>【表单】【绑定下拉列表】</td>
+		<td><p><font class="w b">&lt;datalist</font> <font class="w g">id</font> = <font class="r">ID</font> <font class="w b">/&gt;</font><font class="w b">&lt;option</font> <font class="w g">label</font> = <font class="r">列表内容</font> <font class="w g">value</font> = <font class="r">真实内容</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_datalist()" title="
+		&#10;可选数据下拉列表">
+		<td>【表单】【绑定下拉列表】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">list</font> = <font class="r">datalist的ID</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_email()" title="">
+		<td>【表单】【邮件】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">type</font> = <font class="w r">email</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_url()" title="">
+		<td>【表单】【网址】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">type</font> = <font class="w r">url</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_number()" title="
+		&#10;最大值 → 不能超过设定值
+		&#10;最小值 → 不能低于设定值
+		&#10;增值 → 一次点击的增加值">
+		<td>【表单】【数值】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">type</font> = <font class="w r">number</font> <font class="w g">min</font> = <font class="r">最小值</font> <font class="w g">max</font> = <font class="r">最大值</font> <font class="w g">step</font> = <font class="r">增值</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_tel()" title="">
+		<td>【表单】【电话】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">type</font> = <font class="w r">tel</font> <font class="w b">/&gt;</font></p></td>
+	<tr onclick="test_range()" title="">
+		<td>【表单】【滑块】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">type</font> = <font class="w r">range</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_search()" title="">
+		<td>【表单】【搜索】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">type</font> = <font class="w r">search</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_color()" title="">
+		<td>【表单】【颜色】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">type</font> = <font class="w r">color</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	</tr><tr onclick="test_date()" title="">
+		<td>【表单】【日期】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">type</font> = <font class="w r">date</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_time()" title="">
+		<td>【表单】【时间】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">type</font> = <font class="w r">time</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_week()" title="">
+		<td>【表单】【星期】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">type</font> = <font class="w r">week</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_month()" title="">
+		<td>【表单】【月份】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">type</font> = <font class="w r">month</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_datetime()" title="">
+		<td>【表单】【详细时间】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">type</font> = <font class="w r">datetime</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_novalidate()" title="
+		&#10;禁止验证 所有表单中需要验证的表单跳过验证操作">
+		<td>【表单属性】【验证关闭】</td>
+		<td><p><font class="w b">&lt;form</font> <font class="w g">novalidate</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_pattern()" title="
+		&#10;自定义一个验证规则（js语言）">
+		<td>【表单属性】【验证插入】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">pattern</font> = <font class="r">验证规则</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_autofocus()" title="
+		&#10;设置打开页面时光标的位置 唯一">
+		<td>【表单属性】【焦点定位】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">autofocus</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_tabindex()" title="
+		&#10;设定多个输入框的 tab 键跳转顺序">
+		<td>【表单属性】【焦点切换】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">tabindex</font> = <font class="r">数值</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_placeholder()" title="
+		&#10;提示的内容 不能提交 只对能显示内容的表单有效">
+		<td>【表单属性】【提示】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">placeholder</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr onclick="test_required()" title="
+		&#10;设置如果不输入/选择内容禁止提交">
+		<td>【表单属性】【必填项】</td>
+		<td><p><font class="w b">&lt;input</font> <font class="w g">required</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【表单】**************************************************/
+
+function test_form(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;form</font> <font class="g">id</font>=<font class="r">"input_01"</font> <font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"input_01"</font> <font class="b">/&gt;</font></p>');
+	PC_Case.show(2,'');
+}
+
+function test_datalist(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"text"</font> <font class="g">list</font>=<font class="r">"list_01"</font> <font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;datalist</font> <font class="g">id</font>=<font class="r">"list_01"</font><font class="b">&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;option</font> <font class="g">label</font>=<font class="r">"1"</font> <font class="g">value</font>=<font class="r">"one"</font> <font class="b">/&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;option</font> <font class="g">label</font>=<font class="r">"2"</font> <font class="g">value</font>=<font class="r">"two"</font> <font class="b">/&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">&lt;option</font> <font class="g">label</font>=<font class="r">"3"</font> <font class="g">value</font>=<font class="r">"three"</font> <font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;/datalist&gt;</font></p>');
+	PC_Case.show(2,
+		'<input type="text" list="list_01">'
+		+'<datalist id="list_01">'
+			+'<option label="1" value="one">'
+			+'<option label="2" value="two">'
+			+'<option label="3" value="three">'
+		+'</datalist>');
+}
+
+function test_email(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;form</font> <font class="g">id</font>=<font class="r">"form_01"</font> <font class="g">action</font>=<font class="r">"controller.php"</font><font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"email"</font> <font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"submit"</font> <font class="b">/&gt;</font></p>');
+	PC_Case.show(2,
+		'<form action="controller.php" id="form_01" />'
+		+'<input type="email" form="form_01" />'
+		+'<input type="submit" form="form_01" value="提交" />');
+}
+
+function test_url(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;form</font> <font class="g">id</font>=<font class="r">"form_01"</font> <font class="g">action</font>=<font class="r">"controller.php"</font><font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"url"</font> <font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"submit"</font> <font class="b">/&gt;</font></p>');
+	PC_Case.show(2,
+		'<form action="controller.php" id="form_01" />'
+		+'<input type="url" form="form_01" />'
+		+'<input type="submit" form="form_01" value="提交" />');
+}
+
+function test_number(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;form</font> <font class="g">id</font>=<font class="r">"form_01"</font> <font class="g">action</font>=<font class="r">"controller.php"</font><font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"number"</font> <font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"submit"</font> <font class="b">/&gt;</font></p>');
+	PC_Case.show(2,
+		'<form action="controller.php" id="form_01" />'
+		+'<input type="number" form="form_01" />'
+		+'<input type="submit" form="form_01" value="提交" />');
+}
+
+function test_tel(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;form</font> <font class="g">id</font>=<font class="r">"form_01"</font> <font class="g">action</font>=<font class="r">"controller.php"</font><font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"tel"</font> <font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"submit"</font> <font class="b">/&gt;</font></p>');
+	PC_Case.show(2,
+		'<form action="controller.php" id="form_01" />'
+		+'<input type="tel" form="form_01" />'
+		+'<input type="submit" form="form_01" value="提交" />');
+}
+
+function test_range(){
+	PC_Case.show(1,'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"range"</font> <font class="b">/&gt;</font></p>');
+	PC_Case.show(2,'<input type="range" />');
+}
+
+function test_search(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;form</font> <font class="g">id</font>=<font class="r">"form_01"</font> <font class="g">action</font>=<font class="r">"controller.php"</font><font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"search"</font> <font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"submit"</font> <font class="b">/&gt;</font></p>');
+	PC_Case.show(2,
+		'<form action="controller.php" id="form_01" />'
+		+'<input type="search" form="form_01" />'
+		+'<input type="submit" form="form_01" value="提交" />');
+}
+
+function test_color(){
+	PC_Case.show(1,'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"color"</font> <font class="b">/&gt;</font></p>');
+	PC_Case.show(2,'<input type="color" />');
+}
+
+function test_date(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;form</font> <font class="g">id</font>=<font class="r">"form_01"</font> <font class="g">action</font>=<font class="r">"controller.php"</font><font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"date"</font> <font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"submit"</font> <font class="b">/&gt;</font></p>');
+	PC_Case.show(2,
+		'<form action="controller.php" id="form_01" />'
+		+'<input type="date" form="form_01" />'
+		+'<input type="submit" form="form_01" value="提交" />');
+}
+
+function test_time(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;form</font> <font class="g">id</font>=<font class="r">"form_01"</font> <font class="g">action</font>=<font class="r">"controller.php"</font><font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"time"</font> <font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"submit"</font> <font class="b">/&gt;</font></p>');
+	PC_Case.show(2,
+		'<form action="controller.php" id="form_01" />'
+		+'<input type="time" form="form_01" />'
+		+'<input type="submit" form="form_01" value="提交" />');
+}
+
+function test_week(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;form</font> <font class="g">id</font>=<font class="r">"form_01"</font> <font class="g">action</font>=<font class="r">"controller.php"</font><font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"week"</font> <font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"submit"</font> <font class="b">/&gt;</font></p>');
+	PC_Case.show(2,
+		'<form action="controller.php" id="form_01" />'
+		+'<input type="week" form="form_01" />'
+		+'<input type="submit" form="form_01" value="提交" />');
+}
+
+function test_month(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;form</font> <font class="g">id</font>=<font class="r">"form_01"</font> <font class="g">action</font>=<font class="r">"controller.php"</font><font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"month"</font> <font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"submit"</font> <font class="b">/&gt;</font></p>');
+	PC_Case.show(2,
+		'<form action="controller.php" id="form_01" />'
+		+'<input type="month" form="form_01" />'
+		+'<input type="submit" form="form_01" value="提交" />');
+}
+
+function test_datetime(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;form</font> <font class="g">id</font>=<font class="r">"form_01"</font> <font class="g">action</font>=<font class="r">"controller.php"</font><font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"datetime"</font> <font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"submit"</font> <font class="b">/&gt;</font></p>');
+	PC_Case.show(2,
+		'<form action="controller.php" id="form_01" />'
+		+'<input type="datetime" form="form_01" />'
+		+'<input type="submit" form="form_01" value="提交" />');
+}
+
+/**************************************************【表单属性】**************************************************/
+
+function test_novalidate(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;form</font> <font class="g">id</font>=<font class="r">"form_01"</font> <font class="g">action</font>=<font class="r">"controller.php"</font> <font class="g">novalidate</font> <font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"number"</font> <font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"submit"</font> <font class="b">/&gt;</font></p>');
+	PC_Case.show(2,
+		'<form action="controller.php" id="form_01" novalidate />'
+		+'<input type="number" form="form_01" />'
+		+'<input type="submit" form="form_01" value="提交" />');
+}
+
+function test_pattern(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;form</font> <font class="g">id</font>=<font class="r">"form_01"</font> <font class="g">action</font>=<font class="r">"controller.php"</font> <font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"text"</font> <font class="g">pattern</font>=<font class="r">"[A-z]{3}"</font> <font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"submit"</font> <font class="b">/&gt;</font></p>');
+	PC_Case.show(2,
+		'<form action="controller.php" id="form_01" />'
+		+'<input type="text" form="form_01" pattern="[A-z]{3}" />'
+		+'<input type="submit" form="form_01" value="提交" />');
+}
+
+function test_autofocus(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"text"</font><font class="b">&gt;</font></p>'
+		+'<br />'
+		+'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"text"</font><font class="b">&gt;</font></p>'
+		+'<br />'
+		+'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"text"</font> <font class="g">autofocus</font> <font class="b">&gt;</font></p>'
+		+'<br />'
+		+'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"text"</font><font class="b">&gt;</font></p>'
+		+'<br />'
+		+'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"text"</font><font class="b">&gt;</font></p>');
+	PC_Case.show(2,
+		'<input type="text">'
+		+'<br />'
+		+'<input type="text">'
+		+'<br />'
+		+'<input type="text" autofocus>'
+		+'<br />'
+		+'<input type="text">'
+		+'<br />'
+		+'<input type="text">');
+}
+
+function test_tabindex(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"text"</font> <font class="g">tabindex</font>=<font class="r">"4"</font><font class="b">&gt;</font></p>'
+		+'<br />'
+		+'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"text"</font> <font class="g">tabindex</font>=<font class="r">"2"</font><font class="b">&gt;</font></p>'
+		+'<br />'
+		+'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"text"</font> <font class="g">tabindex</font>=<font class="r">"1"</font><font class="b">&gt;</font></p>'
+		+'<br />'
+		+'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"text"</font> <font class="g">tabindex</font>=<font class="r">"3"</font><font class="b">&gt;</font></p>'
+		+'<br />'
+		+'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"text"</font> <font class="g">tabindex</font>=<font class="r">"5"</font><font class="b">&gt;</font></p>');
+	PC_Case.show(2,
+		'<input type="text" tabindex="4">'
+		+'<br />'
+		+'<input type="text" tabindex="2">'
+		+'<br />'
+		+'<input type="text" tabindex="1">'
+		+'<br />'
+		+'<input type="text" tabindex="3">'
+		+'<br />'
+		+'<input type="text" tabindex="5">');
+}
+
+function test_placeholder(){
+	PC_Case.show(1,'<p><font class="b">&lt;input</font> <font class="g">type</font>=<font class="r">"text"</font> <font class="g">placeholder</font>=<font class="r">"这是一个表单"</font> <font class="b">/&gt;</font></p>');
+	PC_Case.show(2,'<input type="text" form="form_01" placeholder="这是一个表单" />');
+}
+
+function test_required(){
+	PC_Case.show(1,
+		'<p><font class="b">&lt;form</font> <font class="g">id</font>=<font class="r">"form_01"</font> <font class="g">action</font>=<font class="r">"controller.php"</font><font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"text"</font> <font class="g">required</font> <font class="b">/&gt;</font></p>'
+		+'<p><font class="b">&lt;input</font> <font class="g">form</font>=<font class="r">"form_01"</font> <font class="g">type</font>=<font class="r">"submit"</font> <font class="b">/&gt;</font></p>');
+	PC_Case.show(2,
+		'<form action="controller.php" id="form_01" />'
+		+'<input type="text" form="form_01" required />'
+		+'<input type="submit" form="form_01" value="提交" />');
+}
+
+/**************************************************【】**************************************************/
+</script>

@@ -1,0 +1,490 @@
+<table class="i_table">
+	<tr onclick="" title="
+		&#10;查看系统全部环境变量和自定义变量">
+		<td>【变量】【查看所有变量】</td>
+		<td><p><font class="w b">set</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;仅查看系统全部环境变量和自定义环境变量
+		&#10;环境变量一般是大写字母表示
+		&#10;--------------------------------------------------
+		&#10;常见变量：HOSTNAME → 主机名
+		&#10;常见变量：SHELL → 当前的 shell
+		&#10;常见变量：TERM → 终端环境
+		&#10;常见变量：HISTSIZE → 历史命令条数
+		&#10;常见变量：SSH_CLIENT → 当前操作环境是 ssh 连接的 这里记录客户端 ip
+		&#10;常见变量：SSH_TTY → ssh 连接的终端时 pts/1
+		&#10;常见变量：USER → 当前登录用户">
+		<td>【变量】【查看环境变量】</td>
+		<td><p><font class="w b">env</font></p></td>
+	</tr>
+	<tr onclick="" title="">
+		<td>【变量】【删除】</td>
+		<td><p><font class="w b">unset</font> <font class="w g">变量</font></p></td>
+	</tr>
+	<tr onclick="test_var_01()" title="
+		&#10;注意变量名的命名规则
+		&#10;声明变量时和 = 号之间不能有空格">
+		<td>【变量】【声明一般变量】</td>
+		<td><p><font class="w g">变量</font>=<font class="r">值</font></p></td>
+	</tr>
+	<tr onclick="test_var_01()" title="
+		&#10;或者对已声明的变量进行转化 即不写值
+		&#10;建议用大写字母声明">
+		<td>【变量】【声明系统变量】</td>
+		<td><p><font class="w b">export</font> <font class="w g">变量</font>=<font class="r">值</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;数组从 0 开始声明">
+		<td>【变量】【声明数组变量】</td>
+		<td><p><font class="w b">变量</font>[<font class="w r">下标</font>]=<font class="r">值</font></p></td>
+	</tr>
+	<tr onclick="" title="">
+		<td>【变量】【查看一般变量】</td>
+		<td><p><font class="w b">echo</font> <font class="w r">$变量</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;当下标为 * 时 查看数组所有成员">
+		<td>【变量】【查看数组变量】</td>
+		<td><p><font class="w b">echo</font> <font class="w r">${变量[下标]}</font></p></td>
+	</tr>
+	<tr onclick="test_var_02()" title="
+		&#10;结果是变量和新值组成的新字符串">
+		<td>【变量】【叠加】【格式1】</td>
+		<td><p>"</font><font class="w b">$</font><font class="w g">变量</font>"<font class="r">值</font></p></td>
+	</tr>
+	<tr onclick="test_var_03()" title="
+		&#10;结果是变量和新值组成的新字符串">
+		<td>【变量】【叠加】【格式2】</td>
+		<td><p><font class="w b">$</font>{<font class="w g">变量</font>}<font class="r">值</font></p></td>
+	</tr>
+	<tr onclick="test_path()" title="">
+		<td>【变量】【环境变量】【PATH】</td>
+		<td><p><font class="w b">PATH</font></p></td>
+	</tr>
+	<tr onclick="test_ps1()" title="
+		&#10;默认是 [用户名@主机名 当前目录] 的格式显示
+		&#10;--------------------------------------------------
+		&#10;参数：\d → 显示日期 格式为 星期 月 日
+		&#10;参数：\H → 显示完整的主机名 如 localhost.localdomain
+		&#10;参数：\t → 显示 24 小时制的时间 格式为 HH:MM:SS
+		&#10;参数：\A → 显示 24 小时制的时间 格式为 HH:MM
+		&#10;参数：\u → 显示当前用户名
+		&#10;参数：\w → 显示当前所在目录的完整名称
+		&#10;参数：\W → 显示当前所在目录的最后一个目录
+		&#10;参数：\$ → 提示符 如果是 root 账户会显示 # 如果是普通用户则显示 $">
+		<td>【变量】【环境变量】【ps1】</td>
+		<td><p><font class="w b">PS1</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;n 为数字
+		&#10;$0 代表命令本身
+		&#10;$1~$9 为第 1~9 个参数
+		&#10;十以上的参数需要用大括号包含 如 ${10}">
+		<td>【变量】【位置参数变量】【$n】</td>
+		<td><p><font class="w b">$n</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;代表命令行中的所有参数 $* 把所有参数看成一个整体 不可被循环">
+		<td>【变量】【位置参数变量】【$*】</td>
+		<td><p><font class="w b">$*</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;代表命令行中的所有参数 $@ 把所有参数区分对待 可以被循环">
+		<td>【变量】【位置参数变量】【$@】</td>
+		<td><p><font class="w b">$@</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;代表命令行中所有参数的个数">
+		<td>【变量】【位置参数变量】【$#】</td>
+		<td><p><font class="w b">$#</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;返回最后一次执行的命令的状态
+		&#10;--------------------------------------------------
+		&#10;返回值：0 → 表示命令正确的执行
+		&#10;返回值：非0 → 表示命令发生错误 返回值由命令自已决定">
+		<td>【变量】【预定义变量】【$?】</td>
+		<td><p><font class="w b">$?</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;当前进程的进程号">
+		<td>【变量】【预定义变量】【$$】</td>
+		<td><p><font class="w b">$$</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;后台运行的最后一个进程的进程号">
+		<td>【变量】【预定义变量】【$!】</td>
+		<td><p><font class="w b">$!</font></p></td>
+	</tr>
+	<tr onclick="test_read()" title="
+		&#10;将用户的输入写入变量
+		&#10;可以设置多个选项
+		&#10;--------------------------------------------------
+		&#10;选项：-p 提示信息 → 在等待 read 输入时 输出提示信息
+		&#10;选项：-t 秒数 → read 命令会一直等待用户输入 此功能可以设定等待时间
+		&#10;选项：-n 字符数 → read 命令只接收指定的字符数
+		&#10;选项：-s → 隐藏输入的数据 适用于机密信息的输入">
+		<td>【变量】【接收键盘输入】</td>
+		<td><p><font class="w b">read</font> <font class="w g">[选项]</font> <font class="w g">变量</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="
+		&#10;所有变量默认存为字符串型
+		&#10;--------------------------------------------------
+		&#10;+ 取消变量类型属性
+		&#10;- 给变量设定类型属性
+		&#10;--------------------------------------------------
+		&#10;选项：-a → 数组型
+		&#10;选项：-i → 整型
+		&#10;选项：-x → 环境变量
+		&#10;选项：-r → 只读变量 不可删除或修改 系统重赢后消失
+		&#10;选项：-p → 显示指定变量声明的类型">
+		<td>【运算】【declare】</td>
+		<td><p><font class="w b">declare</font> <font class="w r">[+丨-]</font> <font class="w g">[选项]</font> <font class="w g">变量</font></p></td>
+	</tr>
+	<tr onclick="" title="">
+		<td>【运算】【格式1】</td>
+		<td><p><font class="w g">变量</font>=<font class="w b">$</font>(<font class="w b">expr</font> <font class="w g">变量1</font> <font class="w g">运算符</font> <font class="w g">变量2</font>)</p></td>
+	</tr>
+	<tr onclick="" title="">
+		<td>【运算】【格式2】</td>
+		<td><p><font class="w g">变量</font>=<font class="w b">$</font>((<font class="w g">变量1</font><font class="w o">运算符</font><font class="w g">变量2</font>))</p></td>
+	</tr>
+	<tr onclick="" title="">
+		<td>【运算】【格式3】</td>
+		<td><p><font class="w g">变量</font>=<font class="w b">$</font>[<font class="w g">变量1</font><font class="w o">运算符</font><font class="w g">变量2</font>]</p></td>
+	</tr>
+	<tr onclick="" title="">
+		<td>【运算】【数组长度】</td>
+		<td><p><font class="w g">变量</font>=<font class="w b">$</font>{<font class="w b">#</font><font class="w g">变量</font>[<font class="w b">@</font>]}</p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="
+		&#10;+ → 单目正
+		&#10;- → 单目负">
+		<td>【运算符】【优先级13】</td>
+		<td><p><font class="w r">+&nbsp;&nbsp;&nbsp;-</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;! → 逻辑非
+		&#10;~ → 按位取反或补码">
+		<td>【运算符】【优先级12】</td>
+		<td><p><font class="w r">!&nbsp;&nbsp;&nbsp;~</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;* → 乘
+		&#10;/ → 除
+		&#10;% → 取模">
+		<td>【运算符】【优先级11】</td>
+		<td><p><font class="w r">*&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;%</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;+ → 加
+		&#10;- → 减">
+		<td>【运算符】【优先级10】</td>
+		<td><p><font class="w r">+&nbsp;&nbsp;&nbsp;-</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;<< → 按位左移
+		&#10;>> → 按位右移">
+		<td>【运算符】【优先级09】</td>
+		<td><p><font class="w r"><<&nbsp;&nbsp;&nbsp;>></font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;<= → 小于等于
+		&#10;>= → 大于等于
+		&#10;< → 小于
+		&#10;> → 大于">
+		<td>【运算符】【优先级08】</td>
+		<td><p><font class="w r"><=&nbsp;&nbsp;&nbsp;>=&nbsp;&nbsp;&nbsp;<&nbsp;&nbsp;&nbsp;></font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;== → 等于
+		&#10;!= → 不等于">
+		<td>【运算符】【优先级07】</td>
+		<td><p><font class="w r">==&nbsp;&nbsp;&nbsp;!=</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;& → 按位与">
+		<td>【运算符】【优先级06】</td>
+		<td><p><font class="w r">&</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;^ → 按位异或">
+		<td>【运算符】【优先级05】</td>
+		<td><p><font class="w r">^</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;| → 按位或">
+		<td>【运算符】【优先级04】</td>
+		<td><p><font class="w r">|</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;&& → 逻辑与 一个是假就是假">
+		<td>【运算符】【优先级03】</td>
+		<td><p><font class="w r">&&</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;|| → 逻辑或 一个是真就是真">
+		<td>【运算符】【优先级02】</td>
+		<td><p><font class="w r">||</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;赋值或运算且赋值
+		&#10;--------------------------------------------------
+		&#10;= → 等于
+		&#10;+= → 
+		&#10;-= → 
+		&#10;*= → 
+		&#10;/= → 
+		&#10;%= → 
+		&#10;&= → 
+		&#10;^= → 
+		&#10;|= → 
+		&#10;<<= → 
+		&#10;>>= → ">
+		<td>【运算符】【优先级01】</td>
+		<td><p><font class="w r">=&nbsp;&nbsp;&nbsp;+=&nbsp;&nbsp;&nbsp;-=&nbsp;&nbsp;&nbsp;*=&nbsp;&nbsp;&nbsp;/=&nbsp;&nbsp;&nbsp;%=&nbsp;&nbsp;&nbsp;&=&nbsp;&nbsp;&nbsp;^=&nbsp;&nbsp;&nbsp;|=&nbsp;&nbsp;&nbsp;<<=&nbsp;&nbsp;&nbsp;>>=</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="
+		&#10;字段提取
+		&#10;--------------------------------------------------
+		&#10;选项：-f 列号 → 提取第 n 列
+		&#10;选项：-d 分隔符 → 按指定分隔符分隔列">
+		<td>【字符串截取】【cut】</td>
+		<td><p><font class="w b">cut</font> <font class="w g">[选项]</font> <font class="r">文件</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;">
+		<td>【字符串截取】【printf】</td>
+		<td><p><font class="w b">printf</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;">
+		<td>【字符串截取】【awk】</td>
+		<td><p><font class="w b">awk</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;">
+		<td>【字符串截取】【sed】</td>
+		<td><p><font class="w b">sed</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="
+		&#10;判断文件是否为指定类型
+		&#10;也可以用 test 选项 文件 的格式 但不常用
+		&#10;--------------------------------------------------
+		&#10;选项：-b → 判断该文件是否存在 并且是否为块设备文件
+		&#10;选项：-c → 判断该文件是否存在 并且是否为字符设备文件
+		&#10;选项：-d → 判断该文件是否存在 并且是否为目录文件 常用
+		&#10;选项：-e → 判断该文件是否存在 常用
+		&#10;选项：-f → 判断该文件是否存在 并且是否为普通文件 常用
+		&#10;选项：-L → 判断该文件是否存在 并且是否为符号链接文件
+		&#10;选项：-p → 判断该文件是否存在 并且是否为管道文件
+		&#10;选项：-s → 判断该文件是否存在 并且是否为非空
+		&#10;选项：-S → 判断该文件是否存在 并且是否为套接字文件">
+		<td>【条件判断】【文件类型判断】</td>
+		<td><p>[ <font class="w g">选项</font> <font class="r">文件</font> ]</p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;
+		&#10;--------------------------------------------------
+		&#10;选项：-r → 判断该文件是否存在 并且是否有指读权限 常用
+		&#10;选项：-w → 判断该文件是否存在 并且是否有写权限 常用
+		&#10;选项：-x → 判断该文件是否存在 并且是否有执行权限 常用
+		&#10;选项：-u → 判断该文件是否存在 并且是否有 SUID 权限
+		&#10;选项：-g → 判断该文件是否存在 并且是否有 SGID 权限
+		&#10;选项：-k → 判断该文件是否存在 并且是否有 SBit 权限">
+		<td>【条件判断】【文件权限判断】</td>
+		<td><p>[ <font class="w g">选项</font> <font class="r">文件</font> ]</p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;判断两个文件
+		&#10;--------------------------------------------------
+		&#10;选项：-nt → 判断 文件1 的修改时间是否比 文件2 新
+		&#10;选项：-ot → 判断 文件1 的修改时间是否比 文件2 旧
+		&#10;选项：-ef → 判断 文件1 和 文件2 的 Inode 号一致（即判断是否有一个是硬链接）">
+		<td>【条件判断】【文件属性比较】</td>
+		<td><p>[ <font class="r">文件1</font> <font class="w g">选项</font> <font class="r">文件2</font> ]</p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;判断两个整数
+		&#10;--------------------------------------------------
+		&#10;选项：-eq → 判断 整数1 是否和 整数2 相等
+		&#10;选项：-ne → 判断 整数1 是否和 整数2 不相等
+		&#10;选项：-gt → 判断 整数1 是否大于 整数2
+		&#10;选项：-lt → 判断 整数1 是否小于 整数2
+		&#10;选项：-ge → 判断 整数1 是否大于等于 整数2
+		&#10;选项：-le → 判断 整数1 是否小于等于 整数2">
+		<td>【条件判断】【整数比较】</td>
+		<td><p>[ <font class="r">整数1</font> <font class="w g">选项</font> <font class="r">整数2</font> ]</p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;判断一个字符串
+		&#10;--------------------------------------------------
+		&#10;选项：-z → 判断字符串是否为空
+		&#10;选项：-n → 判断字符串是否为非空">
+		<td>【条件判断】【字符串判断】</td>
+		<td><p>[ <font class="w g">选项</font> <font class="r">字符串</font> ]</p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;判断两个字符串
+		&#10;--------------------------------------------------
+		&#10;选项：== → 判断 字符串1 是否和 字符串2 相等
+		&#10;选项：!= → 判断 字符串1 是否和 字符串2 不相等">
+		<td>【条件判断】【字符串比较】</td>
+		<td><p>[ <font class="r">字符串1</font> <font class="w g">选项</font> <font class="r">字符串2</font> ]</p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;判断一个条件判断
+		&#10;--------------------------------------------------
+		&#10;选项：! → 逻辑非 使原判断结果取反">
+		<td>【条件判断】【多重条件判断】</td>
+		<td><p>[ <font class="w g">选项</font> <font class="r">判断</font> ]</p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;判断两个条件判断的结果
+		&#10;--------------------------------------------------
+		&#10;选项：-a → 逻辑与 判断1 和 判断2 都成立
+		&#10;选项：-o → 逻辑或 判断1 和 判断2 有一个成立">
+		<td>【条件判断】【多重条件比较】</td>
+		<td><p>[ <font class="r">判断1</font> <font class="w g">选项</font> <font class="r">判断2</font> ]</p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="">
+		<td>【流程控制】【if语句】</td>
+		<td>
+			<p><font class="w b">if</font> [ <font class="w o">条件判断式</font> ]</p>
+				<p class="ti_1"><font class="w b">then</font></p>
+				<p class="ti_1"><font class="w o">条件成立时执行的程序</font></p>
+			<p><font class="w b">else</font></p>
+				<p class="ti_1"><font class="w o">条件不成立时执行的程序</font></p>
+			<p><font class="w b">fi</font></p>
+		</td>
+	</tr>
+	<tr onclick="" title="">
+		<td>【流程控制】【多if语句】</td>
+		<td>
+			<p><font class="w b">if</font> [ <font class="w o">条件判断式1</font> ]</p>
+				<p class="ti_1"><font class="w b">then</font></p>
+				<p class="ti_1"><font class="w o">条件1成立时执行的程序</font></p>
+			<p><font class="w b">elif</font> [ <font class="w o">条件判断式2</font> ]</p>
+				<p class="ti_1"><font class="w b">then</font></p>
+				<p class="ti_1"><font class="w o">条件2成立时执行的程序</font></p>
+			<p><font class="w b">else</font></p>
+				<p class="ti_1"><font class="w o">条件不成立时执行的程序</font></p>
+			<p><font class="w b">fi</font></p>
+		</td>
+	</tr>
+	<tr onclick="" title="">
+		<td>【流程控制】【case语句】</td>
+		<td>
+			<p><font class="w b">case</font> <font class="w g">变量</font> <font class="w b">in</font></p>
+				<p class="ti_1"><font class="r">"值1"</font>)</p>
+					<p class="ti_2"><font class="w o">变量为值1时执行的程序</font></p>
+					<p class="ti_2">;;</p>
+				<p class="ti_1"><font class="r">"值2"</font>)</p>
+					<p class="ti_2"><font class="w o">变量为值2时执行的程序</font></p>
+					<p class="ti_2">;;</p>
+				<p class="ti_1"><font class="w r">*</font>)</p>
+					<p class="ti_2"><font class="w o">变量值非以上值时执行的程序</font></p>
+					<p class="ti_2">;;</p>
+			<p><font class="w b">esac</font></p>
+		</td>
+	</tr>
+	<tr onclick="" title="">
+		<td>【流程控制】【for循环】</td>
+		<td>
+			<p><font class="w b">for</font> <font class="w g">变量</font> <font class="w b">in</font> <font class="r">值</font></p>
+				<p class="ti_1"><font class="w b">do</font></p>
+					<p class="ti_2"><font class="w o">每循环一次时执行的程序</font></p>
+				<p class="ti_1"><font class="w b">done</font></p>
+		</td>
+	</tr>
+	<tr onclick="" title="">
+		<td>【流程控制】【for循环】</td>
+		<td>
+			<p><font class="w b">for</font> (( <font class="w o">循环条件（初始值;最大值;增值）</font> ))</p>
+				<p class="ti_1"><font class="w b">do</font></p>
+					<p class="ti_2"><font class="w o">每循环一次时执行的程序</font></p>
+				<p class="ti_1"><font class="w b">done</font></p>
+		</td>
+	</tr>
+	<tr onclick="" title="
+		&#10;只要条件判断式一直成立 循环就持续 直到不成立为止">
+		<td>【流程控制】【while循环】</td>
+		<td>
+			<p><font class="w b">while</font> [ <font class="w o">条件判断式</font> ]</p>
+				<p class="ti_1"><font class="w b">do</font></p>
+					<p class="ti_2"><font class="w o">每循环一次时执行的程序</font></p>
+				<p class="ti_1"><font class="w b">done</font></p>
+		</td>
+	</tr>
+	<tr onclick="" title="
+		&#10;只要条件判断式一直不成立 循环就持续 直到成立为止">
+		<td>【流程控制】【until循环】</td>
+		<td>
+			<p><font class="w b">while</font> [ <font class="w o">条件判断式</font> ]</p>
+				<p class="ti_1"><font class="w b">do</font></p>
+					<p class="ti_2"><font class="w o">每循环一次时执行的程序</font></p>
+				<p class="ti_1"><font class="w b">done</font></p>
+		</td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【变量】**************************************************/
+
+function test_var_01(){
+	PC_Case.show(3,
+		'<p>x=123</p>'
+		+'<p>echo $x</p>'
+		+'<p>123</p>');
+}
+
+function test_var_02(){
+	PC_Case.show(3,
+		'<p>x=123</p>'
+		+'<p>x="$x"456</p>'
+		+'<p>echo $x</p>'
+		+'<p>123456</p>');
+}
+
+function test_var_03(){
+	PC_Case.show(3,
+		'<p>x=123</p>'
+		+'<p>x=${x}456</p>'
+		+'<p>echo $x</p>'
+		+'<p>123456</p>');
+}
+
+function test_path(){
+	PC_Case.show(3,'<p>PATH="$PATH":/newvar</p>');
+}
+
+function test_ps1(){
+	PC_Case.show(3,
+		'<p>PS1=\'[\\u@\\A \\w]\$ \'</p>'
+		+'<p>[root@6:50 /home/root]$ </p>'
+		+'<p>PS1=\'[\\u@\\H \\W]\$ \'</p>'
+		+'<p>[root@ubuntu root]$ </p>');
+}
+
+function test_read(){
+	PC_Case.show(3,
+		'<p#!/bin/bash</p>'
+		+'<p>read -p "请输入用户名：" name</p>'
+		+'<p>echo $name</p>'
+		+'<p>read -p "请输入密码：" -s name</p>'
+		+'<p>echo -e "\\n"</p>'
+		+'<p>echo $passwd</p>'
+		+'<p>read -p "请输入姓别 [M/F]：" -n 1 sex</p>'
+		+'<p>echo -e "\\n"</p>'
+		+'<p>echo $sex</p>');
+}
+
+/**************************************************【】**************************************************/
+</script>
+

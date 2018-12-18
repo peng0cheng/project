@@ -1,0 +1,152 @@
+<table class="i_table">
+	<tr title="
+		&#10;说&#12288;明：查找符合给定模式的 key
+		&#10;说&#12288;明：可以用 * 代替不明确的部分
+		&#10;返回值：数据库有值 → key 的名称列表
+		&#10;返回值：数据库无值 → 空
+		&#10;返回值：键不存在 → 空">
+		<td>【CMD】【获取】【键的名称】</td>
+		<td><p><font class="w b">KEYS</font> <font class="w o">关键字</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：随机返回一个 key
+		&#10;返回值：数据库有值 → key 的名称
+		&#10;返回值：数据库无值 → 空">
+		<td>【CMD】【获取】【随机一个键的名称】</td>
+		<td><p><font class="w b">RANDOMKEY</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：将 key 改名为 newkey
+		&#10;说&#12288;明：非强制
+		&#10;返回值：成功 → OK
+		&#10;返回值：旧键不存在 → error
+		&#10;返回值：新键已存在 → 0">
+		<td>【CMD】【设置】【修改键名】</td>
+		<td><p><font class="w b">RENAMENX</font> <font class="w g">key</font> <font class="w g">key</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：将 key 强制改名为 newkey
+		&#10;说&#12288;明：强制
+		&#10;返回值：成功 → OK
+		&#10;返回值：旧键不存在 → error
+		&#10;返回值：新键已存在 → OK">
+		<td>【CMD】【设置】【强制修改键名】</td>
+		<td><p><font class="w b">RENAME</font> <font class="w g">key</font> <font class="w g">key</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：移除给定的一个或多个 key
+		&#10;返回值：成功 → 被移除的数量">
+		<td>【CMD】【操作】【删除】</td>
+		<td><p><font class="w b">DEL</font> <font class="w g">key</font> <font class="w gr">[</font> <font class="w g">key</font> <font class="w gr">...</font> <font class="w gr">]</p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：redis 默认使用数据库 0
+		&#10;说&#12288;明：将一个 key 从当前数据库移动到目标数据库
+		&#10;返回值：成功 → 1
+		&#10;返回值：原键不存在 → 0
+		&#10;返回值：两键同名 → 0">
+		<td>【CMD】【操作】【移动键到其它库】</td>
+		<td><p><font class="w b">MOVE</font> <font class="w g">key</font> <font class="w o">数据库</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：检查给定 key 是否存在
+		&#10;返回值：键存在 → 1
+		&#10;返回值：键不存在 → 0">
+		<td>【CMD】【检测】【键是否存在】</td>
+		<td><p><font class="w b">EXISTS</font> <font class="w g">key</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：检测 key 所储存的值的类型
+		&#10;返回值：未知类型 → 0
+		&#10;返回值：字符串型 → 1
+		&#10;返回值：列表型 → 2
+		&#10;返回值：集合型 → 3
+		&#10;返回值：有序集合型 → 4
+		&#10;返回值：哈希表型 → 5">
+		<td>【CMD】【检测】【键的类型】</td>
+		<td><p><font class="w b">TYPE</font> <font class="w g">key</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：返回给定 key 引用所储存的值的次数 此命令主要用于除错
+		&#10;返回值：键存在 → 数值
+		&#10;返回值：键不存在 → 空">
+		<td>【CMD】【检测】【内部对象】【REFCOUNT】</td>
+		<td><p><font class="w b">OBJECT REFCOUNT</font> <font class="w g">key</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：返回给定 key 储存的值的编码类型
+		&#10;说&#12288;明：字符串可以被编码为 raw(一般字符串)或 int(用字符串表示64位数字是为了节约空间)。
+		&#10;说&#12288;明：列表可以被编码为 ziplist 或 linkedlist ziplist 是为节约大小较小的列表空间而作的特殊表示
+		&#10;说&#12288;明：集合可以被编码为 intset 或者 hashtable intset 是只储存数字的小集合的特殊表示
+		&#10;说&#12288;明：哈希表可以编码为 zipmap 或者 hashtable zipmap 是小哈希表的特殊表示
+		&#10;说&#12288;明：有序集合可以被编码为 ziplist 或者 skiplist 格式 ziplist 用于表示小的有序集合 skiplist 则用于表示任何大小的有序集合
+		&#10;返回值：键存在 → 编码类型
+		&#10;返回值：键不存在 → 空">
+		<td>【CMD】【检测】【内部对象】【ENCODING】</td>
+		<td><p><font class="w b">OBJECT ENCODING</font> <font class="w g">key</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：返回给定key自储存以来的空转时间 即没有被读取也没有被写入 以秒为单位
+		&#10;返回值：键存在 → 数值
+		&#10;返回值：键不存在 → 空">
+		<td>【CMD】【检测】【内部对象】【IDLETIME】</td>
+		<td><p><font class="w b">OBJECT IDLETIME</font> <font class="w g">key</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：返回给定 key 的剩余生存时间 以秒为单位
+		&#10;返回值：已设置生存时间 → 秒数
+		&#10;返回值：未设置生存时间 → -1
+		&#10;返回值：键不存在 → -2">
+		<td>【CMD】【其它】【生存时间】【查询】</td>
+		<td><p><font class="w b">TTL</font> <font class="w g">key</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：给 key 设置生存时间
+		&#10;说&#12288;明：当 key 过期时 它会被自动删除
+		&#10;返回值：成功 → 1
+		&#10;返回值：键不存在 → 0">
+		<td>【CMD】【其它】【生存时间】【设置持续时间】</td>
+		<td><p><font class="w b">EXPIRE</font> <font class="w g">key</font> <font class="w o">秒数</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：给 key 设置生存时间
+		&#10;说&#12288;明：当 key 过期时 它会被自动删除
+		&#10;返回值：成功 → 1
+		&#10;返回值：键不存在 → 0">
+		<td>【CMD】【其它】【生存时间】【设置结束时间】</td>
+		<td><p><font class="w b">EXPIREAT</font> <font class="w g">key</font> <font class="w o">Unix时间戳</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：移除 key 设置的生存时间
+		&#10;返回值：成功 → 1
+		&#10;返回值：键未设置生存时间 → 0
+		&#10;返回值：键不存在 → 0">
+		<td>【CMD】【其它】【生存时间】【移除】</td>
+		<td><p><font class="w b">PERSIST</font> <font class="w g">key</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：给数值列表排序 从低到高
+		&#10;说&#12288;明：只能给纯数值的列表排序
+		&#10;返回值：成功 → 已排序的列表
+		&#10;返回值：失败 → error">
+		<td>【CMD】【其它】【排序】【一般】</td>
+		<td><p><font class="w b">SORT</font> <font class="w g">key</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：给列表排序
+		&#10;说&#12288;明：可以给任何列表排序
+		&#10;说&#12288;明：ASC|DESC → ASC 为正序 DESC 为倒序
+		&#10;说&#12288;明：ALPHA → 按字符排序（数字小于字母）
+		&#10;说&#12288;明：LIMIT 起始位置 数量 → 取某一部分的列表（起始位置从 0 开始 可以为负值）
+		&#10;返回值：成功 → 已排序的列表">
+		<td>【CMD】【其它】【排序】【复杂】</td>
+		<td><p><font class="w b">SORT</font> <font class="w g">key</font> [<font class="w b">ASC</font>|<font class="w b">DESC</font>] [<font class="w b">BY PATTERN</font>] [<font class="w b">LIMIT</font> <font class="w r">起始位置 数量</font>]</p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr title="
+		&#10;说&#12288;明：
+		&#10;返回值：">
+		<td>【php】</td>
+		<td><p></p></td>
+	</tr>
+</table>

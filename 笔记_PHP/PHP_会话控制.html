@@ -1,0 +1,35 @@
+<table class="i_table">
+	<tr title="使用SESSION必须开启会话">
+		<td>【SESSION 开启】</td>
+		<td><p><font class="w b">SESSION_START()</font></p></td>
+	</tr>
+	<tr title="清除客户端的 COOKIE">
+		<td>【SESSION 清除】</td>
+		<td><p><font class="w b">setCookie</font>(<font class="w b">session_name()</font>,'',<font class="w b">time()-1</font>,'<font class="w b">/</font>')</p></td>
+	</tr>
+	<tr title="清除页面的 $_SESSION 数组">
+		<td>【SESSION 清除】</td>
+		<td><p><font class="w b">$_SESSION</font>=<font class="w b">array()</font></p></td>
+	</tr>
+	<tr title="清除服务器的 SESSION 文件">
+		<td>【SESSION 清除】</td>
+		<td><p><font class="w b">session_destroy()</font></p></td>
+	</tr>
+	<tr title="通常用于用户登录">
+		<td>【COOKIE 接收】</td>
+		<td><p><font class="w b">$_COOKIE</font>['<font class="g">用户传值</font>']</p></td>
+	</tr>
+	<tr title="">
+		<td>【COOKIE 添加】</td>
+		<td><p><font class="w b">SetCookie</font>(<font class="g">名字</font>,<font class="g">值</font>,<font class="g">有效时间</font>,<font class="g">有效路径</font>)</p></td>
+	</tr>
+	<tr title="">
+		<td>【COOKIE 删除】</td>
+		<td><p><font class="w b">SetCookie</font>(<font class="g">名字</font>,'',<font class="w b">time()-1</font>,<font class="g">有效路径</font>)</p></td>
+	</tr>
+	<tr title="">
+		<td>【COOKIE 修改】</td>
+		<td><p><font class="w b">SetCookie</font>(<font class="g">名字</font>,<font class="g">新值</font>,<font class="g">有效时间</font>,<font class="g">有效路径</font>)	</p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->

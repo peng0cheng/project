@@ -1,0 +1,128 @@
+<meta charset="utf8">
+<!---------------------------------------------------------------------------------------------------->
+
+<style>
+	.{margin:0px;padding:0px;}
+	a{text-decoration:none;}
+	
+	table{border-collapse:collapse;border:3px solid black;}
+	table{width:80%;margin:auto;font-size:12px;font-family:"微软雅黑";}
+	table tr{border-bottom:2px solid black;}
+	table tr td:nth-of-type(1){width:15%;border-right:1px solid black;text-align:center;}
+	table tr td:nth-of-type(2){width:85%;padding:1%;}
+
+	.r{color:red;}
+	.g{color:green;}
+	.b{color:blue;}
+	.gr{color:grey;}
+	.bg_gr{background:grey;}
+	.cmd{background:black;color:white;width:60%;padding:1%;}
+
+	.hide{display:none;}
+	.show{display:block;}
+</style>
+
+<!---------------------------------------------------------------------------------------------------->
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>准备</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">组件</h2>
+		</td>
+		<td>
+			<h3 class="g">配置目标</h3>
+			<font>确保所有开发运行库已安装</font><br>
+		</td>
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>配置</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">配置文件</h2>
+		</td>
+		<td>
+			<h3 class="g">配置文件路径</h3>
+			<font>/conf/httpd.conf</font><br>
+
+			<h3 class="g">配置 Apache 基本路径常量</h3>
+			<font class="gr">Apache 的安装路径</font><br>
+			<div class="cmd">
+				<font class="r">ServerRoot "e:/apache"</font><br>
+			</div>
+			<br>
+
+			<h3 class="g">配置 web 服务器路径</h3>
+			<font class="gr">项目文件所在路径（如果加载了虚拟主机需要将虚拟主机也做相同配置）</font><br>
+			<div class="cmd">
+				<font class="r">DocumentRoot "e:/WWW"</font><br>
+			</div>
+			<br>
+
+			<h3 class="g">配置服务器名</h3>
+			<font class="gr">将 servername 的注释打开并修改</font><br>
+			<div class="cmd">
+				<font class="r">ServerName localhost:80</font><br>
+			</div>
+			<br>
+
+			<h3 class="g">配置 PHP 解析功能</h3>
+			<font class="gr">让 Apache 支持 PHP</font><br>
+			<font class="gr">在 #LoadModule 列表下添加</font><br>
+			<div class="cmd">
+				<font class="r">#php for apache in module</font><br>
+				<font class="r">LoadModule php5_module "e:/php/php5apache2_4.dll"</font><br>
+				<font class="r">PHPIniDir "e:/php"</font><br>
+				<font class="r">AddType application/x-httpd-php .php</font><br>
+			</div>
+			<br>
+		</td>    
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">虚拟主机<br>配置文件</h2>
+		</td>
+		<td>
+			<h3 class="g">配置文件路径</h3>
+			<font>/conf/extra/httpd-vhosts.conf</font><br>
+
+			<h3 class="g">配置 web 服务器路径</h3>
+			<font class="gr">项目文件所在路径</font><br>
+			<div class="cmd">
+				<font class="r">DocumentRoot "e:/WWW"</font><br>
+			</div>
+			<br>
+		</td>    
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>使用</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">文件结构</h2>
+		</td>
+		<td>
+			<h3 class="g">执行文件</h3>
+			<font>/bin/httpd.exe</font><br>
+		</td>
+	</tr>
+</table>

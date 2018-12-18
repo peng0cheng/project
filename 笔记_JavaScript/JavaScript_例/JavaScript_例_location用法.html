@@ -1,0 +1,15 @@
+<meta charset="utf-8" />
+
+//【例】
+	$('#test_location_01').live('click',function(){
+		PC_Case.show(1,
+			'<p>history.go(0)</p>'
+			+'<p>location.reload()</p>'
+			+'<p>location=location</p>'
+			+'<p>location.assign(location)</p>'
+			+'<p>document.execCommand(\'Refresh\')</p>'
+			+'<p>window.navigate(location)</p>'
+			+'<p>location.replace(location)</p>'
+			+'<p>document.URL=location.href</p>'
+		);
+	});

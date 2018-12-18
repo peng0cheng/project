@@ -1,0 +1,149 @@
+<table class="i_table">
+	<tr onclick="test_vw()" title="
+		&#10;视窗宽度 1vw 等于视窗宽度的 1%">
+		<td>【长度单位】【视窗宽】</td>
+		<td><p><font class="w g">属性</font> : <font class="w o">0~100</font><font class="w r">vw</font><p></td>
+	</tr>
+	<tr onclick="test_vh()" title="
+		&#10;视窗高度 1vh 等于视窗高度的 1%">
+		<td>【长度单位】【视窗高】</td>
+		<td><p><font class="w g">属性</font> : <font class="w o">0~100</font><font class="w r">vh</font><p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_color_01()" title="
+		&#10;透明">
+		<td>【颜色单位】【英文】</td>
+		<td><p><font class="w g">属性</font> : <font class="w r">transparent</font><p></td>
+	</tr>
+	<tr onclick="test_color_02()" title="
+		&#10;第一位 0~255 → 红色度
+		&#10;第二位 0~255 → 绿色度
+		&#10;第三位 0~255 → 蓝色度 
+		&#10;第四位 0~1 → 透明度 数值越大透明度越低">
+		<td>【颜色单位】【RGBA】</td>
+		<td><p><font class="w g">属性</font> : <font class="w r">rgba</font> ( <font class="w o">0~255</font> , <font class="w o">0~255</font> , <font class="w o">0~255</font> , <font class="w o">0~1</font> )<p></td>
+	</tr>
+	<tr onclick="test_color_03()" title="
+		&#10;第一位 0~360 → 色调 0 和 360 红色 120 绿色 240 蓝色
+		&#10;第二位 0%~100% → 饱合度 数值越大颜色越深 0% 无色 100% 纯色
+		&#10;第三位 0%~100% → 亮度 数值越大亮度越高 0% 黑色 100% 白色 50% 适中">
+		<td>【颜色单位】【HSL】</td>
+		<td><p><font class="w g">属性</font> : <font class="w r">hsl</font> ( <font class="w o">0~360</font> , <font class="w o">0%~100%</font> , <font class="w o">0%~100%</font> )</p></td>
+	</tr>
+	<tr onclick="test_color_04()" title="
+		&#10;第一位 0~360 → 色调 0 和 360 红色 120 绿色 240 蓝色
+		&#10;第二位 0%~100% → 饱合度 数值越大颜色越深 0% 无色 100% 纯色
+		&#10;第三位 0%~100% → 亮度 数值越大亮度越高 0% 黑色 100% 白色 50% 适中
+		&#10;第四位 0~1 → 透明度 数值越大透明度越低">
+		<td>【颜色单位】【HSLA】</td>
+		<td><p><font class="w g">属性</font> : <font class="w r">hsla</font> ( <font class="w o">0~360</font> , <font class="w o">0%~100%</font> , <font class="w o">0%~100%</font> , <font class="w o">0~1</font> )</p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_ie()" title="
+		&#10;当 IE 不支持该 CSS3 属性时使用">
+		<td>【浏览器前缀】【IE】</td>
+		<td><p><font class="w g">-ms-</font> <font class="w o">属性</font></p></td>
+	</tr>
+	<tr onclick="test_opera()" title="
+		&#10;当 Opera 不支持该 CSS3 属性时使用">
+		<td>【浏览器前缀】【Opera】</td>
+		<td><p><font class="w g">-o-</font> <font class="w o">属性</font></p></td>
+	</tr>
+	<tr onclick="test_firefox()" title="
+		&#10;当 FireFox 不支持该 CSS3 属性时使用">
+		<td>【浏览器前缀】【FireFox】</td>
+		<td><p><font class="w g">-moz-</font> <font class="w o">属性</font></p></td>
+	</tr>
+	<tr onclick="test_chrome()" title="
+		&#10;当 Chrome 不支持该 CSS3 属性时使用">
+		<td>【浏览器前缀】【Chrome】</td>
+		<td><p><font class="w g">-webkit-</font> <font class="w o">属性</font></p></td>
+	</tr>
+	<tr onclick="test_safari()" title="
+		&#10;当 Safari 不支持该 CSS3 属性时使用">
+		<td>【浏览器前缀】【Safari】</td>
+		<td><p><font class="w g">-webkit-</font> <font class="w o">属性</font></p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【长度单位】**************************************************/
+
+function test_vw(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { background: green; height: 20px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">width:</font> <font class="r">10vw;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:10vw;height:20px;background:green"></div>');
+}
+
+function test_vh(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { background: green; width: 20px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">height:</font> <font class="r">10vh;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:20px;height:10vw;background:green"></div>');
+}
+
+/**************************************************【颜色单位】**************************************************/
+
+function test_color_01(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div</font> { width: 100px; height: 100px; }'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">background:</font> <font class="r">transparent;</font> }'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:100px;height:100px;background:transparent"></div>');
+}
+
+function test_color_02(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">'+'div'+'</font> { width: 100px; height: 100px; }'
+			+'<p class="ti_1"><font class="b">div</font> { <font class="g">background:</font> <font class="r">rgba( 255,0,0,0.5 );</font> }'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:100px;height:100px;background:rgba(255,0,0,0.5)"></div>');
+}
+
+function test_color_03(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div</font> { width: 100px; height: 100px; }'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">background:</font> <font class="r">hsl( 120,100%,0% );</font> }'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:100px;height:100px;background:hsl(120,100%,50%);"></div>');
+}
+
+function test_color_04(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div</font> { width: 100px; height: 100px; }'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">background:</font> <font class="r">hsla( 240,100%,0%,0.5 );</font> }'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:100px;height:100px;background:hsla(240,100%,50%,0.5);"></div>');
+}
+
+/**************************************************【浏览器前缀】**************************************************/
+
+/**************************************************【】**************************************************/
+</script>

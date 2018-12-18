@@ -1,0 +1,166 @@
+<table class="i_table">
+	<tr id="test_" title="一般格式">
+		<td>【类】</td>
+		<td>
+			<p><font class="o">关键词</font> <font class="w b">class</font> <font class="g">类</font>{</p>
+			<p class="ti_2"><font class="o">成员属性</font></p>
+			<p class="ti_2"><font class="o">成员方法</font></p>
+			<p>}</p>
+		</td>
+	</tr>
+	<tr id="test_" title="完整格式">
+		<td>【类】</td>
+		<td>
+			<p><font class="o">关键词</font> <font class="w b">class</font> <font class="g">类</font> <font class="w b">extends</font> <font class="g">父类</font> <font class="w b">implements</font> <font class="g">接口1,接口2...</font>{</p>
+			<p class="ti_2"><font class="o">成员属性</font></p>
+			<p class="ti_2"><font class="o">成员方法</font></p>
+			<p>}</p>
+		</td>
+	</tr>
+	<tr id="test_" title="大多在生成对象时再赋值">
+		<td>【成员属性】</td>
+		<td><p><font class="o">修饰符</font> <font class="o">关键词</font> <font class="w b">$</font><font class="g">属性</font></p></td>
+	</tr>
+	<tr id="test_" title="大多在生成对象时再赋值">
+		<td>【成员属性】</td>
+		<td><p><font class="o">修饰符</font> <font class="o">关键词</font> <font class="w b">$</font><font class="g">属性</font> = <font class="g">值</font></p></td>
+	</tr>
+	<tr id="test_" title="参数可以重构成员属性 可在实例化时赋值">
+		<td>【成员方法】</td>
+		<td><p><font class="o">修饰符</font> <font class="o">关键词</font> <font class="w b">function</font> <font class="g">方法(</font> <font class="o">参数</font> <font class="g">)</font>{ <font class="o">方法体</font> }</p></td>
+	</tr>
+	<tr id="test_" title="在对象实例化时触发 用于初始化成员属性">
+		<td>【魔术方法】</td>
+		<td><p><font class="o">修饰符</font> <font class="o">关键词</font> <font class="w b">function __construct</font>(</font> <font class="o">参数</font> <font class="g">)</font>{ <font class="o">方法体</font> }</p></td>
+	</tr>
+	<tr id="test_" title="在销毁对象或页面执行完时触发 用于回收资源 节省内存空间">
+		<td>【魔术方法】</td>
+		<td><p><font class="o">修饰符</font> <font class="o">关键词</font> <font class="w b">function __destruct</font>(</font> <font class="o">参数</font> <font class="g">)</font>{ <font class="o">方法体</font> }</p></td>
+	</tr>
+	<tr id="test_" title="必须设置参数 访问私有成员时触发 用于防止报错">
+		<td>【魔术方法】</td>
+		<td><p><font class="o">修饰符</font> <font class="o">关键词</font> <font class="w b">function __get</font>(</font> <font class="o">参数</font> <font class="g">)</font>{ <font class="o">方法体</font> }</p></td>
+	</tr>
+	<tr id="test_" title="必须设置参数 设置私有成员时触发 用于控制设置">
+		<td>【魔术方法】</td>
+		<td><p><font class="o">修饰符</font> <font class="o">关键词</font> <font class="w b">function __set</font>(</font> <font class="o">参数</font> <font class="g">)</font>{ <font class="o">方法体</font> }</p></td>
+	</tr>
+	<tr id="test_" title="使用 isset 检测时触发">
+		<td>【魔术方法】</td>
+		<td><p><font class="o">修饰符</font> <font class="o">关键词</font> <font class="w b">function __isset</font>(</font> <font class="o">参数</font> <font class="g">)</font>{ <font class="o">方法体</font> }</p></td>
+	</tr>
+	<tr id="test_" title="对私有成员属性进行 unset 操作时自动触发 用于代替对象外部的 unset 操作 返回结果">
+		<td>【魔术方法】</td>
+		<td><p><font class="o">修饰符</font> <font class="o">关键词</font> <font class="w b">function __unset</font>(</font> <font class="o">参数</font> <font class="g">)</font>{ <font class="o">方法体</font> }</p></td>
+	</tr>
+	<tr id="test_" title="在对象进行串行化时自动触发 可以 return 一个数组返回指定的属性">
+		<td>【魔术方法】</td>
+		<td><p><font class="o">修饰符</font> <font class="o">关键词</font> <font class="w b">function __sleep</font>(</font> <font class="o">参数</font> <font class="g">)</font>{ <font class="o">方法体</font> }</p></td>
+	</tr>
+	<tr id="test_" title="在对象进行反串行化时自动触发">
+		<td>【魔术方法】</td>
+		<td><p><font class="o">修饰符</font> <font class="o">关键词</font> <font class="w b">function __wakeup</font>(</font> <font class="o">参数</font> <font class="g">)</font>{ <font class="o">方法体</font> }</p></td>
+	</tr>
+	<tr id="test_" title="对一个对象进行 echo 操作时 自动触发 并返回一个字符串">
+		<td>【魔术方法】</td>
+		<td><p><font class="o">修饰符</font> <font class="o">关键词</font> <font class="w b">function __tostring</font>(</font> <font class="o">参数</font> <font class="g">)</font>{ <font class="o">方法体</font> }</p></td>
+	</tr>
+	<tr id="test_" title="对对象进行克隆操作时自动触发">
+		<td>【魔术方法】</td>
+		<td><p><font class="o">修饰符</font> <font class="o">关键词</font> <font class="w b">function __clone</font>(</font> <font class="o">参数</font> <font class="g">)</font>{ <font class="o">方法体</font> }</p></td>
+	</tr>
+	<tr id="test_" title="调用了类中不存在的方法时自动触发 用于屏敝错误 为不存在的方法定义个一个功能">
+		<td>【魔术方法】</td>
+		<td><p><font class="o">修饰符</font> <font class="o">关键词</font> <font class="w b">function __call</font>(</font> <font class="o">参数</font> <font class="g">)</font>{ <font class="o">方法体</font> }</p></td>
+	</tr>
+	<tr id="test_" title="当页面中需要一个类而该类不存在时自动触发 用于实现类的自动加载">
+		<td>【魔术方法】</td>
+		<td><p><font class="o">修饰符</font> <font class="o">关键词</font> <font class="w b">function __autoload</font>(</font> <font class="o">参数</font> <font class="g">)</font>{ <font class="o">方法体</font> }</p></td>
+	</tr>
+	<tr id="test_" title="调用属性不能加 $ 符">
+		<td>【方法体】【调用类内成员】</td>
+		<td><p><font class="w b">$this</font> -> <font class="o">成员</font></p></td>
+	</tr>
+	<tr id="test_" title="表示调用自已类中的静态成员 等同于 $this">
+		<td>【方法体】【调用类内成员】</td>
+		<td><p><font class="w b">self</font> : : <font class="o">成员</font></p></td>
+	</tr>
+	<tr id="test_" title="用于子类覆盖父类同名方法时 区分指定调用的方法">
+		<td>【方法体】【调用父类成员】</td>
+		<td><p><font class="g">类</font> : : <font class="o">成员</font></p></td>
+	</tr>
+	<tr id="test_" title="公有化成员 全部可以使用">
+		<td>【修饰符】【public】</td>
+		<td><p><font class="w b">public</font> <font class="o">成员</font></p></td>
+	</tr>
+	<tr id="test_" title="保护成员 仅子类可以使用 但是非子类不能使用">
+		<td>【修饰符】【protected】</td>
+		<td><p><font class="w b">protected</font> <font class="o">成员</font></p></td>
+	</tr>
+	<tr id="test_" title="私有化成员 子类和外部都不可以使用 只可以被内部调用">
+		<td>【修饰符】【private】</td>
+		<td><p><font class="w b">private</font> <font class="o">成员</font></p></td>
+	</tr>
+		<tr id="test_" title="final 修饰的类是最终的类 不能被继承和扩展">
+		<td>【关键词】【final】</td>
+		<td><p><font class="w b">final</font> <font class="g">类</font></p></td>
+	</tr>
+	<tr id="test_" title="final 不能修饰成员属性">
+		<td>【关键词】【final】</td>
+		<td><p><font class="w b">final</font> <font class="g td_lt">成员属性</font></p></td>
+	</tr>
+	<tr id="test_" title="final 修饰的方法是最终的方法 不能被重写">
+		<td>【关键词】【final】</td>
+		<td><p><font class="w b">final</font> <font class="g">成员方法</font>( )</p></td>
+	</tr>
+	<tr id="test_" title="static 不能修饰类">
+		<td>【关键词】【static】</td>
+		<td><p><font class="w b">static</font> <font class="g td_lt">类</font></p></td>
+	</tr>
+	<tr id="test_" title="static 修饰的成员属性不能通过对象直接访问">
+		<td>【关键词】【static】</td>
+		<td><p><font class="w b">static</font> <font class="g">成员属性</font></p></td>
+	</tr>
+	<tr id="test_" title="static 修饰的成员方法不能通过对象直接访问 只能使用静态成员">
+		<td>【关键词】【static】</td>
+		<td><p><font class="w b">static</font> <font class="g">成员方法</font>( )</p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr id="test_" title="可以在方法中使用 ★ 有实参需要写实参 没有实参可以不写括号">
+		<td>【实例化】</td>
+		<td><p><font class="w b">$</font><font class="g">变量</font> = <font class="w b">new</font> <font class="g">类</font>(</font> <font class="o">参数</font> <font class="g">)</font></p></td>
+	</tr>
+	<tr id="test_" title="">
+		<td>【对象调用成员】</td>
+		<td><p><font class="g">对象</font> -> <font class="o">成员</font></p></td>
+	</tr>
+	<tr id="test_" title="可以直接使用静态成员 而不用实例化对象">
+		<td>【类调用成员】</td>
+		<td><p><font class="g">类</font> : : <font class="o">成员</font></p></td>
+	</tr>
+	<tr id="test_" title="用于检测指定对象是否属于指定的类">
+		<td>【检测】</td>
+		<td><p><font class="g">对象</font> <font class="w b">instanceof</font> <font class="g">类</font></p></td>
+	</tr>
+	<tr id="test_" title="将对象转换成数组">
+		<td>【串行化】</td>
+		<td><p><font class="w b">serialize</font>( <font class="o">对象</font> )</p></td>
+	</tr>
+	<tr id="test_" title="将数组转回对象">
+		<td>【反串行化】</td>
+		<td><p><font class="w b">unserialize</font>( <font class="o">数组</font> )</p></td>
+	</tr>
+	<tr id="test_" title="函数结果是将数组转化为通用的 JSON 字符串格式 用于多语言多设备传输数据">
+		<td>【JSON 化】</td>
+		<td><p><font class="w b">json_encode</font>( <font class="o">数组</font> )</p></td>
+	</tr>
+	<tr id="test_" title="用于将接收到的 JSON 格式的字符串转成对象">
+		<td>【反 JSON 化】</td>
+		<td><p><font class="w b">json_decode</font>( <font class="o">字符串</font> )</p></td>
+	</tr>
+	<tr id="test_" title="用于将接收到的 JSON 格式的字符串转成数组">
+		<td>【反 JSON 化】</td>
+		<td><p><font class="w b">json_decode</font>( <font class="o">字符串</font> , <font class="w b">true</font> )</p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->

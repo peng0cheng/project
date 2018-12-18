@@ -1,0 +1,213 @@
+<table class="i_table">
+	<tr ondblclick="test_hn()" title="
+		&#10;h1 ~ h3 较常用
+		&#10;h4 ~ h6 不常用 没有 h7
+		&#10;h1 → 配合搜索引擎 唯一
+		&#10;h2 → 配合搜索引擎
+		&#10;h3 → 一般标题
+		&#10;h4 → 一般标题
+		&#10;h5 → 一般标题
+		&#10;h6 → 一般标题">
+		<td>【标题】【标题】</td>
+		<td><p><font class="w b">&lt;hn</font><font class="w b">&gt;</font></p></td>
+	</tr>
+	<tr ondblclick="test_hr()" title="
+		&#10;不与其它元素共占一行
+		&#10;width → 线宽占其父元素宽度的百分比">
+		<td>【标题】【水平线】</td>
+		<td><p><font class="w b">&lt;hr</font> <font class="w g">width</font> = <font class="r">宽度</font> <font class="w b">/&gt;</font></p></td>
+	</tr>
+	<tr ondblclick="test_comment()" title="
+		&#10;注释内容不显示在页面中也不占用页面空间">
+		<td>【标题】【注释】</td>
+		<td><p><font class="w b">&lt;!--</font><font class="w o">注释内容</font><font class="w b">--&gt;</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr ondblclick="test_p()" title="
+		&#10;不与其它元素共占一行">
+		<td>【段落】【段落】</td>
+		<td><p><font class="w b">&lt;p&gt;</font></p></td>
+	</tr>
+	<tr ondblclick="test_br()" title="
+		&#10;相当于 \n 回车键的效果">
+		<td>【段落】【换行】</td>
+		<td><p><font class="w b">&lt;br /&gt;</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr ondblclick="test_b()" title="">
+		<td>【格式化】【加粗】</td>
+		<td><p><font class="w b">&lt;b&gt;</font></p></td>
+	</tr>
+	<tr ondblclick="test_i()" title="">
+		<td>【格式化】【倾斜】</td>
+		<td><p><font class="w b">&lt;i&gt;</font></p></td>
+	</tr>
+	<tr ondblclick="test_del()" title="">
+		<td>【格式化】【删除线】</td>
+		<td><p><font class="w b">&lt;del&gt;</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr ondblclick="test_font()" title="">
+		<td>【样式】【文字】</td>
+		<td><p><font class="w b">&lt;font&gt;</font></p></td>
+	</tr>
+	<tr ondblclick="test_div()" title="
+		&#10;不与其它元素共占一行">
+		<td>【样式】【块状元素】</td>
+		<td><p><font class="w b">&lt;div&gt;</font></p></td>
+	</tr>
+	<tr ondblclick="test_span()" title="
+		&#10;能与其它元素共占一行">
+		<td>【样式】【行内元素】</td>
+		<td><p><font class="w b">&lt;span&gt;</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr ondblclick="test_a_href()" title="
+		&#10;# → 页面本身 默认跳转到本页顶部
+		&#10;链接地址 → 填写目标页面的完整路径或相对路径
+		&#10;锚点名称 → 跳转到指定锚点 在本页前面需要加 #">
+		<td>【链接】【地址】</td>
+		<td><p><font class="w b">&lt;a</font> <font class="w g">href</font> = <font class="w r">#</font>丨<font class="r">链接地址</font>丨<font class="r">锚点名称</font> <font class="w b">&gt;</font></p></td>
+	</tr>
+	<tr ondblclick="test_a_target()" title="
+		&#10;_self → 在当前框架中打开被链接文档
+		&#10;_blank → 在新窗口中打开被链接文档。
+		&#10;_top → 在整个窗口中打开被链接文档
+		&#10;框架名 → 在指定的框架中打开被链接文档 属性值为框架的 name 值">
+		<td>【链接】【打开方式】</td>
+		<td><p><font class="w b">&lt;a</font> <font class="w g">target</font> = <font class="w r">_self</font>丨<font class="w r">_blank</font>丨<font class="w r">_top</font>丨<font class="r">框架名</font> <font class="w b">&gt;</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr ondblclick="test_img()" title="
+		&#10;当图片路径示找到时 alt 属性会将默认图标替换成文字">
+		<td>【图像】【图片】</td>
+		<td><p><font class="w b">&lt;img</font> <font class="w g">src</font> = <font class="r">地址</font> <font class="w g">alt</font> = <font class="r">替换文本</font> <font class="w b">&gt;</font></p></td>
+	</tr>
+</table>
+
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【】**************************************************/
+
+function showCase(){
+	AL.open('没有实例');
+}
+
+function showTest(code){
+	TEST.write(code);
+	PU.open();
+}
+
+/**************************************************【字体】**************************************************/
+
+function test_hn(){
+	var code = '<h1>h1</h1>\n'
+		+'<h2>h2</h2>\n'
+		+'<h3>h3</h3>\n'
+		+'<h4>h4</h4>\n'
+		+'<h5>h5</h5>\n';
+	showTest(code);
+}
+
+function test_hr(){
+	var code = 
+		'one\n'
+		+'<hr />\n'
+		+'two\n'
+		+'<hr width="50%" />\n'
+		+'three\n';
+	showTest(code);
+}
+
+function test_comment(){
+	var code = '<!--这是注释内容-->\n';
+	showTest(code);
+}
+
+/**************************************************【段落】**************************************************/
+
+function test_p(){
+	var code = 
+		'<p>one</p>\n';
+		+'<p>two</p>\n';
+	showTest(code);
+}
+
+function test_br(){
+	var code = 
+		'one\n';
+		+'<br />\n';
+		+'two\n';
+	showTest(code);
+}
+
+/**************************************************【格式化】**************************************************/
+
+function test_b(){
+	var code = '<b>hello world</b>\n';
+	showTest(code);
+}
+
+function test_i(){
+	var code = '<i>hello world</i>\n';
+	showTest(code);
+}
+
+function test_del(){
+	var code = '<del>hello world</del>\n';
+	showTest(code);
+}
+
+/**************************************************【样式】**************************************************/
+
+function test_font(){
+	var code = '<font>hello world</font>\n';
+	showTest(code);
+}
+
+function test_div(){
+	var code = 
+		'<div>one</div>\n';
+		+'<div>two</div>\n';
+	showTest(code);
+}
+
+function test_span(){
+	var code = 
+		'<span>one</span>\n'
+		+'<span>two</span>\n';
+	showTest(code);
+}
+
+/**************************************************【链接】**************************************************/
+
+function test_a_href(){
+	var code = 
+		'<a href="#">点我跳转到本页</a>\n'
+		+'<a href="http://www.baidu.com">点我跳转到百度</a>\n'
+		+'<a name="focus"></a>\n'
+		+'<a href="#focus">点我跳转到锚点</a>\n';
+	showTest(code);
+}
+
+function test_a_target(){
+	var code = 
+		'<a href="#" target="_self">'+'在本页打开链接'+'</a>\n'
+		+'<a href="#" target="_blank">'+'在新页打开链接'+'</a>\n'
+		+'<a href="#" target="_top">'+'在顶级页打开链接'+'</a>\n'
+		+'<a href="#" target="frame_01">'+'在框架打开链接'+'</a>\n';
+	showTest(code);
+}
+
+/**************************************************【图像】**************************************************/
+
+function test_img(){
+	var code = 
+		'<img src="./public/test/img_01.jpg">\n'
+		+'<br><br>\n'
+		+'<img src="img.jpg" alt="图片失效">\n';
+	showTest(code);
+}
+
+/**************************************************【】**************************************************/
+</script>

@@ -1,0 +1,332 @@
+<meta charset="utf8">
+<!---------------------------------------------------------------------------------------------------->
+
+<style>
+	.{margin:0px;padding:0px;}
+	a{text-decoration:none;}
+
+	table{border-collapse:collapse;border:3px solid black;}
+	table{width:80%;margin:auto;font-size:12px;font-family:"微软雅黑";}
+	table tr{border-bottom:2px solid black;}
+	table tr td:nth-of-type(1){width:15%;border-right:1px solid black;text-align:center;}
+	table tr td:nth-of-type(2){width:85%;padding:1%;}
+
+	.r{color:red;}
+	.g{color:green;}
+	.b{color:blue;}
+	.gr{color:grey;}
+	.bg_gr{background:grey;}
+	.cmd{background:black;color:white;width:50%;padding:1%;}
+
+	.hide{display:none;}
+	.show{display:block;}
+</style>
+
+<!---------------------------------------------------------------------------------------------------->
+
+<button onclick="show(1)">CentOS</button> <button onclick="show(2)">Ubuntu</button>
+
+<hr>
+
+<div id="show_01" class="hide">
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>安装前准备</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装服务器软件</h2>
+		</td>
+		<td>
+			<h3 class="g">配置目标</h3>
+			<font>确保能正确运行 Nginx 或 Apache 等服务器功能</font><br>
+
+			<h3 class="g">配置方法</h3>
+			<font>略</font><br>
+		</td>
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>安装</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装必要的支持软件</h2>
+		</td>
+		<td>
+			<h3 class="g">配置目标</h3>
+			<font>PHP 必备支持软件</font><br>
+
+			<h3 class="g">配置方法</h3>
+			<font class="gr">主要是 PHP 的前置程序</font><br>
+			<font class="r">yum install libxml2</font><br>
+			<font class="r">yum install libxml2-devel</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装<br>PHP</h2>
+		</td>
+		<td>
+			<h3 class="g">下载</h3>
+			<font class="gr">在官网下载最稳定版的安装包 解压后进入安装目录准备执行安装程序</font><br>
+			<font>下载命令：</font> <font class="r">wget http://cn2.php.net/get/php-5.6.11.tar.gz/from/this/mirror</font><br>
+			<font>下载地址：</font> <a href="http://www.php.net/downloads.php" target="_blank">http://www.php.net/downloads.php</a><br>
+
+			<h3 class="g">安装</h3>
+			<font class="gr">执行 ./configure 若无错误则进行 make install 安装</font><br>
+			
+
+			<font class="r">./configure \</font><br>
+			<font class="r" title="安装路径">--prefix=/usr/local/php \</font><br>
+			<font class="r" title="php.ini 配置文件路径">--with-config-file-path=/usr/local/php/etc \</font><br>
+			<font class="r" title="优化选项">--enable-inline-optimization \</font><br>
+			<font class="r" title="优化选项">--disable-debug \</font><br>
+			<font class="r" title="优化选项">--disable-rpath \</font><br>
+			<font class="r" title="优化选项">--enable-shared \</font><br>
+			<font class="r" title="启用 opcache 默认为 ZendOptimizer+(ZendOpcache)">--enable-opcache \</font><br>
+			<font class="r" title="FPM">--enable-fpm \</font><br>
+			<font class="r" title="FPM 用户名">--with-fpm-user=nginx \</font><br>
+			<font class="r" title="FPM 密码">--with-fpm-group=nginx \</font><br>
+			<font class="r" title="Apache">--with-apxs2=/usr/local/apache-xx/bin/apxs \</font><br>
+			<font class="r" title="mysql">--with-mysql=mysqlnd \</font><br>
+			<font class="r" title="mysql">--with-mysqli=mysqlnd \</font><br>
+			<font class="r" title="mysql">--with-pdo-mysql=mysqlnd \</font><br>
+			<font class="r" title="国际化与字符编码支持">--with-gettext \</font><br>
+			<font class="r" title="国际化与字符编码支持">--enable-mbstring \</font><br>
+			<font class="r" title="国际化与字符编码支持">--with-iconv \</font><br>
+			<font class="r" title="加密扩展">--with-mcrypt \</font><br>
+			<font class="r" title="加密扩展">--with-mhash \</font><br>
+			<font class="r" title="加密扩展">--with-openssl \</font><br>
+			<font class="r" title="数学扩展">--enable-bcmath \</font><br>
+			<font class="r" title="Web 服务 soap 依赖 libxml">--enable-soap \</font><br>
+			<font class="r" title="Web 服务 soap 依赖 libxml">--with-libxml-dir \</font><br>
+			<font class="r" title="进程 信号及内存">--enable-pcntl \</font><br>
+			<font class="r" title="进程 信号及内存">--enable-shmop \</font><br>
+			<font class="r" title="进程 信号及内存">--enable-sysvmsg \</font><br>
+			<font class="r" title="进程 信号及内存">--enable-sysvsem \</font><br>
+			<font class="r" title="进程 信号及内存">--enable-sysvshm \</font><br>
+			<font class="r" title="socket">--enable-sockets \</font><br>
+			<font class="r" title="curl">--with-curl \</font><br>
+			<font class="r" title="压缩与归档">--with-zlib \</font><br>
+			<font class="r" title="压缩与归档">--enable-zip \</font><br>
+			<font class="r" title="压缩与归档">--with-bz2 \</font><br>
+			<font class="r" title="GNU Readline 命令行快捷键绑定">--with-readline</font><br>
+			<font class="r">make && make install</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装<br>MongoDB 扩展</h2>
+		</td>
+		<td>
+			<h3 class="g">下载安装包</h3>
+			<font class="gr">在官网下载扩展包</font><br>
+			<font>下载命令：</font> <font class="r">wget http://pecl.php.net/get/mongo-1.6.10.tgz</font><br>
+			<font>下载地址：</font> <a href="http://pecl.php.net/" target="_blank">http://pecl.php.net/</a><br>
+
+			<h3 class="g">解压并生成 .configure</h3>
+			<font class="gr">进入解压目录 执行 phpize 程序 生成 ./configure 文件</font><br>
+			<font class="r">/usr/local/php/bin/phpize</font><br>
+
+			<h3 class="g">安装</h3>
+			<font class="gr">安装 php 扩展</font><br>
+			<font class="r">./configure --with-php-config=/usr/local/php/bin/php-config</font><br>
+			<font class="r">make && make install</font><br>
+
+			<h3 class="g">配置</h3>
+			<font class="gr">修改 php.ini 文件 添加一行代码</font><br>
+			<font class="r">vi /usr/local/php/etc/php.ini</font><br>
+			<div class="cmd">
+				<font class="r">extension=mongo.so</font><br>
+			</div>
+		</td>    
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>使用</h1>
+		</th>
+	</tr>
+</table>
+</div>
+<!---------------------------------------------------------------------------------------------------->
+<div id="show_02" class="hide">
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>安装前准备</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装服务器软件</h2>
+		</td>
+		<td>
+			<h3 class="g">配置目标</h3>
+			<font>确保能正确运行 Nginx 或 Apache 等服务器功能</font><br>
+
+			<h3 class="g">配置方法</h3>
+			<font>略</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装编译工具及库文件</h2>
+		</td>
+		<td>
+			<p class="g">配置目标</p>
+			<font>Mysql 必备编译工具</font><br>
+
+			<p class="g">配置方法</p>
+			<font class="r">sudo apt-get install build-essential</font><br>
+		</td>
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>安装</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装必要的支持软件</h2>
+		</td>
+		<td>
+			<h3 class="g">配置目标</h3>
+			<font>PHP 必备支持软件</font><br>
+
+			<h3 class="g">配置方法</h3>
+			<font class="gr">主要是 PHP 的前置程序</font><br>
+			<font class="r">sudo apt-get install libxml2-dev</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装<br>PHP</h2>
+		</td>
+		<td>
+			<h3 class="g">下载</h3>
+			<font class="gr">在官网下载最稳定版的安装包 解压后进入安装目录准备执行安装程序</font><br>
+			<font>下载命令：</font> <font class="r">wget http://cn2.php.net/get/php-5.6.11.tar.gz/from/this/mirror</font><br>
+			<font>下载地址：</font> <a href="http://www.php.net/downloads.php" target="_blank">http://www.php.net/downloads.php</a><br>
+
+			<h3 class="g">安装</h3>
+			<font class="gr">执行 ./configure 若无错误则进行 make install 安装</font><br>
+			
+
+			<font class="r">./configure \</font><br>
+			<font class="r" title="安装路径">--prefix=/usr/local/php \</font><br>
+			<font class="r" title="php.ini 配置文件路径">--with-config-file-path=/usr/local/php/etc \</font><br>
+			<font class="r" title="优化选项">--enable-inline-optimization \</font><br>
+			<font class="r" title="优化选项">--disable-debug \</font><br>
+			<font class="r" title="优化选项">--disable-rpath \</font><br>
+			<font class="r" title="优化选项">--enable-shared \</font><br>
+			<font class="r" title="启用 opcache 默认为 ZendOptimizer+(ZendOpcache)">--enable-opcache \</font><br>
+			<font class="r" title="FPM">--enable-fpm \</font><br>
+			<font class="r" title="FPM 用户名">--with-fpm-user=nginx \</font><br>
+			<font class="r" title="FPM 密码">--with-fpm-group=nginx \</font><br>
+			<font class="r" title="Apache">--with-apxs2=/usr/local/apache-xx/bin/apxs \</font><br>
+			<font class="r" title="mysql">--with-mysql=mysqlnd \</font><br>
+			<font class="r" title="mysql">--with-mysqli=mysqlnd \</font><br>
+			<font class="r" title="mysql">--with-pdo-mysql=mysqlnd \</font><br>
+			<font class="r" title="国际化与字符编码支持">--with-gettext \</font><br>
+			<font class="r" title="国际化与字符编码支持">--enable-mbstring \</font><br>
+			<font class="r" title="国际化与字符编码支持">--with-iconv \</font><br>
+			<font class="r" title="加密扩展">--with-mcrypt \</font><br>
+			<font class="r" title="加密扩展">--with-mhash \</font><br>
+			<font class="r" title="加密扩展">--with-openssl \</font><br>
+			<font class="r" title="数学扩展">--enable-bcmath \</font><br>
+			<font class="r" title="Web 服务 soap 依赖 libxml">--enable-soap \</font><br>
+			<font class="r" title="Web 服务 soap 依赖 libxml">--with-libxml-dir \</font><br>
+			<font class="r" title="进程 信号及内存">--enable-pcntl \</font><br>
+			<font class="r" title="进程 信号及内存">--enable-shmop \</font><br>
+			<font class="r" title="进程 信号及内存">--enable-sysvmsg \</font><br>
+			<font class="r" title="进程 信号及内存">--enable-sysvsem \</font><br>
+			<font class="r" title="进程 信号及内存">--enable-sysvshm \</font><br>
+			<font class="r" title="socket">--enable-sockets \</font><br>
+			<font class="r" title="curl">--with-curl \</font><br>
+			<font class="r" title="压缩与归档">--with-zlib \</font><br>
+			<font class="r" title="压缩与归档">--enable-zip \</font><br>
+			<font class="r" title="压缩与归档">--with-bz2 \</font><br>
+			<font class="r" title="GNU Readline 命令行快捷键绑定">--with-readline</font><br>
+			<font class="r">make && make install</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装<br>MongoDB 扩展</h2>
+		</td>
+		<td>
+			<h3 class="g">下载安装包</h3>
+			<font class="gr">在官网下载扩展包</font><br>
+			<font>下载命令：</font> <font class="r">wget http://pecl.php.net/get/mongo-1.6.10.tgz</font><br>
+			<font>下载地址：</font> <a href="http://pecl.php.net/" target="_blank">http://pecl.php.net/</a><br>
+
+			<h3 class="g">解压并生成 .configure</h3>
+			<font class="gr">进入解压目录 执行 phpize 程序 生成 ./configure 文件</font><br>
+			<font class="r">/usr/local/php/bin/phpize</font><br>
+
+			<h3 class="g">安装</h3>
+			<font class="gr">安装 php 扩展</font><br>
+			<font class="r">./configure --with-php-config=/usr/local/php/bin/php-config</font><br>
+			<font class="r">make && make install</font><br>
+
+			<h3 class="g">配置</h3>
+			<font class="gr">修改 php.ini 文件 添加一行代码</font><br>
+			<font class="r">vi /usr/local/php/etc/php.ini</font><br>
+			<div class="cmd">
+				<font class="r">extension=mongo.so</font><br>
+			</div>
+		</td>    
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>使用</h1>
+		</th>
+	</tr>
+</table>
+</div>
+
+<!---------------------------------------------------------------------------------------------------->
+
+<script>
+
+	var show_01 = document.getElementById('show_01');
+	var show_02 = document.getElementById('show_02');
+
+	function show(n){
+		switch(n){
+			case 1:
+				show_01.className = 'show';
+				show_02.className = 'hide';
+				break;
+			case 2:
+				show_01.className = 'hide';
+				show_02.className = 'show';
+				break;
+		}
+	}
+
+</script>

@@ -1,0 +1,280 @@
+<meta charset="utf8">
+<!---------------------------------------------------------------------------------------------------->
+
+<style>
+	.{margin:0px;padding:0px;}
+	a{text-decoration:none;}
+	
+	table{border-collapse:collapse;border:3px solid black;}
+	table{width:80%;margin:auto;font-size:12px;font-family:"微软雅黑";}
+	table tr{border-bottom:2px solid black;}
+	table tr td:nth-of-type(1){width:15%;border-right:1px solid black;text-align:center;}
+	table tr td:nth-of-type(2){width:85%;padding:1%;}
+
+	.r{color:red;}
+	.g{color:green;}
+	.b{color:blue;}
+	.gr{color:grey;}
+	.bg_gr{background:grey;}
+	.cmd{background:black;color:white;width:50%;padding:1%;}
+
+	.hide{display:none;}
+	.show{display:block;}
+</style>
+
+<!---------------------------------------------------------------------------------------------------->
+
+<button onclick="show(1)">LNMPA一键安装</button> <button onclick="show(2)">Ubuntu下安装LAMP</button>
+
+<hr>
+
+<div id="show_01" class="hide">
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>安装前准备</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">无</h2>
+		</td>
+		<td>
+		</td>
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>安装</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">下载并解压一键安装包</h2>
+		</td>
+		<td>
+			<h3 class="g">下载</h3>
+			<font class="gr">在线安装包</font><br>
+			<font class="r">wget -c http://soft.vpser.net/lnmp/lnmp1.2.tar.gz</font><br>
+			<font class="gr">完整安装包</font><br>
+			<font class="r">wget -c http://soft.vpser.net/lnmp/lnmp1.2-full.tar.gz</font><br>
+			<font class="gr">更完整的安装包（含有 Apache 以及其它软件）</font><br>
+			<font class="r">wget -c http://mirrors.linuxeye.com/lnmp-full.tar.gz</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装</h2>
+		</td>
+		<td>
+			<h3 class="g">解压并进入安装目录执行安装程序</h3>
+			<font class="gr">根据需求选择给定选项</font><br>
+			<font class="r">./install.sh</font><br>
+		</td>
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>使用</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">文件结构</h2>
+		</td>
+		<td>
+			<h3 class="g">配置文件目录</h3>
+			<font class="r">/etc/nginx/nginx.conf</font><br>
+
+			<h3 class="g">项目文件目录</h3>
+			<font class="r">/usr/share/nginx/html/</font><br>
+
+			<h3 class="g">日志文件目录</h3>
+			<font class="r">/var/log/nginx/</font><br>
+
+			<h3 class="g">执行文件目录</h3>
+			<font class="r">/usr/sbin/nginx</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">操作命令</h2>
+		</td>
+		<td>
+			<h3 class="g">启动</h3>
+			<font class="r">/usr/sbin/nginx -c /etc/nginx/nginx.conf</font><br>
+
+			<h3 class="g">重启</h3>
+			<font class="r">/usr/sbin/nginx -s reload</font><br>
+
+			<h3 class="g">验证配置</h3>
+			<font class="r">/usr/sbin/nginx -t</font><br>
+
+			<h3 class="g">关闭</h3>
+			<font class="r">pkill -9 nginx</font><br>
+		</td>
+	</tr>
+</table>
+</div>
+<!---------------------------------------------------------------------------------------------------->
+<div id="show_02" class="hide">
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>安装前准备</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">apt-get</h2>
+		</td>
+		<td>
+			<p class="g">确保 apt-get 能使用且为最新版本</p>
+			<font class="r">sudo apt-get update</font><br>
+		</td>
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>安装</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">开始安装</h2>
+		</td>
+		<td>
+			<p class="g">分步安装命令</p>
+			<font class="r">sudo apt-get install apache2</font><br>
+			<font class="r">sudo apt-get install php5</font><br>
+			<font class="r">sudo apt-get install mysql-server</font><br>
+			<font class="r">sudo apt-get install php5-mysql</font><br>
+
+			<p class="g">一次性安装命令</p>
+			<font class="gr">可以一次性安装整个 lamp 环境</font><br>
+			<font class="r">sudo tasksel install lamp-server</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">检测安装结果</h2>
+		</td>
+		<td>
+			<p class="g">检测 apache 是否安装</p>
+			<font class="gr">结果未出现错误则成功</font><br>
+			<font class="r">apache2 -v</font><br>
+
+
+			<p class="g">检测 apache 是否已加载 php 模块</p>
+			<font class="gr">安装 php 后检测</font><br>
+			<font class="gr">出现 libphp5.so 文件 则加载成功</font><br>
+			<font class="r">cat /etc/apache2/mods-enabled/php5.load</font><br>
+
+			<p class="g">检测 php 是否已加载 mysql 模块</p>
+			<font class="gr">安装 php 和 mysql 后检测 php 是否已加载 mysql 模块（默认不安装）</font><br>
+			<font class="gr">出现 mysql.so 文件 则加载成功</font><br>
+			<font class="r">cat /etc/php5/conf.d/mysql.ini</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装<br>php 扩展包</h2>
+		</td>
+		<td>
+			<p class="g">安装命令</p>
+			<font class="gr">根据服务器需求选择安装</font><br>
+			<font class="r">sudo apt-get install php5-gd curl libcurl3-dev php5-curl</font><br>
+		</td>
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>使用</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">文件结构</h2>
+		</td>
+		<td>
+			<p class="g">apache 配置文件目录</p>
+			<font class="gr">核心配置文件是 apache2.conf</font><br>
+			<font class="gr">mods-available → 存放可以使用的模块</font><br>
+			<font class="gr">mods-enabled → 存放已启用的模块（通过 ln -s 软链接来启用 删除则关闭）</font><br>
+			<font class="gr">sites-available → 存放可以使用的虚拟主机</font><br>
+			<font class="gr">sites-enabled → 存放已启用的虚拟主机</font><br>
+			<font class="r">/etc/apache2/</font><br>
+
+			<p class="g">mysql 配置文件目录</p>
+			<font class="gr">核心配置文件是 my.cnf</font><br>
+			<font class="r">/etc/mysql/</font><br>
+
+			<p class="g">php 配置文件目录</p>
+			<font class="gr">核心配置文件是 php.ini</font><br>
+			<font class="r">/etc/php5/</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">配置虚拟主机</h2>
+		</td>
+		<td>
+			<p class="g">修改虚拟主机配置文件</p>
+			<font>进入 /etc/apache2/sites-available/ 目录</font><br>
+			<font>复制 default 文件 每个文件都相当于一台虚拟主机</font><br>
+			<font>修改每个复制的配置文件</font><br>
+			<div class="cmd">
+				<font>... ...</font><br>
+				<font class="r">ServerName video.xxx.com</font><br>
+				<font>ServerAdmin webmaster@localhost</font><br>
+				<font>... ...</font><br>
+				<font class="r">DocumentRoot /www/video/</font><br>
+				<font>... ...</font><br>
+				<font class="r">&lt;Directory /www/video/&gt;</font><br>
+			</div>
+
+			<p class="g">开启虚拟主机配置文件</p>
+			<font>在 /etc/apache2/sites-enabled/ 目录下创建软链接</font><br>
+			
+		</td>
+	</tr>
+</table>
+</div>
+
+<!---------------------------------------------------------------------------------------------------->
+
+<script>
+
+	var show_01 = document.getElementById('show_01');
+	var show_02 = document.getElementById('show_02');
+
+	function show(n){
+		switch(n){
+			case 1:
+				show_01.className = 'show';
+				show_02.className = 'hide';
+				break;
+			case 2:
+				show_01.className = 'hide';
+				show_02.className = 'show';
+				break;
+		}
+	}
+
+</script>

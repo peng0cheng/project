@@ -1,0 +1,79 @@
+<!doctype HTML>
+<meta charset="utf-8" />
+
+<style>
+	table{border-collapse:collapse;}
+	#dt_table{ width:800px;}
+	#dt_table tr th{ border:1px solid red; }
+	#dt_table tr td{ border:1px solid red; text-align: center; }
+</style>
+
+搜索名字：<input type="text" id="input_name">
+<br><br>
+搜索电话：<input type="text" id="input_phone">
+
+<br><br>
+
+<div id="dt_number"></div>
+
+<br><br>
+
+<table id="dt_table">
+	<thead>
+		<tr>
+			<th>姓名</th>
+			<th>电话</th>
+			<th>姓别</th>
+			<th>出生日期</th>
+			<th>其它</th>
+		<tr>
+	</thead>
+	<tbody>
+	</tbody>
+</table>
+
+<br><br>
+
+<div id="dt_page"></div>
+
+<hr>
+
+
+
+<script src="./jquery-1.8.3.min.js"></script><!-- jquery 库 -->
+<script src="./c.js"></script><!-- jquery 库 -->
+
+<script>
+
+//DATATABLE插件
+var tags = new Array();
+tags['table'] = $('#dt_table>tbody');//定位表格
+tags['page_jump'] = $('#dt_page');
+tags['page_show'] = $('#dt_number');
+var DT = new DataTable(tags);
+//触发器
+$('#input_name').live('change',getDataTable);
+$('#input_phone').live('change',getDataTable);
+
+function getDataTable(){
+	DT.optionAjax({
+		'url' : 'c.php',
+		'type' : 'POST',
+	});
+	DT.inputSearch({
+		'name':$('#input_name').val(),
+		'phone':$('#input_phone').val(),
+	});
+	DT.run();//运行
+}
+
+DT.callBack = function(){
+	var a = DT.getOutput();
+	//alert(JSON.stringify(a));
+}
+
+$(function(){
+	getDataTable();
+});
+		
+</script>

@@ -1,0 +1,37 @@
+<table class="i_table">
+	<tr onclick="test_clip_rect()" title="
+		&#10;矩形剪裁只能作用于 position:absolute 元素上
+		&#10;上距 < 下距 否则元素不可见
+		&#10;左距 < 右距 否则元素不可见">
+		<td>【距形裁剪】</td>
+		<td><p><font class="w g">clip</font> : <font class="w r">rect</font> ( <font class="r">上距 右距 下距 左距</font> )</p></td>
+	</tr>
+	<tr onclick="test_opacity()" title="
+		&#10;数值为 0 时为完全透明
+		&#10;数值为 1 时为完全不透明">
+		<td>【元素透明】</td>
+		<td><p><font class="w g">opacity</font> : <font class="r">透明度</font></p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【其它】**************************************************/
+
+function test_clip_rect(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">.style_01{ background: blue; width: 400px; height: 200px; }</p>'
+			+'<p class="ti_1">.style_02{ background: green; width: 400px; height: 200px; }</p>'
+			+'<p class="ti_1"><font class="w b">.style_02{</font> '+'position: absolute; <font class="w g">clip:</font> <font class="w r">rect(</font> <font class="r">100px 200px 150px 50px</font> <font class="w r">);</font> <font class="w b">}</font></p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="style_01"&gt;</p>'
+				+'<p class="ti_2">&lt;div class="<font class="w b">'+'style_02'+'</font>"&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="background:blue;width:400px;height:200px;"><div style="background:green;height:200px;width:400px;position:absolute;clip:rect(100px 200px 150px 50px);"></div></div>');
+}
+	
+
+/**************************************************【】**************************************************/
+</script>

@@ -1,0 +1,127 @@
+<table class="i_table">
+	<tr id="test_abs" title="">
+		<td>【绝对值】</td>
+		<td><p><font class="w b">abs</font>( <font class="o">Number</font> )</p></td>
+	</tr>
+	<tr id="test_ceil" title="">
+		<td>【进1位】</td>
+		<td><p><font class="w b">ceil</font>( <font class="o">Number</font> )</p></td>
+	</tr>
+	<tr id="test_floor" title="">
+		<td>【舍1位】</td>
+		<td><p><font class="w b">floor</font>( <font class="o">Number</font> )</p></td>
+	</tr>
+	<tr id="test_round" title="">
+		<td>【四舍五入】</td>
+		<td><p><font class="w b">round</font>( <font class="o">Number</font> )</p></td>
+	</tr>
+	<tr id="test_max" title="">
+		<td>【最大值】</td>
+		<td><p><font class="w b">max</font>( <font class="o">Number</font> , <font class="r">++</font> )</p></td>
+	</tr>
+	<tr id="test_min" title="">
+		<td>【最小值】</td>
+		<td><p><font class="w b">min</font>( <font class="o">Number</font> , <font class="r">++</font> )</p></td>
+	</tr>
+	<tr id="test_mt_rand" title="">
+		<td>【随机值】</td>
+		<td><p><font class="w b">mt_rand</font>( <font class="g">最小值</font> , <font class="g">最大值</font> )</p></td>
+	</tr>
+	<tr id="test_sqrt" title="">
+		<td>【开平方】</td>
+		<td><p><font class="w b">sqrt</font>( <font class="o">Number</font> )</p></td>
+	</tr>
+	<tr id="test_pi" title="返回固定值 3.1415926535898">
+		<td>【圆周率】</td>
+		<td><p><font class="w b">pi</font>( )</p></td>
+	</tr>
+	<tr id="test_fmod" title="">
+		<td>【取余】</td>
+		<td><p><font class="w b">fmod</font>( <font class="g">被除数</font> , <font class="g">除数</font> )</p></td>
+	</tr>
+	<tr id="test_exp" title="">
+		<td>【e的指数】</td>
+		<td><p><font class="w b">exp</font>( <font class="g">开方次数</font> )</p></td>
+	</tr>
+	<tr id="test_pow" title="">
+		<td>【指数】</td>
+		<td><p><font class="w b">pow</font>( <font class="o">Number</font> , <font class="g">开方次数</font> )</p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+$(function(){
+
+//【绝对值】
+	$('#test_abs').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">abs</font>( <font class="r">-5</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">5</font></p>');
+	});
+//【进1位】
+	$('#test_ceil').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">ceil</font>( <font class="r">9.1</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">10</font></p>');
+	});
+//【舍1位】
+	$('#test_floor').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">floor</font>( <font class="r">9.9</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">9</font></p>');
+	});
+//【四舍五入】
+	$('#test_round').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">round</font>( <font class="r">5.4</font> )</p>'
+			+'<p><font class="w b">round</font>( <font class="r">5.5</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="r">5</font></p>'
+			+'<p><font class="r">6</font></p>');
+	});
+//【最大值】
+	$('#test_max').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">max</font>( <font class="r">1</font> , <font class="r">2</font> , <font class="r">3</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">3</font></p>');
+	});
+//【最小值】
+	$('#test_min').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">min</font>( <font class="r">1</font> , <font class="r">2</font> , <font class="r">3</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">1</font></p>');
+	});
+//【随机值】
+	$('#test_mt_rand').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">mt_rand</font>( <font class="r">0</font> , <font class="r">100</font> )</p>'
+			+'<hr>'
+			+'<p><font class="w b">mt_rand</font>( <font class="r">0</font> , <font class="r">100</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="r">43</font></p>'
+			+'<hr>'
+			+'<p><font class="r">67</font></p>');
+	});
+//【开平方】
+	$('#test_sqrt').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">sqrt</font>( <font class="r">9</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">3</font></p>');
+	});
+//【圆周率】
+	$('#test_pi').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">pi</font>( )</p>');
+		PC_Case.show(2,'<p><font class="r">3.1415926535898</font></p>');
+	});
+//【取余】
+	$('#test_fmod').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">fmod</font>( <font class="r">5.5</font> , <font class="r">2.2</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">1.1</font></p>');
+	});
+//【【e的指数】】
+	$('#test_exp').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">exp</font>( <font class="r">1</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">2.718281828459</font></p>');
+	});
+//【指数】
+	$('#test_pow').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">pow</font>( <font class="r">2</font> , <font class="r">3</font> )</p>');
+		PC_Case.show(2,'<p><font class="r">8</font></p>');
+	});
+
+});
+</script>

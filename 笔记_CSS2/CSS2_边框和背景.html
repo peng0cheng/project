@@ -1,0 +1,238 @@
+<table class="i_table">
+	<tr onclick="test_border()" title="
+		&#10;设置四个边的厚度 风格 颜色">
+		<td>【边框】【综合】</td>
+		<td><p><font class="w g">border</font> : <font class="w o">厚度 风格 颜色</font><p></td>
+	</tr>
+	<tr onclick="test_borderWidth()" title="
+		&#10;设置四个边的厚度">
+		<td>【边框】【厚度】</td>
+		<td><p><font class="w g">border-width</font> : <font class="w o">厚度</font><p></td>
+	</tr>
+	<tr onclick="test_borderStyle()" title="
+		&#10;设置四个边框的风格
+		&#10;dotted → 点状线
+		&#10;dashed → 虚线
+		&#10;solid → 实线
+		&#10;inset → 3D 凹陷 必须有一定的宽度
+		&#10;outset → 3D 凸起 必须有一定的宽度">
+		<td>【边框】【风格】</td>
+		<td><p><font class="w g">border-style</font> : <font class="w r">dotted</font> 丨 <font class="w r">dashed</font> 丨 <font class="w r">solid</font> 丨 <font class="w r">inset</font> 丨 <font class="w r">outset</font><p></td>
+	</tr>
+	<tr onclick="test_borderColor()" title="
+		&#10;设置四个边框的颜色">
+		<td>【边框】【颜色】</td>
+		<td><p><font class="w g">border-color</font> : <font class="w o">颜色</font><p></td>
+	</tr>
+	<tr onclick="test_borderTBLR()" title="
+		&#10;单独设置一个边框的厚度 风格 颜色">
+		<td>【边框】【独边】</td>
+		<td><p><font class="w g">border-top</font> 丨 <font class="w g">border-bottom</font> 丨 <font class="w g">border-left</font> 丨 <font class="w g">border-right</font> : <font class="w o">厚度 风格 颜色</font><p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_background()" title="
+		&#10;可以代替一切 background- 的属性">
+		<td>【背景】【综合】</td>
+		<td><p><font class="w g">background</font> : <font class="w o">颜色</font> 丨 <font class="w o">图片 重复 偏移量 锁定</font><p></td>
+	</tr>
+	<tr onclick="test_backgroundColor()" title="">
+		<td>【背景颜色】【颜色】</td>
+		<td><p><font class="w g">background-color</font> : <font class="w o">颜色</font><p></td>
+	</tr>
+	<tr onclick="test_backgroundImage()" title="
+		&#10;默认从当前元素左上角开始放置">
+		<td>【背景图片】【图片】</td>
+		<td><p><font class="w g">background-image</font> : <font class="w r">url</font> ( <font class="w o">地址</font> )<p></td>
+	</tr>
+	<tr onclick="test_backgroundRepeat()" title="
+		&#10;repeat → 重复 默认值
+		&#10;no-repeat → 不重复
+		&#10;repeat-x → 只允许横向重复
+		&#10;repeat-y → 只允许纵向重复">
+		<td>【背景图片】【重复】</td>
+		<td><p><font class="w g">background-repeat</font> : <font class="w r">repeat</font> 丨 <font class="w r">no-repeat</font> 丨 <font class="w r">repeat-x</font> 丨 <font class="w r">repeat-y</font><p></td>
+	</tr>
+	<tr onclick="test_backgroundPosition()" title="
+		&#10;可以使用百分比 像素值 正负号 center 代替 middle 居中">
+		<td>【背景图片】【偏移】</td>
+		<td><p><font class="w g">background-position</font> : <font class="w o">水平偏移量 垂直偏移量</font><p></td>
+	</tr>
+	<tr onclick="test_backgroundAttachment()" title="
+		&#10;scroll → 背景随滚动条移动
+		&#10;fixed → 背景锁定页面固定位置">
+		<td>【背景图片】【锁定】</td>
+		<td><p><font class="w g">background-attachment</font> : <font class="w r">scroll</font> 丨 <font class="w r">fixed</font><p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【边框】**************************************************/
+
+function test_border(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { width: 100px; height: 100px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">border:</font> <font class="r">1px solid red;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:100px;height:100px;border:1px solid red;"></div>');
+}
+
+function test_borderWidth(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+				+'<p class="ti_1">div { width: 100px; height: 100px; border: 1px solid red; }</p>'
+		+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">border-width:</font> <font class="r">5px;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:100px;height:100px;border:1px solid red;border-width:5px;"></div>');
+}
+
+function test_borderStyle(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div{ width: 100px; height: 100px; border: 5px solid red; float: left; margin: 1%; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { <font class="g">border-style:</font> <font class="r">dotted;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { <font class="g">border-style:</font> <font class="r">dashed;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_03'+'</font> { <font class="g">border-style:</font> <font class="r">solid;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_04'+'</font> { <font class="g">border-style:</font> <font class="r">inset;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_05'+'</font> { <font class="g">border-style:</font> <font class="r">outset;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>"&gt;one&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_02'+'</font>"&gt;two&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_03'+'</font>"&gt;three&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_04'+'</font>"&gt;four&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_04'+'</font>"&gt;five&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:100px;height:100px;border:5px solid red;float:left;margin:1%;border-style:dotted;">one</div>'
+		+'<div style="width:100px;height:100px;border:5px solid red;float:left;margin:1%;border-style:dashed;">two</div>'
+		+'<div style="width:100px;height:100px;border:5px solid red;float:left;margin:1%;border-style:solid;">three</div>'
+		+'<div style="width:100px;height:100px;border:5px solid red;float:left;margin:1%;border-style:inset;">four</div>'
+		+'<div style="width:100px;height:100px;border:5px solid red;float:left;margin:1%;border-style:outset;">five</div>');
+}
+
+function test_borderColor(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { width: 100px; height: 100px; border: 1px solid red; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">border-color:</font> <font class="r">blue;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:100px;height:100px;border:1px solid red;border-color:blue;"></div>');
+}
+
+function test_borderTBLR(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { width: 100px; height: 100px; }</p>'
+				+'<p class="ti_1"><font class="b">'+'div'+'</font> {</p>'
+					+'<p class="ti_2"><font class="g">border-top:</font> <font class="r">1px solid red;</font></p>'
+					+'<p class="ti_2"><font class="g">border-bottom:</font> <font class="r">2px dashed blue;</font></p>'
+					+'<p class="ti_2"><font class="g">border-left:</font> <font class="r">3px dotted green;</font></p>'
+					+'<p class="ti_2"><font class="g">border-right:</font> <font class="r">none;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:100px;height:100px;border-top:1px solid red;border-bottom:2px dashed blue;border-left:3px dotted green;border-right:none;"></div>');
+}
+
+/**************************************************【背景】**************************************************/
+
+function test_background(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { border: 5px outset red; height: 200px; width: 400px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">background:</font> <font class="r">url(./CSS2/CSS2_public/test_01.jpg) no-repeat</font> <font class="r">50px 50px</font> <font class="r">scroll;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="border:1px solid red;height:200px;width:400px;background:url(./CSS2/CSS2_public/test_01.jpg) no-repeat 50px 50px scroll;"></div>');
+}
+
+function test_backgroundColor(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div{ border: 1px solid red; height: 200px; width: 400px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">background-color:</font> <font class="r">blue;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="border:1px solid red;height:200px;width:400px;background:blue"></div>');
+}
+
+function test_backgroundImage(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { border: 1px solid red; height: 200px; width: 400px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">background-image:</font> <font class="r">url(</font> <font class="r">./CSS2/CSS2_public/test_01.jpg</font> <font class="r">);</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="border:1px solid red;height:200px;width:400px;background-image:url(./CSS2/CSS2_public/test_01.jpg)"></div>');
+}
+
+function test_backgroundRepeat(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { border: 1px solid red; height: 150px; width: 150px; background-image: url(./CSS2/CSS2_public/test_01.jpg); margin: 1%; float: left; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { <font class="g">background-repeat:</font> <font class="r">no-repeat;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { <font class="g">background-repeat:</font> <font class="r">repeat-x;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_03'+'</font> { <font class="g">background-repeat:</font> <font class="r">repeat-y;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div lass="<font class="b">'+'style_01'+'</font>"&gt;one&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div lass="<font class="b">'+'style_02'+'</font>"&gt;two&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div lass="<font class="b">'+'style_03'+'</font>"&gt;three&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="border:1px solid red;height:150px;width:150px;background-image:url(./CSS2/CSS2_public/test_01.jpg);background-repeat:no-repeat;float:left;margin:1%">one</div>'
+		+'<div style="border:1px solid red;height:150px;width:150px;background-image:url(./CSS2/CSS2_public/test_01.jpg);background-repeat:repeat-x;float:left;margin:1%">two</div>'
+		+'<div style="border:1px solid red;height:150px;width:150px;background-image:url(./CSS2/CSS2_public/test_01.jpg);background-repeat:repeat-y;float:left;margin:1%">three</div>');
+}
+
+function test_backgroundPosition(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { border: 1px outset red; height: 150px; width: 150px; background-image: url(./CSS2/CSS2_public/test_01.jpg); background-repeat: no-repeat; margin: 1%; float: left; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { <font class="g">background-position:</font> <font class="r">50px 50px;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { <font class="g">background-position:</font> <font class="r">50px -50px;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div lass="<font class="b">'+'style_01'+'</font>"&gt;one&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div lass="<font class="b">'+'style_02'+'</font>"&gt;two&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="border:1px solid red;height:150px;width:150px;background-image:url(./CSS2/CSS2_public/test_01.jpg);background-repeat:no-repeat;float:left;margin:1%;background-position:50px 50px;">one</div>'
+		+'<div style="border:1px solid red;height:150px;width:150px;background-image:url(./CSS2/CSS2_public/test_01.jpg);background-repeat:no-repeat;float:left;margin:1%;background-position:50px -50px;">two</div>');
+}
+
+function test_backgroundAttachment(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { border: 1px outset red; height: 150px; width: 150px; background-image: url(./CSS2/CSS2_public/test_01.jpg); background-repeat: no-repeat; margin: 1%; float: left; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { <font class="g">background-attachment:</font> <font class="r">scroll;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { <font class="g">background-attachment:</font> <font class="r">fixed;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div lass="<font class="b">'+'style_01'+'</font>"&gt;one&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div lass="<font class="b">'+'style_02'+'</font>"&gt;two&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="border:1px solid red;height:150px;width:150px;background-image:url(./CSS2/CSS2_public/test_01.jpg);background-repeat:no-repeat;float:left;margin:1%;background-attachment:scroll;">one</div>'
+		+'<div style="border:1px solid red;height:150px;width:150px;background-image:url(./CSS2/CSS2_public/test_01.jpg);background-repeat:no-repeat;float:left;margin:1%;background-attachment:fixed;">two</div>');
+}
+
+/**************************************************【】**************************************************/
+</script>

@@ -1,0 +1,399 @@
+<meta charset="utf8">
+<!---------------------------------------------------------------------------------------------------->
+
+<style>
+	.{margin:0px;padding:0px;}
+	a{text-decoration:none;}
+	
+	table{border-collapse:collapse;border:3px solid black;}
+	table{width:80%;margin:auto;font-size:12px;font-family:"微软雅黑";}
+	table tr{border-bottom:2px solid black;}
+	table tr td:nth-of-type(1){width:15%;border-right:1px solid black;text-align:center;}
+	table tr td:nth-of-type(2){width:85%;padding:1%;}
+
+	.r{color:red;}
+	.g{color:green;}
+	.b{color:blue;}
+	.gr{color:grey;}
+	.bg_gr{background:grey;}
+	.cmd{background:black;color:white;width:50%;padding:1%;}
+
+	.hide{display:none;}
+	.show{display:block;}
+</style>
+
+<!---------------------------------------------------------------------------------------------------->
+
+<button onclick="show(1)">CentOS</button> <button onclick="show(2)">Ubuntu</button>
+
+<hr>
+
+<div id="show_01" class="hide">
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>安装前准备</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">配置防火墙</h2>
+		</td>
+		<td>
+			<h3 class="g">配置目标</h3>
+			<font>开启 80 端口（http 服务默认端口）</font><br>
+			<font>开启 3306 端口（mysql 默认端口）</font><br>
+
+			<h3 class="g">配置方法</h3>
+			<font class="gr">编辑防火墙端口配置文件</font><br>
+			<font class="r">vi /etc/sysconfig/iptables</font><br>
+			<br>
+			<font class="gr">修改配置文件内容</font><br>
+			<div class="cmd">
+				<font># Firewall configuration written by system-config-firewall</font><br>
+				<font># Manual customization of this file is not recommended.</font><br>
+				<font>*filter</font><br>
+				<font>:INPUT ACCEPT [0:0]</font><br>
+				<font>:FORWARD ACCEPT [0:0]</font><br>
+				<font>:OUTPUT ACCEPT [0:0]</font><br>
+				<font>-A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT</font><br>
+				<font>-A INPUT -p icmp -j ACCEPT</font><br>
+				<font>-A INPUT -i lo -j ACCEPT</font><br>
+				<font>-A INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT</font><br>
+				<font class="r">-A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT</font><br>
+				<font class="r">-A INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT</font><br>
+				<font>-A INPUT -j REJECT --reject-with icmp-host-prohibited</font><br>
+				<font>-A FORWARD -j REJECT --reject-with icmp-host-prohibited</font><br>
+				<font>COMMIT</font><br>
+			</div>
+			<br>
+			<font class="gr">重启防火墙配置 使设置生效</font><br>
+			<font class="r">/etc/init.d/iptables restart</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">关闭SELINUX</h2>
+		</td>
+		<td>
+			<h3 class="g">配置目标</h3>
+			<font>防止安装被系统阻止</font><br>
+
+			<h3 class="g">配置方法</h3>
+			<font class="gr">编缉 SELINUX 配置文件</font><br>
+			<font class="r">vi /etc/selinux/config</font><br>
+			<br>
+			<font class="gr">修改配置文件内容</font><br>
+			<div class="cmd">
+				<font># This file controls the state of SELinux on the system.</font><br>
+				<font># SELINUX= can take one of these three values:</font><br>
+				<font>#     enforcing - SELinux security policy is enforced.</font><br>
+				<font>#     permissive - SELinux prints warnings instead of enforcing.</font><br>
+				<font>#     disabled - No SELinux policy is loaded.</font><br>
+				<font class="r">#SELINUX=enforcing</font><br>
+				<font># SELINUXTYPE= can take one of these two values:</font><br>
+				<font>#     targeted - Targeted processes are protected,</font><br>
+				<font>#     mls - Multi Level Security protection.</font><br>
+				<font class="r">#SELINUXTYPE=targeted</font><br>
+				<font class="r">SELINUX=disabled</font><br>
+			</div>
+			<br>
+			<font class="gr">重启系统 使设置生效</font><br>
+			<font class="r">shutdown -r now</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">确保系统支持基本的功能</h2>
+		</td>
+		<td>
+			<h3 class="g">配置目标</h3>
+			<font>确保系统有最基本的工具和软件</font><br>
+
+			<h3 class="g">配置方法</h3>
+			<font class="r">yum install make</font><br>
+			<font class="r">yum install gcc</font><br>
+			<font class="r">yum install gcc-c++</font><br>
+			<font class="r">yum install wget</font><br>
+			<font class="r">yum install screen</font><br>
+		</td>
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>安装</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装必要的支持软件</h2>
+		</td>
+		<td>
+			<h3 class="g">配置目标</h3>
+			<font>Nginx 必备支持软件</font><br>
+
+			<h3 class="g">配置方法</h3>
+			<font class="gr">主要是 nginx 的前置程序</font><br>
+			<font class="r">yum install pcre*</font><br>
+			<font class="r">yum install openssl*</font><br>
+			<font class="r">yum install zlib zlib-devel</font><br>
+		</td>    
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装<br>Nginx</h2>
+		</td>
+		<td>
+			<h3 class="g">下载</h3>
+			<font class="gr">在官网下载最稳定版的安装包 解压后进入安装目录准备执行安装程序</font><br>
+			<font>下载命令：</font> <font class="r">wget http://nginx.org/download/nginx-1.8.0.tar.gz</font><br>
+			<font>下载地址：</font> <a href="http://nginx.org" target="_blank">http://nginx.org</a><br>
+
+			<h3 class="g">安装</h3>
+			<font class="gr">根据 ./configure 所提示的错误一步步解决 直到不提示错误为止 如果不提示 当我没说</font><br>
+			<font class="gr">参数可以不选 可以在安装后修改配置文件</font><br>
+			<font class="gr">参数：--prefix= 安装路径 如果没有指定 默认为 /usr/local/nginx</font><br>
+			<font class="gr">参数：--sbin-path= 可执行文件安装路径 只能安装时指定 如果没有指定 默认为 /usr/local/nginx/sbin/nginx</font><br>
+			<font class="gr">参数：--conf-path= 配置文件的路径 如果没有指定 默认为 /usr/local/nginx/conf/nginx.conf</font><br>
+			<font class="gr">参数：--error-log-path= 错误日志文件的路径 如果没有指定 默认为 /usr/local/nginx/logs/error.log</font><br>
+			<font class="gr">参数：-–http-log-path= 访问日志文件的路径 如果没有指定 默认为 /usr/local/nginx/logs/access.log</font><br>
+			<font class="gr">参数：--pid-path= pid文件的路径 如果没有指定 默认为 /usr/local/nginx/logs/nginx.pid</font><br>
+			<font class="gr">参数：--lock-path=  lock文件的路径</font><br>
+			<font class="gr">参数：--user= 默认的 nginx 使用的用户</font><br>
+			<font class="gr">参数：--group= 默认的 nginx 使用的用户组</font><br>
+			<font class="gr">参数：其它的上网查</font><br>
+			<font class="r">./configure</font><br>
+			<font class="r">make && make install</font><br>
+		</td>
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>使用</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">文件结构</h2>
+		</td>
+		<td>
+			<h3 class="g">配置文件</h3>
+			<font class="r">/usr/local/nginx/conf/nginx.conf</font><br>
+
+			<h3 class="g">项目文件</h3>
+			<font class="r">/usr/local/nginx/html/</font><br>
+
+			<h3 class="g">日志文件</h3>
+			<font class="r">/usr/local/nginx/logs/</font><br>
+
+			<h3 class="g">执行文件</h3>
+			<font class="r">/usr/local/nginx/sbin/nginx</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">账户配置</h2>
+		</td>
+		<td>
+			<h3 class="g">添加 nginx 系统账户组</h3>
+			<font class="r">groupadd -r nginx</font><br>
+
+			<h3 class="g">添加 nginx 系统账户</h3>
+			<font class="r">useradd -s /sbin/nologin -g nginx -r nginx</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">操作命令</h2>
+		</td>
+		<td>
+			<h3 class="g">启动</h3>
+			<font class="r">/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf</font><br>
+
+			<h3 class="g">重启</h3>
+			<font class="r">/usr/local/nginx/sbin/nginx -s reload</font><br>
+
+			<h3 class="g">关闭</h3>
+			<font class="r">/usr/local/nginx/sbin/nginx -s stop</font><br>
+
+			<h3 class="g">验证配置</h3>
+			<font class="r">/usr/local/nginx/sbin/nginx -t</font><br>
+		</td>
+	</tr>
+</table>
+</div>
+<!---------------------------------------------------------------------------------------------------->
+<div id="show_02" class="hide">
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>安装前准备</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装编译工具及库文件</h2>
+		</td>
+		<td>
+			<p class="g">配置目标</p>
+			<font>nginx 必备组件</font><br>
+
+			<p class="g">配置方法</p>
+			<font class="r">apt-get update</font><br>
+			<font class="r">apt-get install gcc g++ c++</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装 PCRE</h2>
+		</td>
+		<td>
+			<p class="g">配置目标</p>
+			<font>nginx 必备组件</font><br>
+
+			<p class="g">配置方法</p>
+			<font>下载源码包 解压进入目录 使用 ./configure 安装</font><br>
+			<font class="r">apt-get http://sourceforge.net/projects/pcre/files/pcre/8.37/pcre-8.37.tar.gz/download</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装 zlib</h2>
+		</td>
+		<td>
+			<p class="g">配置目标</p>
+			<font>nginx 必备组件</font><br>
+
+			<p class="g">配置方法</p>
+			<font class="r">sudo apt-get install libssl-dev</font><br>
+		</td>
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>安装</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">进入安装目录执行安装程序</h2>
+		</td>
+		<td>
+			<p class="g">执行配置程序</p>
+			<font class="gr">根据 ./configure 所提示的错误一步步解决 直到不提示错误为止</font><br>
+			<font class="gr">参数：--prefix= 安装路径 如果没有指定 默认为 /usr/local/nginx</font><br>
+			<font class="gr">参数：--sbin-path= 可执行文件安装路径 只能安装时指定 如果没有指定 默认为 /usr/local/nginx/sbin/nginx</font><br>
+			<font class="gr">参数：--conf-path= 配置文件的路径 如果没有指定 默认为 /usr/local/nginx/conf/nginx.conf</font><br>
+			<font class="gr">参数：--error-log-path= 错误日志文件的路径 如果没有指定 默认为 /usr/local/nginx/logs/error.log</font><br>
+			<font class="gr">参数：-–http-log-path= 访问日志文件的路径 如果没有指定 默认为 /usr/local/nginx/logs/access.log</font><br>
+			<font class="gr">参数：--pid-path= pid文件的路径 如果没有指定 默认为 /usr/local/nginx/logs/nginx.pid</font><br>
+			<font class="gr">参数：--lock-path=  lock文件的路径</font><br>
+			<font class="gr">参数：--user= 默认的 nginx 使用的用户</font><br>
+			<font class="gr">参数：--group= 默认的 nginx 使用的用户组</font><br>
+			<font class="gr">参数：其它的上网查</font><br>
+			<font class="r">./configure</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">开始安装</h2>
+		</td>
+		<td>
+			<p class="g">执行安装命令</p>
+			<font class="r">make && make install</font><br>
+		</td>
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>使用</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">文件结构</h2>
+		</td>
+		<td>
+			<p class="g">默认配置文件目录</p>
+			<font class="r">/usr/local/nginx/conf/nginx.conf</font><br>
+
+			<p class="g">默认项目文件目录</p>
+			<font class="r">/usr/local/nginx/html/</font><br>
+
+			<p class="g">默认日志文件目录</p>
+			<font class="r">/usr/local/nginx/logs/</font><br>
+
+			<p class="g">默认执行文件目录</p>
+			<font class="r">/usr/local/nginx/sbin/nginx</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">账户配置</h2>
+		</td>
+		<td>
+			<p class="g">添加 nginx 系统账户组</p>
+			<font class="r">groupadd -r nginx</font><br>
+
+			<p class="g">添加 nginx 系统账户</p>
+			<font class="r">useradd -s /sbin/nologin -g nginx -r nginx</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">操作命令</h2>
+		</td>
+		<td>
+			<p class="g">启动</p>
+			<font class="r">/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf</font><br>
+
+			<p class="g">重启</p>
+			<font class="r">/usr/local/nginx/sbin/nginx -s reload</font><br>
+
+			<p class="g">验证配置</p>
+			<font class="r">/usr/local/nginx/sbin/nginx -t</font><br>
+
+			<p class="g">关闭</p>
+			<font class="r">pkill -9 nginx</font><br>
+		</td>
+	</tr>
+</table>
+</div>
+
+<!---------------------------------------------------------------------------------------------------->
+
+<script>
+
+	var show_01 = document.getElementById('show_01');
+	var show_02 = document.getElementById('show_02');
+
+	function show(n){
+		switch(n){
+			case 1:
+				show_01.className = 'show';
+				show_02.className = 'hide';
+				break;
+			case 2:
+				show_01.className = 'hide';
+				show_02.className = 'show';
+				break;
+		}
+	}
+
+</script>

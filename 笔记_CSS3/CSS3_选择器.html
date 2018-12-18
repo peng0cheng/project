@@ -1,0 +1,808 @@
+<table class="i_table">
+	<tr onclick="test_relation_01()" title="
+		&#10;选中选择器 1 内部第一层符合选择器 2 的元素">
+		<td>【关系选择器】【父子】</td>
+		<td><p><font class="w b">选择器1</font> > <font class="w b">选择器2</font></p></td>
+	</tr>
+	<tr onclick="test_relation_02()" title="
+		&#10;选中选择器 1 后第一个符合选择器 2 的元素">
+		<td>【关系选择器】【相邻】</td>
+		<td><p><font class="w b">选择器1</font> + <font class="w b">选择器2</font></p></td>
+	</tr>
+	<tr onclick="test_relation_03()" title="
+		&#10;选中选择器 1 后面所有符合选择器 2 的兄弟元素">
+		<td>【关系选择器】【兄弟】</td>
+		<td><p><font class="w b">选择器1</font> ~ <font class="w b">选择器2</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_attribute_01()" title="
+		&#10;选中具有指定属性名称的元素">
+		<td>【属性选择器】【包含属性名】</td>
+		<td><p><font class="w b">选择器</font> [ <font class="w g">属性</font> ]</p></td>
+	</tr>
+	<tr onclick="test_attribute_02()" title="
+		&#10;选中具有指定属性名称的元素 且属性值为指定值的元素">
+		<td>【属性选择器】【包含属性值】</td>
+		<td><p><font class="w b">选择器</font> [ <font class="w g">属性</font> = <font class="r">值</font> ]</p></td>
+	</tr>
+	<tr onclick="test_attribute_03()" title="
+		&#10;选中具有指定属性名称的元素 且属性值以指定字符结尾的元素">
+		<td>【属性选择器】【包含部分属性值】</td>
+		<td><p><font class="w b">选择器</font> [ <font class="w g">属性</font> $=  <font class="r">字符</font> ]</p></td>
+	</tr>
+	<tr onclick="test_attribute_04()" title="
+		&#10;选中具有指定属性名称的元素 且属性值以指定字符开头的元素">
+		<td>【属性选择器】【包含部分属性值】</td>
+		<td><p><font class="w b">选择器</font> [ <font class="w g">属性</font> ^=  <font class="r">字符</font> ]</p></td>
+	</tr>
+	<tr onclick="test_attribute_05()" title="
+		&#10;选中具有指定属性名称的元素 且属性值中有指定字符的元素">
+		<td>【属性选择器】【包含部分属性值】</td>
+		<td><p><font class="w b">选择器</font> [ <font class="w g">属性</font> *=  <font class="r">字符</font> ]</p></td>
+	</tr>
+	<tr onclick="test_attribute_06()" title="
+		&#10;选中具有指定属性名称的元素 且属性值中有横线 -">
+		<td>【属性选择器】【包含 - 的属性值】</td>
+		<td><p><font class="w b">选择器</font> [ <font class="w g">属性</font> |=  <font class="r">-前的字符</font> ]</p></td>
+	</tr>
+	<tr onclick="test_attribute_07()" title="
+		&#10;选中具有指定属性名称的元素 且属性值中有空格">
+		<td>【属性选择器】【包含空格的属性值】</td>
+		<td><p><font class="w b">选择器</font> [ <font class="w g">属性</font> ~= <font class="r">空格后的字符</font> ]</p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_falseObject_firstLine()" title="
+		&#10;选中某个元素内部的第一行内容">
+		<td>【伪对像选择器】【选中第一行内容】</td>
+		<td><p><font class="w b">选择器</font> :: <font class="w b">first-line</font></p></td>
+	</tr>
+	<tr onclick="test_falseObject_firstLetter()" title="
+		&#10;选中某个元素内部的第一个字符/汉字">
+		<td>【伪对像选择器】【选中第一个字符】</td>
+		<td><p><font class="w b">选择器</font> :: <font class="w b">first-letter</font></p></td>
+	</tr>
+	<tr onclick="test_falseObject_before()" title="
+		&#10;选中某个元素内容的前面 添加其他内容">
+		<td>【伪对像选择器】【在元素前插入内容】</td>
+		<td><p><font class="w b">选择器</font> :: <font class="w b">before</font> { <font class="w g">content</font> : <font class="r">被添加内容</font> }</p></td>
+	</tr>
+	<tr onclick="test_falseObject_after()" title="
+		&#10;选中某个元素内容的后面 添加其他内容">
+		<td>【伪对像选择器】【在元素后追加内容】</td>
+		<td><p><font class="w b">选择器</font> :: <font class="w b">after</font> { <font class="w g">content</font> : <font class="r">被添加内容</font> }</p></td>
+	</tr>
+	<tr onclick="test_falseObject_selection()" title="
+		&#10;选中某个元素内容选中时的状态 通常用背景和颜色">
+		<td>【伪对像选择器】【选中指定状态】</td>
+		<td><p><font class="w b">选择器</font> :: <font class="w b">selection</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_falseClass_lvha()" title="
+		&#10;只对 a 链接有效">
+		<td>【伪类选择器】【未访问】</td>
+		<td><p><font class="w b">选择器</font> : <font class="w b">link</font></p></td>
+	</tr>
+	<tr onclick="test_falseClass_lvha()" title="
+		&#10;只对 a 链接有效">
+		<td>【伪类选择器】【访问过】</td>
+		<td><p><font class="w b">选择器</font> : <font class="w b">visited</font></p></td>
+	</tr>
+	<tr onclick="test_falseClass_lvha()" title="
+		&#10;所有元素有效">
+		<td>【伪类选择器】【指向时】</td>
+		<td><p><font class="w b">选择器</font> : <font class="w b">hover</font></p></td>
+	</tr>
+	<tr onclick="test_falseClass_lvha()" title="
+		&#10;所有元素有效">
+		<td>【伪类选择器】【点击时】</td>
+		<td><p><font class="w b">选择器</font> : <font class="w b">active</font></p></td>
+	</tr>
+	<tr onclick="test_falseClass_firstChild()" title="
+		&#10;选中选择器同级所有元素的第一个子元素
+		&#10;不符合指定规则则失效">
+		<td>【伪类选择器】【child 系列】</td>
+		<td><p><font class="w b">选择器</font> : <font class="w b">first-child</font></p></td>
+	</tr>
+	<tr onclick="test_falseClass_lastChild()" title="
+		&#10;选中选择器同级所有元素的最后个子元素
+		&#10;不符合指定规则则失效">
+		<td>【伪类选择器】【child 系列】</td>
+		<td><p><font class="w b">选择器</font> : <font class="w b">last-child</font></p></td>
+	</tr>
+	<tr onclick="test_falseClass_nthChild()" title="
+		&#10;选中选择器同级所有元素的指定元素
+		&#10;不符合指定规则则失效">
+		<td>【伪类选择器】【child 系列】</td>
+		<td><p><font class="w b">选择器</font> : <font class="w b">nth-child</font> ( <font class="r">位置</font> )</p></td>
+	</tr>
+	<tr onclick="test_falseClass_onlyChild()" title="
+		&#10;选中选择器同级所有元素的唯一子元素
+		&#10;不符合指定规则则忽视">
+		<td>【伪类选择器】【child 系列】</td>
+		<td><p><font class="w b">选择器</font> : <font class="w b">only-child</font></p></td>
+	</tr>
+	<tr onclick="test_falseClass_firstOfType()" title="
+		&#10;选中选择器同级并同类的第一个子元素
+		&#10;不符合指定规则则忽视">
+		<td>【伪类选择器】【of-type 系列】</td>
+		<td><p><font class="w b">选择器</font> : <font class="w b">first-of-type</font></p></td>
+	</tr>
+	<tr onclick="test_falseClass_lastOfType()" title="
+		&#10;选中选择器同级并同类的最后个子元素
+		&#10;不符合指定规则则忽视">
+		<td>【伪类选择器】【of-type 系列】</td>
+		<td><p><font class="w b">选择器</font> : <font class="w b">last-of-type</font></p></td>
+	</tr>
+	<tr onclick="test_falseClass_nthOfType()" title="
+		&#10;选中选择器同级并同类的指定子元素
+		&#10;不符合指定规则则忽视">
+		<td>【伪类选择器】【of-type 系列】</td>
+		<td><p><font class="w b">选择器</font> : <font class="w b">nth-of-type</font> ( <font class="r">位置</font> )</p></td>
+	</tr>
+	<tr onclick="test_falseClass_onlyOfType()" title="
+		&#10;选中选择器同级并同类的唯一子元素
+		&#10;不符合指定规则则忽视">
+		<td>【伪类选择器】【of-type 系列】</td>
+		<td><p><font class="w b">选择器</font> : <font class="w b">only-of-type</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_other_empty()" title="">
+		<td>【其它选择器】【空元素】</td>
+		<td><p><font class="w b">选择器</font> : <font class="w b">empty</font></p></td>
+	</tr>
+	<tr onclick="test_other_focus()" title="
+		&#10;选中选择器指定的元素的获取焦点的状态 一般是表单元素">
+		<td>【其它选择器】【焦点】</td>
+		<td><p><font class="w b">选择器</font> : <font class="w b">focus</font></p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【关系选择器】**************************************************/
+
+function test_relation_01(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01 > div'+'</font> { background: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;</p>'
+					+'<p class="ti_3">&lt;div&gt;</p>'
+					+'<p class="ti_3">&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:200px;height:200px;border:1px solid black;box-sizing:border-box">'
+			+'<div style="width:50%;height:50%;border:1px solid black;box-sizing:border-box;background:red;">'
+				+'<div style="width:50%;height:50%;border:1px solid black;box-sizing:border-box">'
+				+'</div>'
+			+'</div>'
+		+'</div>');
+}
+
+function test_relation_02(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01 + div'+'</font> { background: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;background:red;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>');
+}
+
+function test_relation_03(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01 ~ div'+'</font> { background: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;p&gt;&lt;/p&gt;</p>'
+			+'<p class="ti_1">&lt;div&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;background:red;"></div>'
+		+'<p style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></p>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;background:red;"></div>');
+}
+
+/**************************************************【属性选择器】**************************************************/
+
+function test_attribute_01(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'div[ <font class="g">class</font> ]'+'</font> { background: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div a &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div b &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="c" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div d &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div e &gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;background:red;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>');
+}
+
+function test_attribute_02(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'div[ <font class="g">class</font> = <font class="r">"2"</font> ]'+'</font> { background: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="1" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="2" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="3" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="4" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="5" &gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;background:red;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>');
+}
+
+function test_attribute_03(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'div[ <font class="g">class</font> $= <font class="r">"2"</font> ]'+'</font> { background: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="11" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="22" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="37" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="48" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="52" &gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;background:red;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;background:red;"></div>');
+}
+
+function test_attribute_04(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'div[ <font class="g">class</font> ^= <font class="r">"2"</font> ]'+'</font> { background: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="11" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="42" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="27" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="28" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="52" &gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;background:red;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;background:red;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>');
+}
+
+function test_attribute_05(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'div[ <font class="g">class</font> *= <font class="r">"2"</font> ]'+'</font> { background: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="11" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="42" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="67" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="28" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="55" &gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;background:red;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;background:red;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>');
+}
+
+function test_attribute_06(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'div[ <font class="g">class</font> |= <font class="r">"2"</font> ]'+'</font> { background: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="2-" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="42" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="72-" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="28" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="2-4" &gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;background:red;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;background:red;"></div>');
+}
+
+function test_attribute_07(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'div[ <font class="g">class</font> ~= <font class="r">"2"</font> ]'+'</font> { background: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class=" 2" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="32" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="73 24" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="4 2" &gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class=" 23" &gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;background:red;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;background:red;"></div>'
+		+'<div style="width:50px;height:50px;border:1px solid black;margin:1%;float:left;"></div>');
+}
+
+/**************************************************【伪对像选择器】**************************************************/
+
+function test_falseObject_firstLine(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01 :: first-line'+'</font> { color: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+			+'<p class="ti_1">line1&lt;br /&gt;</p>'
+			+'<p class="ti_1">line2&lt;br /&gt;</p>'
+			+'<p class="ti_1">line3</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div>'
+		+'<span style="color:red">line1</span><br />'
+		+'<span>line2</span><br />'
+		+'<span>line3</span>'
+		+'</div>');
+}
+
+function test_falseObject_firstLetter(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01 :: first-letter'+'</font> { color: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+			+'<p class="ti_1">一二三四五六七八九十</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div>'
+		+'<span style="color:red">一</span>二三四五六七八九十<br />'
+		+'</div>');
+}
+
+function test_falseObject_before(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01 :: before'+'</font> { <font class="g">content:</font> <font class="r">"一";</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+			+'<p class="ti_1">二三四五六七八九十</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div>'
+		+'一 二三四五六七八九十'
+		+'</div>');
+}
+
+function test_falseObject_after(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01 :: after'+'</font> { <font class="g">content:</font> <font class="r">"十";</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+			+'<p class="ti_1">一二三四五六七八九</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div>'
+		+'一 二三四五六七八九十'
+		+'</div>');
+}
+
+function test_falseObject_selection(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01 :: '+Prefix+'selection'+'</font> { background: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+			+'<p class="ti_1">一二三四五六七八十</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div class="test_falseObject_selection">'
+		+'一 二三四五六七八九十'
+		+'</div>');
+}
+
+/**************************************************【伪类选择器】**************************************************/
+
+function test_falseClass_lvha(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'a : link'+'</font> { background: red; }</p>'
+			+'<p class="ti_1"><font class="b">'+'a : visited'+'</font> { background: grey; }</p>'
+			+'<p class="ti_1"><font class="b">'+'a : hover'+'</font> { background: green; }</p>'
+			+'<p class="ti_1"><font class="b">'+'a : active'+'</font> { background: blue; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'a'+'</font> href="http://www.baidu.com" target="_blank"&gt;点我链接到百度&lt;/a&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<a style="width:100px;height:100px;display:block;" class="test_falseClass_lvha" href="http://www.baidu.com" target="_blank">点我链接到百度</a>');
+}
+
+function test_falseClass_firstChild(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01 > div : first-child'+'</font> { background: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+				+'<p class="ti_2">&lt;span&gt;&lt;/span&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:100%;height:100px;padding:1%;border:1px solid black;box-sizing:border-box">'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+		+'</div>'
+		+'<br />'
+		+'<div style="width:100%;height:100px;padding:1%;border:1px solid black;box-sizing:border-box">'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;background:red;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+		+'</div>');
+}
+
+function test_falseClass_lastChild(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01 > div : last-child'+'</font> { background: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;span&gt;&lt;/span&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:100%;height:100px;padding:1%;border:1px solid black;box-sizing:border-box">'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+		+'</div>'
+		+'<br />'
+		+'<div style="width:100%;height:100px;padding:1%;border:1px solid black;box-sizing:border-box">'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;background:red;"></div>'
+		+'</div>');
+}
+
+function test_falseClass_nthChild(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01 > div : nth-child(3)'+'</font> { background: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;span&gt;&lt;/span&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:100%;height:100px;padding:1%;border:1px solid black;box-sizing:border-box">'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+		+'</div>'
+		+'<br />'
+		+'<div style="width:100%;height:100px;padding:1%;border:1px solid black;box-sizing:border-box">'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;background:red;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+		+'</div>');
+}
+
+function test_falseClass_onlyChild(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01 > div : only-child'+'</font> { background: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+				+'<p class="ti_2">&lt;span&gt;&lt;/span&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:100%;height:100px;padding:1%;border:1px solid black;box-sizing:border-box">'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+		+'</div>'
+		+'<br />'
+		+'<div style="width:100%;height:100px;padding:1%;border:1px solid black;box-sizing:border-box">'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;background:red;"></div>'
+		+'</div>');
+}
+
+function test_falseClass_firstOfType(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01 > div : first-of-type'+'</font> { background: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+				+'<p class="ti_2">&lt;span&gt;&lt;/span&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:100%;height:100px;padding:1%;border:1px solid black;box-sizing:border-box">'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;background:red;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+		+'</div>'
+		+'<br />'
+		+'<div style="width:100%;height:100px;padding:1%;border:1px solid black;box-sizing:border-box">'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;background:red;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+		+'</div>');
+}
+
+function test_falseClass_lastOfType(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01 > div : last-of-type'+'</font> { background: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;span&gt;&lt;/span&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:100%;height:100px;padding:1%;border:1px solid black;box-sizing:border-box">'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;background:red;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+		+'</div>'
+		+'<br />'
+		+'<div style="width:100%;height:100px;padding:1%;border:1px solid black;box-sizing:border-box">'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;background:red;"></div>'
+		+'</div>');
+}
+
+function test_falseClass_nthOfType(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01 > div : nth-of-type(3)'+'</font> { background: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+				+'<p class="ti_2">&lt;span&gt;&lt;/span&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:100%;height:100px;padding:1%;border:1px solid black;box-sizing:border-box">'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;background:red;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+		+'</div>'
+		+'<br />'
+		+'<div style="width:100%;height:100px;padding:1%;border:1px solid black;box-sizing:border-box">'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;background:red;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+		+'</div>');
+}
+
+function test_falseClass_onlyOfType(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01 > div : only-of-type'+'</font> { background: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+				+'<p class="ti_2">&lt;span&gt;&lt;/span&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:100%;height:100px;padding:1%;border:1px solid black;box-sizing:border-box">'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;background:red;"></div>'
+		+'</div>'
+		+'<br />'
+		+'<div style="width:100%;height:100px;padding:1%;border:1px solid black;box-sizing:border-box">'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;background:red;"></div>'
+		+'</div>');
+}
+
+/**************************************************【其它选择器】**************************************************/
+
+function test_other_empty(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01 > div : empty'+'</font> { background: red; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>" &gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;hello world&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;hello world&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;hello world&lt;/div&gt;</p>'
+				+'<p class="ti_2">&lt;div&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<div style="width:100%;height:100px;padding:1%;border:1px solid black;box-sizing:border-box">'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;">hello world</div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;background:red;"></div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;">hello world</div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;">hello world</div>'
+			+'<div style="width:15%;height:100%;float:left;margin-left:1%;border:1px solid black;background:red;"></div>'
+		+'</div>');
+}
+
+function test_other_focus(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1"><font class="b">'+'input : focus'+'</font> { background: grey; }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;input type="text" /&gt;</p>'
+			+'<p class="ti_1">&lt;input type="text" /&gt;</p>'
+			+'<p class="ti_1">&lt;input type="text" /&gt;</p>'
+			+'<p class="ti_1">&lt;input type="text" /&gt;</p>'
+			+'<p class="ti_1">&lt;input type="text" /&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<input class="test_other_focus" type="text"><br />'
+		+'<input class="test_other_focus" type="text"><br />'
+		+'<input class="test_other_focus" type="text"><br />'
+		+'<input class="test_other_focus" type="text"><br />'
+		+'<input class="test_other_focus" type="text"><br />');
+}
+
+/**************************************************【】**************************************************/
+</script>
+<!---------------------------------------------------------------------------------------------------->
+<style>
+	.test_falseObject_selection::-moz-selection{background:red;}
+	.test_falseObject_selection::-webkit-selection{background:red;}
+	.test_falseObject_selection::-o-selection{background:red;}
+	.test_falseObject_selection::-ms-selection{background:red;}
+
+	.test_falseClass_lvha:link{background:red;}
+	.test_falseClass_lvha:visited{background:grey;}
+	.test_falseClass_lvha:hover{background:green;}
+	.test_falseClass_lvha:active{background:blue;}
+
+	.test_other_focus:focus{background:grey;}
+</style>

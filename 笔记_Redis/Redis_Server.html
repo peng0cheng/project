@@ -1,0 +1,138 @@
+<table class="i_table">
+	<tr title="
+		&#10;说&#12288;明：执行一个 AOF文件 重写操作
+		&#10;说&#12288;明：重写会创建一个当前 AOF 文件的体积优化版本
+		&#10;说&#12288;明：Redis 会自动执行重写操作 而此命令为手动操作
+		&#10;返回值：Background append only file rewriting started">
+		<td>【CMD】【数据】【AOF重写】</td>
+		<td><p><font class="w b">BGREWRITEAOF</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：在后台异步保存当前数据库的数据到磁盘
+		&#10;说&#12288;明：执行后会产生一个子进程 负责保存数据
+		&#10;返回值：Background saving started">
+		<td>【CMD】【数据】【异步保存】</td>
+		<td><p><font class="w b">BGSAVE</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：同步保存当前数据库的数据到磁盘
+		&#10;返回值：OK">
+		<td>【CMD】【数据】【同步保存】</td>
+		<td><p><font class="w b">SAVE</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：返回最近一次 Redis 成功执行保存操作的时间点（SAVE BGSAVE 等） 以 UNIX 时间戳格式表示
+		&#10;返回值：UNIX 时间戳">
+		<td>【CMD】【数据】【上一次保存时间】</td>
+		<td><p><font class="w b">LASTSAVE</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：返回当前数据库的 key 的数量
+		&#10;返回值：数量">
+		<td>【CMD】【数据】【键的总数】</td>
+		<td><p><font class="w b">DBSIZE</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：清空整个 Redis 服务器的数据
+		&#10;返回值：OK">
+		<td>【CMD】【数据】【清空所有服务器数据】</td>
+		<td><p><font class="w b">FLUSHALL</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：清空当前数据库中的所有 key
+		&#10;返回值：OK">
+		<td>【CMD】【数据】【清空当前数据库】</td>
+		<td><p><font class="w b">FLUSHDB</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：命令用于在 Redis 运行时动态地修改复制功能的行为
+		&#10;说&#12288;明：将当前服务器转变为指定服务器的从属服务器
+		&#10;说&#12288;明：如果当前服务器已是其从属服务器 则重新同步数据
+		&#10;说&#12288;明：对一个从属服务器执行命令 SLAVEOF NO ONE 将使得这个从属服务器关闭复制功能 并从从属服务器转变回主服务器
+		&#10;说&#12288;明：利用 SLAVEOF NO ONE 命令可以在主服务器失败的时候 将从属服务器用作新的主服务器 从而实现无间断运行
+		&#10;返回值：OK">
+		<td>【CMD】【主从】【设置从属】</td>
+		<td><p><font class="w b">SLAVEOF</font> <font class="w o">服务器地址</font> <font class="w o">端口</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：从主服务器同步据
+		&#10;说&#12288;明：连接主服务器时 从服务器会自动执行该命令
+		&#10;返回值：无">
+		<td>【CMD】【主从】【同步数据】</td>
+		<td><p><font class="w b">SYNC</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：step 1 停止所有客户端
+		&#10;说&#12288;明：step 2 如果有最少一个保存点在等待 执行 SAVE 命令
+		&#10;说&#12288;明：step 3 如果 AOF 选项被打开 更新 AOF 文件
+		&#10;说&#12288;明：step 4 服务器关闭
+		&#10;返回值：成功 → 空
+		&#10;返回值：失败 → error">
+		<td>【CMD】【系统】【关闭所有服务】</td>
+		<td><p><font class="w b">SHUTDOWN</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：是 Redis 用来记录查询执行时间的日志系统
+		&#10;返回值：日志信息">
+		<td>【CMD】【系统】【查询日志】</td>
+		<td><p><font class="w b">SLOWLOG</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：返回关于 Redis 服务器的各种信息和统计值
+		&#10;返回值：统计信息">
+		<td>【CMD】【系统】【查询服务器信息】</td>
+		<td><p><font class="w b">INFO</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：取得运行中的 Redis 服务器的配置参数
+		&#10;说&#12288;明：可以用 * 查询所有的配置项
+		&#10;返回值：配置值">
+		<td>【CMD】【系统】【获取配置】</td>
+		<td><p><font class="w b">CONFIG GET</font> <font class="w o">配置项</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：动态调整 Redis 服务器的配置
+		&#10;说&#12288;明：立刻生效 无须重启
+		&#10;返回值：成功 → OK
+		&#10;返回值：失败 → error">
+		<td>【CMD】【系统】【修改配置】</td>
+		<td><p><font class="w b">CONFIG SET</font> <font class="w o">配置项</font> <font class="w o">配置值</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：重置 INFO 命令中的某些统计数据
+		&#10;说&#12288;明：包括 Keyspace hits （键空间命中次数）
+		&#10;说&#12288;明：包括 Keyspace misses （键空间不命中次数）
+		&#10;说&#12288;明：包括 Number of commands processed （执行命令的次数）
+		&#10;说&#12288;明：包括 Number of connections received （连接服务器的次数）
+		&#10;说&#12288;明：包括 Number of expired keys （过期key的数量）
+		&#10;返回值：OK">
+		<td>【CMD】【系统】【重置统计数据】</td>
+		<td><p><font class="w b">CONFIG RESETSTAT</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：返回给定 key 的调试信息
+		&#10;返回值：键存在 → 键的相关信息
+		&#10;返回值：键不存在 → error">
+		<td>【CMD】【系统】【键的属性】</td>
+		<td><p><font class="w b">DEBUG OBJECT</font> <font class="w g">key</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：令 Redis 服务器崩溃 调试用
+		&#10;返回值：无">
+		<td>【CMD】【系统】【自我崩溃】</td>
+		<td><p><font class="w b">DEBUG SEGFAULT</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：实时打印出 Redis 服务器接收到的命令 调试用
+		&#10;返回值：OK">
+		<td>【CMD】【系统】【实时接收命令】</td>
+		<td><p><font class="w b">MONITOR</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr title="
+		&#10;说&#12288;明：
+		&#10;返回值：">
+		<td>【php】</td>
+		<td><p></p></td>
+	</tr>
+</table>

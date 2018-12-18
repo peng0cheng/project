@@ -1,0 +1,145 @@
+<table class="i_table">
+	<tr id="test_time" title="时间戳 获取1970年1月1日零点以来的秒数">
+		<td>【时间】</td>
+		<td><p><font class="w b">time</font>( )</p></td>
+	</tr>
+	<tr id="test_date" title="
+		&#10;时间戳是可选项 若不设置则为当前时间 若设置则为设置的时间
+		&#10;参数 U → 获取从一个起始时间(1970年1月1日)以来的秒数
+		&#10;参数 Y → 获取本年的4位年号
+		&#10;参数 y → 获取本年的2位年号
+		&#10;参数 F → 获取本月的英文全称
+		&#10;参数 M → 获取本月的英文简称
+		&#10;参数 m → 获取本月的月份数
+		&#10;参数 z → 获取从本年1月1日至今的天数
+		&#10;参数 d → 获取本日的天数(这个月第几号)
+		&#10;参数 w → 获取本日的天数(这周的周几)
+		&#10;参数 l → 获取本日星期数的英文全称
+		&#10;参数 D → 获取本日星期数的英文简称
+		&#10;参数 H → 获取小时数(24小时制)
+		&#10;参数 h → 获取小时数(12小时制)
+		&#10;参数 i → 获取分钟数
+		&#10;参数 s → 获取秒数
+		&#10;参数 A → 获取上下午 AM PM
+		&#10;参数 a → 获取上下午 am pm">
+		<td>【日期】</td>
+		<td><p><font class="w b">date</font>( <font class="o">参数</font> , <font class="o">时间戳</font> )</p></td>
+	</tr>
+	<tr id="test_checkdate" title="检测是否存在当前日期 返回布尔值">
+		<td>【日期检测】</td>
+		<td><p><font class="w b">checkdate</font>( <font class="r">月</font> , <font class="r">日</font> , <font class="r">年</font> )</p></td>
+	</tr>
+	<tr id="test_mktime" title="时间戳 获取1970年1月1日零点以来的秒数">
+		<td>【获取指定时间的时间戳】</td>
+		<td><p><font class="w b">mktime</font>( <font class="r">小时数</font> , <font class="r">分钟数</font> , <font class="r">秒数</font> , <font class="r">月</font> , <font class="r">日</font> , <font class="r">年</font> )</p></td>
+	</tr>
+	<tr id="test_getdate" title="
+		&#10;返回值 seconds → 秒数
+		&#10;返回值 minutes → 分钟数
+		&#10;返回值 hours → 小时数
+		&#10;返回值 mday → 获取本日的天数(这个月第几号)
+		&#10;返回值 wday → 本日的天数(这周的周几)
+		&#10;返回值 mon → 月份数
+		&#10;返回值 year → 年号
+		&#10;返回值 yday → 本年1月1日至今的天数
+		&#10;返回值 weekday → 星期几的英文全称
+		&#10;返回值 month → 月份的英文全称
+		&#10;返回值 0 → 时间戳">
+		<td>【获取指定时间戳的时间】</td>
+		<td><p><font class="w b">getdate</font>( <font class="o">时间戳</font> )</p></td>
+	</tr>
+	<tr id="test_strtotime" title="">
+		<td>【字符串转换成时间戳】</td>
+		<td><p><font class="w b">strtotime</font>( <font class="o">美国英语日期格式的字符串</font> )</p></td>
+	</tr>
+	<tr id="test_set_time_limit" title="
+		&#10;规定从该句运行时起程序必须在指定秒数内运行结束 超时则程序出错退出
+		&#10;秒数为 0 时不受时间限制 PHP 默认秒数为 30 可以在配置文件修改">
+		<td>【限时运行】</td>
+		<td><p><font class="w b">set_time_limit</font>( <font class="r">秒数</font> )</p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+$(function(){
+
+//【时间】
+	$('#test_time').live('click',function(){
+		PC_Case.show(1,'<p><font class="w g">$result</font> = <font class="w b">time</font>( )</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="r">1427704494</font></p>');
+	});
+//【日期】
+	$('#test_date').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w g">$result_01</font> = <font class="w b">date</font>( <font class="w r">\'Y-m-d H:i:s\'</font> )</p>'
+			+'<p><font class="w g">$result_02</font> = <font class="r">\'今天是星期\'</font>.<font class="w b">date</font>( <font class="w r">\'w\'</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="w g">$result_01</font> <font class="p">→</font> <font class="r">2015-03-30 16:57:28</font></p>'
+			+'<p><font class="w g">$result_01</font> <font class="p">→</font> <font class="r">今天是星期1</font></p>');
+	});
+//【日期检测】
+	$('#test_checkdate').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w g">$result_01</font> = <font class="w b">test_checkdate</font>( <font class="r">2</font> , <font class="r">29</font> , <font class="r">2015</font> )</p>'
+			+'<p><font class="w g">$result_02</font> = <font class="w b">test_checkdate</font>( <font class="r">2</font> , <font class="r">29</font> , <font class="r">2016</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="w g">$result_01</font> <font class="p">→</font> <font class="gr">Boolean</font> <font class="w r">false</font></p>'
+			+'<p><font class="w g">$result_02</font> <font class="p">→</font> <font class="gr">Boolean</font> <font class="w r">true</font></p>');
+	});
+//【获取指定时间的时间戳】
+	$('#test_mktime').live('click',function(){
+		PC_Case.show(1,'<p><font class="w g">$result</font> = <font class="w b">mktime</font>( <font class="r">0</font> , <font class="r">0</font> , <font class="r">0</font> , <font class="r">12</font> , <font class="r">19</font> , <font class="r">1987</font> )</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="r">566841600</font></p>');
+	});
+//【获取指定时间戳的时间】
+	$('#test_getdate').live('click',function(){
+		PC_Case.show(1,'<p><font class="w g">$result</font> = <font class="w b">getdate</font>( <font class="r">566841600</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="w g">$result</font> <font class="p">→</font> <font class="w b">array</font>(</p>'
+				+'<p class="ti_1"><font class="w r">\'seconds\'</font> => <font class="r">0</font></p>'
+				+'<p class="ti_1"><font class="w r">\'minutes\'</font> => <font class="r">0</font></p>'
+				+'<p class="ti_1"><font class="w r">\'hours\'</font> => <font class="r">0</font></p>'
+				+'<p class="ti_1"><font class="w r">\'mday\'</font> => <font class="r">19</font></p>'
+				+'<p class="ti_1"><font class="w r">\'wday\'</font> => <font class="r">6</font></p>'
+				+'<p class="ti_1"><font class="w r">\'mon\'</font> => <font class="r">12</font></p>'
+				+'<p class="ti_1"><font class="w r">\'year\'</font> => <font class="r">1987</font></p>'
+				+'<p class="ti_1"><font class="w r">\'yday\'</font> => <font class="r">352</font></p>'
+				+'<p class="ti_1"><font class="w r">\'weekday\'</font> => <font class="r">\'Saturday\'</font></p>'
+				+'<p class="ti_1"><font class="w r">\'month\'</font> => <font class="r">\'December\'</font></p>'
+				+'<p class="ti_1"><font class="w r">0</font> => <font class="r">566841600</font></p>'
+			+'<p>)</p>');
+	});
+//【字符串转换成时间戳】
+	$('#test_strtotime').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w g">$result_01</font> = <font class="w b">strtotime</font>( <font class="r">\'now\'</font> )</p>'
+			+'<p><font class="w g">$result_02</font> = <font class="w b">strtotime</font>( <font class="r">\'19 December 1987\'</font> )</p>'
+			+'<p><font class="w g">$result_03</font> = <font class="w b">strtotime</font>( <font class="r">\'+5 hours\'</font> )</p>'
+			+'<p><font class="w g">$result_04</font> = <font class="w b">strtotime</font>( <font class="r">\'+1 week\'</font> )</p>'
+			+'<p><font class="w g">$result_05</font> = <font class="w b">strtotime</font>( <font class="r">\'+1 week 3 days 7 hours 5 seconds\'</font> )</p>'
+			+'<p><font class="w g">$result_06</font> = <font class="w b">strtotime</font>( <font class="r">\'next Monday\'</font> )</p>'
+			+'<p><font class="w g">$result_07</font> = <font class="w b">strtotime</font>( <font class="r">\'last Sunday\'</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="w g">$result_01</font> <font class="p">→</font> <font class="r">1427708999</font></p>'
+			+'<p><font class="w g">$result_02</font> <font class="p">→</font> <font class="r">566841600</font></p>'
+			+'<p><font class="w g">$result_03</font> <font class="p">→</font> <font class="r">1427727129</font></p>'
+			+'<p><font class="w g">$result_04</font> <font class="p">→</font> <font class="r">1428314097</font></p>'
+			+'<p><font class="w g">$result_05</font> <font class="p">→</font> <font class="r">1428598525</font></p>'
+			+'<p><font class="w g">$result_06</font> <font class="p">→</font> <font class="r">1428249600</font></p>'
+			+'<p><font class="w g">$result_07</font> <font class="p">→</font> <font class="r">1427558400</font></p>');
+	});
+//【限时运行】
+	$('#test_set_time_limit').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">function</font> <font class="w g">func</font>( ){</p>'
+				+'<p class="ti_1"><font class="w b">set_time_limit</font>( <font class="r">1</font> )</p>'
+				+'<p class="ti_1"><font class="w b">for</font>( <font class="g">$i</font> = <font class="r">0</font> ; <font class="g">$i</font> < <font class="r">10000000</font> ; <font class="g">$i</font> ++ ){</p>'
+					+'<p class="ti_2"><font class="w b">echo</font> <font class="r">1</font></p>'
+				+'<p class="ti_1">}</p>'
+			+'<p>}</p>'
+			);
+		PC_Case.show(2,'<p><font class="w g">func</font> <font class="p">→</font> <font class="r">111111111</font>... <font class="o">错误！</font></p>');
+	});
+
+});
+</script>

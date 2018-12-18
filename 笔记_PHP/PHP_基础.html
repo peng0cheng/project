@@ -1,0 +1,726 @@
+<table class="i_table">
+	<tr id="test_int" title="
+		&#10;当以 0 开头时 默认转换成八进制
+		&#10;当以 0x 开头时 默认转换成十六进制">
+		<td>【数据类型】【标量】【整型】</td>
+		<td><p><font class="w b">Int</font></p></td>
+	</tr>
+	<tr id="test_float" title="">
+		<td>【数据类型】【标量】【浮点型】</td>
+		<td><p><font class="w b">Float</font></p></td>
+	</tr>
+	<tr id="test_boolean" title="
+		&#10;布尔型只有 true 和 false
+		&#10;不区分大小写">
+		<td>【数据类型】【标量】【布尔型】</td>
+		<td><p><font class="w b">Boolean</font></p></td>
+	</tr>
+	<tr id="test_string" title="
+		&#10;可以使用定界符 开始符和结束符必须相同 结束符必须顶头写
+		&#10;单引号不解析变量 直接输出
+		&#10;双引号会解析变量
+		&#10;建议使用单引号">
+		<td>【数据类型】【标量】【字符串】</td>
+		<td><p><font class="w b">String</font></p></td>
+	</tr>
+	<tr id="test_array" title="">
+		<td>【数据类型】【数组】</td>
+		<td><p><font class="w b">Array</font></p></td>
+	</tr>
+	<tr id="test_object" title="">
+		<td>【数据类型】【对象】</td>
+		<td><p><font class="w b">Object</font></p></td>
+	</tr>
+	<tr id="test_null" title="">
+		<td>【数据类型】【空】</td>
+		<td><p><font class="w b">Null</font></p></td>
+	</tr>
+	<tr id="test_var_dump" title="">
+		<td>【数据类型检测】【类型和值】</td>
+		<td><p><font class="w b">var_dump</font>( </font> <font class="o">内容</font> )</p></td>
+	</tr>
+	<tr id="test_gettype" title="">
+		<td>【数据类型检测】【类型】</td>
+		<td><p><font class="w b">gettype</font>( </font> <font class="o">内容</font> )</p></td>
+	</tr>
+	<tr id="test_is_numeric" title="">
+		<td>【数据类型检测】【是否为数值】</td>
+		<td><p><font class="w b">is_numeric</font>( </font> <font class="o">内容</font> )</p></td>
+	</tr>
+	<tr id="test_is_scalar" title="标量为 布尔型 整型 浮点型 字符串型">
+		<td>【数据类型检测】【是否为标量】</td>
+		<td><p><font class="w b">is_scalar</font>( </font> <font class="o">内容</font> )</p></td>
+	</tr>
+	<tr id="test_intval" title="强制转换为整型 但是不改变原有数据类型">
+		<td>【数据类型转换】【整型】</td>
+		<td><p><font class="w b">intval</font>( </font> <font class="o">内容</font> )</p></td>
+	</tr>
+	<tr id="test_settype" title="
+		&#10;第一个参数必须是变量 不能是直接的数值
+		&#10;强制转换为其它类型 并改变原有数据类型
+		&#10;转换类型 → 整型 int
+		&#10;转换类型 → 浮点型 float
+		&#10;转换类型 → 字符串 string
+		&#10;转换类型 → 布尔型 boolean
+		&#10;转换类型 → 数组 array
+		&#10;转换类型 → 对象 object">
+		<td>【数据类型转换】【其它】</td>
+		<td><p><font class="w b">settype</font>( </font> <font class="g">变量</font> , </font> <font class="g">转换类型</font> )</p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr id="test_operator_01" title="PHP 中 . 号的作用可以是连接字符串">
+		<td>【运算符】【字符串运算】</td>
+		<td><p><font class="r">字符串</font> <font class="w b">.</font> <font class="r">字符串</font></p></td>
+	</tr>
+	<tr id="test_operator_02" title="
+		&#10;变量++ → 先使用变量 再进行 +1 操作
+		&#10;变量-- → 先使用变量 再进行 -1 操作
+		&#10;++变量 → 先进行 +1 操作 再使用变量
+		&#10;--变量 → 先进行 -1 操作 再使用变量">
+		<td>【运算符】【算术运算】</td>
+		<td><p><font class="w b">+&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;%&nbsp;&nbsp;&nbsp;++&nbsp;&nbsp;&nbsp;--</font></p></td>
+	</tr>
+	<tr id="test_operator_03" title="">
+		<td>【运算符】【赋值运算】</td>
+		<td><p><font class="w b">=&nbsp;&nbsp;&nbsp;+=&nbsp;&nbsp;&nbsp;-=&nbsp;&nbsp;&nbsp;*=&nbsp;&nbsp;&nbsp;/=&nbsp;&nbsp;&nbsp;%=&nbsp;&nbsp;&nbsp;.=</font</p></td>
+	</tr>
+	<tr id="test_operator_04" title="
+		&#10;== → 只判断值是否相等
+		&#10;=== → 判断值和数据类型是否都相等">
+		<td>【运算符】【比较运算】</td>
+		<td><p><font class="w b">>&nbsp;&nbsp;&nbsp;<&nbsp;&nbsp;&nbsp;>=&nbsp;&nbsp;&nbsp;<=&nbsp;&nbsp;&nbsp;==&nbsp;&nbsp;&nbsp;!=&nbsp;&nbsp;&nbsp;===&nbsp;&nbsp;&nbsp;!==</font></font></p></td>
+	</tr>
+	<tr id="test_operator_05" title="
+		&#10;&& → 有一个假就是假
+		&#10;|| → 有一个真就是真
+		&#10;! → 真就是假 假就是真
+		&#10;xor → 相同为假 不同为真">
+		<td>【运算符】【逻辑运算】</td>
+		<td><p><font class="w b">&&&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;!&nbsp;&nbsp;&nbsp;xor</font></font></p></td>
+	</tr>
+	<tr id="test_operator_06" title="">
+		<td>【运算符】【三元运算】</td>
+		<td><p><font class="o">条件</font> <font class="w b">?</font> <font class="o">条件为真的操作</font> <font class="w b">:</font class="b"> <font class="o">条件不为真时的操作</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr id="test_var" title="声明一个变量">
+		<td>【变量】【声明变量】</td>
+		<td><p><font class="w b">$</font><font class="g">变量名</font> = <font class="o">内容</font></p></td>
+	</tr>
+	<tr id="test_unset" title="删除一个变量">
+		<td>【变量】【删除变量】</td>
+		<td><p><font class="w b">unset</font>( <font class="g">变量</font> )</p></td>
+	</tr>
+	<tr id="test_isset" title="检测一个变量是否被赋值">
+		<td>【变量】【检测变量是否赋值】</td>
+		<td><p><font class="w b">isset</font>( <font class="g">变量</font> )</p></td>
+	</tr>
+	<tr id="test_empty" title="
+		&#10;一些特殊的检测为空的结果
+		&#10;整型 → 0
+		&#10;浮点型 → 0.0
+		&#10;布尔型 → false
+		&#10;字符串 → 空字符串 \'\' 或 \'0\'
+		&#10;数组 → 空数组 array()
+		&#10;空 → null">
+		<td>【变量】【检测变量是否为空】</td>
+		<td><p><font class="w b">empty</font>( <font class="g">变量</font> )</p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr id="test_function_01" title="
+		&#10;参数 → 可有可无 若设置参数 形参(函数中的参数)和实参(调用时的参数)必须按顺序一一对应
+		&#10;函数体 → 函数以外的变量为全局变量 函数以内的变量为局部变量">
+		<td>【函数】【一般函数】</td>
+		<td><p><font class="w b">function</font> <font class="g">函数名</font>( <font class="o">参数</font> ){ <font class="o">函数体</font> }</p></td>
+	</tr>
+	<tr id="test_function_02" title="
+		&#10;将函数赋给一个变量
+		&#10;输出函数时可以给函数的形参赋值">
+		<td>【函数】【变量函数】</td>
+		<td><p><font class="g">变量</font> = <font class="g">函数名</font></p></td>
+	</tr>
+	<tr id="test_function_03" title="
+		&#10;函数调用函数
+		&#10;被调用的函数的实参可以写在回调函数内部">
+		<td>【函数】【回调函数】</td>
+		<td><p><font class="g">函数名1</font>( <font class="g">函数名2</font> , <font class="r">++</font> )</p></td>
+	</tr>
+	<tr id="test_function_04" title="内部函数不能在其声明之前调用">
+		<td>【函数】【内部函数】</td>
+		<td><p><font class="w b">function</font> <font class="g">函数名1</font>( ){ <font class="w b">function</font> <font class="g">函数名2</font>( ){ <font class="o">函数体</font> } }</p></td>
+	</tr>
+	<tr id="test_function_05" title="将函数直接赋予一个变量 不需设置函数名">
+		<td>【函数】【匿名函数】</td>
+		<td><p><font class="g">变量</font> = <font class="w b">function</font>( ){ <font class="o">函数体</font> }</p></td>
+	</tr>
+	<tr id="test_function_06" title="
+		&#10;闭包函数中必须使用匿名函数
+		&#10;必须用 use 调用父函数中的变量">
+		<td>【函数】【闭包函数】</td>
+		<td><p><font class="w b">function</font> <font class="g">父函数名</font>( ){ <font class="g">子函数变量</font> = <font class="w b">function</font>( ) <font class="w b">use</font>( <font class="o">父函数参数</font> ){ <font class="o">函数体</font> } }</p></td>
+	</tr>
+	<tr id="test_function_07" title="在函数内部调用函数本身">
+		<td>【函数】【递归函数】</td>
+		<td><p><font class="w b">function</font> <font class="g">函数名1</font>( ){ <font class="o">函数体</font> <font class="g">函数名1</font>( ) }</p></td>
+	</tr>
+	<tr id="test_param_01" title="
+		&#10;通过形参临时调用全局变量 可以在函数内部使用
+		&#10;该函数不能改变全局变量">
+		<td>【函数】【调用全局变量】</td>
+		<td><p><font class="w b">function</font> <font class="g">函数名</font>( <font class="o">全局变量</font> ){ <font class="o">函数体</font> }</p></td>
+	</tr>
+	<tr id="test_param_02" title="
+		&#10;通过加入 & 符的形参调用全局变量 可在函数内部使用
+		&#10;该函数可以改变全局变量">
+		<td>【函数】【调用全局变量】</td>
+		<td><p><font class="w b">function</font> <font class="g">函数名</font>( <font class="w b">&</font><font class="g">全局变量</font> ){ <font class="o">函数体</font> }</p></td>
+	</tr>
+	<tr id="test_global" title="
+		&#10;通过 global 直接调用全局变量 可在函数内部直接使用
+		&#10;该函数可以改变全局变量">
+		<td>【函数体】【调用全局变量】</td>
+		<td><p><font class="w b">global</font> <font class="g">全局变量</font></p></td>
+	</tr>
+	<tr id="test_globals" title="
+		&#10;$GLOBALS 是常量 必须大写
+		&#10;通过 $GLOBALS 临时调用全局变量 在函数内部使用必须将其赋值
+		&#10;该函数不能改变全局变量">
+		<td>【函数体】【调用全局变量】</td>
+		<td><p><font class="w b">$GLOBALS</font>[ <font class="g">全局变量</font> ]</p></td>
+	</tr>
+	<tr id="test_return" title="
+		&#10;将结果返回给调用者
+		&#10;return 会结束该函数执行流程">
+		<td>【函数体】【返回值】</td>
+		<td><p><font class="w b">return</font> <font class="o">返回值</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr id="test_define" title="
+		&#10;常量名必须加引号
+		&#10;常量值必须使用标量
+		&#10;true 不区分大小写 默认值
+		&#10;false 区分大小写">
+		<td>【常量】【声明】</td>
+		<td><p><font class="w b">define</font>( <font class="g">常量名</font> , <font class="g">常量值</font> , <font class="g">是否区分大小写</font> )</p></td>
+	</tr>
+	<tr id="test_const" title="
+		&#10;常量名不能加引号
+		&#10;常量值必须使用标量">
+		<td>【常量】【声明】</td>
+		<td><p><font class="w b">const</font> <font class="g">常量名</font> = <font class="g">常量值</font></p></td>
+	</tr>
+	<tr id="test_file" title="当前文件相对于系统的绝对路径">
+		<td>【常量】【魔术常量】</td>
+		<td><p><font class="w b">__FILE__</font></p></td>
+	</tr>
+	<tr id="test_line" title="当前常量所在文件的行数">
+		<td>【常量】【魔术常量】</td>
+		<td><p><font class="w b">__LINE__</font></p></td>
+	</tr>
+	<tr id="test_function" title="当前常量所在函数的名称">
+		<td>【常量】【魔术常量】</td>
+		<td><p><font class="w b">__FUNCTION__</font></p></td>
+	</tr>
+	<tr id="test_class" title="当前常量所在类的名称">
+		<td>【常量】【魔术常量】</td>
+		<td><p><font class="w b">__CLASS__</font></p></td>
+	</tr>
+	<tr id="test_method" title="当前常量所在的类的方法的名称">
+		<td>【常量】【魔术常量】</td>
+		<td><p><font class="w b">__METHOD__</font></p></td>
+	</tr>
+	<tr id="test_constant" title="">
+		<td>【常量】【获取指定常量的值】</td>
+		<td><p><font class="w b">constant</font>( <font class="g">常量名</font> )</p></td>
+	</tr>
+	<tr id="test_get_defined_constants" title="">
+		<td>【常量】【获取当前系统所有常量】</td>
+		<td><p><font class="w b">get_defined_constants</font>( )</p></td>
+	</tr>
+	<tr id="test_defined" title="">
+		<td>【常量】【检测常量是否被定义】</td>
+		<td><p><font class="w b">defined</font>( <font class="g">常量名</font> )</p></td>
+	</tr>
+	<tr id="test_defined" title="
+		&#10;linux 上就是 /
+		&#10;Windows 上就是 \">
+		<td>【常量】【目录分隔符】</td>
+		<td><p><font class="w b">DIRECTORY_SEPARATOR</font></p></td>
+	</tr>
+	<tr id="test_defined" title="
+		&#10;当你要include多个路径的话 linux 上就是 :
+		&#10;当你要include多个路径的话 Windows 上就是 ;">
+		<td>【常量】【路径分隔符】</td>
+		<td><p><font class="w b">PATH_SEPARATOR</font></p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+$(function(){
+
+//【数据类型】【整型】
+	$('#test_int').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w g">$result_01</font> = <font class="r">123</font></p>'
+			+'<p><font class="w g">$result_02</font> = <font class="r">077</font></p>'
+			+'<p><font class="w g">$result_03</font> = <font class="r">0xFF</font></p>');
+		PC_Case.show(2,
+			'<p><font class="w g">$result_01</font> <font class="p">→</font> <font class="r">123</font></p>'
+			+'<p><font class="w g">$result_02</font> <font class="p">→</font> <font class="r">65</font></p>'
+			+'<p><font class="w g">$result_03</font> <font class="p">→</font> <font class="r">255</font></p>');
+	});
+//【数据类型】【浮点型】
+	$('#test_float').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w g">$result_01</font> = <font class="r">3.14</font></p>'
+			+'<p><font class="w g">$result_02</font> = <font class="r">3.14E2</font></p>');
+		PC_Case.show(2,
+			'<p><font class="w g">$result_01</font> <font class="p">→</font> <font class="r">3.14</font></p>'
+			+'<p><font class="w g">$result_02</font> <font class="p">→</font> <font class="r">314</font></p>');
+	});
+//【数据类型】【布尔型】
+	$('#test_boolean').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w g">$result_01</font> = <font class="w r">true</font></p>'
+			+'<p><font class="w g">$result_02</font> = <font class="w r">false</font></p>');
+		PC_Case.show(2,
+			'<p><font class="w g">$result_01</font> <font class="p">→</font> <font class="w r">true</font></p>'
+			+'<p><font class="w g">$result_02</font> <font class="p">→</font> <font class="w r">false</font></p>');
+	});
+//【数据类型】【字符串】
+	$('#test_string').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="g">$a</font> = <font class="r">\'hello world\'</font></p>'
+			+'<p><font class="w g">$result_01</font> = <font class="r">\'$a\'</font></p>'
+			+'<p><font class="w g">$result_02</font> = <font class="r">"$a"</font></p>'
+			+'<p><font class="w g">$result_03</font> = <font class="w b"><<<</font><font class="r">EOT</font></p>'
+				+'<p class="ti_1"></font><font class="r">\'hello world\'</font></p>'
+			+'<p></font><font class="r">EOT</font></p>');
+		PC_Case.show(2,
+			'<p><font class="w g">$result_01</font> <font class="p">→</font> <font class="r">$a</font></p>'
+			+'<p><font class="w g">$result_02</font> <font class="p">→</font> <font class="r">hello world</font></p>'
+			+'<p><font class="w g">$result_03</font> <font class="p">→</font> <font class="r">hello world</font></p>');
+	});
+//【数据类型】【数组】
+	$('#test_array').live('click',function(){
+		PC_Case.show(1,'<p><font class="w g">$result</font> = <font class="w b">array</font>( <font class="r">\'one\'</font> , <font class="r">\'two\'</font> , <font class="r">\'three\'</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="w g">$result</font> <font class="p">→</font></p>'
+			+'<p class="ti_1"><font class="r">0</font> <font class="p">→</font> <font class="r">one</font></p>'
+			+'<p class="ti_1"><font class="r">1</font> <font class="p">→</font> <font class="r">two</font></p>'
+			+'<p class="ti_1"><font class="r">2</font> <font class="p">→</font> <font class="r">three</font></p>');
+	});
+//【数据类型】【对象】
+	$('#test_object').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">class</font> <font class="g">demo</font>{</p>'
+				+'<p class="ti_1"><font class="w b">function</font> <font class="g">func</font>( ){</p>'
+					+'<p class="ti_2"><font class="w b">echo</font> <font class="r">\'hello world\'</font></p>'
+				+'<p class="ti_1">}</p>'
+			+'<p>}</p>'
+			+'<p><font class="g">$demo</font> = <font class="w b">new</font> <font class="g">demo</font>( )</p>'
+			+'<p><font class="w g">$result</font> = <font class="g">$demo</font> -> <font class="g">func</font>( )</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="r">hello world</font></p>');
+	});
+//【数据类型】【空】
+	$('#test_null').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w g">$result_01</font></p>'
+			+'<p><font class="w g">$result_02</font> = <font class="w r">null</font></p>');
+		PC_Case.show(2,
+			'<p><font class="w g">$result_01</font> <font class="p">→</font> <font class="w r">null</font></p>'
+			+'<p><font class="w g">$result_02</font> <font class="p">→</font> <font class="w r">null</font></p>');
+	});
+//【数据类型检测】【类型和值】
+	$('#test_var_dump').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w g">$result</font> = <font class="w r">true</font></p>'
+			+'<p><font class="w b">var_dump</font>( <font class="w g">$result</font> )</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="gr">boolean</font> <font class="w r">true</font></p>');
+	});
+//【数据类型检测】【类型】
+	$('#test_gettype').live('click',function(){
+		PC_Case.show(1,'<p><font class="w g">$result</font> = <font class="w b">gettype</font>( <font class="w r">true</font> )</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="w r">boolean</font></p>');
+	});
+//【数据类型检测】【是否为数值】
+	$('#test_is_numeric').live('click',function(){
+		PC_Case.show(1,'<p><font class="w g">$result</font> = <font class="w b">is_numeric</font>( <font class="w r">true</font> )</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="gr">boolean</font> <font class="w r">false</font></p>');
+	});
+//【数据类型检测】【是否为标量】
+	$('#test_is_numeric').live('click',function(){
+		PC_Case.show(1,'<p><font class="w g">$result</font> = <font class="w b">is_scalar</font>( <font class="w r">true</font> )</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="w r">true</font></p>');
+	});
+//【数据类型转换】【整型】
+	$('#test_intval').live('click',function(){
+		PC_Case.show(1,'<p><font class="w g">$result</font> = <font class="w b">intval</font>( <font class="r">3.14</font> )</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="w r">3</font></p>');
+	});
+//【数据类型转换】【其它】
+	$('#test_settype').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w g">$result</font> = <font class="r">3.14</font></p>'
+			+'<p><font class="w b">settype</font>( <font class="w g">$result</font> , <font class="w r">\'int\'</font> )</p>'
+			+'<p><font class="w b">settype</font>( <font class="w g">$result</font> , <font class="w r">\'float\'</font> )</p>'
+			+'<p><font class="w b">settype</font>( <font class="w g">$result</font> , <font class="w r">\'boolean\'</font> )</p>'
+			+'<p><font class="w b">settype</font>( <font class="w g">$result</font> , <font class="w r">\'string\'</font> )</p>'
+			+'<p><font class="w b">settype</font>( <font class="w g">$result</font> , <font class="w r">\'array\'</font> )</p>'
+			+'<p><font class="w b">settype</font>( <font class="w g">$result</font> , <font class="w r">\'object\'</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="w g">$result</font> <font class="p">→</font> <font class="r">3</font> <font class="gr">int</font></p>'
+			+'<p><font class="w g">$result</font> <font class="p">→</font> <font class="r">3.14</font> <font class="gr">float</font></p>'
+			+'<p><font class="w g">$result</font> <font class="p">→</font> <font class="w r">true</font> <font class="gr">boolean</font></p>'
+			+'<p><font class="w g">$result</font> <font class="p">→</font> <font class="r">\'3\'</font> <font class="gr">string</font></p>'
+			+'<p><font class="w g">$result</font> <font class="p">→</font> <font class="w b">array</font>( 0 => <font class="r">3.14</font> ) <font class="gr">array</font></p>'
+			+'<p><font class="w g">$result</font> <font class="p">→</font> <font class="w b">public</font> <font class="w r">\'scalar\'</font> => <font class="r">3.14</font> <font class="gr">object</font></p>');
+	});
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+//【运算符】【字符串运算】
+	$('#test_operator_01').live('click',function(){
+		PC_Case.show(1,'<p><font class="w g">$result</font> = <font class="r">\'hello\'</font> <font class="w b">.</font> <font class="r">\' \'</font> <font class="w b">.</font> <font class="r">\'world\'</font></p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="r">\'hello world\'</font></p>');
+	});
+//【运算符】【算术运算】
+	$('#test_operator_02').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="g">$a</font> = <font class="r">5</font></p>'
+			+'<p><font class="w g">$result_01</font> = <font class="r">5</font> <font class="w b">+</font> <font class="r">2</font></p>'
+			+'<p><font class="w g">$result_02</font> = <font class="r">5</font> <font class="w b">-</font> <font class="r">2</font></p>'
+			+'<p><font class="w g">$result_03</font> = <font class="r">5</font> <font class="w b">*</font> <font class="r">2</font></p>'
+			+'<p><font class="w g">$result_04</font> = <font class="r">5</font> <font class="w b">/</font> <font class="r">2</font></p>'
+			+'<p><font class="w g">$result_05</font> = <font class="r">5</font> <font class="w b">%</font> <font class="r">2</font></p>'
+			+'<p><font class="w g">$result_06</font> = <font class="w b">++</font> <font class="g">$a</font></p>'
+			+'<p><font class="w g">$result_07</font> = <font class="g">$a</font> <font class="w b">++</font></p>'
+			+'<p><font class="w g">$result_08</font> = <font class="w b">--</font> <font class="g">$a</font></p>'
+			+'<p><font class="w g">$result_09</font> = <font class="g">$a</font> <font class="w b">--</font></p>');
+		PC_Case.show(2,
+			'<p><font class="w g">$result_01</font> <font class="p">→</font> <font class="r">7</font></p>'
+			+'<p><font class="w g">$result_02</font> <font class="p">→</font> <font class="r">3</font></p>'
+			+'<p><font class="w g">$result_03</font> <font class="p">→</font> <font class="r">10</font></p>'
+			+'<p><font class="w g">$result_04</font> <font class="p">→</font> <font class="r">2.5</font></p>'
+			+'<p><font class="w g">$result_05</font> <font class="p">→</font> <font class="r">1</font></p>'
+			+'<p><font class="w g">$result_06</font> <font class="p">→</font> <font class="r">6</font></p>'
+			+'<p><font class="w g">$result_07</font> <font class="p">→</font> <font class="r">5</font></p>'
+			+'<p><font class="w g">$result_08</font> <font class="p">→</font> <font class="r">4</font></p>'
+			+'<p><font class="w g">$result_09</font> <font class="p">→</font> <font class="r">5</font></p>');
+	});
+//【运算符】【赋值运算】
+	$('#test_operator_03').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="g">$a</font> = <font class="r">5</font></p>'
+			+'<p><font class="g">$b</font> = <font class="r">\'hello\'</font></p>'
+			+'<p><font class="w g">$result_01</font> <font class="w b">=</font> <font class="g">$a</font></p>'
+			+'<p><font class="w g">$result_02</font> = <font class="g">$a</font> <font class="w b">+=</font> <font class="r">2</font></p>'
+			+'<p><font class="w g">$result_03</font> = <font class="g">$a</font> <font class="w b">-=</font> <font class="r">2</font></p>'
+			+'<p><font class="w g">$result_04</font> = <font class="g">$a</font> <font class="w b">*=</font> <font class="r">2</font></p>'
+			+'<p><font class="w g">$result_05</font> = <font class="g">$a</font> <font class="w b">/=</font> <font class="r">2</font></p>'
+			+'<p><font class="w g">$result_06</font> = <font class="g">$a</font> <font class="w b">%=</font> <font class="r">2</font></p>'
+			+'<p><font class="w g">$result_07</font> = <font class="g">$b</font> <font class="w b">.=</font> <font class="r">\' world\'</font></p>');
+		PC_Case.show(2,
+			'<p><font class="w g">$result_01</font> <font class="p">→</font> <font class="r">5</font></p>'
+			+'<p><font class="w g">$result_02</font> <font class="p">→</font> <font class="r">7</font></p>'
+			+'<p><font class="w g">$result_03</font> <font class="p">→</font> <font class="r">3</font></p>'
+			+'<p><font class="w g">$result_04</font> <font class="p">→</font> <font class="r">10</font></p>'
+			+'<p><font class="w g">$result_05</font> <font class="p">→</font> <font class="r">2.5</font></p>'
+			+'<p><font class="w g">$result_06</font> <font class="p">→</font> <font class="r">1</font></p>'
+			+'<p><font class="w g">$result_07</font> <font class="p">→</font> <font class="r">hello world</font></p>');
+	});
+//【运算符】【比较运算】
+	$('#test_operator_04').live('click',function(){
+		PC_Case.show(1,
+			+'<p><font class="w g">$result_01</font> = <font class="r">5</font> <font class="w b">></font> <font class="r">2</font></p>'
+			+'<p><font class="w g">$result_02</font> = <font class="r">5</font> <font class="w b"><</font> <font class="r">2</font></p>'
+			+'<p><font class="w g">$result_03</font> = <font class="r">5</font> <font class="w b">>=</font> <font class="r">5</font></p>'
+			+'<p><font class="w g">$result_04</font> = <font class="r">5</font> <font class="w b"><=</font> <font class="r">5</font></p>'
+			+'<p><font class="w g">$result_05</font> = <font class="r">5</font> <font class="w b">==</font> <font class="r">\'5\'</font></p>'
+			+'<p><font class="w g">$result_06</font> = <font class="r">5</font> <font class="w b">!=</font> <font class="r">\'5\'</font></p>'
+			+'<p><font class="w g">$result_07</font> = <font class="r">5</font> <font class="w b">===</font> <font class="r">\'5\'</font></p>'
+			+'<p><font class="w g">$result_08</font> = <font class="r">5</font> <font class="w b">!==</font> <font class="r">\'5\'</font></p>');
+		PC_Case.show(2,
+			'<p><font class="w g">$result_01</font> <font class="p">→</font> <font class="w r">true</font></p>'
+			+'<p><font class="w g">$result_02</font> <font class="p">→</font> <font class="w r">false</font></p>'
+			+'<p><font class="w g">$result_03</font> <font class="p">→</font> <font class="w r">true</font></p>'
+			+'<p><font class="w g">$result_04</font> <font class="p">→</font> <font class="w r">true</font></p>'
+			+'<p><font class="w g">$result_05</font> <font class="p">→</font> <font class="w r">true</font></p>'
+			+'<p><font class="w g">$result_06</font> <font class="p">→</font> <font class="w r">false</font></p>'
+			+'<p><font class="w g">$result_07</font> <font class="p">→</font> <font class="w r">false</font></p>'
+			+'<p><font class="w g">$result_08</font> <font class="p">→</font> <font class="w r">true</font></p>');
+	});
+//【运算符】【逻辑运算】
+	$('#test_operator_05').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w g">$result_01</font> = <font class="w r">true</font> <font class="w b">&&</font> <font class="w r">true</font></p>'
+			+'<p><font class="w g">$result_02</font> = <font class="w r">true</font> <font class="w b">&&</font> <font class="w r">false</font></p>'
+			+'<p><font class="w g">$result_03</font> = <font class="w r">true</font> <font class="w b">||</font> <font class="w r">true</font></p>'
+			+'<p><font class="w g">$result_04</font> = <font class="w r">true</font> <font class="w b">||</font> <font class="w r">false</font></p>'
+			+'<p><font class="w g">$result_05</font> = <font class="w b">!</font> <font class="w r">true</font></p>'
+			+'<p><font class="w g">$result_06</font> = <font class="w r">true</font> <font class="w b">xor</font> <font class="w r">false</font></p>'
+			+'<p><font class="w g">$result_07</font> = <font class="w r">true</font> <font class="w b">xor</font> <font class="w r">true</font></p>'
+			+'<p><font class="w g">$result_08</font> = <font class="w r">false</font> <font class="w b">xor</font> <font class="w r">false</font></p>');
+		PC_Case.show(2,
+			'<p><font class="w g">$result_01</font> <font class="p">→</font> <font class="w r">true</font></p>'
+			+'<p><font class="w g">$result_02</font> <font class="p">→</font> <font class="w r">false</font></p>'
+			+'<p><font class="w g">$result_03</font> <font class="p">→</font> <font class="w r">true</font></p>'
+			+'<p><font class="w g">$result_04</font> <font class="p">→</font> <font class="w r">true</font></p>'
+			+'<p><font class="w g">$result_05</font> <font class="p">→</font> <font class="w r">false</font></p>'
+			+'<p><font class="w g">$result_06</font> <font class="p">→</font> <font class="w r">true</font></p>'
+			+'<p><font class="w g">$result_07</font> <font class="p">→</font> <font class="w r">false</font></p>'
+			+'<p><font class="w g">$result_08</font> <font class="p">→</font> <font class="w r">false</font></p>');
+	});
+//【运算符】【三元运算】
+	$('#test_operator_06').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w g">$result_01</font> = <font class="r">1</font> < <font class="r">2</font> <font class="w b">?</font> <font class="r">\'正确\'</font> <font class="w b">:</font> <font class="r">\'错误\'</font></p>'
+			+'<p><font class="w g">$result_02</font> = <font class="r">1</font> > <font class="r">2</font> <font class="w b">?</font> <font class="r">\'正确\'</font> <font class="w b">:</font> <font class="r">\'错误\'</font></p>');
+		PC_Case.show(2,
+			'<p><font class="w g">$result_01</font> <font class="p">→</font> <font class="r">正确</font></p>'
+			+'<p><font class="w g">$result_02</font> <font class="p">→</font> <font class="r">错误</font></p>');
+	});
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+//【变量】【声明变量】
+	$('#test_var').live('click',function(){
+		PC_Case.show(1,'<p><font class="w g">$result</font> = <font class="r">\'helo world\'</font></p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="r">helo world</font></p>');
+	});
+//【变量】【删除变量】
+	$('#test_unset').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="g">$a</font> = <font class="r">\'helo world\'</font></p>'
+			+'<p><font class="w g">$result</font> = <font class="w b">unset</font>( <font class="g">$a</font> )</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="o">错误！</font></p>');
+	});
+//【变量】【检测变量是否赋值】
+	$('#test_isset').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="g">$a</font> = <font class="r">\'helo world\'</font></p>'
+			+'<p><font class="w g">$result</font> = <font class="w b">isset</font>( <font class="g">$a</font> )</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="w r">true</font></p>');
+	});
+//【变量】【检测变量是否为空】
+	$('#test_empty').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w g">$result_01</font> = <font class="w b">empty</font>( <font class="w g">$int</font> = <font class="r">0</font> )</p>'
+			+'<p><font class="w g">$result_02</font> = <font class="w b">empty</font>( <font class="w g">$float</font> = <font class="r">0.0</font> )</p>'
+			+'<p><font class="w g">$result_03</font> = <font class="w b">empty</font>( <font class="w g">$string</font> = <font class="r">\'\'</font> )</p>'
+			+'<p><font class="w g">$result_04</font> = <font class="w b">empty</font>( <font class="w g">$string</font> = <font class="r">\'0\'</font> )</p>'
+			+'<p><font class="w g">$result_05</font> = <font class="w b">empty</font>( <font class="w g">$bool</font> = <font class="w r">false</font> )</p>'
+			+'<p><font class="w g">$result_06</font> = <font class="w b">empty</font>( <font class="w g">$array</font> = <font class="w b">array</font>( ) )</p>'
+			+'<p><font class="w g">$result_07</font> = <font class="w b">empty</font>( <font class="w g">$null</font> = <font class="w r">null</font> )</p>');
+		PC_Case.show(2,
+			'<p><font class="w g">$result_01</font> <font class="p">→</font> <font class="w r">true</font></p>'
+			+'<p><font class="w g">$result_02</font> <font class="p">→</font> <font class="w r">true</font></p>'
+			+'<p><font class="w g">$result_03</font> <font class="p">→</font> <font class="w r">true</font></p>'
+			+'<p><font class="w g">$result_04</font> <font class="p">→</font> <font class="w r">true</font></p>'
+			+'<p><font class="w g">$result_05</font> <font class="p">→</font> <font class="w r">true</font></p>'
+			+'<p><font class="w g">$result_06</font> <font class="p">→</font> <font class="w r">true</font></p>'
+			+'<p><font class="w g">$result_07</font> <font class="p">→</font> <font class="w r">true</font></p>');
+	});
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+//【函数】【一般函数】
+	$('#test_function_01').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">function</font> <font class="g">demo</font>( <font class="g">$a</font> , <font class="g">$b</font> , <font class="g">$c</font> ){</p>'
+			+'<p class="ti_1"><font class="w b">echo</font> <font class="g">$a</font>.\'<font class="r">-</font>\'.<font class="g">$b</font>.\' \'.<font class="g">$c</font></p>'
+			+'<p>}</p>'
+			+'<p><font class="w g">$result</font> = <font class="g">demo</font>( <font class="r">\'hello\'</font> , <font class="r">\'world\'</font> , <font class="r">\'!\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="r">\'hello-world !\'</font></p>');
+	});
+//【函数】【变量函数】
+	$('#test_function_02').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">function</font> <font class="g">demo</font>( <font class="g">$a</font> ){</p>'
+			+'<p class="ti_1"><font class="w b">echo</font> <font class="g">$a</font></p>'
+			+'<p>}</p>'
+			+'<p><font class="w b">$b</font> = \'<font class="g">demo</font>\'</p>'
+			+'<p><font class="w g">$result</font> = <font class="w b">$b</font>( <font class="r">\'hello world !\'</font> )');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="r">\'hello world !\'</font></p>');
+	});
+//【函数】【回调函数】
+	$('#test_function_03').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">function</font> <font class="g">func1</font>( <font class="g">$a</font> ){</p>'
+			+'<p class="ti_1"><font class="w b">echo</font> <font class="g">$a</font></p>'
+			+'<p>}</p>'
+			+'<p><font class="w b">function</font> <font class="g">func2</font>( <font class="g">$b</font> ){</p>'
+			+'<p class="ti_1"><font class="w b">echo</font> <font class="g">$b</font>( <font class="r">\'hello world !\'</font> )</p>'
+			+'<p>}</p>'
+			+'<p><font class="w g">$result</font> = <font class="g">func2</font>( \'<font class="g">func1</font>\' )');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="r">\'hello world !\'</font></p>');
+	});
+//【函数】【内部函数】
+	$('#test_function_04').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">function</font> <font class="g">outer</font>( ){</p>'
+			+'<p class="ti_1 td"><font class="w g">$result</font> = <font class="g">inner</font>( )</p>'
+			+'<p class="ti_1"><font class="w b">function</font> <font class="g">inner</font>( ){</p>'
+			+'<p class="ti_2"><font class="w b">echo</font> <font class="r">\'hello world !\'</font></p>'
+			+'<p class="ti_1">}</p>'
+			+'<p class="ti_1"><font class="w g">$result</font> = <font class="g">inner</font>( )</p>'
+			+'<p>}</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="r">\'hello world !\'</font></p>');
+	});
+//【函数】【匿名函数】
+	$('#test_function_05').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="g">$a</font> = <font class="w b">function</font>( ){</p>'
+			+'<p class="ti_1"><font class="w b">echo</font> <font class="r">\'hello world !\'</font></p>'
+			+'<p>}</p>'
+			+'<p><font class="w g">$result</font> = <font class="g">$a</font>( )</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="r">\'hello world !\'</font></p>');
+	});
+//【函数】【闭包函数】
+	$('#test_function_06').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">function</font> <font class="g">father</font>( ){</p>'
+			+'<p class="ti_1"><font class="g">$a</font> = <font class="r">\'hello world !\'</font></p>'
+			+'<p class="ti_1"><font class="g">$son</font> = <font class="w b">function</font>( ) <font class="w b">use</font>( <font class="g">$a</font> ){</p>'
+			+'<p class="ti_2"><font class="w b">echo</font> <font class="g">$a</font></p>'
+			+'<p class="ti_1">}</p>'
+			+'<p class="ti_1"><font class="g">$son</font>( )</p>'
+			+'<p>}</p>'
+			+'<p><font class="w g">$result</font> = <font class="g">father</font>( )</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="r">\'hello world !\'</font></p>');
+	});
+//【函数】【递归函数】
+	$('#test_function_07').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">function</font> <font class="g">demo</font>( ){</p>'
+			+'<p class="ti_1"><font class="w b">static</font> <font class="g">$a</font> = <font class="r">0</font></p>'
+			+'<p class="ti_1"><font class="w b">if</font>( <font class="g">$a++</font> < <font class="r">10</font> ){</p>'
+			+'<p class="ti_2"><font class="w b">echo</font> <font class="g">$a</font></p>'
+			+'<p class="ti_2"><font class="g">demo</font>( )</p>'
+			+'<p class="ti_1">}</p>'
+			+'<p>}</p>'
+			+'<p><font class="w g">$result</font> = <font class="g">demo</font>( )</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="r">\'12345678910\'</font></p>');
+	});
+//【参数】【调用全局变量】
+	$('#test_param_01').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="g">$a</font> = <font class="r">\'one\'</font></p>'
+			+'<p><font class="w b">function</font> <font class="g">demo</font>( <font class="g">$a</font> ){</p>'
+			+'<p class="ti_1"><font class="g">$a</font> = <font class="r">\'two\'</font></p>'
+			+'<p>}</p>'
+			+'<p><font class="g">demo</font>( <font class="g">$a</font> )</p>'
+			+'<p><font class="w g">$result</font> = <font class="g">$a</font></p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="r">\'one\'</font></p>');
+	});
+//【参数】【调用全局变量】
+	$('#test_param_02').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="g">$a</font> = <font class="r">\'one\'</font></p>'
+			+'<p><font class="w b">function</font> <font class="g">demo</font>( <font class="w b">&</font><font class="g">$a</font> ){</p>'
+			+'<p class="ti_1"><font class="g">$a</font> = <font class="r">\'two\'</font></p>'
+			+'<p>}</p>'
+			+'<p><font class="g">demo</font>( <font class="g">$a</font> )</p>'
+			+'<p><font class="w g">$result</font> = <font class="g">$a</font></p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="r">\'two\'</font></p>');
+	});
+//【函数体】【调用全局变量】
+	$('#test_global').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="g">$a</font> = <font class="r">\'one\'</font></p>'
+			+'<p><font class="w b">function</font> <font class="g">demo</font>( ){</p>'
+			+'<p class="ti_1"><font class="w b">global</font> <font class="g">$a</font></p>'
+			+'<p class="ti_1"><font class="g">$a</font> = <font class="r">\'two\'</font></p>'
+			+'<p>}</p>'
+			+'<p><font class="g">demo</font>( )</p>'
+			+'<p><font class="w g">$result</font> = <font class="g">$a</font></p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="r">\'two\'</font></p>');
+	});
+//【函数体】【调用全局变量】
+	$('#test_globals').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="g">$a</font> = <font class="r">\'one\'</font></p>'
+			+'<p><font class="w b">function</font> <font class="g">demo</font>( ){</p>'
+			+'<p class="ti_1"><font class="w b">$GLOBALS</font>[ \'<font class="r">a</font>\' ] = <font class="r">\'two\'</font></p>'
+			+'<p>}</p>'
+			+'<p><font class="g">demo</font>( )</p>'
+			+'<p><font class="w g">$result</font> = <font class="g">$a</font></p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="r">\'one\'</font></p>');
+	});
+//【函数体】【返回值】
+	$('#test_return').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">function</font> <font class="g">demo</font>( ){</p>'
+			+'<p class="ti_1"><font class="w b">return</font> <font class="r">\'hello world !\'</font></p>'
+			+'<p>}</p>'
+			+'<p><font class="w g">$result</font> = <font class="g">demo</font>( )</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="r">\'hello world !\'</font></p>');
+	});
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+//【常量】【声明】
+	$('#test_define').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">define</font>( <font class="w g">\'HL\'</font> , <font class="r">\'hello world\'</font> , <font class="w r">true</font> )</p>');
+		PC_Case.show(2,'<p><font class="w g">HL</font> <font class="p">→</font> <font class="r">\'hello world\'</font></p>');
+	});
+//【常量】【声明】
+	$('#test_const').live('click',function(){
+		PC_Case.show(1,'<p><font class="w b">const</font> <font class="w g">HL</font> = <font class="r">\'hello world\'</font></p>');
+		PC_Case.show(2,'<p><font class="w g">HL</font> <font class="p">→</font> <font class="r">\'hello world\'</font></p>');
+	});
+//【常量】【魔术常量】
+	$('#test_file').live('click',function(){
+		PC_Case.show(1,'<p><font class="w g">$result</font> = <font class="w b">__FILE__</font></p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="gr">String</font> <font class="r">E:\\tools\\xpath-server\\webapps\\test.php</font></p>');
+	});
+//【常量】【魔术常量】
+	$('#test_line').live('click',function(){
+		PC_Case.show(1,'<p><font class="w g">$result</font> = <font class="w b">__LINE__</font></p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="gr">int</font> <font class="r">3</font></p>');
+	});
+//【常量】【魔术常量】
+	$('#test_function').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">function</font> <font class="g">func</font>(){</p>'
+				+'<p class="ti_1"><font class="w g">$result</font> = <font class="w b">__FUNCTION__</font></p>'
+			+'<p>}</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="gr">String</font> <font class="r">func</font></p>');
+	});
+//【常量】【魔术常量】
+	$('#test_class').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">class</font> <font class="g">demo</font>{</p>'
+				+'<p class="ti_1"><font class="w b">public</font> <font class="w g">$result</font> = <font class="w b">__CLASS__</font></p>'
+			+'<p>}</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="gr">String</font> <font class="r">demo</font></p>');
+	});
+//【常量】【魔术常量】
+	$('#test_method').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">class</font> <font class="g">demo</font>{</p>'
+				+'<p class="ti_1"><font class="w b">public function</font> <font class="g">func</font>(){</p>'
+					+'<p class="ti_2"><font class="w g">$result</font> = <font class="w b">__METHOD__</font></p>'
+				+'<p class="ti_1">}</p>'
+			+'<p>}</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="gr">String</font> <font class="r">demo::func</font></p>');
+	});
+//【常量】【获取指定常量的值】
+	$('#test_constant').live('click',function(){
+		PC_Case.show(1,
+			'<p><font class="w b">define</font>( <font class="g">\'HL\'</font> , <font class="r">\'hello world\'</font> , <font class="w r">true</font> )</p>'
+			+'<p><font class="w g">$result</font> = <font class="w b">constant</font>( <font class="g">\'HL\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="r">\'hello world\'</font></p>');
+	});
+//【常量】【获取当前系统所有常量】
+	$('#test_get_defined_constants').live('click',function(){
+		PC_Case.show(1,'<p><font class="w g">$result</font> = <font class="w b">get_defined_constants</font>( )</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="w b">array</font>( <font class="o">系统默认常量</font> )</p>');
+	});
+//【常量】【检测常量是否被定义】
+	$('#test_defined').live('click',function(){
+		PC_Case.show(1,'<p><font class="w g">$result</font> = <font class="w b">defined</font>( <font class="g">\'HL\'</font> )</p>');
+		PC_Case.show(2,'<p><font class="w g">$result</font> <font class="p">→</font> <font class="gr">Boolean</font> <font class="w r">false</font></p>');
+	});
+
+});
+</script>

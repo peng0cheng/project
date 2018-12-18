@@ -1,0 +1,242 @@
+<table class="i_table">
+	<tr onclick="" title="
+		&#10;选项：-a → 查看所有连接和监听端口
+		&#10;选项：-n → 显示IP地址和端口号 而不显示域名和服务名
+		&#10;选项：-l → 仅列出在监听状态的网络服务
+		&#10;选项：-t → 列出 TCP 协议端口
+		&#10;选项：-u → 列出 UDP 协议端口
+		&#10;常用选项：-tlun → 主要监测我开了哪些端口和服务
+		&#10;常用选项：-an → 主要监测有谁连接到我的服务器上
+		&#10;常用选项：-rn → 列出路由列表 功能和 route 命令一致
+		&#10;--------------------------------------------------
+		&#10;参数：Proto → 协议名称（[TCP] [UDP]）
+		&#10;参数：Recv-Q → 接收数据包队列（数值越大网络状况越差）
+		&#10;参数：Send-Q → 发送数据包队列（数值越大网络状况越差）
+		&#10;参数：Local Address → 本地IP状态（表示我发出了哪些连接 由 IP 地址和端口号组成）
+		&#10;参数：Foreign Address → 被连接状态（表示是谁连接到了我 由 IP 地址和端口号组成）
+		&#10;参数：State → 状态（[LISTEN 监听] [ESTABLISHED 连接已存在]）">
+		<td>【基本命令】【查看网络状态】</td>
+		<td><p><font class="w b">netstat</font> <font class="w g">[选项]</font></p></td>
+	</tr>
+	<tr onclick="" title="">
+		<td>【基本命令】【网卡关闭】</td>
+		<td><p><font class="w b">ifdown</font> <font class="r">网卡</font></p></td>
+	</tr>
+	<tr onclick="" title="">
+		<td>【基本命令】【网卡开启】</td>
+		<td><p><font class="w b">ifup</font> <font class="r">网卡</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;可以使用 service network restart">
+		<td>【基本命令】【网卡重启】【CentOS】</td>
+		<td><p><font class="w r">/etc/rc.d/init.d/network</font> <font class="w b">restart</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;可以使用 service networking restart">
+		<td>【基本命令】【网卡重启】【Ubuntu】</td>
+		<td><p><font class="w r">/etc/init.d/networking</font> <font class="w b">restart</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="
+		&#10;查看已经生效的 IP
+		&#10;--------------------------------------------------
+		&#10;参数：eth0丨wlan0 → 网卡名称
+		&#10;参数：link encap → 网络类型
+		&#10;参数：HWaddr → 网卡物理地址
+		&#10;参数：Inet addr → IP地址
+		&#10;参数：Bcast → 广播地址
+		&#10;参数：Mask → 子网掩码
+		&#10;参数：UP → 正在使用的网络接口
+		&#10;参数：RX packets → 接收的数据包个数
+		&#10;参数：TX packets → 传输的数据包个数
+		&#10;参数：RX byte → 表示接收的具体数目
+		&#10;参数：TX byte → 表示传输的具体数目
+		&#10;参数：Interrupt → 终端信息
+		&#10;参数：Base address → 内存地址">
+		<td>【网络设置】【网卡】【查看】</td>
+		<td><p><font class="w b">ifconfig</font></p></td>
+	</tr>
+	<tr onclick="test_ifcfgeth()" title="
+		&#10;永久设置指定网卡的详细配置
+		&#10;网卡对应的文件通常是 ifcfg-eth0 如果有第二块网卡 则对应 ifcfg-eth1 无线网卡对应 ifcfg-wlan0
+		&#10;--------------------------------------------------
+		&#10;编缉：DEVICE → 网卡设备名 与文件名对应
+		&#10;编缉：BOOTPROTO → 是否自动获取 IP（[none 不自动获取] [static 静态] [dhcp 自动获取]）
+		&#10;编缉：HWADDR → MAC 地址
+		&#10;编缉：NB_CONTROLLED → 是否可以由 Network Manager 图形管理工具托管（[yes] [no]）
+		&#10;编缉：ONBOOT → 是否随网络服务启动（[yes] [no]）
+		&#10;编缉：TYPE → 网络类型（[Ethernet 以太网]）
+		&#10;编缉：UUID → 唯一识别码
+		&#10;编缉：IPADDR → IP 地址
+		&#10;编缉：NETMASK → 子网掩码
+		&#10;编缉：GETEWAY → 网关
+		&#10;编缉：DNS1 → DNS
+		&#10;编缉：IPV6INIT → IPv6 是否启用（[yes] [no]）
+		&#10;编缉：USERCTL → 是否允许非 root 用户控制此网卡（[yes] [no]）">
+		<td>【网络设置】【网卡】【配置文件】【CentOS】</td>
+		<td><p><font class="w b">vi</font> <font class="w r">/etc/sysconfig/network-scripts/ifcfg-eth0</font></p></td>
+	</tr>
+	<tr onclick="test_interfaces()" title="
+		&#10;永久设置指定网卡的详细配置
+		&#10;Ubuntu 对无线连接支持不好 不建议使用 wlan 方式连网
+		&#10;--------------------------------------------------
+		&#10;编缉：auto 网卡名 → 添加网卡（通常是 eth0 wlan0）
+		&#10;编缉：iface 网卡名 inet 连接方式（通常是 [dhcp 动态] [static 静态]）
+		&#10;--------------------------------------------------
+		&#10;如果是 static 需要在下方添加地址 网关 子网掩码
+		&#10;address xxx.xxx.xxx.xxx
+		&#10;gateway xxx.xxx.xxx.xxx
+		&#10;netmask xxx.xxx.xxx.xxx">
+		<td>【网络设置】【网卡】【配置文件】【Ubuntu】</td>
+		<td><p><font class="w b">vi</font> <font class="w r">/etc/network/interfaces</font></p></td>
+	</tr>
+	<tr onclick="" title="">
+		<td>【网络设置】【DNS】【查看】【Windows】</td>
+		<td><p><font class="w b">nslookup</font> <font class="r">网络地址</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;编缉：NAMESERVER → 名称服务器 是 DNS 的地址 可以增加 用空格隔开
+		&#10;编缉：SEARCH → 默认域名">
+		<td>【网络设置】【DNS】【配置文件】【CentOS】</td>
+		<td><p><font class="w b">vi</font> <font class="w r">/etc/resolv.conf</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;选项：-n → 用 IP 的形式表示">
+		<td>【网络设置】【网关】【查看】</td>
+		<td><p><font class="w b">route</font> <font class="w g">[选项]</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;查看防火墙状态：/etc/init.d/iptables status
+		&#10;本次关闭防火墙：/etc/init.d/iptables stop
+		&#10;重启防火墙：/etc/init.d/iptables restart
+		&#10;永久性关闭防火墙：chkconfig --level 35 iptables off">
+		<td>【网络设置】【防火墙】【配置文件】【CentOS】</td>
+		<td><p><font class="w b">vi</font> <font class="w r">/etc/init.d/iptables</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;如果要开启指定端口 如 80 3306 等 需要在默认的 22 端口下复制一行内容并修改
+		&#10;--------------------------------------------------
+		&#10;开放指定端口例：
+		&#10;-A INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT
+		&#10;-A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
+		&#10;-A INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT
+		&#10;--------------------------------------------------
+		&#10;永久关闭防火墙的方法
+		&#10;添加一行：-A RH-Firewall-1-INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT">
+		<td>【网络设置】【防火墙开放端口】【配置文件】【CentOS】</td>
+		<td><p><font class="w b">vi</font> <font class="w r">/etc/sysconfig/iptables</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;通常需要关闭 SELINUX 功能
+		&#10;--------------------------------------------------
+		&#10;关闭 SELINUX 方法：
+		&#10;#SELINUX=enforcing #注释掉
+		&#10;#SELINUXTYPE=targeted #注释掉
+		&#10;SELINUX=disabled #增加">
+		<td>【网络设置】【SELINUX】【配置文件】【CentOS】</td>
+		<td><p><font class="w b">vi</font> <font class="w r">/etc/selinux/config</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="">
+		<td>【主机设置】【查看】</td>
+		<td><p><font class="w b">hostname</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;临时设置主机名
+		&#10;重启后失效">
+		<td>【主机设置】【临时修改】</td>
+		<td><p><font class="w b">hostname</font> <font class="r">主机名</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;编缉：NETWORKING → 网络是否开启（[yes] [no]）
+		&#10;编缉：HOSTNAME → 主机名">
+		<td>【主机设置】【配置文件】【CentOS】</td>
+		<td><p><font class="w b">vi</font> <font class="w r">/etc/sysconfig/network</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;修改主机名称">
+		<td>【主机设置】【配置文件】【Ubuntu】</td>
+		<td><p><font class="w b">vi</font> <font class="w r">/etc/hostname</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="" title="
+		&#10;探测与目标地址的网络是否通畅
+		&#10;有些网站会禁止 ping 命令
+		&#10;--------------------------------------------------
+		&#10;选项：-c → 设置 ping 的次数 后面跟数值 用空格隔开">
+		<td>【网络测试】【网络探测】</td>
+		<td><p><font class="w b">ping</font> <font class="r">IP地址或网址</font> <font class="w g">[选项]</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;探测目标端口是否可用">
+		<td>【网络测试】【端口探测】</td>
+		<td><p><font class="w b">telnet</font> <font class="r">IP地址或网址</font> <font class="r">端口号</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;探测到达目标网站经过的路由">
+		<td>【网络测试】【路由探测】</td>
+		<td><p><font class="w b">traceroute</font> <font class="r">IP地址或网址</font> <font class="r">端口号</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;探测无线网卡能搜索到的无线信号
+		&#10;网卡通常是 wlan0">
+		<td>【网络测试】【wifi探测】【Ubuntu】</td>
+		<td><p><font class="w b">iwlist</font> <font class="r">网卡</font> <font class="w b">scanning</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;从目标地址下载文件">
+		<td>【网络下载】</td>
+		<td><p><font class="w b">wget</font> <font class="r">文件地址</font></p></td>
+	</tr>
+	<tr onclick="" title="
+		&#10;从目标地址抓取数据包
+		&#10;--------------------------------------------------
+		&#10;选项1：-i → 指定网卡接口
+		&#10;--------------------------------------------------
+		&#10;选项2：-nn → 将数据包中的域名与服务转为 IP 和端口
+		&#10;选项2：-X → 以十六进制和ASCII码显示数据包内容
+		&#10;常用选项2：-nnX → 人性化显示">
+		<td>【网络抓包】</td>
+		<td><p><font class="w b">tcpdump</font> <font class="w g">选项1</font> <font class="r">网卡</font> <font class="w g">[选项2]</font> <font class="w b">port</font> <font class="r">端口号</font></p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【网络】**************************************************/
+
+function test_ipconfig_netmask(){
+	PC_Case.show(3,'<p><font class="b">ipconfig</font> <font class="r">eth0 192.168.0.200</font> <font class="b">netmask</font> <font class="r">255.255.255.0</font></p>');
+}
+
+function test_ifcfgeth(){
+	PC_Case.show(3,
+		'<p>DEVICE=eth0</p>'
+		+'<p>BOOTPROTO=none</p>'
+		+'<p>HWADDR=00:0c:29:17:c4:09</p>'
+		+'<p>NB_CONTROLLED=yes</p>'
+		+'<p>ONBOOT=yes</p>'
+		+'<p>TYPE=Ethernet</p>'
+		+'<p>UUID=44b76c8a-b59f-44d5-83fa-7f98fda86b3d</p>'
+		+'<p>IPADDR=192.168.0.252</p>'
+		+'<p>NETMASK=255.255.255.0</p>'
+		+'<p>GETEWAY=192.168.0.1</p>'
+		+'<p>DNS1=202.106.0.20</p>'
+		+'<p>IPV6INIT=no</p>'
+		+'<p>USERCTL=no</p>');
+}
+
+function test_interfaces(){
+	PC_Case.show(3,
+		'<p>auto lo</p>'
+		+'<p>iface lo inet loopback</p>'
+		+'<p><br /></p>'
+		+'<p>auto eth0</p>'
+		+'<p>iface eth0 inet dhcp</p>');
+}
+
+/**************************************************【主机】**************************************************/
+
+
+
+/**************************************************【】**************************************************/
+</script>

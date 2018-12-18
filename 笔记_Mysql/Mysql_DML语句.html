@@ -1,0 +1,99 @@
+<table class="i_table">
+	<tr title="指定字段增加一个数据">
+		<td>【增加数据】</td>
+		<td><p><font class="w b">INSERT INTO</font> <font class="g">表名</font>(<font class="g">字段,字段...</font>) <font class="w b">VALUES</font>(<font class="g">值,值...</font>)</p></td>
+	</tr>
+	<tr title="指定字段增加多个数据">
+		<td>【增加数据】</td>
+		<td><p><font class="w b">INSERT INTO</font> <font class="g">表名</font>(<font class="g">字段,字段...</font>) <font class="w b">VALUES</font>(<font class="g">值,值...</font>),(<font class="g">值,值...</font>)<font class="g">...</font></p></td>
+	</tr>
+	<tr title="默认字段增加一个数据">
+		<td>【增加数据】</td>
+		<td><p><font class="w b">INSERT INTO</font> <font class="g">表名</font> <font class="w b">VALUES</font>(<font class="g">值,值...</font>)</p></td>
+	</tr>
+	<tr title="默认字段增加多个数据">
+		<td>【增加数据】</td>
+		<td><p><font class="w b">INSERT INTO</font> <font class="g">表名</font> <font class="w b">VALUES</font>(<font class="g">值,值...</font>),(<font class="g">值,值<font class="g">...</font>)<font class="g">...</font></font></p></td>
+	</tr>
+	<tr title="">
+		<td>【删除数据】</td>
+		<td><p><font class="w b">DELETE FROM</font> <font class="g">表名</font> <font class="o">判断条件 排序条件 限制条件</font></p></td>
+	</tr>
+	<tr title="">
+		<td>【修改数据】</td>
+		<td><p><font class="w b">UPDATE</font> <font class="g">表名</font> <font class="w b">SET</font> <font class="g">字段名</font>=<font class="g">新值</font>,<font class="g">字段名</font>=<font class="g">新值...</font> <font class="o">判断条件 排序条件 限制条件</font></p></td>
+	</tr>
+	<tr title="查询所有数据">
+		<td>【查询数据】</td>
+		<td><p><font class="w b">SELECT * FROM</font> <font class="g">表名</font> <font class="o">判断条件 排序条件 限制条件</font></p></td>
+	</tr>
+	<tr title="查询指定字段名下所有数据">
+		<td>【查询数据】</td>
+		<td><p><font class="w b">SELECT</font> <font class="g">字段名</font>,<font class="g">字段名...</font> <font class="w b">FROM</font> <font class="g">表名</font> <font class="o">判断条件 排序条件 限制条件</font></p></td>
+	</tr>
+	<tr title="查询所有数据 并过滤重复的行 保留第一个重复的行">
+		<td>【查询数据】</td>
+		<td><p><font class="w b">SELECT distinct * FROM</font> <font class="g">表名</font> <font class="o">判断条件 排序条件 限制条件</font></p></td>
+	</tr>
+	<tr title="查询指定字段名下所有数据 并过滤重复的行 保留第一个重复的行">
+		<td>【查询数据】</td>
+		<td><p><font class="w b">SELECT distinct</font>(<font class="g">字段名</font>) <font class="w b">FROM</font> <font class="g">表名</font> <font class="o">判断条件 排序条件 限制条件</font></p></td>
+	</tr>
+	<tr title="分组排序查询 并添加聚合函数计算数据">
+		<td>【查询数据】</td>
+		<td><p><font class="w b">SELECT</font> <font class="g">字段名</font>,<font class="g">字段名</font>,<font class="g">...</font>,<font class="w b">count</font>(<font class="g">字段名</font>) <font class="w b">FROM</font> <font class="g">表名</font> <font class="o">排序条件</font></p></td>
+	</tr>
+	<tr title="多表联合查询">
+		<td>【查询数据】</td>
+		<td><p><font class="w b">SELECT</font> <font class="g">表1 字段名</font>,<font class="g">表2 字段名</font>,<font class="g">...</font> <font class="w b">FORM</font> <font class="g">表1</font>,<font class="g">表2</font>,<font class="g">...</font> <font class="o">判断条件 排序条件 限制条件</font></p></td>
+	</tr>
+	<tr class="line">
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr title="指定字段中存在指定值的行 可以使用多种运算符">
+		<td>【判断条件】</td>
+		<td><p><font class="w b">WHERE</font> <font class="g">字段名</font>=<font class="g">值</font></p></td>
+	</tr>
+	<tr title="存在某值的行">
+		<td>【判断条件】</td>
+		<td><p><font class="w b">WHERE</font> <font class="g">字段名</font> <font class="w b">IN</font>(<font class="g">值</font>,<font class="g">值...</font>)</p></td>
+	</tr>
+	<tr title="不存在某值的行">
+		<td>【判断条件】</td>
+		<td><p><font class="w b">WHERE</font> <font class="g">字段名</font> <font class="w b">NOTIN</font>(<font class="g">值</font>,<font class="g">值...</font>)</p></td>
+	</tr>
+	<tr title="指定字段中的值1和值2中间的行">
+		<td>【判断条件】</td>
+		<td><p><font class="w b">WHERE</font> <font class="g">字段名</font> <font class="w b">BETWEEN</font> <font class="g">值1</font> <font class="w b">AND</font> <font class="g">值2</font></p></td>
+	</tr>
+	<tr title="指定字段中满足条件1且满足条件2的">
+		<td>【判断条件】</td>
+		<td><p><font class="w b">WHERE</font> <font class="g">条件值1</font> <font class="w b">AND</font> <font class="g">条件值2</font></p></td>
+	</tr>
+	<tr title="指定字段中满足条件1或条件2的">
+		<td>【判断条件】</td>
+		<td><p><font class="w b">WHERE</font> <font class="g">条件值1</font> <font class="w b">OR</font> <font class="g">条件值2</font></p></td>
+	</tr>
+	<tr title="正则方式">
+		<td>【判断条件】</td>
+		<td><p><font class="w b">WHERE</font> <font class="g">字段名</font> <font class="w b">LIKE</font> <font class="g">%值%</font></p></td>
+	</tr>
+	<tr title="[ASC 升序] [DESC 降序]">
+		<td>【排序条件】</td>
+		<td><p><font class="w b">ORDER BY</font> <font class="g">字段名</font> <font class="w b">ASC丨DESC</font></p></td>
+	</tr>
+	<tr title="如果碰到相同的值 相同值所在行按另一种字段排序">
+		<td>【排序条件】</td>
+		<td><p><font class="w b">ORDER BY</font> <font class="g">字段名1</font> <font class="w b">ASC丨DESC</font>,<font class="g">字段名2</font> <font class="w b">ASC丨DESC</font></p></td>
+	</tr>
+	<tr title="">
+		<td>【限制条件】</td>
+		<td><p><font class="w b">LIMIT</font> <font class="g">个数</font></p></td>
+	</tr>
+	<tr title="">
+		<td>【限制条件】</td>
+		<td><p><font class="w b">LIMIT</font> <font class="g">起始位置</font>,<font class="g">个数</font></p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->

@@ -1,0 +1,204 @@
+<table class="i_table">
+	<tr onclick="test_width()" title="">
+		<td>【尺寸】【宽度】</td>
+		<td><p><font class="w g">width</font> : <font class="r">宽度</font><p></td>
+	<tr onclick="test_minWidth()" title="
+		&#10;超出自动增加">
+		<td>【尺寸】【最小宽度】</td>
+		<td><p><font class="w g">min-width</font> : <font class="r">宽度</font><p></td>
+	</tr>
+	<tr onclick="test_maxWidth()" title="
+		&#10;超出自动溢出">
+		<td>【尺寸】【最大宽度】</td>
+		<td><p><font class="w g">max-width</font> : <font class="r">宽度</font><p></td>
+	</tr>
+	<tr onclick="test_height()" title="">
+		<td>【尺寸】【高度】</td>
+		<td><p><font class="w g">height</font> : <font class="r">高度</font><p></td>
+	</tr>
+	<tr onclick="test_minHeight()" title="
+		&#10;超出自动增加">
+		<td>【尺寸】【最小高度】</td>
+		<td><p><font class="w g">min-height</font> : <font class="r">高度</font><p></td>
+	</tr>
+	<tr onclick="test_maxHeight()" title="
+		&#10;超出自动溢出">
+		<td>【尺寸】【最大高度】</td>
+		<td><p><font class="w g">max-height</font> : <font class="r">高度</font><p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_padding()" title="
+		&#10;边距 → 同时设置四个边的内边距
+		&#10;上距 右距 下距 左距 → 分别设置 上距 右距 下距 左距
+		&#10;上下距 左右距 → 分别设置 上下距 左右距
+		&#10;上距 左右距 下距 → 分别设置 上距 左右距 下距">
+		<td>【边距】【内部】</td>
+		<td><p><font class="w g">padding</font> : <font class="r">边距</font> 丨 <font class="r">上距 右距 下距 左距</font> 丨 <font class="r">上下距 左右距</font> 丨 <font class="r">上距 左右距 下距</font><p></td>
+	</tr>
+	<tr onclick="test_paddingTBLR()" title="
+		&#10;padding-top → 单独设置内部顶边的边距
+		&#10;padding-bottom → 单独设置内部底边的边距
+		&#10;padding-left → 单独设置内部左边的边距
+		&#10;padding-right → 单独设置内部右边的边距">
+		<td>【边距】【内部】</td>
+		<td><p><font class="w g">padding-top</font> 丨 <font class="w g">padding-bottom</font> 丨 <font class="w g">padding-left</font> 丨 <font class="w g">padding-right</font> : <font class="r">边距</font><p></td>
+	</tr>
+	<tr onclick="test_margin()" title="
+		&#10;margin 的父元素必须设置定位
+		&#10;边距 → 同时设置四个边的外边距
+		&#10;上距 右距 下距 左距 → 分别设置 上距 右距 下距 左距
+		&#10;上下距 左右距 → 分别设置 上下距 左右距
+		&#10;上距 左右距 下距 → 分别设置 上距 左右距 下距">
+		<td>【边距】【外部】</td>
+		<td><p><font class="w g">margin</font> : <font class="r">边距</font> 丨 <font class="r">上距 右距 下距 左距</font> 丨 <font class="r">上下距 左右距</font> 丨 <font class="r">上距 左右距 下距</font><p></td>
+	</tr>
+	<tr onclick="test_marginTBLR()" title="
+		&#10;margin 的父元素必须设置定位
+		&#10;margin-top → 单独设置外部顶边的边距
+		&#10;margin-bottom → 单独设置外部底边的边距
+		&#10;margin-left → 单独设置外部左边的边距
+		&#10;margin-right → 单独设置外部右边的边距">
+		<td>【边距】【外部】</td>
+		<td><p><font class="w g">margin-top</font> 丨 <font class="w g">margin-bottom</font> 丨 <font class="w g">margin-left</font> 丨 <font class="w g">margin-right</font> : <font class="r">边距</font><p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【尺寸】**************************************************/
+
+function test_width(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { height: 100px; background: red; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">width:</font> <font class="r">200px;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:200px;height:100px;background:red;"></div>');
+}
+
+function test_minWidth(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { height: 100px; background: red; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">min-width:</font> <font class="r">200px;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="height:100px;min-width:200px;background:red;">##############################</div>');
+}
+
+function test_maxWidth(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { height: 100px; background: red; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">max-width:</font> <font class="r">200px;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="max-width:200px;height:100px;background:red;">##############################</div>');
+}
+
+function test_height(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { width: 100px; background: red; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">height:</font> <font class="r">200px;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="height:200px;width:100px;background:red;"></div>');
+}
+
+function test_minHeight(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { width: 100px; background: red; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">min-height:</font> <font class="r">200px;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="min-height:200px;width:100px;background:red;">#<br>#<br>#<br>#<br>#<br>#<br>#<br>#<br>#<br>#<br>#<br>#<br>#<br>#<br>#<br></div>');
+}
+
+function test_maxHeight(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { width: 100px; background: red; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">max-height:</font> <font class="r">200px;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="max-height:200px;width:100px;background:red;">#<br>#<br>#<br>#<br>#<br>#<br>#<br>#<br>#<br>#<br>#<br>#<br>#<br>#<br>#<br></div>');
+}
+
+/**************************************************【边距】**************************************************/
+
+function test_padding(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">.style_01 { background: blue; width: 100px; height: 100px; }</p>'
+			+'<p class="ti_1">.style_02 { background: green; height: 100%; width: 100%; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { <font class="g">padding:</font> <font class="r">20px 30px 40px 50px;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>"&gt;</p>'
+				+'<p class="ti_2">&lt;div class="style_02"&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="background:blue;width:100px;height:100px;padding:20px 30px 40px 50px;float:left;margin-left:1%;"><div style="background:green;height:100%;width:100%;"></div></div>');
+}
+
+function test_paddingTBLR(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">.style_01 { background: blue; width: 100px; height: 100px; }</p>'
+			+'<p class="ti_1">.style_02 { background: green; height: 100%; width: 100%; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { <font class="g">padding-left:</font> <font class="r">50px;</font> <font class="g">padding-top:</font> <font class="r">50px;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="<font class="b">'+'style_01'+'</font>"&gt;</p>'
+				+'<p class="ti_2">&lt;div class="style_02"&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="background:blue;width:100px;height:100px;padding-left:50px;padding-top:50px;"><div style="background:green;height:100%;width:100%;"></div></div>');
+}
+
+function test_margin(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">.style_01 { background: blue; }</p>'
+			+'<p class="ti_1">.style_02 { background: green; height: 100px; width: 100px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { position: absolute; <font class="g">margin:</font> <font class="r">50px;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="style_01"&gt;</p>'
+				+'<p class="ti_2">&lt;div class="<font class="b">'+'style_02'+'</font>"&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="background:blue;position:absolute"><div style="margin:50px;background:green;width:100px;height:100px;"></div></div>');
+}
+
+function test_marginTBLR(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">.style_01 { background: blue; }</p>'
+			+'<p class="ti_1">.style_02 { background: green; height: 100px; width: 100px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { position: absolute; <font class="g">margin-left:</font> <font class="r">50px;</font> <font class="g">margin-top:</font> <font class="r">50px;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div class="style_01"&gt;</p>'
+				+'<p class="ti_2">&lt;div class="<font class="b">'+'style_02'+'</font>"&gt;&lt;/div&gt;</p>'
+			+'<p class="ti_1">&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="background:blue;position:absolute"><div style="margin-left:50px;margin-top:50px;background:green;width:100px;height:100px;"></div></div>');
+}
+
+/**************************************************【】**************************************************/
+</script>

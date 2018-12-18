@@ -1,0 +1,351 @@
+<meta charset="utf-8" />
+
+<div id="body">
+	<ul>
+		<li>自启动服务</li>
+		<li>
+		<table>
+		<tr>
+			<td>【启动】</td>
+			<td><h3>ntsysv</h3></td>
+			<td>★ 红帽专有命令 进入自启动设置界面</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="电源管理接口如果是笔记本用户建议开启 可以监听内核层的相关电源事件">acpid</h4></td>
+			<td>★ [* 开启]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="系统的定时任务程序 cron 的一个子系统 如果定时任务错过了执行时间 可以通过 anacron 继续唤醒执行">anacron</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="Alsa声卡驱动如果使用 alsa 声卡 开启">alsasound</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="电源管理模块如果支持 acpid 就不需要apmd 可以关闭">apmd</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="指定系统在特定时间执行某个任务 只能执行一次如果需要则开启 但我们一般使用 crond 来进行循环定时任务">atd</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="审核子系统如果开启了此服务 SELinux 的审核信息会写入 /var/log/audit/audit.log 文件 如果不开启 审核信息会记录在 syslog 中">auditd</h4></td>
+			<td>★ [* 开启]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="让服务器可以自动挂载网络中的其他服务器的共享数据 一般用来自动挂载 NFS 服务如果没有 NFS 服务建议关闭">autofs</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="Avahi 是 zeroconf 协议的实现它可以在没有 DNS 服务的局域网里发现基于 zeroconf 协议的设备和服务除非有兼容设备或使用 zeroconf 协议 否则关闭">avahi-daemon</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="蓝牙设备支持一般不会在服务器上启用蓝牙设备 关闭它">bluetooth</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="仅对使用 ISND 设备的用户有用">capi</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="使用 UDP 协议的 chargen server 主要功能是提供类似远程打字的功能">chargen-dgram</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="使用UDP协议的 chargen server 主要功能是提供类似远程打字的功能">chargen-stream</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="可以用来调整 CPU 的频率当闲置时可以自动降低CPU频率来节省电量">cpuspeed</h4></td>
+			<td>★ [* 开启]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="系统的定时任务 一般的 Linux 服务器都需要定时任务帮助系统维护建议开启">crond</h4></td>
+			<td>★ [* 开启]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="一个版本控制系统">cvs</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="daytime 使用 TCP 协议的 Daytime 守护进程 该协议为客户机实现从远程服务器获取日期 和时间的功能">daytime-dgram</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="daytime 使用 TCP 协议的 Daytime 守护进程 该协议为客户机实现从远程服务器获取日期 和时间的功能">daytime-stream</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="邮件服务中 POP3/IMAP 服务的守护进程主要用来接收信件 如果启动了邮件服务则开启 否则关闭">dovecot</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="服务器回显客户服务的进程">echo-dgram</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="服务器回显客户服务的进程">echo-stream</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="系统安装完成之后 有个欢迎界面 需要对系统进程初始设定就是这个进程的作用既然不是第一次启动了 关闭吧">firstboot</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="在字符终端（tty1-tty6）中可以使用鼠标复制和粘贴就是这个服务的功能">gpm</h4></td>
+			<td>★ [* 开启]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="检测盒支持 USB 设备如果是服务器可以关闭 个人机建议开启">haldaemon</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="蓝牙鼠标、键盘等蓝牙设备检测必须启动 bluetooth 服务">hidd</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="HP打印机支持 如果没有 HP 打印机关闭吧">hplip</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="httpd apache 服务的守护进程如果需要启动 apache 就开启">httpd</h4></td>
+			<td>★ [* 开启]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="IPv6 的防火墙 目前 IPv6 协议并没有使用 可以关闭">ip6tables</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="防火墙功能 Linux 中防火墙是内核支持功能这是服务器的主要防护手段 必须开启">iptables</h4></td>
+			<td>★ [* 开启]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="IrDA 提供红外线设备（笔记本 PDA’s 手机 计算器等等）间的通讯支持 可以关闭">irda</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="支持多核处理器 让 CPU 可以自动分配系统中断（IRQ） 提高系统性能目前服务器多是多核CPU 请开启">irqbalance</h4></td>
+			<td>★ [* 开启]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="使用 ISDN 设备连接网络目前主流的联网方式是光纤接入和 ADSL ISDN 已经非常少见 请关闭">isdn</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="该服务可以在开机时进行硬件检测 并会调用相关的设置软件建议关闭 仅在需要时开启">kudzu</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="该服务可以让系统支持 LVM 逻辑卷组 如果分区采用的是 LVM 方式 那么应该开启建议开启">lvm2-monitor</h4></td>
+			<td>★ [* 开启]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="SELinux 的支持服务建议启动">mcstrans</h4></td>
+			<td>★ [* 开启]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="该服务用来监测 Software RAID 或 LVM 的信息不是必须服务 建议关闭">mdmonitor</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="该服务用来监测 Multi-Path 设备不是必须服务">mdmpd</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="这是 Linux 的 IPC（Interprocess Communication 进程间通讯）服务 用来在各个软件中交换信息 个人建议关闭">messagebus</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="Intel系列的 CPU 可以通过这个服务支持额外的微指令集">microcode_ctl</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="mysql 数据库服务器如果需要就开启 否则关闭">mysqld</h4></td>
+			<td>★ [* 开启]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="DNS 服务的守护进程 用来进行域名解析如果是 DNS 服务器则开启 否则关闭">named</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="该服务用于在系统启动时自动挂载网络中的共享文件空间 比如 NFS Samba 等等需要就开启 否则关闭">netfs</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="提供网络设置功能通过这个服务来管理网络 所以开启">network</h4></td>
+			<td>★ [* 开启]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="NFS（Network File System）服务 Linux 与 Linux 之间的文件共享服务需要就开启 否则关闭">nfs</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="在 Linux 中如果使用了 NFS 服务 为了避免同一个文件被不同的用户同时编辑 所有有这个锁服务有 NFS 是开启 否则关闭">nfslock</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="该服务可以通过互联网自动更新系统时间 使系统时间永远都准确需要则开启 但不是必须服务">ntpd</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="智能卡检测服务 可以关闭">pcscd</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="用在远程过程调用（RPC）的服务 如果没有任何 RPC 服务时 可以关闭主要是 NFS 和 NIS 服务需要">portmap</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="该守护进程支持几个监控进程活动的工具">psacct</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="客户端 ICMP 路由协议">rdisc</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="在系统开机的时候 先将某些进程加载如内存整理 可以加快一点启动速度">readahead_early</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="在系统开机的时候 先将某些进程加载如内存整理 可以加快一点启动速度">readahead_later</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="用于给 SELinux 监测和重新加载正确的文件上下文如果开启 SELinux 则需要开启">restorecond</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="与 NFS 有关的客户端功能 如果没有 NFS 就关闭吧">rpcgssd</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="与 NFS 有关的客户端功能 如果没有 NFS 就关闭吧">rpcidmapd</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="远程数据备份守护进程">rsync</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="sendmail 邮件服务的守护进程如果有邮件服务就开启 否则关闭">sendmail</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="该服务用于将 SELinux 相关信息记录在日志 /var/log/messages 中建议开启">setroubleshoot</h4></td>
+			<td>★ [* 开启]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="该服务用于自动检测硬盘状态建议开启">smartd</h4></td>
+			<td>★ [* 开启]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="网络服务 samba 的守护进程可以让 Linux 和 Windows 之间共享数据如果需要则开启">smb</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="代理服务的守护进程如果需要则开启 否则关闭">squid</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="ssh 加密远程登陆管理的服务服务器的远程管理必须使用此服务 不要关闭">sshd</h4></td>
+			<td>★ [* 开启]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="日志的守护进程">syslog</h4></td>
+			<td>★ [* 开启]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="vsftp 服务的守护进程如果需要 FTP 服务则开启 否则关闭">vsftpd</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="这个是 X Window 的字体守护进程为图形界面提供字体服务 如果不启动图形界面 就不用开启">xfs</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="超级守护进程如果有依赖 xinetd 的服务就必须开启">xinetd</h4></td>
+			<td>★ [* 开启]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="为 NIS（网络信息系统）客户机激活 ypbind 服务进程">ypbind</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		<tr>
+			<td>【服务】</td>
+			<td><h4 title="yum 的在线升级服务">yum-updatesd</h4></td>
+			<td>★ [&nbsp;&nbsp;&nbsp;关闭]</td>
+		</tr>
+		</table>
+		</li>
+	</ul>
+</div>

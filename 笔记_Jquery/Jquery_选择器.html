@@ -1,0 +1,218 @@
+<table class="i_table">
+	<tr onclick="test_01()" title="
+		&#10;匹配 ID">
+		<td>【基础选择器】【ID】</td>
+		<td><p><font class="w b">$</font> ( <font class="w b">#</font> <font class="g">ID</font> )</p></td>
+	</tr>
+	<tr onclick="test_02()" title="
+		&#10;匹配 CSS 样式">
+		<td>【基础选择器】【类】</td>
+		<td><p><font class="w b">$</font> ( <font class="w b">.</font> <font class="g">类</font> )</p></td>
+	</tr>
+	<tr onclick="test_03()" title="
+		&#10;匹配标签">
+		<td>【基础选择器】【标签】</td>
+		<td><p><font class="w b">$</font> ( <font class="g">标签</font> )</p></td>
+	</tr>
+	<tr onclick="test_04()" title="
+		&#10;匹配多个元素">
+		<td>【基础选择器】【多匹配】</td>
+		<td><p><font class="w b">$</font> ( <font class="g">元素</font> , <font class="g">++</font> )</p></td>
+	</tr>
+	<tr onclick="test_05()" title="
+		&#10;匹配页面所有节点">
+		<td>【基础选择器】【所有】</td>
+		<td><p><font class="w b">$</font> ( <font class="w b">*</font> )</p></td>
+	</tr>
+	<tr onclick="test_06()" title="
+		&#10;匹配所有符合条件的子节点 包括子元素的子元素">
+		<td>【基础选择器】</td>
+		<td><p><font class="w b">$</font> ( <font class="g">元素</font><font class="w b">*</font> )</p></td>
+	</tr>
+	<tr onclick="test_07()" title="
+		&#10;匹配所有符合条件的子元素 包括子元素的子元素...">
+		<td>【基础选择器】</td>
+		<td><p><font class="w b">$</font> ( <font class="g">元素</font> <font class="g">子孙元素</font> )</p></td>
+	</tr>
+	<tr onclick="test_08()" title="
+		&#10;匹配所有符合条件的子元素 必须是子元素">
+		<td>【基础选择器】</td>
+		<td><p><font class="w b">$</font> ( <font class="g">元素</font> <font class="w b">></font> <font class="g">子元素</font> )</p></td>
+	</tr>
+	<tr onclick="test_09()" title="
+		&#10;匹配下一个同级的相邻元素">
+		<td>【基础选择器】</td>
+		<td><p><font class="w b">$</font> ( <font class="g">元素</font> <font class="w b">+</font> )</p></td>
+	</tr>
+	<tr onclick="test_10()" title="
+		&#10;匹配其以下所有同级的相邻元素">
+		<td>【基础选择器】</td>
+		<td><p><font class="w b">$</font> ( <font class="g">元素</font> <font class="w b">~</font> )</p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_()" title="">
+		<td>【过滤选择器】【同级第一个元素】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">first</font> )</p></td>
+	</tr>
+	<tr onclick="test_()" title="">
+		<td>【过滤选择器】【同级最后一个元素】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">last</font> )</p></td>
+	</tr>
+	<tr onclick="test_()" title="">
+		<td>【过滤选择器】【偶数索引】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">even</font> )</p></td>
+	</tr>
+	<tr onclick="test_()" title="">
+		<td>【过滤选择器】【奇数索引】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">odd</font> )</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+		&#10;匹配指定元素之外的元素">
+		<td>【过滤选择器】【除了】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">not</font> ( <font class="g">元素</font> ) )</p></td>
+	</tr>
+	<tr onclick="test_()" title="">
+		<td>【过滤选择器】【指定索引】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">eq</font> ( <font class="g">位置</font> ) )</p></td>
+	</tr>
+	<tr onclick="test_()" title="">
+		<td>【过滤选择器】【大于指定索引】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">gt</font> ( <font class="g">位置</font> ) )</p></td>
+	</tr>
+	<tr onclick="test_()" title="">
+		<td>【过滤选择器】【小于指定索引】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">lt</font> ( <font class="g">位置</font> ) )</p></td>
+	</tr>
+	<tr onclick="test_()" title="">
+		<td>【过滤选择器】【包含文本】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">contains</font> ( <font class="g">内容</font> ) )</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+		&#10;匹配包含子元素或文本的元素">
+		<td>【过滤选择器】【包含子元素或文本】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">parent</font> )</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+		&#10;匹配包含指定标签的元素">
+		<td>【过滤选择器】【包含指定标签】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">has</font> ( <font class="g">标签</font> ) )</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+		&#10;匹配符合要求的隐藏元素">
+		<td>【过滤选择器】【隐藏】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">hidden</font>)</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+		&#10;匹配符合要求的可见元素">
+		<td>【过滤选择器】【可见】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">visible</font>)</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+		&#10;匹配符合指定属性和值的元素">
+		<td>【过滤选择器】【指定属性】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> [ <font class="g">属性</font> = <font class="g">值</font> ] )</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+		&#10;匹配不符合指定属性和值的元素">
+		<td>【过滤选择器】【无指定属性】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> [ <font class="g">属性</font> != <font class="g">值</font> ] )</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+		&#10;匹配其父元素下第一个子元素">
+		<td>【过滤选择器】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">first-child</font> )</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+		&#10;匹配其父元素下最后一个元素">
+		<td>【过滤选择器】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">last-child</font> )</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+		&#10;匹配其父元素下指定子元素">
+		<td>【过滤选择器】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">nth-child</font> ( <font class="g">位置</font> )</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+		&#10;匹配其父元素下唯一的一个子元素">
+		<td>【过滤选择器】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">only-child</font> )</p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_()" title="
+		&#10;匹配所包含的所有表单">
+		<td>【表单选择器】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">input</font> )</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+		&#10;匹配所包含的所有文本输入框">
+		<td>【表单选择器】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">text</font> )</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+		&#10;匹配所包含的所有密码输入框">
+		<td>【表单选择器】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">password</font> )</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+		&#10;匹配所包含的所有单选框">
+		<td>【表单选择器】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">radio</font> )</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+		&#10;匹配所包含的所有复选框">
+		<td>【表单选择器】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">checkbox</font> )</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+			&#10;匹配所包含的所有 input 提交按扭">
+		<td>【表单选择器】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">submit</font> )</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+		&#10;匹配所包含的所有图像域">
+		<td>【表单选择器】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">image</font> )</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+		&#10;匹配所包含的所有 button 提交按扭">
+		<td>【表单选择器】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">button</font> )</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+		&#10;匹配所包含的所有 checked 选中状态的表单">
+		<td>【表单选择器】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">checked</font> )</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+		&#10;匹配所包含的所有 selected 状态的表单">
+		<td>【表单选择器】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">selected</font> )</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+		&#10;匹配所包含的所有不可见表单">
+		<td>【表单选择器】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">disabled</font> )</p></td>
+	</tr>
+	<tr onclick="test_()" title="
+		&#10;匹配所包含的所有可见的表单">
+		<td>【表单选择器】</td>
+		<td><p><font class="w b">$</font> ( <font class="o">选择器</font> : <font class="w b">enabled</font> )</p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【】**************************************************/
+
+function test_01(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;script&gt;</font></p>'
+			+'<p class="ti_1">$(<font class="b">\'#a\'</font>).html(<font class="r">"hello world"</font>)</p>'
+		+'<p><font class="gr">&lt;/script&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;div <font class="b">id="a"</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<p><div>hello world</div></p>');
+}
+
+/**************************************************【】**************************************************/
+</script>

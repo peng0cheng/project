@@ -1,0 +1,106 @@
+/**************************************************【全局设置】**************************************************/
+
+*{margin:0;padding:0;}											/*内外边距0 列表无序号*/
+table{border-collapse:collapse;}								/*单元格无间距*/
+img,button{cursor:pointer;}										/*图片、按钮增加小手图标*/
+a{text-decoration:none;}										/*链接没有下划线*/
+a:hover{text-decoration:none;}									/*链接触碰时没有下划线*/
+body{background:url(../img/normal_01.gif) fixed;}	/*页面背景*/
+body{font-size:12px;font-family:"微软雅黑";}
+body{overflow:hidden;}
+
+/**************************************************【全局快捷设置】**************************************************/
+
+.f_l{float:left;}							/*左浮动统一配置*/
+.f_r{float:right;}							/*右浮动统一配置*/
+.c_b{clear:both;}							/*清除浮动统一配置*/
+.d_tc{display:table-cell;}					/*单元格元素统一配置*/
+.d_b{display:block;}						/*块状元素统一配置*/
+.d_i{display:inline;}						/*行内元素统一配置*/
+.d_ib{display:inline-block;}				/*行内-块状元素统一配置*/
+.bs_bb{box-sizing:border-box;}				/*锁定框体大小*/
+.p_a{position:absolute;}					/*绝对定位*/
+.p_r{position:relative;}					/*相对定位*/
+.p_f{position:fixed;}						/*脱离定位*/
+.bc_c{border-collapse:collapse;}			/*去掉表格的单元格间距*/
+
+/**************************************************【内容部分快捷设置】**************************************************/
+
+.r{color:red;}
+.o{color:orange;}
+.y{color:yellow;}
+.g{color:green;}
+.c{color:cyan;}
+.b{color:blue;}
+.p{color:purple;}
+.w{font-weight:800;}
+.gr{color:grey;}
+.line{background:rgba(90,90,90,0.1);}
+.cut{margin-top:5px;margin-bottom:5px;}
+.td{text-decoration:line-through;color:red;}
+.ti_1{text-indent:1em;}
+.ti_2{text-indent:2em;}
+.ti_3{text-indent:3em;}
+
+/**************************************************【页面主分区】**************************************************/
+
+.header,.footer{background:rgba(20,20,20,0.5);box-shadow:0px 1px 1px #333;}
+.header,.footer{width:100vw;height:10vh;padding:1%;box-sizing:border-box;}
+.body{width:100vw;height:80vh;padding:2% 5%;box-sizing:border-box;}
+.body_left{width:10%;height:100%;float:left;}
+.body_right{width:89%;height:100%;float:right;overflow-y:auto;overflow-x:hidden;}
+.body_right{background:rgba(200,200,200,0.3);}
+
+/**************************************************【列表部分】**************************************************/
+
+.body_left ul{background:rgba(20,20,20,0.5);}
+.body_left ul li{list-style:none;}
+.body_left ul li:nth-of-type(1){background:url(../img/in.gif) no-repeat left top;cursor:default;}
+.body_left ul li:nth-of-type(1){height:25px;line-height:25px;text-align:center;color:orange;}
+.body_left ul li:nth-of-type(2){display:none;}
+.body_left ul li:nth-of-type(1):hover{color:yellow;}
+.body_left ul li:nth-of-type(2) div{width:100%;height:25;line-height:25px;text-align:center;cursor:default;}
+.body_left ul li:nth-of-type(2) div{border-bottom:1px solid #033245;color:#ADFF2F;}
+.body_left ul li:nth-of-type(2) div:hover{color:#fff;background-color:rgba(200,200,200,0.5);}
+
+.body_left ul li.active{color:yellow;background:url(../img/out.gif) no-repeat left top;}
+.body_left ul li div.active{color:#fff;background-color:rgba(200,200,200,0.5);}
+
+/**************************************************【内容部分】**************************************************/
+
+.i_table{width:100%;font-size:14px;font-family:"微软雅黑";}
+.i_table button{height:20px;width:80px;}
+.i_table tr{border-bottom:1px dashed #CCCCCC;}
+.i_table tr:hover{background:#CCCCCC;}										
+.i_table tr td:nth-of-type(1){border-right:1px dashed #CCCCCC;}
+.i_table tr td{padding-left:1em;}
+.i_table tr td:nth-of-type(1){width:15%;color:purple;white-space:nowrap;}
+.i_table tr td:nth-of-type(2){width:85%;color:black;white-space:nowrap;}
+
+.bg_table{background:url(../img/bg_table.png) fixed;}
+.bg_set{background:url(../img/bg_03.jpg) fixed;}
+.bg_theme{background::rgba(200,200,200,0.3);}
+
+
+/**************************************************【回到顶部部分】**************************************************/
+
+.toTop{position:absolute;right:7%;bottom:16vh;width:50px;height:50px;position:fixed;display:none;}	/*回到顶部按钮定位*/
+.toTop{border:none;cursor:pointer;background:rgba(0,0,0,0.8);color:white;}							/*回到顶部按钮效果*/
+.toTop:hover{color:green;}
+
+/**************************************************【时间部分】**************************************************/
+
+.ts_show{width:500px;text-align:center;margin:auto;}
+.ts_datetime{font-size:20px;font-family:"微软雅黑";border-radius:10px;float:left;}
+.ts_week{font-size:20px;font-family:"微软雅黑";border-radius:10px;float:right;}
+
+/**************************************************【实例部分】**************************************************/
+
+.testlist{width:100%;height:100%;padding:1%;box-sizing:border-box;}
+.testlist{overflow-x:hidden;overflow-y:auto;}
+.testlist>a{width:150px;height:50px;background:rgba(20,20,20,0.5);}
+.testlist>a{line-height:50px;text-align:center;color:white;cursor:pointer;}
+.testlist>a{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.testlist>a{float:left;margin:1%;box-sizing:border-box;}
+
+/**************************************************【】**************************************************/

@@ -1,0 +1,447 @@
+<table class="i_table">
+	<tr onclick="test_01_script_01()" title="
+		&#10;用于引用外部 JS 文件
+		&#10;注意文件加载顺序">
+		<td>【标签】【引用】</td>
+		<td><p><font class="w b">&lt;script</font> <font class="w g">src</font>=<font class="r">地址</font> <font class="w b">/ &gt;</font></p></td>
+	</tr>
+	<tr onclick="test_01_script_02()" title="
+		&#10;用于页面内部使用 JS 代码
+		&#10;注意页面代码执行顺序">
+		<td>【标签】【嵌套】</td>
+		<td><p><font class="w b">&lt;script&gt;</font><font class="o">js代码</font><font class="w b">&lt;/script&gt;</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_02_explain_01()" title="">
+		<td>【注释】【单行】</td>
+		<td><p><font class="w b">//</font></p></td>
+	</tr>
+	<tr onclick="test_02_explain_02()" title="">
+		<td>【注释】【多行】</td>
+		<td><p><font class="w b">/*</font> <font class="o">js代码</font> <font class="w b">*/</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_03_undefined()" title="undefined 表示一个未声明的变量">
+		<td>【数据类型】【Undefined】</td>
+		<td><p><font class="w b">Undefined</font></p></td>
+	</tr>
+	<tr onclick="test_03_boolean()" title="
+		&#10;布尔值（true false）必须小写
+		&#10;undefined 与 null 相等
+		&#10;NaN 与任何值都不相等 包括自已">
+		<td>【数据类型】【布尔型】</td>
+		<td><p><font class="w b">Boolean</font></p></td>
+	</tr>
+	<tr onclick="test_03_number()" title="
+		&#10;包括整型（十进制 八进制 十六进制）和浮点型（小数 科学计数）
+		&#10;NaN 是一种特殊的数值类型">
+		<td>【数据类型】【数值型】</td>
+		<td><p><font class="w b">Number</font></p></td>
+	</tr>
+	<tr onclick="test_03_string()" title="建议使用单引号 不与 HTML 属性冲突">
+		<td>【数据类型】【字符串】</td>
+		<td><p><font class="w b">String</font></p></td>
+	</tr>
+	<tr onclick="test_03_object()" title="null 是一种特殊的对象类型 表示无值">
+		<td>【数据类型】【对象】</td>
+		<td><p><font class="w b">Object</font></p></td>
+	</tr>
+	<tr onclick="test_03_typeof()" title="
+		&#10;检测元素的数据类型 返回字符串格式的结果 可能的返回值
+		&#10;undefined → 这个值未定义
+		&#10;boolean → 这个值是布尔值
+		&#10;string → 这个值是字符串
+		&#10;number → 这个值是数值
+		&#10;object → 这个值是对象或 null
+		&#10;function → 这个值是函数">
+		<td>【数据类型检测】【类型】</td>
+		<td><p><font class="w b">typeof</font> ( <font class="o">元素</font> )</p></td>
+	</tr>
+	<tr onclick="test_03_turn_parseint()" title="
+		&#10;字符串强制转换成整型
+		&#10;转换类型默认为十进制 可选项
+		&#10;以 0x开头时默认以8进制转换">
+		<td>【数据类型转换】【整型】</td>
+		<td><p><font class="w b">parseInt</font> ( <font class="r">字符串</font> , <font class="o">转换类型</font> )</p></td>
+	</tr>
+	<tr onclick="test_03_turn_parsefloat()" title="
+		&#10;字符串强制转换成浮点型
+		&#10;必须以数字开头">
+		<td>【数据类型转换】【浮点型】</td>
+		<td><p><font class="w b">parseFloat</font> ( <font class="r">字符串</font> )</p></td>
+	</tr>
+	<tr onclick="test_03_turn_number()" title="
+		&#10;字符串强制转换成数值型
+		&#10;必须是纯数字">
+		<td>【数据类型转换】【数值型】</td>
+		<td><p><font class="w b">Number</font> ( <font class="r">字符串</font> )</p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_04_variable_01()" title="
+		&#10;在 function 外部声明的是全局变量
+		&#10;在 function 内部声明的是局部变量
+		&#10;用 var 声明的变量无法被 delete">
+		<td>【变量】【方式1】</td>
+		<td><p><font class="w b">var</font> <font class="g">变量名</font> = <font class="r">值</font></p></td>
+	</tr>
+	<tr onclick="test_04_variable_02()" title="
+		&#10;在 function 外部声明的是全局变量
+		&#10;在 function 内部 若当前作用域链中找到该变量 则对其属性赋值
+		&#10;在 function 内部 若当前作用域链中找不到该变量 则自动声明一个全局变量
+		&#10;可以被 delete">
+		<td>【变量】【方式2】</td>
+		<td><p><font class="g">变量名</font> = <font class="r">值</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_05_function_01()" title="函数也是方法">
+		<td>【函数】【声明】</td>
+		<td><p><font class="w b">function</font> <font class="g">函数名</font> ( <font class="o">参数</font> ){ <font class="o">函数体</font> }</p></td>
+	</tr>
+	<tr onclick="test_05_function_02()" title="">
+		<td>【函数】【调用】</td>
+		<td><p><font class="g">函数名</font> ( <font class="o">参数</font> )</p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_05_operator_01()" title="JS 中 + 号的作用可以是连接字符串">
+		<td>【运算符】【字符串运算】</td>
+		<td><p><font class="r">字符串</font> <font class="w b">+</font> <font class="r">字符串</font></p></td>
+	</tr>
+	<tr onclick="test_06_operator_02()" title="">
+		<td>【运算符】【算术运算】</td>
+		<td><p><font class="w b">+&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;%&nbsp;&nbsp;&nbsp;++&nbsp;&nbsp;&nbsp;--</font></p></td>
+	</tr>
+	<tr onclick="test_06_operator_03()" title="">
+		<td>【运算符】【赋值运算】</td>
+		<td><p><font class="w b">=&nbsp;&nbsp;&nbsp;+=&nbsp;&nbsp;&nbsp;-=&nbsp;&nbsp;&nbsp;*=&nbsp;&nbsp;&nbsp;/=&nbsp;&nbsp;&nbsp;%=</font</p></td>
+	</tr>
+	<tr onclick="test_06_operator_04()" title="">
+		<td>【运算符】【比较运算】</td>
+		<td><p><font class="w b">>&nbsp;&nbsp;&nbsp;<&nbsp;&nbsp;&nbsp;>=&nbsp;&nbsp;&nbsp;<=&nbsp;&nbsp;&nbsp;==&nbsp;&nbsp;&nbsp;!=&nbsp;&nbsp;&nbsp;===&nbsp;&nbsp;&nbsp;!==</font></font></p></td>
+	</tr>
+	<tr onclick="test_06_operator_05()" title="">
+		<td>【运算符】【逻辑运算】</td>
+		<td><p><font class="w b">&&&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;!</font></font></p></td>
+	</tr>
+	<tr onclick="test_06_operator_06()" title="">
+		<td>【运算符】【三元运算】</td>
+		<td><p><font class="o">条件</font> <font class="w b">?</font> <font class="o">条件为真的操作</font> <font class="w b">:</font class="b"> <font class="o">条件为假时的操作</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_07_delete()" title="
+		&#10;删除对象的成员属性或成员方法
+		&#10;删除数组中的指定成员
+		&#10;无法删除变量和函数">
+		<td>【其它】【删除】</td>
+		<td><p><b class="b">delete</b> <font class="o">成员</font></p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【标签】**************************************************/
+
+function test_01_script_01(){
+	PC_Case.show(1,'<p><font class="w b">&lt;script</font> <font class="w g">src</font>="<font class="r">javascript.js</font>" <font class="w b">/&gt;</font></p>');
+	PC_Case.show(2,'');
+}
+
+function test_01_script_02(){
+	PC_Case.show(1,
+		'<p><font class="w b">&lt;script&gt;</font></p>'
+			+'<p class="ti_1"><font class="o">js代码</font></p>'
+		+'<p><font class="w b">&lt;/script&gt;</font></p>');
+	PC_Case.show(2,'');
+}
+
+/**************************************************【注释】**************************************************/
+
+
+function test_02_explain_01(){
+	PC_Case.show(1,'<p><font class="w b">//</font> <font class="o">js代码</font></p>');
+	PC_Case.show(2,'');
+}
+
+function test_02_explain_02(){
+	PC_Case.show(1,
+		'<p><font class="w b">/*</font></p>'
+			+'<p class="ti_1"><font class="o">js代码</font></p>'
+		+'<p><font class="w b">*/</font></p>');
+	PC_Case.show(2,'');
+}
+
+/**************************************************【数据类型】**************************************************/
+
+function test_03_undefined(){
+	PC_Case.show(1,'<p><font class="w b">var</font> <font class="w g">demo</font></p>');
+	PC_Case.show(2,'<p><font class="w g">demo</font> <font class="p">→</font> <font class="gr">Undefined</font> <font class="w r">Undefined</font></p>');
+}
+
+function test_03_boolean(){
+	PC_Case.show(1,
+		'<p><font class="w b">var</font> <font class="w g">demo_01</font> = <font class="w r">true</font></p>'
+		+'<p><font class="w b">var</font> <font class="w g">demo_02</font> = <font class="w r">false</font></p>'
+		+'<p><font class="w b">var</font> <font class="w g">demo_03</font> = <font class="w r">Undefined</font> == <font class="w r">null</font></p>'
+		+'<p><font class="w b">var</font> <font class="w g">demo_04</font> = <font class="w r">NaN</font> == <font class="w r">NaN</font></p>');
+	PC_Case.show(2,
+		'<p><font class="w g">demo_01</font> <font class="p">→</font> <font class="gr">Boolean</font> <font class="w r">true</font></p>'
+		+'<p><font class="w g">demo_02</font> <font class="p">→</font> <font class="gr">Boolean</font> <font class="w r">false</font></p>'
+		+'<p><font class="w g">demo_03</font> <font class="p">→</font> <font class="gr">Boolean</font> <font class="w r">true</font></p>'
+		+'<p><font class="w g">demo_04</font> <font class="p">→</font> <font class="gr">Boolean</font> <font class="w r">false</font>');
+}
+
+function test_03_number(){
+	PC_Case.show(1,
+		'<p><font class="w b">var</font> <font class="w g">demo_01</font> = <font class="r">100</font></p>'
+		+'<p><font class="w b">var</font> <font class="w g">demo_02</font> = <font class="r">100.00</font></p>'
+		+'<p><font class="w b">var</font> <font class="w g">demo_03</font> = <font class="r">100e2</font></p>'
+		+'<p><font class="w b">var</font> <font class="w g">demo_04</font> = <font class="r">100e-2</font></p>'
+		+'<p><font class="w b">var</font> <font class="w g">demo_05</font> = <font class="w r">NaN</font></p>');
+	PC_Case.show(2,
+		'<p><font class="w g">demo_01</font> <font class="p">→</font> <font class="gr">Number</font> <font class="r">100</font></p>'
+		+'<p><font class="w g">demo_02</font> <font class="p">→</font> <font class="gr">Number</font> <font class="r">100</font></p>'
+		+'<p><font class="w g">demo_03</font> <font class="p">→</font> <font class="gr">Number</font> <font class="r">10000</font></p>'
+		+'<p><font class="w g">demo_04</font> <font class="p">→</font> <font class="gr">Number</font> <font class="r">1</font></p>'
+		+'<p><font class="w g">demo_05</font> <font class="p">→</font> <font class="gr">Number</font> <font class="w r">NaN</font>');
+}
+
+function test_03_string(){
+	PC_Case.show(1,
+		'<p><font class="w b">var</font> <font class="w g">demo_01</font> = <font class="r">\'hello world\'</font></p>'
+		+'<p><font class="w b">var</font> <font class="w g">demo_02</font> = <font class="r">"hello world"</font></p>');
+	PC_Case.show(2,
+		'<p><font class="w g">demo_01</font> <font class="p">→</font> <font class="gr">String</font> <font class="r">hello world</font></p>'
+		+'<p><font class="w g">demo_02</font> <font class="p">→</font> <font class="gr">String</font> <font class="r">hello world</font></p>');
+}
+
+function test_03_object(){
+	PC_Case.show(1,
+		'<p><font class="w b">var</font> <font class="w g">demo_01</font> = <font class="w b">new</font> <font class="r">Object()</font></p>'
+		+'<p><font class="w b">var</font> <font class="w g">demo_02</font> = <font class="w r">null</font></p>');
+	PC_Case.show(2,
+		'<p><font class="w g">demo_01</font> <font class="p">→</font> <font class="gr">Object</font> <font class="w r">Object</font></p>'
+		+'<p><font class="w g">demo_02</font> <font class="p">→</font> <font class="gr">Object</font> <font class="w r">Object</font></p>');
+}
+
+function test_03_typeof(){
+	PC_Case.show(1,
+		'<p><font class="w g">demo_01</font> = <font class="w b">typeof</font>( <font class="r">x</font> )</p>'
+		+'<p><font class="w g">demo_02</font> = <font class="w b">typeof</font>( <font class="w r">true</font> )</p>'
+		+'<p><font class="w g">demo_03</font> = <font class="w b">typeof</font>( <font class="r">\'hello world\'</font> )</p>'
+		+'<p><font class="w g">demo_04</font> = <font class="w b">typeof</font>( <font class="r">123</font> )</p>');
+	PC_Case.show(2,
+		'<p><font class="w g">demo_01</font> <font class="p">→</font> <font class="gr">String</font> <font class="w r">Undefined</font></p>'
+		+'<p><font class="w g">demo_02</font> <font class="p">→</font> <font class="gr">String</font> <font class="w r">Boolean</font></p>'
+		+'<p><font class="w g">demo_03</font> <font class="p">→</font> <font class="gr">String</font> <font class="w r">String</font></p>'
+		+'<p><font class="w g">demo_04</font> <font class="p">→</font> <font class="gr">String</font> <font class="w r">Number</font></p>');
+}
+
+function test_03_turn_parseint(){
+	PC_Case.show(1,
+		'<p><font class="w g">demo_01</font> = <font class="w b">parseInt</font>( <font class="r">\'100\'</font> )</p>'
+		+'<p><font class="w g">demo_02</font> = <font class="w b">parseFloat</font>( <font class="r">\'100.5\'</font> )</p>'
+		+'<p><font class="w g">demo_03</font> = <font class="w b">parseFloat</font>( <font class="r">\'100 200 300\'</font> )</p>'
+		+'<p><font class="w g">demo_04</font> = <font class="w b">parseInt</font>( <font class="r">\'100a\'</font> )</p>'
+		+'<p><font class="w g">demo_05</font> = <font class="w b">parseInt</font>( <font class="r">\'a100\'</font> )</p>'
+		+'<p><font class="w g">demo_06</font> = <font class="w b">parseInt</font>( <font class="r">\'0x10\'</font> )</p>'
+		+'<p><font class="w g">demo_07</font> = <font class="w b">parseInt</font>( <font class="r">\'FF\'</font> , <font class="r">16</font> )</p>');
+	PC_Case.show(2,
+		'<p><font class="w g">demo_01</font> <font class="p">→</font> <font class="r">100</font></p>'
+		+'<p><font class="w g">demo_02</font> <font class="p">→</font> <font class="r">100</font></p>'
+		+'<p><font class="w g">demo_03</font> <font class="p">→</font> <font class="r">100</font></p>'
+		+'<p><font class="w g">demo_04</font> <font class="p">→</font> <font class="r">100</font></p>'
+		+'<p><font class="w g">demo_05</font> <font class="p">→</font> <font class="w r">NaN</font></p>'
+		+'<p><font class="w g">demo_06</font> <font class="p">→</font> <font class="r">16</font></p>'
+		+'<p><font class="w g">demo_07</font> <font class="p">→</font> <font class="r">255</font></p>');
+}
+
+function test_03_turn_parsefloat(){
+	PC_Case.show(1,
+		'<p><font class="w g">demo_01</font> = <font class="w b">parseFloat</font>( <font class="r">\'100\'</font> )</p>'
+		+'<p><font class="w g">demo_02</font> = <font class="w b">parseFloat</font>( <font class="r">\'100.5\'</font> )</p>'
+		+'<p><font class="w g">demo_03</font> = <font class="w b">parseFloat</font>( <font class="r">\'100 200 300\'</font> )</p>'
+		+'<p><font class="w g">demo_04</font> = <font class="w b">parseFloat</font>( <font class="r">\'100a\'</font> )</p>'
+		+'<p><font class="w g">demo_05</font> = <font class="w b">parseFloat</font>( <font class="r">\'a100\'</font> , <font class="r">16</font> )</p>');
+	PC_Case.show(2,
+		'<p><font class="w g">demo_01</font> <font class="p">→</font> <font class="r">100</font></p>'
+		+'<p><font class="w g">demo_02</font> <font class="p">→</font> <font class="r">100.5</font></p>'
+		+'<p><font class="w g">demo_03</font> <font class="p">→</font> <font class="r">100</font></p>'
+		+'<p><font class="w g">demo_04</font> <font class="p">→</font> <font class="r">100</font></p>'
+		+'<p><font class="w g">demo_05</font> <font class="p">→</font> <font class="w r">NaN</font></p>');
+}
+
+function test_03_turn_number(){
+	PC_Case.show(1,
+		'<p><font class="w g">demo_01</font> = <font class="w b">Number</font>( <font class="r">\'100\'</font> )</p>'
+		+'<p><font class="w g">demo_02</font> = <font class="w b">Number</font>( <font class="r">\'100.5\'</font> )</p>'
+		+'<p><font class="w g">demo_03</font> = <font class="w b">Number</font>( <font class="r">\'100 200 300\'</font> )</p>'
+		+'<p><font class="w g">demo_04</font> = <font class="w b">Number</font>( <font class="r">\'100a\'</font> )</p>'
+		+'<p><font class="w g">demo_05</font> = <font class="w b">Number</font>( <font class="r">\'a100\'</font> , <font class="r">16</font> )</p>');
+	PC_Case.show(2,
+		'<p><font class="w g">demo_01</font> <font class="p">→</font> <font class="r">100</font></p>'
+		+'<p><font class="w g">demo_02</font> <font class="p">→</font> <font class="r">100.5</font></p>'
+		+'<p><font class="w g">demo_03</font> <font class="p">→</font> <font class="w r">NaN</font></p>'
+		+'<p><font class="w g">demo_04</font> <font class="p">→</font> <font class="w r">NaN</font></p>'
+		+'<p><font class="w g">demo_05</font> <font class="p">→</font> <font class="w r">NaN</font></p>');
+}
+
+/**************************************************【变量】**************************************************/
+
+function test_04_variable_01(){
+	PC_Case.show(1,
+		'<p><font class="w b">var</font> <font class="g">x</font> = <font class="r">\'hello world\'</font></p>'
+		+'<p><font class="w b">function</font> <font class="w g">func</font>( ){</font></p>'
+			+'<p class="ti_1"><font class="w b">var</font> <font class="g">x</font> = <font class="r">\'fuck world\'</font></p>'
+			+'<p class="ti_1"><font class="w b">alert</font> ( <font class="g">x</font> )</p>'
+		+'<p>}</p>'
+		+'<p><font class="w g">func</font>( )</p>'
+		+'<p><font class="w b">var</font> <font class="w g">demo</font> = <font class="g">x</font></p>');
+	PC_Case.show(2,
+		'<p><font class="w g">func</font> <font class="p">→</font> <font class="r">fuck world</font></p>'
+		+'<p><font class="w g">demo</font> <font class="p">→</font> <font class="r">hello world</font></p>');
+}
+
+function test_04_variable_02(){
+	PC_Case.show(1,
+		'<p><font class="g">x</font> = <font class="r">\'hello world\'</font></p>'
+		+'<p><font class="w b">function</font> <font class="w g">func</font>( ){</font></p>'
+			+'<p class="ti_1"><font class="g">x</font> = <font class="r">\'fuck world\'</font></p>'
+			+'<p class="ti_1"><font class="w b">alert</font> ( <font class="g">x</font> )</p>'
+		+'<p>}</p>'
+		+'<p><font class="w g">func</font>( )</p>'
+		+'<p><font class="w g">demo</font> = <font class="g">x</font></p>');
+	PC_Case.show(2,
+		'<p><font class="w g">func</font> <font class="p">→</font> <font class="r">fuck world</font></p>'
+		+'<p><font class="w g">demo</font> <font class="p">→</font> <font class="r">fuck world</font></p>');
+}
+
+/**************************************************【函数】**************************************************/
+
+function test_05_function_01(){
+	PC_Case.show(1,
+		'<p><font class="w b">function</font> <font class="w g">func</font>( ){</p>'
+			+'<p class="ti_1"><font class="o">函数体</font>'
+		+'<p>}</p>');
+	PC_Case.show(2,'');
+}
+
+function test_05_unction_02(){
+	PC_Case.show(1,
+		'<p><font class="w b">function</font> <font class="w g">func</font>( <font class="g">data1</font> , <font class="g">data2</font> ){</p>'
+			+'<p class="ti_1"><font class="w b">alert</font>( <font class="g">data1</font>+\' \'+<font class="g">data2</font> )</p>'
+		+'<p>}</p>'
+		+'<p><font class="w g">func</font>( <font class="r">\'hello\'</font> , <font class="r">\'world\'</font> )</p>');
+	PC_Case.show(2,'<p><font class="w g">func</font> <font class="p">→</font> <font class="r">hello world</font></p>');
+}
+
+/**************************************************【运算符】**************************************************/
+
+function test_06_operator_01(){
+	PC_Case.show(1,
+		'<p><font class="g">x</font> = <font class="r">\'hello\'</font></p>'
+		+'<p><font class="g">y</font> = <font class="r">\'world\'</font></p>'
+		+'<p><font class="w g">demo</font> = <font class="g">x</font> <font class="w b">+</font> <font class="g">y</font></p>');
+	PC_Case.show(2,'<p><font class="w g">demo</font> <font class="p">→</font> <font class="r">hello world</font></p>');
+}
+
+function test_06_operator_02(){
+	PC_Case.show(1,
+		'<p><font class="g">x</font> = <font class="r">5</font></p>'
+		+'<p><font class="g">y</font> = <font class="r">2</font></p>'
+		+'<p><font class="w g">demo_01</font> = <font class="g">x</font> <font class="w b">+</font> <font class="g">y</font></p>'
+		+'<p><font class="w g">demo_02</font> = <font class="g">x</font> <font class="w b">-</font> <font class="g">y</font></p>'
+		+'<p><font class="w g">demo_03</font> = <font class="g">x</font> <font class="w b">*</font> <font class="g">y</font></p>'
+		+'<p><font class="w g">demo_04</font> = <font class="g">x</font> <font class="w b">/</font> <font class="g">y</font></p>'
+		+'<p><font class="w g">demo_05</font> = <font class="g">x</font> <font class="w b">%</font> <font class="g">y</font></p>'
+		+'<p><font class="w g">demo_06</font> = <font class="w b">++</font> <font class="g">x</font></p>'
+		+'<p><font class="w g">demo_07</font> = <font class="w b">--</font> <font class="g">x</font></p>');
+	PC_Case.show(2,
+		'<p><font class="w g">demo_01</font> <font class="p">→</font> <font class="r">7</font></p>'
+		+'<p><font class="w g">demo_02</font> <font class="p">→</font> <font class="r">3</font></p>'
+		+'<p><font class="w g">demo_03</font> <font class="p">→</font> <font class="r">10</font></p>'
+		+'<p><font class="w g">demo_04</font> <font class="p">→</font> <font class="r">2.5</font></p>'
+		+'<p><font class="w g">demo_05</font> <font class="p">→</font> <font class="r">1</font></p>'
+		+'<p><font class="w g">demo_06</font> <font class="p">→</font> <font class="r">6</font></p>'
+		+'<p><font class="w g">demo_07</font> <font class="p">→</font> <font class="r">4</font></p>');
+}
+
+function test_06_operator_03(){
+	PC_Case.show(1,
+		'<p><font class="g">x</font> = <font class="r">5</font></p>'
+		+'<p><font class="g">y</font> = <font class="r">2</font></p>'
+		+'<p><font class="w g">demo_01</font> = <font class="g">x</font> <font class="w b">=</font> <font class="g">y</font></p>'
+		+'<p><font class="w g">demo_02</font> = <font class="g">x</font> <font class="w b">+=</font> <font class="g">y</font></p>'
+		+'<p><font class="w g">demo_03</font> = <font class="g">x</font> <font class="w b">-=</font> <font class="g">y</font></p>'
+		+'<p><font class="w g">demo_04</font> = <font class="g">x</font> <font class="w b">*=</font> <font class="g">y</font></p>'
+		+'<p><font class="w g">demo_05</font> = <font class="g">x</font> <font class="w b">/=</font> <font class="g">y</font></p>'
+		+'<p><font class="w g">demo_06</font> = <font class="g">x</font> <font class="w b">%=</font> <font class="g">y</font></p>');
+	PC_Case.show(2,
+		'<p><font class="w g">demo_01</font> <font class="p">→</font> <font class="r">2</font></p>'
+		+'<p><font class="w g">demo_02</font> <font class="p">→</font> <font class="r">7</font></p>'
+		+'<p><font class="w g">demo_03</font> <font class="p">→</font> <font class="r">3</font></p>'
+		+'<p><font class="w g">demo_04</font> <font class="p">→</font> <font class="r">10</font></p>'
+		+'<p><font class="w g">demo_05</font> <font class="p">→</font> <font class="r">2.5</font></p>'
+		+'<p><font class="w g">demo_06</font> <font class="p">→</font> <font class="r">1</font></p>');
+}
+
+function test_06_operator_04(){
+	PC_Case.show(1,
+		'<p><font class="g">x</font> = <font class="gr">Number</font> <font class="r">5</font></p>'
+		+'<p><font class="g">y</font> = <font class="gr">Number</font> <font class="r">2</font></p>'
+		+'<p><font class="g">z</font> = <font class="gr">String</font> <font class="r">\'5\'</font></p>'
+		+'<p><font class="w g">demo_01</font> = <font class="g">x</font> <font class="w b">></font> <font class="g">y</font></p>'
+		+'<p><font class="w g">demo_02</font> = <font class="g">x</font> <font class="w b"><</font> <font class="g">z</font></p>'
+		+'<p><font class="w g">demo_03</font> = <font class="g">x</font> <font class="w b">>=</font> <font class="g">y</font></p>'
+		+'<p><font class="w g">demo_04</font> = <font class="g">x</font> <font class="w b"><=</font> <font class="g">z</font></p>'
+		+'<p><font class="w g">demo_05</font> = <font class="g">x</font> <font class="w b">==</font> <font class="g">z</font></p>'
+		+'<p><font class="w g">demo_06</font> = <font class="g">x</font> <font class="w b">!=</font> <font class="g">z</font></p>'
+		+'<p><font class="w g">demo_07</font> = <font class="g">x</font> <font class="w b">===</font> <font class="g">z</font></p>'
+		+'<p><font class="w g">demo_08</font> = <font class="g">x</font> <font class="w b">!==</font> <font class="g">z</font></p>');
+	PC_Case.show(2,
+		'<p><font class="w g">demo_01</font> <font class="p">→</font> <font class="gr">Boolean</font> <font class="w r">true</font></p>'
+		+'<p><font class="w g">demo_02</font> <font class="p">→</font> <font class="gr">Boolean</font> <font class="w r">false</font></p>'
+		+'<p><font class="w g">demo_03</font> <font class="p">→</font> <font class="gr">Boolean</font> <font class="w r">true</font></p>'
+		+'<p><font class="w g">demo_04</font> <font class="p">→</font> <font class="gr">Boolean</font> <font class="w r">true</font></p>'
+		+'<p><font class="w g">demo_05</font> <font class="p">→</font> <font class="gr">Boolean</font> <font class="w r">true</font></p>'
+		+'<p><font class="w g">demo_06</font> <font class="p">→</font> <font class="gr">Boolean</font> <font class="w r">false</font></p>'
+		+'<p><font class="w g">demo_07</font> <font class="p">→</font> <font class="gr">Boolean</font> <font class="w r">false</font></p>'
+		+'<p><font class="w g">demo_08</font> <font class="p">→</font> <font class="gr">Boolean</font> <font class="w r">true</font></p>');
+}
+
+function test_06_operator_05(){
+	PC_Case.show(1,
+		'<p><font class="w g">demo_01</font> = <font class="w r">true</font> <font class="w b">&&</font> <font class="w r">true</font></p>'
+		+'<p><font class="w g">demo_02</font> = <font class="w r">true</font> <font class="w b">&&</font> <font class="w r">false</font>'
+		+'<p><font class="w g">demo_03</font> = <font class="w r">true</font> <font class="w b">||</font> <font class="w r">true</font></p>'
+		+'<p><font class="w g">demo_04</font> = <font class="w r">true</font> <font class="w b">||</font> <font class="w r">false</font</p>'
+		+'<p><font class="w g">demo_05</font> = <font class="w b">!</font> <font class="r">true</font></p>');
+	PC_Case.show(2,
+		'<p><font class="w g">demo_01</font> <font class="p">→</font> <font class="gr">Boolean</font> <font class="w r">true</font></p>'
+		+'<p><font class="w g">demo_02</font> <font class="p">→</font> <font class="gr">Boolean</font> <font class="w r">false</font></p>'
+		+'<p><font class="w g">demo_03</font> <font class="p">→</font> <font class="gr">Boolean</font> <font class="w r">true</font></p>'
+		+'<p><font class="w g">demo_04</font> <font class="p">→</font> <font class="gr">Boolean</font> <font class="w r">true</font></p>'
+		+'<p><font class="w g">demo_05</font> <font class="p">→</font> <font class="gr">Boolean</font> <font class="w r">false</font></p>');
+}
+
+function test_06_operator_06(){
+	PC_Case.show(1,
+		'<p><font class="w g">demo_01</font> = <font class="r">1</font> < <font class="r">2</font> <font class="w b">?</font> <font class="r">\'正确\'</font> <font class="w b">:</font> <font class="r">\'错误\'</font></p>'
+		+'<p><font class="w g">demo_02</font> = <font class="r">1</font> > <font class="r">2</font> <font class="w b">?</font> <font class="r">\'正确\'</font> <font class="w b">:</font> <font class="r">\'错误\'</font></p>');
+	PC_Case.show(2,
+		'<p><font class="w g">demo_01</font> <font class="p">→</font> <font class="r">正确</font></p>'
+		+'<p><font class="w g">demo_02</font> <font class="p">→</font> <font class="r">错误</font></p>');
+}
+
+/**************************************************【其它】**************************************************/
+
+function test_07_delete(){
+	PC_Case.show(1,
+		'<p><font class="w b">var</font> <font class="w g">demo_01</font> = { <font class="r">x</font> : <font class="r">1</font> }</p>'
+		+'<p><font class="w b">delete</font>( <font class="w g">demo_01</font>.<font class="r">x</font> )</p>'
+		+'<p><font class="w b">var</font> <font class="w g">demo_02</font> = <font class="r">1</font></p>'
+		+'<p><font class="w b">delete</font>( <font class="w g">demo_02</font> )</p>');
+	PC_Case.show(2,
+		'<p><font class="w g">demo_01</font> <font class="p">→</font> <font class="r">Undefined</font></p>'
+		+'<p><font class="w g">demo_02</font> <font class="p">→</font> <font class="r">1</font></p>');
+}
+
+/**************************************************【】**************************************************/
+</script>

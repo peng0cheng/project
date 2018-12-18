@@ -1,0 +1,188 @@
+<meta charset="utf8">
+<!---------------------------------------------------------------------------------------------------->
+
+<style>
+	.{margin:0px;padding:0px;}
+	a{text-decoration:none;}
+	
+	table{border-collapse:collapse;border:3px solid black;}
+	table{width:80%;margin:auto;font-size:12px;font-family:"微软雅黑";}
+	table tr{border-bottom:2px solid black;}
+	table tr td:nth-of-type(1){width:15%;border-right:1px solid black;text-align:center;}
+	table tr td:nth-of-type(2){width:85%;padding:1%;}
+
+	.r{color:red;}
+	.g{color:green;}
+	.b{color:blue;}
+	.gr{color:grey;}
+	.bg_gr{background:grey;}
+	.cmd{background:black;color:white;width:50%;padding:1%;}
+</style>
+
+<!---------------------------------------------------------------------------------------------------->
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>安装前准备</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">无</h2>
+		</td>
+		<td>
+		</td>
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>安装</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装<br>MongoDB</h2>
+		</td>
+		<td>
+			<h3 class="g">下载安装包</h3>
+			<font class="gr">在官网下载最稳定版的安装包</font><br>
+			<font>下载命令：</font> <font class="r">wget https://fastdl.mongodb.org/linux/mongodb-linux-i686-3.0.4.tgz</font><br>
+			<font>下载地址：</font> <a href="https://www.mongodb.org" target="_blank">https://www.mongodb.org</a><br>
+
+			<h3 class="g">解压并移动到指定位置</h3>
+			<font class="gr">MongoDB 解压即可使用 不需要编译</font><br>
+			<font class="r">tar -xzvf mongodb-linux-i686-3.0.4.tgz</font><br>
+			<font class="r">mv mongodb-linux-i686-3.0.4 /usr/local/mongodb/</font><br>
+
+			<h3 class="g">建立数据目录和日志目录</h3>
+			<font class="gr">mongodb 可以指定数据和日志的存放位置</font><br>
+			<font class="r">mkdir /usr/local/mongodb/data</font><br>
+			<font class="r">mkdir /usr/local/mongodb/log</font><br>
+		</td>    
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>配置</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">账户配置</h2>
+		</td>
+		<td>
+			<h3 class="g">添加 mongodb 系统账户组</h3>
+			<font class="r">groupadd -r mongodb</font><br>
+
+			<h3 class="g">添加 mongodb 系统账户</h3>
+			<font class="r">useradd -s /sbin/nologin -g mongodb -r mongodb</font><br>
+
+			<h3 class="g">给予目录权限</h3>
+			<font class="r">chown -R mongodb:mongodb /usr/local/mongodb</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">设置配置文件</h2>
+		</td>
+		<td>
+			<h3 class="g">添加配置文件</h3>
+			<font class="gr">在 mongodb 目录下添加配置文件</font><br>
+			<font class="r">vi /usr/local/mongodb/mongodb.conf</font><br>
+
+			<h3 class="g">写入 mongodb.conf 内容</h3>
+			<font class="gr">port → 代表端口号 不写则默认 27017 只能通过本地连接 若需要给其它服务器连接 则改成本机 ip 地址 多个地址用逗号连接 其它服务器使用 mongo --host=xxx.xxx.xxx.xxx 连接到本地</font><br>
+			<font class="gr">bind_ip → 绑定地址 默认 127.0.0.1</font><br>
+			<font class="gr">maxConns → 最大连接数 有默认值 不能大于 20000</font><br>
+			<font class="gr">dbpath → 代表数据目录</font><br>
+			<font class="gr">logpath → 代表日志路径</font><br>
+			<font class="gr">pidfilepath → 因监控需要 必须调用 mongodb 的 PID 默认缺省</font><br>
+			<font class="gr">logappend → true 代表日志文件自动累加 默认则是覆盖 若不设置 重启 mongodb 会覆盖此文件</font><br>
+			<font class="gr">journal → 代表 32 位系统的选项 否则不用写</font><br>
+			<div class="cmd">
+				<font>port=27017</font><br>
+				<font>bind_ip=127.0.0.1</font><br>
+				<font>dbpath=/usr/local/mongodb/data/</font><br>
+				<font>logpath=/usr/local/mongodb/log/mongodb.log</font><br>
+				<font>pidfilepath=/usr/local/mongodb/mongodb.pid</font><br>
+				<font>logappend=true</font><br>
+				<font>journal=true</font><br>
+			</div>
+		</td>    
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>使用</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">文件结构</h2>
+		</td>
+		<td>
+			<h3 class="g">数据文件</h3>
+			<font class="r">/usr/local/mongodb/data/</font><br>
+
+			<h3 class="g">日志文件</h3>
+			<font class="r">/usr/local/mongodb/logs/</font><br>
+
+			<h3 class="g">启动文件</h3>
+			<font class="r">/usr/local/mongodb/bin/mongod</font><br>
+
+			<h3 class="g">执行文件</h3>
+			<font class="r">/usr/local/mongodb/bin/mongo</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">操作命令</h2>
+		</td>
+		<td>
+			<h3 class="g">状态</h3>
+			<font class="r">netstat -lanp | grep 27017</font><br>
+			
+			<h3 class="g">启动（32位）</h3>
+			<font class="r">/usr/local/mongodb/bin/mongod --dbpath=/usr/local/mongodb/data/ --logpath=/usr/local/mongodb/log/mongodb.log --logappend --journal&</font><br>
+
+			<h3 class="g">启动（64位）</h3>
+			<font class="r">/usr/local/mongodb/bin/mongod --dbpath=/usr/local/mongodb/data/ --logpath=/usr/local/mongodb/log/mongodb.log --logappend&</font><br>
+
+			<h3 class="g">启动（配置文件）</h3>
+			<font class="r">/usr/local/mongodb/bin/mongod -f /usr/local/mongodb/mongodb.conf&</font><br>
+
+			<h3 class="g">关闭（32位）</h3>
+			<font class="gr">如果直接 kill 掉进程会锁定 mongodb</font><br>
+			<font class="r">/usr/local/mongodb/bin/mongod --shutdown --dbpath=/usr/local/mongodb/data/ --journal&</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">命令模式</h2>
+		</td>
+		<td>
+			<h3 class="g">连接</h3>
+			<font class="r">/usr/local/mongodb/bin/mongo</font><br>
+
+			<h3 class="g">退出</h3>
+			<font class="gr">ctrl+c 也可以退出</font><br>
+			<font class="r">use admin</font><br>
+			<font class="r">db.shutdownServer()</font><br>
+		</td>
+	</tr>
+</table>
+
+<!---------------------------------------------------------------------------------------------------->

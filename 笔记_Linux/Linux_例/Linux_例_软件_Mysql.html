@@ -1,0 +1,482 @@
+<meta charset="utf8">
+<!---------------------------------------------------------------------------------------------------->
+
+<style>
+	.{margin:0px;padding:0px;}
+	a{text-decoration:none;}
+	
+	table{border-collapse:collapse;border:3px solid black;}
+	table{width:80%;margin:auto;font-size:12px;font-family:"微软雅黑";}
+	table tr{border-bottom:2px solid black;}
+	table tr td:nth-of-type(1){width:15%;border-right:1px solid black;text-align:center;}
+	table tr td:nth-of-type(2){width:85%;padding:1%;}
+
+	.r{color:red;}
+	.g{color:green;}
+	.b{color:blue;}
+	.gr{color:grey;}
+	.bg_gr{background:grey;}
+	.cmd{background:black;color:white;width:50%;padding:1%;}
+
+	.hide{display:none;}
+	.show{display:block;}
+</style>
+
+<!---------------------------------------------------------------------------------------------------->
+
+<button onclick="show(1)">CentOS</button> <button onclick="show(2)">Ubuntu</button>
+
+<hr>
+
+<div id="show_01" class="hide">
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>安装前准备</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装服务器软件</h2>
+		</td>
+		<td>
+			<h3 class="g">配置目标</h3>
+			<font>确保能正确运行 Nginx 或 Apache 等服务器功能</font><br>
+
+			<h3 class="g">配置方法</h3>
+			<font>略</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装编译工具及库文件</h2>
+		</td>
+		<td>
+			<p class="g">配置目标</p>
+			<font>Mysql 必备编译工具</font><br>
+
+			<p class="g">配置方法</p>
+			<font class="gr">bison 是一个自由软件 用于自动生成语法分析器程序 可用于所有常见的操作系统</font><br>
+			<font class="gr">Ncurses 提供字符终端处理库 包括面板和菜单 它提供了一套控制光标 建立窗口 改变前景背景颜色以及处理鼠标操作的函数 使用户在字符终端下编写应用程序时绕过了那些恼人的底层机制 简而言之 他是一个可以使应用程序直接控制终端屏幕显示的函数库</font><br>
+			<font class="gr">mysql 在 5.5 以后 不再使用 ./configure 工具 进行编译安装 而使用 cmake 工具替代了</font><br>
+			<font class="r">yum install bison-devel</font><br>
+			<font class="r">yum install ncurses-devel</font><br>
+			<font class="r">yum install cmake</font><br>
+		</td>
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>安装</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装<br>Mysql</h2>
+		</td>
+		<td>
+			<h3 class="g">下载 rpm 包</h3>
+			<font class="gr">在官网下载最稳定版的安装包 解压后进入安装目录准备执行安装程序</font><br>
+			<font>下载命令：</font> <font class="r">wget http://cdn.mysql.com/Downloads/MySQL-5.6/mysql-5.6.25.tar.gz</font><br>
+			<font>下载地址：</font> <a href="http://http://www.mysql.com/" target="_blank">http://http://www.mysql.com/</a><br>
+
+			<h3 class="g">执行安装命令</h3>
+			<font class="gr">如果报错 清除缓存 执行 make clean 再删除所有的 CMakeCache.txt</font><br>
+			<font class="gr">DCMAKE_INSTALL_PREFIX=/usr/local/mysql &lt;安装根目录（其它目录可以此目录设置相对路径）&gt;</font><br>
+			<font class="gr">DINSTALL_SBINDIR=sbin &lt;mysqld 目录&gt;</font><br>
+			<font class="gr">DMYSQL_DATADIR=data &lt;数据存储目录&gt;</font><br>
+			<font class="gr">DSYSCONFDIR=? &lt;配置文件 my.cnf 目录&gt;</font><br>
+			<font class="gr">DINSTALL_SHAREDIR=share &lt;共享数据目录&gt;</font><br>
+			<font class="gr">DINSTALL_MANDIR=share/man &lt;手册文件目录&gt;</font><br>
+			<font class="gr">DINSTALL_INFODIR=share/info &lt;信息文档目录&gt;</font><br>
+			<font class="gr">DINSTALL_LIBDIR=lib &lt;默认 Library 库目录&gt;</font><br>
+			<font class="gr">DINSTALL_PLUGINDIR=lib/plugin &lt;默认插件目录&gt;</font><br>
+			<font class="gr">DINSTALL_INCLUDEDIR=include/mysql &lt;默认 Header 安装目录&gt;</font><br>
+
+			<font class="gr">DMYSQL_TCP_PORT=3306 &lt;默认端口&gt;</font><br>
+			<font class="gr">DMYSQL_UNIX_ADDR=/tmp/mysqld.sock &lt;默认 socket 文件位置&gt;</font><br>
+			<font class="gr">DENABLED_LOCAL_INFILE=1 &lt;启用加载本地数据&gt;</font><br>
+			<font class="gr">DEXTRA_CHARSETS=all &lt;支持所有扩展字符集&gt;</font><br>
+			<font class="gr">DDEFAULT_CHARSET=utf8 &lt;使用 utf8 字符&gt;</font><br>
+			<font class="gr">DDEFAULT_COLLATION=utf8_general_ci &lt;默认字符校对&gt;</font><br>
+			<font class="gr">DMYSQL_USER=mysql &lt;mysqld 运行用户&gt;</font><br>
+			<font class="gr">DWITH_DEBUG=0 &lt;禁用调试模式&gt;</font><br>
+			<font class="gr">DWITH_INNOBASE_STORAGE_ENGINE=1 &lt;启用 InnoDB 引擎支持&gt;</font><br>
+			<font class="gr">DWITH_ARCHIVE_STORAGE_ENGINE=1  &lt;启用 ARCHIVE 引擎支持&gt;</font><br>
+			<font class="gr">DWITH_BLACKHOLE_STORAGE_ENGINE=1 &lt;启用 BLACKHOLE 引擎支持&gt;</font><br>
+
+			<font class="r">cmake \</font><br>
+			<font class="r">-DCMAKE_INSTALL_PREFIX=/usr/local/mysql \</font><br>
+			<font class="r">-DMYSQL_DATADIR=/usr/local/mysql/data \</font><br>
+			<font class="r">-DMYSQL_UNIX_ADDR=/usr/local/mysql/mysqld.sock \</font><br>
+			<font class="r">-DEXTRA_CHARSETS=all \</font><br>
+			<font class="r">-DDEFAULT_CHARSET=utf8 \</font><br>
+			<font class="r">-DDEFAULT_COLLATION=utf8_general_ci \</font><br>
+			<font class="r">-DWITH_DEBUG=0 \</font><br>
+			<font class="r">-DENABLED_LOCAL_INFILE=1 \</font><br>
+			<font class="r">-DWITH_INNOBASE_STORAGE_ENGINE=1</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">开始安装</h2>
+		</td>
+		<td>
+			<p class="g">执行安装命令</p>
+			<font class="r">make && make install</font><br>
+		</td>
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>配置</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">账户配置</h2>
+		</td>
+		<td>
+			<h3 class="g">添加 mysql 系统账户组</h3>
+			<font class="r">groupadd -r mysql</font><br>
+
+			<h3 class="g">添加 mysql 系统账户</h3>
+			<font class="r">useradd -s /sbin/nologin -g mysql -r mysql</font><br>
+
+			<h3 class="g">给予目录权限</h3>
+			<font class="r">chown -R mysql:mysql /usr/local/mysql</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">初始化配置</h2>
+		</td>
+		<td>
+			<h3 class="g">执行初始化配置脚本 创建系统自带的数据库和表</h3>
+			<font class="gr">必须有一个 no-defaults 选项 如果没有该选项 则程序会自动载入默认的配置文件</font><br>
+			<font class="r">/usr/local/mysql/scripts/mysql_install_db \</font><br>
+			<font class="r">--basedir=/usr/local/mysql \</font><br>
+			<font class="r">--datadir=/usr/local/mysql/data \</font><br>
+			<font class="r">--user=mysql \</font><br>
+			<font class="r">--no-defaults \</font><br>
+			<font class="r">--defaults-file=/usr/local/mysql/my.cnf</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">设置配置文件</h2>
+		</td>
+		<td>
+			<h3 class="g">设置 my.conf 配置文件</h3>
+			<font class="r">cp /usr/local/mysql/support-files/my-default.cnf /usr/local/mysql/my.cnf</font><br>
+			<font class="r">vi /usr/local/mysql/my.cnf</font><br>
+			<div class="cmd">
+				<font>[mysqld]</font><br>
+				<font class="r">user=mysql</font><br>
+				<font class="r">basedir=/usr/local/mysql</font><br>
+				<font class="r">datadir=/usr/local/mysql/data</font><br>
+				<font class="r">socket=/usr/local/mysql/mysql.sock</font><br>
+				<font class="r">pid-file=/usr/local/mysql/mysql.pid</font><br>
+			</div>
+		</td>
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>使用</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">文件结构</h2>
+		</td>
+		<td>
+			<h3 class="g">默认原始配置文件目录</h3>
+			<font class="r">/usr/local/mysql/support-files/my-default.cnf</font><br>
+
+			<h3 class="g">默认原始启动文件目录</h3>
+			<font class="r">/usr/local/mysql/support-files/mysql.server</font><br>
+
+			<h3 class="g">默认 socket 文件目录</h3>
+			<font class="r">/tmp/mysqld.sock</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">操作命令</h2>
+		</td>
+		<td>
+			<h3 class="g">启动</h3>
+			<font class="r">/usr/local/mysql/support-files/mysql.server start</font><br>
+
+			<h3 class="g">重启</h3>
+			<font class="r">/usr/local/mysql/support-files/mysql.server restart</font><br>
+
+			<h3 class="g">关闭</h3>
+			<font class="r">/usr/local/mysql/support-files/mysql.server stop</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">命令模式</h2>
+		</td>
+		<td>
+			<h3 class="g">修改密码</h3>
+			<font class="r">/usr/local/mysql/bin/mysql -uroot</font><br>
+			<font class="r">SET PASSWORD = PASSWORD('123456')</font><br>
+
+			<h3 class="g">连接</h3>
+			<font class="r">/usr/local/mysql/bin/mysql -uroot -p</font><br>
+			<font class="r">123456</font><br>
+		</td>
+	</tr>
+</table>
+</div>
+<!---------------------------------------------------------------------------------------------------->
+<div id="show_02" class="hide">
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>安装前准备</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装服务器软件</h2>
+		</td>
+		<td>
+			<h3 class="g">配置目标</h3>
+			<font>确保能正确运行 Nginx 或 Apache 等服务器功能</font><br>
+
+			<h3 class="g">配置方法</h3>
+			<font>略</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装编译工具及库文件</h2>
+		</td>
+		<td>
+			<p class="g">配置目标</p>
+			<font>Mysql 必备编译工具</font><br>
+
+			<p class="g">配置方法</p>
+			<font class="gr">mysql 在 5.5 以后 不再使用 ./configure 工具 进行编译安装 而使用 cmake 工具替代了</font><br>
+			<font class="r">sudo apt-get install build-essential</font><br>
+			<font class="r">sudo apt-get install libncurses5-dev</font><br>
+			<font class="r">sudo apt-get install sysv-rc-conf</font><br>
+			<font class="r">apt-get install cmake</font><br>
+		</td>
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>安装</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">安装<br>Mysql</h2>
+		</td>
+		<td>
+			<h3 class="g">下载 rpm 包</h3>
+			<font class="gr">在官网下载最稳定版的安装包 解压后进入安装目录准备执行安装程序</font><br>
+			<font>下载命令：</font> <font class="r">wget http://cdn.mysql.com/Downloads/MySQL-5.6/mysql-5.6.25.tar.gz</font><br>
+			<font>下载地址：</font> <a href="http://http://www.mysql.com/" target="_blank">http://http://www.mysql.com/</a><br>
+
+			<h3 class="g">执行安装命令</h3>
+			<font class="gr">如果报错 清除缓存 执行 make clean 再删除所有的 CMakeCache.txt</font><br>
+			<font class="gr">DCMAKE_INSTALL_PREFIX=/usr/local/mysql &lt;安装根目录（其它目录可以此目录设置相对路径）&gt;</font><br>
+			<font class="gr">DINSTALL_SBINDIR=sbin &lt;mysqld 目录&gt;</font><br>
+			<font class="gr">DMYSQL_DATADIR=data &lt;数据存储目录&gt;</font><br>
+			<font class="gr">DSYSCONFDIR=? &lt;配置文件 my.cnf 目录&gt;</font><br>
+			<font class="gr">DINSTALL_SHAREDIR=share &lt;共享数据目录&gt;</font><br>
+			<font class="gr">DINSTALL_MANDIR=share/man &lt;手册文件目录&gt;</font><br>
+			<font class="gr">DINSTALL_INFODIR=share/info &lt;信息文档目录&gt;</font><br>
+			<font class="gr">DINSTALL_LIBDIR=lib &lt;默认 Library 库目录&gt;</font><br>
+			<font class="gr">DINSTALL_PLUGINDIR=lib/plugin &lt;默认插件目录&gt;</font><br>
+			<font class="gr">DINSTALL_INCLUDEDIR=include/mysql &lt;默认 Header 安装目录&gt;</font><br>
+
+			<font class="gr">DMYSQL_TCP_PORT=3306 &lt;默认端口&gt;</font><br>
+			<font class="gr">DMYSQL_UNIX_ADDR=/tmp/mysqld.sock &lt;默认 socket 文件位置&gt;</font><br>
+			<font class="gr">DENABLED_LOCAL_INFILE=1 &lt;启用加载本地数据&gt;</font><br>
+			<font class="gr">DEXTRA_CHARSETS=all &lt;支持所有扩展字符集&gt;</font><br>
+			<font class="gr">DDEFAULT_CHARSET=utf8 &lt;使用 utf8 字符&gt;</font><br>
+			<font class="gr">DDEFAULT_COLLATION=utf8_general_ci &lt;默认字符校对&gt;</font><br>
+			<font class="gr">DMYSQL_USER=mysql &lt;mysqld 运行用户&gt;</font><br>
+			<font class="gr">DWITH_DEBUG=0 &lt;禁用调试模式&gt;</font><br>
+			<font class="gr">DWITH_INNOBASE_STORAGE_ENGINE=1 &lt;启用 InnoDB 引擎支持&gt;</font><br>
+			<font class="gr">DWITH_ARCHIVE_STORAGE_ENGINE=1  &lt;启用 ARCHIVE 引擎支持&gt;</font><br>
+			<font class="gr">DWITH_BLACKHOLE_STORAGE_ENGINE=1 &lt;启用 BLACKHOLE 引擎支持&gt;</font><br>
+
+			<font class="r">cmake \</font><br>
+			<font class="r">-DCMAKE_INSTALL_PREFIX=/usr/local/mysql \</font><br>
+			<font class="r">-DMYSQL_DATADIR=/usr/local/mysql/data \</font><br>
+			<font class="r">-DMYSQL_UNIX_ADDR=/usr/local/mysql/mysqld.sock \</font><br>
+			<font class="r">-DEXTRA_CHARSETS=all \</font><br>
+			<font class="r">-DDEFAULT_CHARSET=utf8 \</font><br>
+			<font class="r">-DDEFAULT_COLLATION=utf8_general_ci \</font><br>
+			<font class="r">-DWITH_DEBUG=0 \</font><br>
+			<font class="r">-DENABLED_LOCAL_INFILE=1 \</font><br>
+			<font class="r">-DWITH_INNOBASE_STORAGE_ENGINE=1</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">开始安装</h2>
+		</td>
+		<td>
+			<p class="g">执行安装命令</p>
+			<font class="r">make && make install</font><br>
+		</td>
+	</tr>
+</table>
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>配置</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">账户配置</h2>
+		</td>
+		<td>
+			<h3 class="g">添加 mysql 系统账户组</h3>
+			<font class="r">groupadd -r mysql</font><br>
+
+			<h3 class="g">添加 mysql 系统账户</h3>
+			<font class="r">useradd -s /sbin/nologin -g mysql -r mysql</font><br>
+
+			<h3 class="g">给予目录权限</h3>
+			<font class="r">chown -R mysql:mysql /usr/local/mysql</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">初始化配置</h2>
+		</td>
+		<td>
+			<h3 class="g">执行初始化配置脚本 创建系统自带的数据库和表</h3>
+			<font class="gr">必须有一个 no-defaults 选项 如果没有该选项 则程序会自动载入默认的配置文件</font><br>
+			<font class="r">/usr/local/mysql/scripts/mysql_install_db \</font><br>
+			<font class="r">--basedir=/usr/local/mysql \</font><br>
+			<font class="r">--datadir=/usr/local/mysql/data \</font><br>
+			<font class="r">--user=mysql \</font><br>
+			<font class="r">--no-defaults \</font><br>
+			<font class="r">--defaults-file=/usr/local/mysql/my.cnf</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">设置配置文件</h2>
+		</td>
+		<td>
+			<h3 class="g">设置 my.conf 配置文件</h3>
+			<font class="r">cp /usr/local/mysql/support-files/my-default.cnf /usr/local/mysql/my.cnf</font><br>
+			<font class="r">vi /usr/local/mysql/my.cnf</font><br>
+			<div class="cmd">
+				<font>[mysqld]</font><br>
+				<font class="r">user=mysql</font><br>
+				<font class="r">basedir=/usr/local/mysql</font><br>
+				<font class="r">datadir=/usr/local/mysql/data</font><br>
+				<font class="r">socket=/usr/local/mysql/mysql.sock</font><br>
+				<font class="r">pid-file=/usr/local/mysql/mysql.pid</font><br>
+			</div>
+		</td>
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>使用</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">文件结构</h2>
+		</td>
+		<td>
+			<h3 class="g">默认原始配置文件目录</h3>
+			<font class="r">/usr/local/mysql/support-files/my-default.cnf</font><br>
+
+			<h3 class="g">默认原始启动文件目录</h3>
+			<font class="r">/usr/local/mysql/support-files/mysql.server</font><br>
+
+			<h3 class="g">默认 socket 文件目录</h3>
+			<font class="r">/tmp/mysqld.sock</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">操作命令</h2>
+		</td>
+		<td>
+			<h3 class="g">启动</h3>
+			<font class="r">/usr/local/mysql/support-files/mysql.server start</font><br>
+
+			<h3 class="g">重启</h3>
+			<font class="r">/usr/local/mysql/support-files/mysql.server restart</font><br>
+
+			<h3 class="g">关闭</h3>
+			<font class="r">/usr/local/mysql/support-files/mysql.server stop</font><br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">命令模式</h2>
+		</td>
+		<td>
+			<h3 class="g">修改密码</h3>
+			<font class="r">/usr/local/mysql/bin/mysql -uroot</font><br>
+			<font class="r">SET PASSWORD = PASSWORD('123456')</font><br>
+
+			<h3 class="g">连接</h3>
+			<font class="r">/usr/local/mysql/bin/mysql -uroot -p</font><br>
+			<font class="r">123456</font><br>
+		</td>
+	</tr>
+</table>
+</div>
+
+<!---------------------------------------------------------------------------------------------------->
+
+<script>
+
+	var show_01 = document.getElementById('show_01');
+	var show_02 = document.getElementById('show_02');
+
+	function show(n){
+		switch(n){
+			case 1:
+				show_01.className = 'show';
+				show_02.className = 'hide';
+				break;
+			case 2:
+				show_01.className = 'hide';
+				show_02.className = 'show';
+				break;
+		}
+	}
+
+</script>

@@ -1,0 +1,638 @@
+<!doctype html>
+<meta charset="utf-8" />
+<link href="./css/linux.css" rel="stylesheet" type="text/css" />
+
+<div id="body">
+	<ul>
+		<li>安装</li>
+		<li>
+		<table>
+		<tr>
+			<td>【导入源码包】</td>
+			<td><h6>用 winSCP 软件导入到自定义路径</h6></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【解压缩】</td>
+			<td><h3>tar zxvf redis-2.8.6.tar.gz</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【进入解压包】</td>
+			<td><h2>cd /.../解压包目录/redis-2.8.6</h2></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【安装】</td>
+			<td><h3>make && make PREFIX=/usr/local/redis install</h3></td>
+			<td>★ 如果没有指定安装位置 PREFIX=/usr/local/redis 则 make install 会把 redis 安装到 /usr/local/bin/ 目录下</td>
+		</tr>
+		<tr>
+			<td>【建立配置文件目录】</td>
+			<td><h3>mkdir /usr/local/redis/etc</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【复制配置文件】</td>
+			<td><h3>cp /解压包目录/redis-2.8.6/redis.conf /usr/local/redis/etc/</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【修改配置文件】</td>
+			<td><h2>vi /usr/local/redis/etc/redis.conf</h2></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><h4 title="daemonize no 改为 daemonize yes">daemonize yes</h4></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【启动服务】</td>
+			<td><h3>/usr/local/redis/bin/redis-server /usr/local/redis/etc/redis.conf</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【连接客户端】</td>
+			<td><h3>/usr/local/redis/bin/redis-cli</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【关闭连接】</td>
+			<td><h3>/usr/local/redis/bin/redis-cli shutdown</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【关闭连接】</td>
+			<td><h3>pkill -9 redis</h3></td>
+			<td></td>
+		</tr>
+		</table>
+		</li>
+	</ul>
+<div id="body_00"></div>
+	<ul>
+		<li>数据类型 字符串(string)</li>
+		<li>
+		<table>
+		<tr>
+			<td>【设置一个键的值】</td>
+			<td><h3>set 键 值</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【返回一个键的值】</td>
+			<td><h3>get 键</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【设置一个键的值】</td>
+			<td><h3>setnx 新键 值</h3></td>
+			<td>★ 该键不能是已存在的键</td>
+		</tr>
+		<tr>
+			<td>【设置一个指定有效期的键和值】</td>
+			<td><h3>setex 键 有效时间 值</h3></td>
+			<td>★ 时间单位是秒</td>
+		</tr>
+		<tr>
+			<td>【返回指定键值的生存时间】</td>
+			<td><h3>ttl 键</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【替换子字符串】</td>
+			<td><h3>setrange 键 位置 子字符串</h3></td>
+			<td>★ 从键值的指定位置开始替换（字符串位置从 0 开始计算） 写几个字符就替换几个</td>
+		</tr>
+		<tr>
+			<td>【批量设置键和值】</td>
+			<td><h3>mset 键1 值1 键2 值2 键3 值3 ...</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【批量返回键的值】</td>
+			<td><h3>mget 键1 键2 键3 ...</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【批量设置键的值】</td>
+			<td><h3>msetnx 新键1 值1 新键2 值2 新键3 值3 ...</h3></td>
+			<td>★ 该键不能是已存在的键</td>
+		</tr>
+		<tr>
+			<td>【获取原值并设置新值】</td>
+			<td><h3>getset 键 新值</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【返回指定范围的值】</td>
+			<td><h3>getrange 键 起始位置 结束位置</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【指定键的值加1】</td>
+			<td><h3>incr 键</h3></td>
+			<td>★ 该值必须是数字</td>
+		</tr>
+		<tr>
+			<td>【指定键的值增加指定值】</td>
+			<td><h3>incrby 键 数量</h3></td>
+			<td>★ 该值必须是数字 ★ 数量可以是正整数或负整数 ★ 键不存在时候会设置键</td>
+		</tr>
+		<tr>
+			<td>【指定键的值减1】</td>
+			<td><h3>decr 键</h3></td>
+			<td>★ 该值必须是数字</td>
+		</tr>
+		<tr>
+			<td>【指定键的值减去指定值】</td>
+			<td><h3>decrby 键 数量</h3></td>
+			<td>★ 该值必须是数字 ★ 数量可以是正整数或负整数 ★ 键不存在时候会设置键</td>
+		</tr>
+		<tr>
+			<td>【给指定键值追加字符串】</td>
+			<td><h3>append 键 追加值</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【计算一个键值长度】</td>
+			<td><h3>strlen 键</h3></td>
+			<td></td>
+		</tr>
+		</table>
+		</li>
+	</ul>
+<div id="body_00"></div>
+	<ul>
+		<li>数据类型 哈希表(hashs)</li>
+		<li>
+		<table>
+		<tr>
+			<td>【设置一个键的字段的值】</td>
+			<td><h3>hset 键 字段 值</h3></td>
+			<td>★ 设置一个键 在键中保存字段和值</td>
+		</tr>
+		<tr>
+			<td>【设置一个键的新字段的值】</td>
+			<td><h3>hsetnx 键 新字段 值</h3></td>
+			<td>★ 该字段不能是已存在的字段</td>
+		</tr>
+		<tr>
+			<td>【批量设置一个键的字段的值】</td>
+			<td><h3>hmset 键 字段1 值1 字段2 值2 字段3 值3 ...</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【返回一个键的字段的值】</td>
+			<td><h3>hget 键 字段</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【返回一个键的多个字段的值】</td>
+			<td><h3>hmget 键 字段1 字段2 字段3 ...</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【判断指定字段是否属于指定键】</td>
+			<td><h3>hexists 键 字段</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【获取键中的字段数量】</td>
+			<td><h3>hlen 键</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【返回键中的所有字段名】</td>
+			<td><h3>hkeys 键</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【返回键中所有字段的值】</td>
+			<td><h3>hvals 键</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【返回键中的所有字段和值】</td>
+			<td><h3>hgetall 键</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【键中指定字段的值增加指定数字】</td>
+			<td><h3>hincrby 键 字段 数量</h3></td>
+			<td>★ 该值必须是数字</td>
+		</tr>
+		<tr>
+			<td>【删除多个键中的字段】</td>
+			<td><h3>hdel 键 字段1 字段2 字段3 ...</h3></td>
+			<td>★ 删除一个键还是要使用 del 命令</td>
+		</tr>
+		</table>
+		</li>
+	</ul>
+<div id="body_00"></div>
+	<ul>
+		<li>数据类型 双向队列(list)</li>
+		<li>
+		<table>
+		<tr>
+			<td>【从队列左边写入一个或多个值】</td>
+			<td><h3>lpush 键 值1 值2 值3 ...</h3></td>
+			<td>★ 认为队列的左面为队列头，右边为队列尾</td>
+		</tr>
+		<tr>
+			<td>【从队列右边写入一个或多个值】</td>
+			<td><h3>rpush 键 值1 值2 值3 ...</h3></td>
+			<td>★ 从队列右边向队列写入值 第一个值就会写到队列的开头</td>
+		</tr>
+		<tr>
+			<td>【从队列左边向右返回指定值】</td>
+			<td><h3>lrange 键 起始下标 终止下标</h3></td>
+			<td>★ 0 代表队列中第一个元素 1 代表第二个元素 -1 代表最后一个元素 -2 代表倒数第二个元素 依次类推</td>
+		</tr>
+		<tr>
+			<td>【从队列中指定元素之前插入新值】</td>
+			<td><h3>linsert 键 before 原值 新值</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【从队列中指定元素之后插入新值】</td>
+			<td><h3>linsert 键 after 原值 新值</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【给队列中指定元素设定新值】</td>
+			<td><h3>lset 键 下标 新值</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【从队列中删除n个含指定值的元素】</td>
+			<td><h3>lerm 键 数量n 指定值</h3></td>
+			<td>★ n>0 从队列头向尾删除 n 个元素 ★ n<0 从队列尾向头删除 n 个元素 ★ n=0 删除所有含指定值的元素</td>
+		</tr>
+		<tr>
+			<td>【修剪队列】</td>
+			<td><h3>ltrim 键 起始下标 结束下标</h3></td>
+			<td>★ 让队列只保留指定指定范围内的元素</td>
+		</tr>
+		<tr>
+			<td>【从指定的队列左面移除一个值】</td>
+			<td><h3>lpop 键</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【从指定队列的右边移除一个值】</td>
+			<td><h3>rpop 键</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【转移元素】</td>
+			<td><h3>rpoplpush 源队列 目标队列</h3></td>
+			<td>★ 移除源队列的最后一个元素 并把该元素写入目标队列</td>
+		</tr>
+		<tr>
+			<td>【获取队列中指定下标元素的值】</td>
+			<td><h3>lindex 键 下标</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【获得队列的长度】</td>
+			<td><h3>llen 键</h3></td>
+			<td></td>
+		</tr>
+		</table>
+		</li>
+	</ul>
+<div id="body_00"></div>
+	<ul>
+		<li>数据类型 集合(sets)</li>
+		<li>
+		<table>
+		<tr>
+			<td>【添加一个或多个元素到集合中】</td>
+			<td><h3>sadd 键 值1 值2 值3 ...</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【获取集合里面所有的元素】</td>
+			<td><h3>smembers 键</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【从集合中删除指定的一个或多个元素】</td>
+			<td><h3>srem 键 值1 值2 值3 ...</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【随机从集合中删除并返回一个元素】</td>
+			<td><h3>spop 键</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【随机返回集合中一个元素】</td>
+			<td><h3>srandmember 键</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【获取集合里面元素个数】</td>
+			<td><h3>scard 键</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【确定一个值是否在集合中】</td>
+			<td><h3>sismember 键 值</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【返回指定集合的差集】</td>
+			<td><h3>sdiff 集合1 集合2</h3></td>
+			<td>★ 以集合1为主</td>
+		</tr>
+		<tr>
+			<td>【返回指定集合的差集并存入新集合】</td>
+			<td><h3>sdiffstore 新集合 集合1 集合2</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【返回指定集合的交集】</td>
+			<td><h3>sinter 集合1 集合2</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【返回指定集合的交集并存入新集合】</td>
+			<td><h3>sinterstore 新集合 集合1 集合2</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【获得指定集合的并集】</td>
+			<td><h3>sunion 集合1 集合2</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【获得指定集合的并集并存入新集合】</td>
+			<td><h3>sunionstore 新集合 集合1 集合2</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【将指定的值从源集合移动到目标集合】</td>
+			<td><h3>smove 源集合 目标集合 值</h3></td>
+			<td></td>
+		</tr>
+		</table>
+		</li>
+	</ul>
+<div id="body_00"></div>
+	<ul>
+		<li>数据类型 有序集合(sorted sets)</li>
+		<li>
+		<table>
+		<tr>
+			<td>【添加一个有序集合】</td>
+			<td><h3>zadd 键 分数1 值1 分数2 值2 分数3 值3 ...</h3></td>
+			<td>★ 集合中的值按分数排序 ★ 分数的值必须是一个表示数字的字符串 并且可以是 double 类型的浮点数</td>
+		</tr>
+		<tr>
+			<td>【返回指定区间的成员】</td>
+			<td><h3>zrange 集合 起始下标 截止下标 withscores</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【返回指定区间的成员并排序】</td>
+			<td><h3>zrevrange 集合 起始下标 截止下标 withscores</h3></td>
+			<td>★ 按下标从大到小排列</td>
+		</tr>
+		<tr>
+			<td>【返回在指定分数区间的值】</td>
+			<td><h3>zrangebyscore 集合 起始分数 截止分数 withscores</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【删除指定的值】</td>
+			<td><h3>zrem 集合 值1 值2 值3 ...</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【给指定值的成员分数增加】</td>
+			<td><h3>zincrby 集合 增量 值</h3></td>
+			<td>★ 如果集合中没有这个值则添加</td>
+		</tr>
+		<tr>
+			<td>【返回指定值的下标并排序】</td>
+			<td><h3>zrank 集合 值</h3></td>
+			<td>★ 按下标从小到大排列</td>
+		</tr>
+		<tr>
+			<td>【返回指定值的下标并排序】</td>
+			<td><h3>zrevrank 集合 值</h3></td>
+			<td>★ 按下标从大到小排列</td>
+		</tr>
+		<tr>
+			<td>【返回指定分数区间的值的个数】</td>
+			<td><h3>zcount 集合 起始分数 截止分数</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【返回有序集合元素的个数】</td>
+			<td><h3>zcard 集合</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【删除指定下标区间的元素】</td>
+			<td><h3>zremrangebyrank 集合 起始下标 结束下标</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【删除指定分数区间的元素】</td>
+			<td><h3>zremrangebyscore 集合 起始分数 截止分数</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【取交集并添入新集合】</td>
+			<td><h3>zinterstore  新集合 取交集的集合个数 集合1 集合2 集合3 ...</h3></td>
+			<td>★ 交集中值的分数是多个集合中分数的和</td>
+		</tr>
+		<tr>
+			<td>【取并集并添入新集合】</td>
+			<td><h3>zunionstore  新集合 取并集的集合个数 集合1 集合2 集合3 ...</h3></td>
+			<td>★ 交集中值的分数是多个集合中分数的和</td>
+		</tr>
+		</table>
+		</li>
+	</ul>
+<div id="body_00"></div>
+	<ul>
+		<li>常用键值命令</li>
+		<li>
+		<table>
+		<tr>
+			<td>【查找指定的键】</td>
+			<td><h3>keys 键名</h3></td>
+			<td>★ 支持通配符</td>
+		</tr>
+		<tr>
+			<td>【查看所有键】</td>
+			<td><h3>keys *</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【删除一个或多个键】</td>
+			<td><h3>del 键1 键2 键3 ...</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【确认一个键是否存在】</td>
+			<td><h3>exists 键名</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【设置一个键的过期时间】</td>
+			<td><h3>expire 键 秒</h3></td>
+			<td>★ 如果键已经过期 将会被自动删除</td>
+		</tr>
+		<tr>
+			<td>【返回键的剩余生存时间】</td>
+			<td><h3>ttl 键</h3></td>
+			<td>★ 以秒为单位 ★ 当键不存在时 返回值为-2 ★ 当键存在但没有设置剩余生存时间时 返回-1</td>
+		</tr>
+		<tr>
+			<td>【选择一个数据库】</td>
+			<td><h3>select 数据库号</h3></td>
+			<td>★ 默认连接的数据库是0 可以支持共16个数据库 ★ 在配置文件中 通过databases 16 关键字定义</td>
+		</tr>
+		<tr>
+			<td>【键库转移】</td>
+			<td><h3>move 键 数据库号</h3></td>
+			<td>★ 将当前数据库的键移动到指定的数据库中</td>
+		</tr>
+		<tr>
+			<td>【从当前数据库返回一个随机键】</td>
+			<td><h3>randomkey</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【重命名键】</td>
+			<td><h3>rename 旧名 新名</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【返回键类型】</td>
+			<td><h3>type 键</h3></td>
+			<td></td>
+		</tr>
+		</table>
+		</li>
+	</ul>
+<div id="body_00"></div>
+	<ul>
+		<li>常用服务命令</li>
+		<li>
+		<table>
+		<tr>
+			<td>【测试服务器是否可以连接】</td>
+			<td><h3>ping</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【在命令行输出字符串】</td>
+			<td><h3>echo 字符串</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【退出 redis 数据库】</td>
+			<td><h3>quit</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【保存所有的数据】</td>
+			<td><h3>save</h3></td>
+			<td>★ 很少在生产环境直接使用 SAVE 命令 因为它会阻塞所有的客户端的请求</td>
+		</tr>
+		<tr>
+			<td>【持久化快照存储】</td>
+			<td><h3>save 秒数 最少变动键数</h3></td>
+			<td>★ 持久化方式能够在指定的时间间隔能对你的数据进行快照存储 ★ 生成 dump.rdb 文件</td>
+		</tr>
+		<tr>
+			<td>【后台保存所有的数据】</td>
+			<td><h3>bgsave</h3></td>
+			<td>★ 后台保存数据 如果无效再使用 save</td>
+		</tr>
+		<tr>
+			<td>【返回当前库中键的数量】</td>
+			<td><h3>dbsize</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【获取服务器的详细信息】</td>
+			<td><h3>info</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【获取 redis 服务器配置文件中的参数】</td>
+			<td><h3>config get 参数</h3></td>
+			<td>★ 支持通配符</td>
+		</tr>
+		<tr>
+			<td>【删除当前数据库中所有的数据】</td>
+			<td><h3>flushdb</h3></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>【删除所有数据库中所有的数据】</td>
+			<td><h3>flushall</h3></td>
+			<td></td>
+		</tr>
+		</table>
+		</li>
+	</ul>
+<div id="body_00"></div>
+	<ul>
+		<li>高级应用</li>
+		<li>
+		<table>
+		<tr>
+			<td>【设置密码】</td>
+			<td><h2>/usr/local/redis/etc/redis.conf</h2></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<h4 title="第340行 requirepass 后面就是登录 redis 的密码">requirepass 新密码</h2>
+				<h3>pkill -9 redis</h3>
+				<h3>/usr/local/redis/bin/redis-server /usr/local/redis/etc/redis.conf</h3>
+				<h3>/usr/local/redis/bin/redis-cli</h3>
+				<h3>auth 密码</h3>
+				<h3>keys *</h3>
+			</td>
+			<td>
+				★ 修改配置文件<br>
+				★ 设置密码<br>
+				★ 关闭服务<br>
+				★ 重启服务<br>
+				★ 连接 redis<br>
+				★ 输入密码（注意历史命令中会明文保存此密码）<br>
+				★ 测试<br>
+			</td>
+		</tr>
+		<tr>
+			<td>【持久化快照存储】</td>
+			<td><h2>/usr/local/redis/etc/redis.conf</h2></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<h4 title="第450行 默认不使用AOF持久化">appendonly no</h4>
+				<h4 title="第450行 默认使用AOF持久化">appendonly yes</h4>
+				<h4 title="第478行 有写操作 就马上写入磁盘 效率最慢">appendfsync always</h4>
+				<h4 title="第478行 默认 每秒钟写入磁盘一次">appendfsync everysec</h4>
+				<h4 title="第478行 不进行AOF备份 将数据交给操作系统处理 最快 最不安全">appendfsync no</h4>
+			</td>
+			<td></td>
+		</tr>
+		</table>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,101 @@
+<meta charset="utf8">
+<!---------------------------------------------------------------------------------------------------->
+
+<style>
+	.{margin:0px;padding:0px;}
+	a{text-decoration:none;}
+	
+	table{border-collapse:collapse;border:3px solid black;}
+	table{width:80%;margin:auto;font-size:12px;font-family:"微软雅黑";}
+	table tr{border-bottom:2px solid black;}
+	table tr td:nth-of-type(1){width:15%;border-right:1px solid black;text-align:center;}
+	table tr td:nth-of-type(2){width:85%;padding:1%;}
+
+	.r{color:red;}
+	.g{color:green;}
+	.b{color:blue;}
+	.gr{color:grey;}
+	.bg_gr{background:grey;}
+	.cmd{background:black;color:white;width:60%;padding:1%;}
+
+	.hide{display:none;}
+	.show{display:block;}
+</style>
+
+<!---------------------------------------------------------------------------------------------------->
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>准备</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">组件</h2>
+		</td>
+		<td>
+			<h3 class="g">配置目标</h3>
+			<font>确保所有开发运行库已安装</font><br>
+		</td>
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>配置</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">配置文件</h2>
+		</td>
+		<td>
+			<h3 class="g">配置文件路径</h3>
+			<font>php.ini-development 文件重命名为 php.ini</font><br>
+			<font>/php.ini</font><br>
+
+			<h3 class="g">配置基于 PHP 引擎的扩展路径</h3>
+			<font class="gr">所有扩展库的存放路径</font><br>
+			<div class="cmd">
+				<font class="r">extension_dir = "e:/php/ext/"</font><br>
+			</div>
+			<br>
+
+			<h3 class="g">配置一般开启的扩展</h3>
+			<font class="gr">PHP 常用的扩展（将前面的 ";" 去掉）</font><br>
+			<div class="cmd">
+				<font class="r">extension=php_curl.dll</font><br>
+				<font class="r">extension=php_gd2.dll</font><br>
+				<font class="r">extension=php_mysql.dll</font><br>
+				<font class="r">extension=php_pdo.dll</font><br>
+				<font class="r">extension=php_pdo_mysql.dll</font><br>
+				<font class="r">extension=php_pdo_sqlite.dll</font><br>
+				<font class="r">extension=php_mbstring.dll</font><br>
+			</div>
+			<br>
+		</td>    
+	</tr>
+</table>
+
+<br /><br />
+
+<table>
+	<tr>
+		<th colspan="2" class="bg_gr">
+			<h1>使用</h1>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<h2 class="b">文件结构</h2>
+		</td>
+		<td>
+			<h3 class="g">执行文件</h3>
+			<font>/php-cgi.exe</font><br>
+		</td>
+	</tr>
+</table>

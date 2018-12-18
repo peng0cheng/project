@@ -1,0 +1,208 @@
+<table class="i_table">
+	<tr onclick="test_textStroke()" title="">
+		<td>【文本】【描边】</td>
+		<td><p><font class="w g">text-stroke</font> : <font class="r">宽度 颜色</font></p></td>
+	</tr>
+	<tr onclick="test_textStrokeWidth()" title="">
+		<td>【文本】【描边的宽度】</td>
+		<td><p><font class="w g">text-stroke-width</font> : <font class="r">宽度</font></p></td>
+	</tr>
+	<tr onclick="test_textStrokeColor()" title="">
+		<td>【文本】【描边的颜色】</td>
+		<td><p><font class="w g">text-stroke-color</font> : <font class="r">颜色</font></p></td>
+	</tr>
+	<tr onclick="test_textFillColor()" title="">
+		<td>【文本】【填充的颜色】</td>
+		<td><p><font class="w g">text-fill-color</font> : <font class="r">颜色</font></p></td>
+	</tr>
+	<tr onclick="test_textDecorationLine()" title="">
+		<td>【文本】【修饰线的位置】</td>
+		<td><p><font class="w g">text-decoration-line</font> : <font class="w r">overline</font> 丨 <font class="w r">underline</font> 丨 <font class="w r">line-through</font></p></td>
+	</tr>
+	<tr onclick="test_textDecorationColor()" title="">
+		<td>【文本】【修饰线的颜色】</td>
+		<td><p><font class="w g">text-decoration-color</font> : <font class="r">颜色</font></p></td>
+	</tr>
+	<tr onclick="test_textDecorationStyle()" title="">
+		<td>【文本】【修饰线的风格】</td>
+		<td><p><font class="w g">text-decoration-style</font> : <font class="w r">solid</font> 丨  <font class="w r">dashed</font> 丨  <font class="w r">double</font> 丨  <font class="w r">wavy</font> 丨  <font class="w r">dotted</font></p></td>
+	</tr>
+	<tr onclick="test_direction()" title="">
+		<td>【文本】【文本流的方向】</td>
+		<td><p><font class="w g">direction</font> : <font class="w r">ltr</font> 丨 <font class="w r">rtl</font></p></td>
+	</tr> 
+	<tr onclick="test_unicodeBidi()" title="
+		&#10;必须和 direction 一起用
+		&#10;normal → 默认方向
+		&#10;bidi-override → 按照文本流的方向">
+		<td>【文本】【文字的方向】</td>
+		<td><p><font class="w g">unicode-bidi</font> : <font class="w r">normal</font> 丨 <font class="w r">bidi-override</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_columnCount()" title="">
+		<td>【多列布局】【设置列数】</td>
+		<td><p><font class="w g">column-count</font> : <font class="r">列数</font></p></td>
+	</tr>
+	<tr onclick="test_columnRule()" title="">
+		<td>【多列布局】【设置分隔线】</td>
+		<td><p><font class="w g">column-rule</font> : <font class="r">线粗 线色 线型</font></p></td>
+	</tr>
+	<tr onclick="test_columnWidth()" title="">
+		<td>【多列布局】【设置列宽】</td>
+		<td><p><font class="w g">column-width</font> : <font class="r">宽度</font></p></td>
+	</tr>
+	<tr onclick="test_columnGap()" title="">
+		<td>【多列布局】【设置列边距】</td>
+		<td><p><font class="w g">column-gap</font> : <font class="r">边距</font></p></td>
+	</tr>
+	<tr onclick="test_columnFont()" title="">
+		<td>【多列布局】【设置跨列】</td>
+		<td><p><font class="w g">column-font</font> : <font class="w r">all</font></p></td>
+	</tr>
+	<tr onclick="test_columnAfter()" title="
+		&#10;设置元素是否与后面其他列共存
+		&#10;auto → 自动处理
+		&#10;always → 另起一列">
+		<td>【多列布局】【设置共存】</td>
+		<td><p><font class="w g">column-after</font> : <font class="w r">auto</font>丨<font class="w r">always</font></p></td>
+	</tr>
+	<tr onclick="test_columnBefore()" title="
+		&#10;设置元素是否与前面其他列共存
+		&#10;auto → 自动处理
+		&#10;always → 另起一列">
+		<td>【多列布局】【设置共存】</td>
+		<td><p><font class="w g">column-before</font> : <font class="w r">auto</font>丨<font class="w r">always</font></p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【文本】**************************************************/
+
+function test_textStroke(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">p { font-size: 50px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'p'+'</font> { <font class="g">'+Prefix+'text-stroke:</font> <font class="r">2px green;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'p'+'</font>&gt;hello world&lt;/p&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<p style="font-size:50px;'+Prefix+'text-stroke:2px green;">hello world</p>');
+}
+
+function test_textStrokeWidth(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">p { font-size: 50px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'p'+'</font> { <font class="g">'+Prefix+'text-stroke-width:</font> <font class="r">2px;</font> <font class="g">'+Prefix+'text-stroke-color:</font> <font class="r">green;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'p'+'</font>&gt;hello world&lt;/p&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<p style="font-size:50px;'+Prefix+'text-stroke-width:2px;'+Prefix+'text-stroke-color:green;">hello world</p>');
+}
+
+function test_textStrokeColor(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">p { font-size: 50px; '+Prefix+'text-stroke: 2px green; }</p>'
+			+'<p class="ti_1"><font class="b">'+'p'+'</font> { <font class="g">'+Prefix+'text-fill-color:</font> <font class="r">blue;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'p'+'</font>&gt;hello world&lt;/p&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<p style="font-size:50px;'+Prefix+'text-stroke:2px green;'+Prefix+'text-fill-color:blue;">hello world</p>');
+}
+
+function test_textDecorationLine(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">p { font-size: 30px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { <font class="g">'+Prefix+'text-decoration-line:</font> <font class="r">underline;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { <font class="g">'+Prefix+'text-decoration-line:</font> <font class="r">overline;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_03'+'</font> { <font class="g">'+Prefix+'text-decoration-line:</font> <font class="r">line-through;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;p class="<font class="b">'+'style_01'+'</font>"&gt;one&lt;/p&gt;</p>'
+			+'<p class="ti_1">&lt;p class="<font class="b">'+'style_02'+'</font>"&gt;two&lt;/p&gt;</p>'
+			+'<p class="ti_1">&lt;p class="<font class="b">'+'style_03'+'</font>"&gt;three&lt;/p&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<p style="font-size:30px;'+Prefix+'text-decoration-line:underline;">one</p>'
+		+'<p style="font-size:30px;'+Prefix+'text-decoration-line:overline;">two</p>'
+		+'<p style="font-size:30px;'+Prefix+'text-decoration-line:line-through;">three</p>');
+}
+
+function test_textDecorationColor(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">p { font-size: 30px; '+Prefix+'text-decoration-line: line-through; }</p>'
+			+'<p class="ti_1"><font class="b">'+'p'+'</font> { <font class="g">'+Prefix+'text-decoration-color:</font> <font class="r">red;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'p'+'</font>&gt;one&lt;/p&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<p style="font-size:30px;'+Prefix+'text-decoration-line:line-through;'+Prefix+'text-decoration-color:red;">one</p>');
+}
+
+function test_textDecorationStyle(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">p { font-size: 50px; '+Prefix+'text-decoration-line: line-through; '+Prefix+'text-decoration-color: red; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { <font class="g">'+Prefix+'text-decoration-style:</font> <font class="r">solid;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { <font class="g">'+Prefix+'text-decoration-style:</font> <font class="r">dashed;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_03'+'</font> { <font class="g">'+Prefix+'text-decoration-style:</font> <font class="r">double;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_04'+'</font> { <font class="g">'+Prefix+'text-decoration-style:</font> <font class="r">wavy;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_05'+'</font> { <font class="g">'+Prefix+'text-decoration-style:</font> <font class="r">dotted;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;p class="<font class="b">'+'style_01'+'</font>"&gt;one&lt;/p&gt;</p>'
+			+'<p class="ti_1">&lt;p class="<font class="b">'+'style_02'+'</font>"&gt;two&lt;/p&gt;</p>'
+			+'<p class="ti_1">&lt;p class="<font class="b">'+'style_03'+'</font>"&gt;three&lt;/p&gt;</p>'
+			+'<p class="ti_1">&lt;p class="<font class="b">'+'style_04'+'</font>"&gt;four&lt;/p&gt;</p>'
+			+'<p class="ti_1">&lt;p class="<font class="b">'+'style_05'+'</font>"&gt;five&lt;/p&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<p style="font-size:30px;'+Prefix+'text-decoration-line:line-through;'+Prefix+'text-decoration-color:red;'+Prefix+'text-decoration-style:solid;">one</p>'
+		+'<p style="font-size:30px;'+Prefix+'text-decoration-line:line-through;'+Prefix+'text-decoration-color:red;'+Prefix+'text-decoration-style:dashed;">two</p>'
+		+'<p style="font-size:30px;'+Prefix+'text-decoration-line:line-through;'+Prefix+'text-decoration-color:red;'+Prefix+'text-decoration-style:double;">three</p>'
+		+'<p style="font-size:30px;'+Prefix+'text-decoration-line:line-through;'+Prefix+'text-decoration-color:red;'+Prefix+'text-decoration-style:wavy;">four</p>'
+		+'<p style="font-size:30px;'+Prefix+'text-decoration-line:line-through;'+Prefix+'text-decoration-color:red;'+Prefix+'text-decoration-style:dotted;">five</p>');
+}
+
+function test_direction(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">p { font-size: 30px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { <font class="g">direction:</font> <font class="r">ltr;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { <font class="g">direction:</font> <font class="r">rtl;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;p class="<font class="b">'+'style_01'+'</font>"&gt;one&lt;/p&gt;</p>'
+			+'<p class="ti_1">&lt;p class="<font class="b">'+'style_02'+'</font>"&gt;two&lt;/p&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<p style="font-size:30px;direction:ltr;">one two three four five</p>'
+		+'<p style="font-size:30px;direction:rtl;">one two three four five</p>');
+}
+
+function test_unicodeBidi(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">p { font-size: 30px; }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_01'+'</font> { direction: rtl; <font class="g">unicode-bidi:</font> <font class="r">normal;</font> }</p>'
+			+'<p class="ti_1"><font class="b">'+'.style_02'+'</font> { direction: rtl; <font class="g">unicode-bidi:</font> <font class="r">bidi-override;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;p class="<font class="b">'+'style_01'+'</font>"&gt;one&lt;/p&gt;</p>'
+			+'<p class="ti_1">&lt;p class="<font class="b">'+'style_02'+'</font>"&gt;two&lt;/p&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,
+		'<p style="font-size:30px;direction:rtl;unicode-bidi:normal;">one two three four five</p>'
+		+'<p style="font-size:30px;direction:rtl;unicode-bidi:bidi-override;">one two three four five</p>');
+}
+
+/**************************************************【多列布局】**************************************************/
+
+/**************************************************【】**************************************************/
+</script>

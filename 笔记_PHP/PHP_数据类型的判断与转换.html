@@ -1,0 +1,81 @@
+<table class="i_table">
+	<tr ondblclick="error()" title="
+		&#10;必须是变量">
+		<td>【判断】【变量是否已经声明】</td>
+		<td><p><font class="w b">isset</font> ( <font class="g">变量</font> )</p></td>
+	</tr>
+	<tr ondblclick="empty()" title="
+		&#10;必须是变量">
+		<td>【判断】【变量是否为空】</td>
+		<td><p><font class="w b">empty</font> ( <font class="g">变量</font> )</p></td>
+	</tr>
+	<tr ondblclick="defined()" title="\
+		&#10;常量名必须加引号">
+		<td>【判断】【常量是否已经定义】</td>
+		<td><p><font class="w b">defined</font>( <font class="g">常量</font> )</p></td>
+	</tr>
+	<tr ondblclick="is_numeric()" title="">
+		<td>【判断】【是否为数字或数字字符串】</td>
+		<td><p><font class="w b">is_numeric</font>()</p></td>
+	</tr>
+	<tr ondblclick="is_bool()" title="">
+		<td>【判断】【是否是布尔型】</td>
+		<td><p><font class="w b">is_bool</font>()</p></td>
+	</tr>
+	<tr ondblclick="is_float()" title="">
+		<td>【判断】【是否是浮点型】</td>
+		<td><p><font class="w b">is_float</font>()</p></td>
+	</tr>
+	<tr ondblclick="is_int()" title="">
+		<td>【判断】【是否是整型】</td>
+		<td><p><font class="w b">is_int</font>()</p></td>
+	</tr>
+	<tr ondblclick="is_string()" title="">
+		<td>【判断】【是否是字符串】</td>
+		<td><p><font class="w b">is_string</font>()</p></td>
+	</tr>
+	<tr ondblclick="is_object()" title="">
+		<td>【判断】【是否是对象】</td>
+		<td><p><font class="w b">is_object</font>()</p></td>
+	</tr>
+	<tr ondblclick="is_array()" title="">
+		<td>【判断】【是否是数组】</td>
+		<td><p><font class="w b">is_array</font>()</p></td>
+	</tr>
+	<tr ondblclick="is_null()" title="">
+		<td>【判断】【是否为 NULL】</td>
+		<td><p><font class="w b">is_null</font>()</p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【】**************************************************/
+
+function error(){
+	AL.open('没有实例');
+}
+
+function showTest(code){
+	TEST.write(code);
+	PU.open();
+}
+
+/**************************************************【概念】**************************************************/
+
+
+function isset(){
+	
+}
+
+function test_tag_02(){
+	var code = '<input />\n';
+	showTest(code);
+}
+
+function test_tag_03(){
+	var code = '<font color="blue">hello world</font>\n';
+	showTest(code);
+}
+
+/**************************************************【】**************************************************/
+</script>

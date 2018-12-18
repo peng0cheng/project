@@ -1,0 +1,103 @@
+<table class="i_table">
+	<tr title="
+		&#10;说&#12288;明：将哈希表 key 中的域 field 的值设为 value 当且仅当域 field 不存在
+		&#10;说&#12288;明：哈希表不存在将自动创建
+		&#10;说&#12288;明：如果 field 值已存在则无效
+		&#10;返回值：成功 → 1
+		&#10;返回值：域已存在 → 0">
+		<td>【CMD】【设置】【单个域】</td>
+		<td><p><font class="w b">HSETNX</font> <font class="w g">key</font> <font class="w r">field</font> <font class="w r">value</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：将哈希表 key 中的域 field 的值设为 value
+		&#10;说&#12288;明：哈希表不存在将自动创建
+		&#10;说&#12288;明：如果 field 值已存在则覆盖
+		&#10;返回值：成功 → 1">
+		<td>【CMD】【设置】【强制单个域】</td>
+		<td><p><font class="w b">HSET</font> <font class="w g">key</font> <font class="w r">field</font> <font class="w r">value</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：同时将多个 field value 对设置到哈希表 key 中
+		&#10;说&#12288;明：哈希表不存在将自动创建
+		&#10;说&#12288;明：如果 field 值已存在则覆盖
+		&#10;返回值：成功 → 1">
+		<td>【CMD】【设置】【强制多个域】</td>
+		<td><p><font class="w b">HMSET</font> <font class="w g">key</font> <font class="w r">field</font> <font class="w r">value</font> <font class="w gr">[</font> <font class="w r">field</font> <font class="w r">value</font> <font class="w gr">...</font> <font class="w gr">]</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：返回哈希表 key 中给定域 field 的值
+		&#10;返回值：成功 → value 值
+		&#10;返回值：键不存在 → 空
+		&#10;返回值：域不存在 → 空">
+		<td>【CMD】【获取】【单个值】</td>
+		<td><p><font class="w b">HGET</font> <font class="w g">key</font> <font class="w r">field</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：返回哈希表 key 中 一个或多个给定域的值
+		&#10;返回值：成功 → 指定 value 的列表
+		&#10;返回值：键不存在 → 空
+		&#10;返回值：域不存在 → 不存在的成员为空 存在的有值">
+		<td>【CMD】【获取】【多个值】</td>
+		<td><p><font class="w b">HMGET</font> <font class="w g">key</font> <font class="w r">field</font> <font class="w gr">[</font> <font class="w r">field</font> <font class="w gr">...</font> <font class="w gr">]</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：返回哈希表 key 中 所有的域和值
+		&#10;返回值：成功 → 所有 field 和 value 的列表
+		&#10;返回值：键不存在 → 空">
+		<td>【CMD】【获取】【全部域和值】</td>
+		<td><p><font class="w b">HGETALL</font> <font class="w g">key</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：返回哈希表 key 中域的数量
+		&#10;返回值：键存在 → 数量
+		&#10;返回值：键不存在 → 0">
+		<td>【CMD】【获取】【域的数量】</td>
+		<td><p><font class="w b">HLEN</font> <font class="w g">key</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：返回哈希表 key 中的所有域
+		&#10;返回值：键存在 → 所有 field 的列表
+		&#10;返回值：键不存在 → 空">
+		<td>【CMD】【获取】【域的集合】</td>
+		<td><p><font class="w b">HKEYS</font> <font class="w g">key</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：返回哈希表 key 中的所有值
+		&#10;返回值：键存在 → 所有 value 的列表
+		&#10;返回值：键不存在 → 空">
+		<td>【CMD】【获取】【值的集合】</td>
+		<td><p><font class="w b">HVALS</font> <font class="w g">key</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：为哈希表 key 中的域 field 的值加上增量
+		&#10;说&#12288;明：增量也可以为负数 相当于减法
+		&#10;说&#12288;明：如果 key 不存在 则创建并执行 HINCRBY 命令
+		&#10;说&#12288;明：如果域 field 不存在 域的值被初始化为 0
+		&#10;说&#12288;明：不能对非数值的域操作
+		&#10;返回值：成功 → 计算结果
+		&#10;返回值：键非数值 → error">
+		<td>【CMD】【操作】【增减域】</td>
+		<td><p><font class="w b">HINCRBY</font> <font class="w g">key</font> <font class="w r">field</font> <font class="w o">增量</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：删除哈希表 key 中的一个或多个指定域
+		&#10;返回值：成功 → 删除的数量">
+		<td>【CMD】【操作】【删除域】</td>
+		<td><p><font class="w b">HDEL</font> <font class="w g">key</font> <font class="w r">field</font> <font class="w gr">[</font> <font class="w r">field</font> <font class="w gr">...</font> <font class="w gr">]</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：查看哈希表 key 中 给定域 field 是否存在
+		&#10;返回值：成功 → 1
+		&#10;返回值：键不存在 → 0
+		&#10;返回值：域不存在 → 0">
+		<td>【CMD】【检测】【域是否存在】</td>
+		<td><p><font class="w b">HEXISTS</font> <font class="w g">key</font> <font class="w r">field</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr title="
+		&#10;说&#12288;明：
+		&#10;返回值：">
+		<td>【php】</td>
+		<td><p></p></td>
+	</tr>
+</table>

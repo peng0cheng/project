@@ -1,0 +1,119 @@
+<table class="i_table">
+	<tr onclick="test_borderRadius_01()" title="
+		&#10;只写一个值时默认水平和垂直半径相同
+		&#10;设置元素四个角的圆角属性">
+		<td>【边框】【圆角】</td>
+		<td><p><font class="w g">border-radius</font> : <font class="r">水平半径/垂直半径</font></p></td>
+	</tr>
+	<tr onclick="test_borderRadius_02()" title="
+		&#10;只写一个组时默认水平和垂直半径相同
+		&#10;分别设置四个角的属性 顺序：左上 右上 右下 左下">
+		<td>【边框】【圆角】</td>
+		<td><p><font class="w g">border-radius</font> : <font class="r">水平半径组/垂直半径组</font></p></td>
+	</tr>
+	<tr onclick="test_borderRadius_03()" title="
+		&#10;只写一个值时默认水平和垂直半径相同
+		&#10;单独设置一个角的圆角属性">
+		<td>【边框】【圆角】</td>
+		<td><p><font class="w g">border-top-left-radius</font> 丨 <font class="w g">border-top-right-radius</font> 丨 <font class="w g">border-bottom-left-radius</font> 丨 <font class="w g">border-bottom-right-radius</font> : <font class="r">水平半径/垂直半径</font></p></td>
+	</tr>
+	<tr onclick="test_borderImage()" title="
+		&#10;设置综合属性 宽度和扩展距离数值前面要加斜杠 /">
+		<td>【边框】【图片】</td>
+		<td><p><font class="w g">border-image</font> : <font class="w r">url</font> ( <font class="r">图片地址</font> ) <font class="r">切割方式/宽度扩展距离</font> <font class="r">重复</font></p></td>
+	</tr>
+	<tr onclick="test_borderImageSource()" title="">
+		<td>【边框】【图片】</td>
+		<td><p><font class="w g">border-image-source</font> : <font class="r">url</font> ( <font class="r">图片地址</font> )</p></td>
+	</tr>
+	<tr onclick="test_borderImageSlice()" title="
+		&#10;设置切割边框使用图片的方式 可以加 fill 在框体内显示图片中部区域 单位px 不用写">
+		<td>【边框】【图片】</td>
+		<td><p><font class="w g">border-image-slice</font> : <font class="r">尺寸</font></p></td>
+	</tr>
+	<tr onclick="test_borderImageWidth()" title="
+		&#10;设置元素边框图片的宽度">
+		<td>【边框】【图片】</td>
+		<td><p><font class="w g">border-image-width</font> : <font class="r">宽度</font></p></td>
+	</tr>
+	<tr onclick="test_borderImageOutset()" title="
+		&#10;设置元素边框图片向外扩展的距离">
+		<td>【边框】【图片】</td>
+		<td><p><font class="w g">border-image-outset</font> : <font class="r">距离</font></p></td>
+	</tr>
+	<tr onclick="test_BorderImageRepeat()" title="
+		&#10;设置边框图片的重复方式 拉伸丨重复填充丨缩放图片填充">
+		<td>【边框】【图片】</td>
+		<td><p><font class="w g">border-image-repeat</font> : <font class="r">stretch</font> 丨 <font class="r">repeat</font> 丨 <font class="r">round</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr onclick="test_background()" title="
+		&#10;多背景图片设置 每个图片分别定义位置 要添加 no-repeat">
+		<td>【背景图片】【多图】</td>
+		<td><p><font class="w g">background</font> : <font class="w r">url</font> ( <font class="r">地址</font> )</p></td>
+	</tr>
+	<tr onclick="test_backgroundOrigin()" title="
+		&#10;border-box → 从边框开始放置
+		&#10;content-box → 从内容开始放置
+		&#10;padding-box → 从内边距开始放置">
+		<td>【背景图片】【位置】</td>
+		<td><p><font class="w g">background-origin</font> : <font class="w r">border-box</font> 丨 <font class="w r">content-box</font> 丨 <font class="w r">padding-box</font></p></td>
+	</tr>
+	<tr onclick="test_backgroundClip()" title="
+		&#10;border-box → 从边框向元素外部剪切
+		&#10;content-box → 从内容向元素外部剪切
+		&#10;padding-box → 从内边距开始向元素外部剪切
+		&#10;text → 使用文字剪切背景图片 文字需要设置透明">
+		<td>【背景图片】【切割】</td>
+		<td><p><font class="w g">background-clip</font> : <font class="w r">border-box</font> 丨 <font class="w r">content-box</font> 丨 <font class="w r">padding-box</font></p></td>
+	</tr>
+	<tr onclick="test_backgroundSize()" title="
+		&#10;auto → 原图实际大小
+		&#10;cover → 使用背景图完全遮盖元素
+		&#10;contain → 图片缩放到元素可以装下的大小">
+		<td>【背景图片】【大小】</td>
+		<td><p><font class="w g">background-size</font> : <font class="w r">auto</font> 丨 <font class="w r">cover</font> 丨 <font class="w r">contain</font></p></td>
+	</tr>
+</table>
+<!---------------------------------------------------------------------------------------------------->
+<script>
+/**************************************************【边框】**************************************************/
+
+function test_borderRadius_01(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { width: 100px; height: 100px; background: green; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">border-radius:</font> <font class="r">50px;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:100px;height:100px;background:green;border-radius:50px;"></div>');
+}
+
+function test_borderRadius_02(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { width: 100px; height: 100px; background: green; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">border-radius:</font> <font class="r">20px 25px 30px 35px/35px 30px 25px 20px;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:100px;height:100px;background:green;border-radius:20px 25px 30px 35px/35px 30px 25px 20px;"></div>');
+}
+
+function test_borderRadius_03(){
+	PC_Case.show(1,
+		'<p><font class="gr">&lt;style&gt;</font></p>'
+			+'<p class="ti_1">div { width: 100px; height: 100px; background: green; }</p>'
+			+'<p class="ti_1"><font class="b">'+'div'+'</font> { <font class="g">border-top-left-radius:</font> <font class="r">100px;</font> }</p>'
+		+'<p><font class="gr">&lt;/style&gt;</font></p>'
+		+'<p><font class="gr">&lt;html&gt;</font></p>'
+			+'<p class="ti_1">&lt;<font class="b">'+'div'+'</font>&gt;&lt;/div&gt;</p>'
+		+'<p><font class="gr">&lt;/html&gt;</font></p>');
+	PC_Case.show(2,'<div style="width:100px;height:100px;background:green;border-top-left-radius:100px;"></div>');
+}
+
+/**************************************************【】**************************************************/
+</script>

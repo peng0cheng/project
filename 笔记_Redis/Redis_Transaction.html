@@ -1,0 +1,45 @@
+<table class="i_table">
+	<tr title="
+		&#10;说&#12288;明：监视一个或多个 key 
+		&#10;说&#12288;明：如果在事务执行之前这个key 被其他命令所改动 那么事务将被打断
+		&#10;返回值：ok">
+		<td>【CMD】【监视】</td>
+		<td><p><font class="w b">WATCH</font> <font class="w g">key</font> <font class="w gr">[</font> <font class="w g">key</font> <font class="w gr">...</font> <font class="w gr">]</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：取消监视所有 key 
+		&#10;说&#12288;明：如果 DISCARD 先被执行 则不需再使用此命令
+		&#10;返回值：ok">
+		<td>【CMD】【取消监视】</td>
+		<td><p><font class="w b">UNWATCH</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：标记一个事务块的开始
+		&#10;说&#12288;明：事务块内的多条命令会按照先后顺序被放进一个队列当中
+		&#10;返回值：ok">
+		<td>【CMD】【开启事务】</td>
+		<td><p><font class="w b">MULTI</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：执行所有事务块内的命令
+		&#10;说&#12288;明：假如事务中某 key 正处于 WATCH 命令的监视之下 则该事务被打断
+		&#10;返回值：成功 → ok
+		&#10;返回值：失败 → 空">
+		<td>【CMD】【执行事务】</td>
+		<td><p><font class="w b">EXEC</font></p></td>
+	</tr>
+	<tr title="
+		&#10;说&#12288;明：取消事务 放弃执行事务块内的所有命令
+		&#10;说&#12288;明：假如事务中某 key 正处于 WATCH 命令的监视之下 则等同于也执行了 UNWATCH
+		&#10;返回值：ok">
+		<td>【CMD】【取消事务】</td>
+		<td><p><font class="w b">DISCARD</font></p></td>
+	</tr>
+<tr class="line"><td></td><td></td></tr>
+	<tr title="
+		&#10;说&#12288;明：
+		&#10;返回值：">
+		<td>【php】</td>
+		<td><p></p></td>
+	</tr>
+</table>
